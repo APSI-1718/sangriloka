@@ -63,6 +63,13 @@
     <script src="<?php echo base_url() ?>vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="<?php echo base_url() ?>vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
     <script src="<?php echo base_url() ?>vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+
+        <!-- FastClick -->
+    <script src="<?php echo base_url() ?>vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="<?php echo base_url() ?>vendors/nprogress/nprogress.js"></script>
+    <!-- Dropzone.js -->
+    <script src="<?php echo base_url() ?>vendors/dropzone/dist/min/dropzone.min.js"></script>
   
   </body>
 </html>

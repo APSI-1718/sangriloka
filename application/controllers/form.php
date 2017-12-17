@@ -9,7 +9,7 @@ class form extends CI_Controller {
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
 		$this->load->view('form/general_form');
-		$this->load->view('template/footer');
+		
 	}
 	public function form_advanced()
 	{
@@ -30,7 +30,7 @@ class form extends CI_Controller {
 		$this->load->view('template/header');
 		$this->load->view('template/menu');
 		$this->load->view('form/wizard_form');
-		$this->load->view('template/footer');
+	
 	}
 	public function upload_form()
 	{
