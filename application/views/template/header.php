@@ -28,6 +28,9 @@
     <!-- Custom Theme Style -->
     <link href="<?php echo base_url() ?>build/css/custom.min.css" rel="stylesheet">
 
+        <link href="../vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="../vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
+
 
     <link href="<?php echo base_url() ?>vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url() ?>vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">

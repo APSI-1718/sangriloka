@@ -32,14 +32,26 @@
                   </li>
                   <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url() ?>data_siswa">General Form</a></li>
+                      <li><a href="<?php echo base_url() ?>form/general_form">General Form</a></li>
+                      <li><a href="<?php echo base_url() ?>form/form_advanced">Advanced Components</a></li>
+                      <li><a href="<?php echo base_url() ?>form/validation_form">Form Validation</a></li>
+                      <li><a href="<?php echo base_url() ?>form/wizard_form">Form Wizard</a></li>
+                      <li><a href="<?php echo base_url() ?>form/upload_form">Form Upload</a></li>
+                      <li><a href="<?php echo base_url() ?>form/button_form">Form Buttons</a></li></li>
 
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="general_elements.html">General Elements</a></li>
-                 
+                     <ul class="nav child_menu">
+                      <li><a href="<?php echo base_url() ?>ui_element/general_elements">General Elements</a></li>
+                      <li><a href="<?php echo base_url() ?>ui_element/media_gallery">Media Gallery</a></li>
+                      <li><a href="<?php echo base_url() ?>ui_element/typography">Typography</a></li>
+                      <li><a href="<?php echo base_url() ?>ui_element/icons">Icons</a></li>
+                      <li><a href="<?php echo base_url() ?>ui_element/glyphicons">Glyphicons</a></li>
+                      <li><a href="<?php echo base_url() ?>ui_element/widgets">Widgets</a></li>
+                      <li><a href="<?php echo base_url() ?>ui_element/invoice">Invoice</a></li>
+                      <li><a href="<?php echo base_url() ?>ui_element/inbox">Inbox</a></li>
+                      <li><a href="<?php echo base_url() ?>ui_element/calendar">Calendar</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
