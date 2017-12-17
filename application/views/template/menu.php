@@ -27,9 +27,7 @@
               <div class="menu_section">
     
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url() ?>"><i class="fa fa-home"></i> Home</a>
-    
-                  </li>
+                  <li><a href="<?php echo base_url() ?>"><i class="fa fa-home"></i> Home</a></li>
                   <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<?php echo base_url() ?>form/general_form">General Form</a></li>
@@ -38,7 +36,6 @@
                       <li><a href="<?php echo base_url() ?>form/wizard_form">Form Wizard</a></li>
                       <li><a href="<?php echo base_url() ?>form/upload_form">Form Upload</a></li>
                       <li><a href="<?php echo base_url() ?>form/button_form">Form Buttons</a></li></li>
-
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
@@ -62,16 +59,41 @@
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="chartjs.html">Chart JS</a></li>
-
+                      <li><a href="<?php echo base_url() ?>data_present/chartjs">Chart JS</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
-                      <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                      <li><a href="<?php echo base_url() ?>add_pages/e_comm">E-commerce</a></li>
+                      <li><a href="<?php echo base_url() ?>add_pages/proyek">Projects</a></li>
+                      <li><a href="<?php echo base_url() ?>add_pages/detil_proyek">Project Detail</a></li>
+                      <li><a href="<?php echo base_url() ?>add_pages/kontak">Contacts</a></li>
                     </ul>
                   </li>
+                  <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo base_url() ?>ekstra/biasa">Plain Page</a></li>
+                      <li><a href="<?php echo base_url() ?>ekstra/login">Login Page</a></li>
+                      <li><a href="<?php echo base_url() ?>ekstra/harga">Pricing Tables</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="#level1_1">Level One</a>
+                        <li><a>Level One<span class="fa fa-chevron-down"></span></a>
+                          <ul class="nav child_menu">
+                            <li class="sub_menu"><a href="level2.html">Level Two</a>
+                            </li>
+                            <li><a href="#level2_1">Level Two</a>
+                            </li>
+                            <li><a href="#level2_2">Level Two</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li><a href="#level1_2">Level One</a>
+                        </li>
+                    </ul>
+                  </li>  
                 </ul>
               </div>
           
