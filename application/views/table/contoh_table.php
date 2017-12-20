@@ -17,7 +17,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-             <button type="button" class="btn btn-info  glyphicon glyphicon-plus" data-toggle="modal" data-target="#myModal"></button>
+             <button type="button" class="btn btn-info fa fa-plus-circle" data-toggle="modal" data-target="#myModal"> Tambah</button>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
