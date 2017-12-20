@@ -56,6 +56,7 @@
                       <li><a href="<?php echo base_url() ?>table/tables">Tables</a></li>
                       <li><a href="<?php echo base_url() ?>table/tables_dynamic">Table Dynamic</a></li>
                       <li><a href="<?php echo base_url() ?>table/contoh_table">Contoh table</a></li>
+                        <li><a href="<?php echo base_url() ?>table/contoh_table">Contoh </a></li>
                       
                     </ul>
                   </li>
