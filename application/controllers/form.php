@@ -46,4 +46,11 @@ class form extends CI_Controller {
 		$this->load->view('form/button_form');
 		$this->load->view('template/footer');
 	}
+	public function rekrut_form()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/menu');
+		$this->load->view('form/rekrut_form');
+		
+	}
 }

@@ -36,6 +36,7 @@
                       <li><a href="<?php echo base_url() ?>form/wizard_form">Form Wizard</a></li>
                       <li><a href="<?php echo base_url() ?>form/upload_form">Form Upload</a></li>
                       <li><a href="<?php echo base_url() ?>form/button_form">Form Buttons</a></li></li>
+                      <li><a href="<?php echo base_url() ?>form/rekrut_form">Rekrutmen</a></li></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
