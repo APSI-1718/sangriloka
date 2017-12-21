@@ -57,8 +57,8 @@
                       <li><a href="<?php echo base_url() ?>table/tables">Tables</a></li>
                       <li><a href="<?php echo base_url() ?>table/tables_dynamic">Table Dynamic</a></li>
                       <li><a href="<?php echo base_url() ?>table/contoh_table">Contoh table</a></li>
-                        <li><a href="<?php echo base_url() ?>table/contoh_table">Contoh </a></li>
-                      
+                      <li><a href="<?php echo base_url() ?>table/contoh_table">Contoh </a></li>
+                      <li><a href="<?php echo base_url() ?>table/data_rekrutmen">Data Rekrutmen</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
