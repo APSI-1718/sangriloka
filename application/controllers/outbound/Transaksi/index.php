@@ -11,6 +11,7 @@ class add_pages extends CI_Controller {
 		$this->load->view('additional/e_commerce');
 		$this->load->view('template/footer');
 	}
+	doifoiyaowetrWIEYTNIOINETONBWIY5TW8O94YTN VOwieweyWTRIEOETRUK
 	public function proyek()
 	{
 		$this->load->view('template/header');
