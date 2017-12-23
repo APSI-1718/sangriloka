@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class add_pages extends CI_Controller {
 
-//asdsadew2qeqwa
+
 	public function e_comm()
 	{
 		$this->load->view('template/header');
