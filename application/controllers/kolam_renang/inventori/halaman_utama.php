@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class halaman_utama extends CI_Controller {
 
-
+//tambah tes
 	public function index()
 	{
 		$this->load->view('template/header');
