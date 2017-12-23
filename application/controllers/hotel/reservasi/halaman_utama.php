@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class halaman_utama extends CI_Controller {
-//reservasi
+
 
 	public function index()
 	{
