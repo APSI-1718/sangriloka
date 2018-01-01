@@ -30,8 +30,8 @@
                   <li><a href="<?php echo base_url() ?>"><i class="fa fa-home"></i> Beranda</a></li>
                   <li><a href="<?php echo base_url() ?>headoffice/hrd/rekrut_hrd/rekrut"><i class="fa fa-plus"></i> Rekrutmen</a></li>
                   <li><a href="<?php echo base_url() ?>headoffice/hrd/mutasi_hrd/mutasi"><i class="fa fa-line-chart"></i> Mutasi</a></li>
-                  <li><a href="#"><i class="fa fa-bar-chart"></i> Kinerja Pegawai</a></li>
-                  <li><a href="#"><i class="fa fa-level-up"></i> Pelatihan Pegawai</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/hrd/kinerja_peg/kinerja"><i class="fa fa-bar-chart"></i> Kinerja Pegawai</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/hrd/pelatihan/pelpeg"><i class="fa fa-level-up"></i> Pelatihan Pegawai</a></li>
                   <li><a href="#"><i class="fa fa-plane"></i> Cuti Pegawai</a></li>
                   <li><a href="#"><i class="fa fa-briefcase"></i> Kelola Pegawai</a></li>
                   <li><a href="#"><i class="fa fa-envelope"></i> Kelola Laporan</a></li>
