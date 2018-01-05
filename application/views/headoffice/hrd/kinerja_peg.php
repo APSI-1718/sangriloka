@@ -92,6 +92,49 @@
               </div>
             </div>
 
+ <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Daftar Para Pegawai</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <table id="datatable" class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          <th>NIP</th>
+                          <th>Nama</th>
+                          <th>Posisi</th>
+                          <th>Jabatan</th>
+                          <th>Tgl. Lahir</th>
+                          <th>JK</th>
+                          <th>Aksi</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>1010105551</td>
+                          <td>Adimas Dimas</td>
+                          <td>HRD</td>
+                          <td>Kepala Kepegawaian</td>
+                          <td>04/24/1997</td>
+                          <td>L</td>
+                          <td><button type="button" class="btn btn-success" >Edit</button>
+                          <button type="button" class="btn btn-danger">Hapus</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+
             </div>
           </div>
         </div>

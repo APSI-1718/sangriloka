@@ -32,9 +32,10 @@
                   <li><a href="<?php echo base_url() ?>headoffice/hrd/mutasi_hrd/mutasi"><i class="fa fa-line-chart"></i> Mutasi</a></li>
                   <li><a href="<?php echo base_url() ?>headoffice/hrd/kinerja_peg/kinerja"><i class="fa fa-bar-chart"></i> Kinerja Pegawai</a></li>
                   <li><a href="<?php echo base_url() ?>headoffice/hrd/pelatihan/pelpeg"><i class="fa fa-level-up"></i> Pelatihan Pegawai</a></li>
-                  <li><a href="#"><i class="fa fa-plane"></i> Cuti Pegawai</a></li>
-                  <li><a href="#"><i class="fa fa-briefcase"></i> Kelola Pegawai</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/hrd/cuti_peg/cuti"><i class="fa fa-plane"></i> Cuti Pegawai</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/hrd/kelolapeg/kelola"><i class="fa fa-briefcase"></i> Kelola Pegawai</a></li> 
                   <li><a href="#"><i class="fa fa-envelope"></i> Kelola Laporan</a></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> Keluar</a></li>
                 </ul>
               </div>
           
@@ -51,7 +52,7 @@
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
               </div>
 
-              <ul class="nav navbar-nav navbar-right">
+              <!-- <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                     <img src="images/img.jpg" alt="">Anonymous
@@ -60,7 +61,7 @@
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="javascript:;"> Profil</a></li>
                    
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Keluar</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out pull-right"></i> Keluar</a></li>
                   </ul>
                 </li>
 
@@ -127,7 +128,7 @@
                       </div>
                     </li>
                   </ul>
-                </li>
+                </li> -->
               </ul>
             </nav>
           </div>
