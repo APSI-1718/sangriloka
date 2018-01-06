@@ -29,7 +29,8 @@
                 <ul class="nav side-menu">
                   <li><a href="<?php echo base_url() ?>Restoran/pegawai/index"><i class="fa fa-home"></i> Home</a></li>
  
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Absensi"><i class="fa fa-book"></i> Penjadwalan</a></li>
+                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Absensi"><i class="fa fa-book"></i> Absensi</a></li>
+                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Absensi/data"><i class="fa fa-book"></i> Data Absensi</a></li>
  
                   <li><a href="<?php echo base_url() ?>Restoran/pegawai/CS"><i class="fa fa-recycle"></i> Cleaning Service</a></li>
  
