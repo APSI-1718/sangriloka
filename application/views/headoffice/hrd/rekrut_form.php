@@ -39,14 +39,14 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Alamat </label>
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Alamat <span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <textarea id="alamat" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-maxlength="100"
                             data-parsley-validation-threshold="10"></textarea>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Kelamin </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Kelamin <span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div id="gender" class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
@@ -66,7 +66,7 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Lulusan <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tingkat Pendidikan <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
@@ -75,8 +75,7 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button">Batal</button>
-              <button class="btn btn-primary" type="reset">Hapus</button>
+              <button class="btn btn-primary" type="reset">Batal</button>
                           <button type="submit" class="btn btn-success">Simpan</button>
                         </div>
                       </div>
@@ -106,25 +105,25 @@
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>NIP</th>
+                          <th>No. Pendaftaran</th>
                           <th>Nama</th>
-                          <th>Posisi</th>
-                          <th>Jabatan</th>
-                          <th>Tgl. Lahir</th>
+                          <th>Alamat</th>
                           <th>JK</th>
+                          <th>Tgl. Lahir</th>
+                          <th>Tingkat Pendidikan</th>
                           <th>Aksi</th>
                         </tr>
                       </thead>
 
                       <tbody>
                         <tr>
-                          <td>1010105551</td>
-                          <td>Adimas Dimas</td>
-                          <td>HRD</td>
-                          <td>Kepala Kepegawaian</td>
-                          <td>04/24/1997</td>
+                          <td>103</td>
+                          <td>Mamas Marimas</td>
+                          <td>Jl. Araha</td>
                           <td>L</td>
-                          <td><button type="button" class="btn btn-danger">Hapus</button></td>
+                          <td>06/26/1996</td>
+                          <td>SMA</td>
+                          <td><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
                         </tr>
                       </tbody>
                     </table>

@@ -26,7 +26,7 @@
                     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id. Pegawai <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">NIP <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
@@ -54,14 +54,14 @@
                         </div>
                         </div>
                       <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Alamat </label>
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Alamat <span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <textarea id="alamat" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-maxlength="100"
                             data-parsley-validation-threshold="10"></textarea>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Kelamin </label>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Kelamin <span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div id="gender" class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
@@ -79,6 +79,27 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
                         </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">No. Telepon <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                      </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Email <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                      </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Username <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                      </div>
                       </div>
                       <div class="ln_solid"></div>
                       <div class="form-group">
@@ -113,28 +134,28 @@
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
+                          <th>Id. Mutasi</th>
+                          <th>Tanggal</th>
                           <th>NIP</th>
                           <th>Nama</th>
                           <th>Posisi</th>
                           <th>Jabatan</th>
-                          <th>Tgl. Lahir</th>
-                          <th>JK</th>
                           <th>Aksi</th>
                         </tr>
                       </thead>
 
                       <tbody>
                         <tr>
-                          <td>1010105551</td>
-                          <td>Adimas Dimas</td>
-                          <td>HRD</td>
-                          <td>Kepala Kepegawaian</td>
-                          <td>04/24/1997</td>
-                          <td>L</td>
+                          <td>99</td>
+                          <td>01/07/2018</td>
+                          <td>1020304012</td>
+                          <td>Supri Sukro</td>
+                          <td>Kolam Renang</td>
+                          <td>Kasir</td>
                           <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editpegawaiModal"
-                          data-userid="#">Edit</button>
+                          data-userid="#"><span class="glyphicon glyphicon-pencil"></span></button>
                           <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletepegawaiModal"
-                          data-userid="#">Hapus</button></td>
+                          data-userid="#"><span class="glyphicon glyphicon-trash"></span></button></td>
                         </tr>
                       </tbody>
                     </table>

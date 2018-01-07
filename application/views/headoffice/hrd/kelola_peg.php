@@ -29,7 +29,6 @@
                           <th>NIP</th>
                           <th>Nama</th>
                           <th>Absen</th>
-                          <th>Lembur</th>
                           <th>Cuti</th>
                         </tr>
                       </thead>
@@ -39,7 +38,6 @@
                           <td>1010105551</td>
                           <td>Adimas Dimas</td>
                           <td>30</td>
-                          <td>2</td>
                           <td>1</td>
                         </tr>
                       </tbody>

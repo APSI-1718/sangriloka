@@ -53,13 +53,7 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal Akhir </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Keterangan Cuti </label>
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal Akhir <span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
@@ -67,9 +61,8 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button">Batal</button>
-              <button class="btn btn-primary" type="reset">Hapus</button>
-                          <button type="submit" class="btn btn-success">Cuti</button>
+              <button class="btn btn-primary" type="reset">Batal</button>
+                          <button type="submit" class="btn btn-success">Simpan</button>
                         </div>
                       </div>
 
@@ -98,25 +91,23 @@
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>NIP</th>
+                          <th>Id. Cuti</th>
+                          <th>Id. Pegawai</th>
                           <th>Nama</th>
-                          <th>Posisi</th>
-                          <th>Jabatan</th>
-                          <th>Tgl. Lahir</th>
-                          <th>JK</th>
+                          <th>Tgl. Mulai</th>
+                          <th>Tgl. Akhir</th>
                           <th>Aksi</th>
                         </tr>
                       </thead>
 
                       <tbody>
                         <tr>
-                          <td>1010105551</td>
-                          <td>Adimas Dimas</td>
-                          <td>HRD</td>
-                          <td>Kepala Kepegawaian</td>
-                          <td>04/24/1997</td>
-                          <td>L</td>
-                          <td><button type="button" class="btn btn-danger">Hapus</button></td>
+                        <td>76754</td>
+                          <td>1010105441</td>
+                          <td>Bella Labela</td>
+                          <td>01/09/2018</td>
+                          <td>02/01/2018</td>
+                          <td><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
                         </tr>
                       </tbody>
                     </table>

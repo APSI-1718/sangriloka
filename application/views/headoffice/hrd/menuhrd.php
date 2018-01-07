@@ -27,7 +27,7 @@
               <div class="menu_section">
     
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url() ?>"><i class="fa fa-home"></i> Beranda</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/hrd/hal_awal_hrd/beranda"><i class="fa fa-home"></i> Beranda</a></li>
                   <li><a href="<?php echo base_url() ?>headoffice/hrd/rekrut_hrd/rekrut"><i class="fa fa-plus"></i> Rekrutmen</a></li>
                   <li><a href="<?php echo base_url() ?>headoffice/hrd/mutasi_hrd/mutasi"><i class="fa fa-line-chart"></i> Mutasi</a></li>
                   <li><a href="<?php echo base_url() ?>headoffice/hrd/kinerja_peg/kinerja"><i class="fa fa-bar-chart"></i> Kinerja Pegawai</a></li>
