@@ -27,25 +27,15 @@
               <div class="menu_section">
     
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/index"><i class="fa fa-home"></i> Home</a></li>
- 
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Absensi"><i class="fa fa-book"></i> Absensi</a></li>
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Absensi/data"><i class="fa fa-book"></i> Data Absensi</a></li>
- 
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/CS"><i class="fa fa-recycle"></i> Cleaning Service</a></li>
- 
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Pembagian_Tugas"><i class="fa fa-group"></i> Pembagian Tugas</a></li>
- 
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Kontrol_Kerja"><i class="fa fa-binoculars"></i> Kontrol Kerja</a></li>
- 
-
+                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/index"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/menu"><i class="fa fa-desktop"></i></a>Menu</li>
+                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/order"><i class="fa fa-edit"></i></a>Order</li>                 
+                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/pembayaran"><i class="fa fa-money"></i> Pembayaran</a></li>
                 </ul>
+                
               </div>
           
             </div>
-
-          </div>
-        </div>
 
         <!-- top navigation -->
         <div class="top_nav">

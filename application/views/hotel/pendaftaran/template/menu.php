@@ -27,18 +27,20 @@
               <div class="menu_section">
     
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/index"><i class="fa fa-home"></i> Home</a></li>
- 
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Absensi"><i class="fa fa-book"></i> Absensi</a></li>
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Absensi/data"><i class="fa fa-book"></i> Data Absensi</a></li>
- 
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/CS"><i class="fa fa-recycle"></i> Cleaning Service</a></li>
- 
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Pembagian_Tugas"><i class="fa fa-group"></i> Pembagian Tugas</a></li>
- 
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Kontrol_Kerja"><i class="fa fa-binoculars"></i> Kontrol Kerja</a></li>
- 
-
+                  <li><a href="<?php echo base_url() ?>"><i class="fa fa-home"></i> Home </a></li>
+                  <li><a><i class="fa fa-edit"></i> Pendaftaran</a>
+                  </li>
+                  <li><a><i class="fa fa-money"></i> Pembayaran</a>
+                  </li>
+                  <li><a><i class="fa fa-table"></i> Master Kamar <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo base_url() ?>table/tables">Kelola Kamar</a></li>
+                      <li><a href="<?php echo base_url() ?>table/tables_dynamic">Fasilitas Kamar</a></li>
+                      <li><a href="<?php echo base_url() ?>table/contoh_table">Jenis Kamar</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> Absensi </a>
+                  </li>
                 </ul>
               </div>
           

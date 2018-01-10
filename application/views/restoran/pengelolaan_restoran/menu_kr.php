@@ -27,18 +27,34 @@
               <div class="menu_section">
     
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/index"><i class="fa fa-home"></i> Home</a></li>
- 
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Absensi"><i class="fa fa-book"></i> Absensi</a></li>
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Absensi/data"><i class="fa fa-book"></i> Data Absensi</a></li>
- 
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/CS"><i class="fa fa-recycle"></i> Cleaning Service</a></li>
- 
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Pembagian_Tugas"><i class="fa fa-group"></i> Pembagian Tugas</a></li>
- 
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/Kontrol_Kerja"><i class="fa fa-binoculars"></i> Kontrol Kerja</a></li>
- 
+                  <li><a href="<?php echo base_url() ?>"><i class="fa fa-home"></i> Home</a>
+    
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo base_url() ?>data_siswa">General Form</a></li>
 
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="general_elements.html">General Elements</a></li>
+                 
+                    </ul>
+                  </li>
+                  
+                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="chartjs.html">Chart JS</a></li>
+
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
+                      <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
           

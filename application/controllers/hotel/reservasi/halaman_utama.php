@@ -6,9 +6,9 @@ class halaman_utama extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('template/header');
-		$this->load->view('template/menu');
-		$this->load->view('table');
-		$this->load->view('template/footer');
+		$this->load->view('hotel/pendaftaran/template/header');
+		$this->load->view('hotel/pendaftaran/template/menu');
+		$this->load->view('hotel/pendaftaran/table');
+		$this->load->view('hotel/pendaftaran/template/footer');
 	}
 }
