@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class alat_makan extends CI_Controller {
+class Alat_makan extends CI_Controller {
 
 	function __construct()
 	{
