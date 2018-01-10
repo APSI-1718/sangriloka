@@ -8,6 +8,7 @@ class cuti_peg extends CI_Controller {
 	{
 		$this->load->view('template/header');
 		$this->load->view('headoffice/hrd/menuhrd');
+		$this->load->view('headoffice/hrd/modal');
 		$this->load->view('headoffice/hrd/cutipeg');
 		$this->load->view('template/footer');
 	}

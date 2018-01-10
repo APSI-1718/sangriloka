@@ -26,19 +26,20 @@
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>NIP</th>
-                          <th>Nama</th>
-                          <th>Absen</th>
-                          <th>Cuti</th>
+                          <th>Tanggal</th>
+                          <th>Laporan</th>
+                          <th>Aksi</th>
                         </tr>
                       </thead>
 
                       <tbody>
                         <tr>
-                          <td>1010105551</td>
-                          <td>Adimas Dimas</td>
-                          <td>30</td>
-                          <td>1</td>
+                          <td>04/01/2018</td>
+                          <td>Laporan Keuangan Bla Bla Bla</td>
+                          <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#"
+                          data-userid="#"><span class="glyphicon glyphicon-print"></span></button>
+                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletelaporanModal"
+                          data-userid="#"><span class="glyphicon glyphicon-trash"></span></button></td>
                         </tr>
                       </tbody>
                     </table>
@@ -47,8 +48,8 @@
 
 
 
-                    <footer>
-          <!-- <div class="pull-right">
+                    <!-- <footer>
+          <div class="pull-right">
             Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
           </div>
           <div class="clearfix"></div>

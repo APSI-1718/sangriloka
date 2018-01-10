@@ -35,7 +35,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tanggal <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12" disabled>
                         </div>
                       </div>
                       <div class="form-group">
@@ -49,20 +49,20 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nama Lengkap <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12" disabled>
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Posisi <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12" disabled>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Jabatan <span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" disabled>
                         </div>
                       </div>
                       <div class="ln_solid"></div>
@@ -116,7 +116,8 @@
                           <td>Suwiten</td>
                           <td>Restoran</td>
                           <td>Koki</td>
-                          <td><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
+                          <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletepelatihanModal"
+                          data-userid="#"><span class="glyphicon glyphicon-trash"></span></button></td>
                         </tr>
                       </tbody>
                     </table>
@@ -127,12 +128,12 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <footer>
+        <!-- <footer>
           <div class="pull-right">
             Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
           </div>
           <div class="clearfix"></div>
-        </footer>
+        </footer> -->
         <!-- /footer content -->
       </div>
     </div>

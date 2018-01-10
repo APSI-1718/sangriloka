@@ -8,6 +8,7 @@ class pelatihan extends CI_Controller {
 	{
 		$this->load->view('template/header');
 		$this->load->view('headoffice/hrd/menuhrd');
+		$this->load->view('headoffice/hrd/modal');
 		$this->load->view('headoffice/hrd/pelatihan');
 		$this->load->view('template/footer');
 	}

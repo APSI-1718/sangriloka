@@ -34,8 +34,8 @@
                   <li><a href="<?php echo base_url() ?>headoffice/hrd/pelatihan/pelpeg"><i class="fa fa-level-up"></i> Pelatihan Pegawai</a></li>
                   <li><a href="<?php echo base_url() ?>headoffice/hrd/cuti_peg/cuti"><i class="fa fa-plane"></i> Cuti Pegawai</a></li>
                   <li><a href="<?php echo base_url() ?>headoffice/hrd/kelolapeg/kelola"><i class="fa fa-briefcase"></i> Kelola Pegawai</a></li> 
-                  <li><a href="#"><i class="fa fa-envelope"></i> Kelola Laporan</a></li>
-                  <li><a href="#"><i class="fa fa-sign-out"></i> Keluar</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/hrd/kel_laporan/laporan"><i class="fa fa-envelope"></i> Kelola Laporan</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/hrd/hal_awal/login"><i class="fa fa-sign-out"></i> Keluar</a></li>
                 </ul>
               </div>
           

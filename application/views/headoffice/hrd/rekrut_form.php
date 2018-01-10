@@ -50,10 +50,10 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div id="gender" class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="male"> &nbsp; Pria &nbsp;
+                              <input type="radio" name="gender" value="male"> &nbsp; Laki-Laki &nbsp;
                             </label>
                             <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="female"> Wanita
+                              <input type="radio" name="gender" value="female"> Perempuan
                             </label>
                           </div>
                         </div>
@@ -101,6 +101,7 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div>
+                  
                   <div class="x_content">
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
@@ -123,7 +124,8 @@
                           <td>L</td>
                           <td>06/26/1996</td>
                           <td>SMA</td>
-                          <td><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
+                          <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletedatarekrutModal"
+                          data-userid="#"><span class="glyphicon glyphicon-trash"></span></button></td>
                         </tr>
                       </tbody>
                     </table>
@@ -134,12 +136,12 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <footer>
+        <!-- <footer>
           <div class="pull-right">
             Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
           </div>
           <div class="clearfix"></div>
-        </footer>
+        </footer> -->
         <!-- /footer content -->
       </div>
     </div>

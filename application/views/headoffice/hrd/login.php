@@ -7,19 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>Sangriloka || APSI 2017 </title>
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- Animate.css -->
-    <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>vendors/animate.css/animate.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="login">
@@ -31,30 +31,27 @@
         <div class="animate form login_form">
           <section class="login_content">
             <form>
-              <h1>Login Form</h1>
+              <h1>Form Absensi</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" placeholder="Maukkan NIP" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
-              </div>
-              <div>
-                <a class="btn btn-default submit" href="index.html">Log in</a>
-                <a class="reset_pass" href="#">Lost your password?</a>
+                <a class="btn btn-default submit" href="index.html">Hadir</a>
+                <a class="reset_pass" href="#">Lupa NIP Anda?</a>
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">New to site?
-                  <a href="#signup" class="to_register"> Create Account </a>
+                <p class="change_link">Anda Ingin Masuk?
+                  <a href="#signup" class="to_register"> Klik Disini! </a>
                 </p>
 
                 <div class="clearfix"></div>
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                  <h1><i class="fa fa-institution"></i> Sangriloka Resort</h1>
                   <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
                 </div>
               </div>
@@ -65,32 +62,26 @@
         <div id="register" class="animate form registration_form">
           <section class="login_content">
             <form>
-              <h1>Create Account</h1>
+              <h1>Form Login</h1>
               <div>
                 <input type="text" class="form-control" placeholder="Username" required="" />
               </div>
               <div>
-                <input type="email" class="form-control" placeholder="Email" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
-              </div>
-              <div>
-                <a class="btn btn-default submit" href="index.html">Submit</a>
+                <a class="btn btn-default submit" href="#">Masuk</a>
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">Already a member ?
-                  <a href="#signin" class="to_register"> Log in </a>
+                <p class="change_link">Anda Belum Absen?
+                  <a href="#signin" class="to_register"> Absen Klik Disini! </a>
                 </p>
 
                 <div class="clearfix"></div>
                 <br />
 
                 <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
+                  <h1><i class="fa fa-institution"></i> Sangriloka Resort</h1>
                   <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
                 </div>
               </div>

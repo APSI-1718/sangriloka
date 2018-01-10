@@ -25,6 +25,13 @@
                     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">No. Pendaftaran <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id. Mutasi <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -55,13 +62,23 @@
                       <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Posisi <span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <select class="form-control #" name="#">
+              <option value="#">Head Office</option>
+              <option value="#">Hotel</option>
+              <option value="#">Kolam Renang</option>
+              <option value="#">Restoran</option>
+            </select>
                         </div>
                       </div>
                       <div class="form-group">
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Jabatan <span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <select class="form-control #" name="#">
+              <option value="#">Admin</option>
+              <option value="#">HRD</option>
+              <option value="#">Koki</option>
+              <option value="#">Cleaning Service</option>
+            </select>
                         </div>
                       </div>
                       <div class="ln_solid"></div>
@@ -114,8 +131,10 @@
                           <td>Kepala Kepegawaian</td>
                           <td>04/24/1997</td>
                           <td>L</td>
-                          <td><button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-pencil"></span></button>
-                          <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
+                          <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editmutasiModal"
+                          data-userid="#"><span class="glyphicon glyphicon-pencil"></span></button>
+                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletemutasiModal"
+                          data-userid="#"><span class="glyphicon glyphicon-trash"></span></button></td>
                         </tr>
                       </tbody>
                     </table>
@@ -126,12 +145,12 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <footer>
+        <!-- <footer>
           <div class="pull-right">
             Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
           </div>
           <div class="clearfix"></div>
-        </footer>
+        </footer> -->
         <!-- /footer content -->
       </div>
     </div>
