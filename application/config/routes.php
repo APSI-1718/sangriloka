@@ -50,5 +50,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'halaman_awal';
+$route['restoran/pegawai'] = 'restoran/pegawai/index'; // route ke halaman utama restoran/pegawai
+$route['Restoran/pegawai'] = 'restoran/pegawai/index'; // route ke halaman utama restoran/pegawai R Besar
+$route['restoran/Pegawai'] = 'restoran/pegawai/index'; // route ke halaman utama restoran/pegawai P Besar
+$route['Restoran/Pegawai'] = 'restoran/pegawai/index'; // route ke halaman utama restoran/pegawai R&P Besar
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
