@@ -11,7 +11,7 @@
                     <div class="title_right">
                       <div class="  form-group pull-right top_search">
                         <div class="input-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AbsenMasuk">Pembagian Tugas</button>
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Pembagian Tugas</button>
                           </div>
                       </div>
                     </div>
@@ -32,13 +32,15 @@
 
     
                       <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td>Accountant</td>
-                          <td>1</td>
-                          <td>1</td>
-                          
-                      </tr>
+                        <?php foreach ($data_tugas as $data) { ?>
+                          <tr>
+                            <td><?php echo $data['id_tugas'] ?></td>
+                            <td><?php echo $data['nama_tugas'] ?></td>
+                            <td><?php echo $data['kategori_tugas'] ?></td>
+                            <td><?php echo $data['tugas'] ?></td>
+                          </tr>
+                        <?php } ?>
+
                       
                       </tbody>
                     </table>
