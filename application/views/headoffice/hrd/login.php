@@ -67,7 +67,7 @@
                 <input type="text" class="form-control" placeholder="Username" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="#">Masuk</a>
+                <a class="btn btn-default submit" href="<?php echo base_url() ?>headoffice/hrd/hal_awal_hrd/beranda">Masuk</a>
               </div>
 
               <div class="clearfix"></div>

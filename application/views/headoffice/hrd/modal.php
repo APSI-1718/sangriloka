@@ -87,7 +87,8 @@
 				<h4 class="modal-title" id="deletedatarekrutModalLabel">Hapus Data</h4>
 			</div>
 			<div class="modal-body">
-			Apakah Anda yakin untuk menghapus data rekrutmen?			
+			Apakah Anda yakin untuk menghapus data rekrutmen?
+			<p><input type="text" name="no_pendaftaran" id="no_pendaftaran" disabled=""></p>			
 			</div>
 			<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
