@@ -27,15 +27,19 @@
               <div class="menu_section">
     
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/index"><i class="fa fa-home"></i> Home</a></li>
-                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/menu"><i class="fa fa-desktop"></i></a>Menu</li>
-                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/order"><i class="fa fa-edit"></i></a>Order</li>                 
-                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/pembayaran"><i class="fa fa-money"></i> Pembayaran</a></li>
+                  <li><a href="<?php echo base_url()  ?>Restoran/transaksi/halaman_utama"><i class="fa fa-home"></i> Home </a></li>
+                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/pemesanan/pesan"><i class="fa fa-edit"></i> Pemesanan </a>
+                  </li>
+
+                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/pembayaran/bayar"><i class="fa fa-money"></i> Pembayaran </a>
+                  </li>
                 </ul>
-                
               </div>
           
             </div>
+
+          </div>
+        </div>
 
         <!-- top navigation -->
         <div class="top_nav">
