@@ -15,7 +15,7 @@
               </div>
               <div class="profile_info">
                 <span>Selamat Datang,</span>
-                <h2>Sangri</h2>
+                <h2>Admin Akuntansi</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -27,12 +27,14 @@
               <div class="menu_section">
     
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url()  ?>Restoran/transaksi/halaman_utama"><i class="fa fa-home"></i> Home </a></li>
-                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/pemesanan/pesan"><i class="fa fa-edit"></i> Pemesanan </a>
-                  </li>
-
-                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/pembayaran/bayar"><i class="fa fa-money"></i> Pembayaran </a>
-                  </li>
+                  <li><a href="<?php echo base_url() ?>headoffice/akuntansi/hal_awal_akuntansi/beranda"><i class="fa fa-home"></i> Beranda</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/akuntansi/jurnal/jurnal_view"><i class="fa fa-file-zip-o"></i> Jurnal</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/akuntansi/perubahan_modal/perubahanmodal_view"><i class="fa fa-repeat"></i> Perubahan Modal </a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/akuntansi/kelola_maintenance/maintenance_view"><i class="fa fa-gavel"></i> Kelola Maintenance</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/akuntansi/laporan_keuangan/laporankeuangan_view"><i class="fa fa-file-text-o"></i> Laporan Keuangan</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/akuntansi/ringkasan_laporan/ringkasanlaporan_view"><i class="fa fa-file-text"></i> Ringkasan Laporan</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/akuntansi/penggajian/penggajian_view/"><i class="fa fa-money"></i> Penggajian</a></li>
+                  <li><a href="<?php echo base_url() ?>headoffice/akuntansi//"><i class="fa fa-sign-out"></i> Keluar</a></li>
                 </ul>
               </div>
           
@@ -49,16 +51,16 @@
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
               </div>
 
-              <ul class="nav navbar-nav navbar-right">
+              <!-- <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">Sangri
+                    <img src="images/img.jpg" alt="">Anonymous
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Profile</a></li>
+                    <li><a href="javascript:;"> Profil</a></li>
                    
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="#"><i class="fa fa-sign-out pull-right"></i> Keluar</a></li>
                   </ul>
                 </li>
 
@@ -125,7 +127,7 @@
                       </div>
                     </li>
                   </ul>
-                </li>
+                </li> -->
               </ul>
             </nav>
           </div>

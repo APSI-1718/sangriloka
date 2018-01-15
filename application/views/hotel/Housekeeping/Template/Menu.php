@@ -27,12 +27,37 @@
               <div class="menu_section">
     
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url()  ?>Restoran/transaksi/halaman_utama"><i class="fa fa-home"></i> Home </a></li>
-                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/pemesanan/pesan"><i class="fa fa-edit"></i> Pemesanan </a>
+                  <li><a href="<?php echo base_url() ?>"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a><i class="fa fa-users"></i> Housekeeper <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo base_url() ?>Hotel/Housekeeping/Home_Housekeeping">Daftar Housekeeper</a></li>
+                      <li><a href="<?php echo base_url() ?>">Kelola Housekeeper</a></li>
+                    </ul>
                   </li>
-
-                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/pembayaran/bayar"><i class="fa fa-money"></i> Pembayaran </a>
+                  <li><a><i class="fa fa-calendar"></i> Jadwal <span class="fa fa-chevron-down"></span></a>
+                     <ul class="nav child_menu">
+                      <li><a href="<?php echo base_url() ?>">Housekeeper</a></li>
+                      <li><a href="<?php echo base_url() ?>">Acara</a></li>
+                    </ul>
                   </li>
+                  <li><a><i class="fa fa-table"></i> Ruangan <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo base_url() ?>">Kelola Ruangan</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-suitcase"></i> Barang <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo base_url() ?>">Master Barang</a></li>
+                      <li><a href="<?php echo base_url() ?>">Pengajuan Barang</a></li>
+                      <li><a href="<?php echo base_url() ?>">Penerimaan Barang</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-bug"></i> Laundry <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="<?php echo base_url() ?>">Hotel</a></li>
+                      <li><a href="<?php echo base_url() ?>">Konsumen</a></li>
+                    </ul>
+                  </li>  
                 </ul>
               </div>
           

@@ -73,3 +73,22 @@
   
   </body>
 </html>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('#table_cs').DataTable( {
+        "paging":   false,
+        "ordering": true,
+        "info":     true
+    } );
+    $('#table_cs2').DataTable( {
+        "paging":   false,
+        "ordering": true,
+        "info":     true
+    } );
+
+} );
+</script>
+

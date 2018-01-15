@@ -38,7 +38,7 @@
  
                   <li><a href="<?php echo base_url() ?>Restoran/pegawai/Kontrol_Kerja"><i class="fa fa-binoculars"></i> Kontrol Kerja</a></li>
  
-
+                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/tugas"><i class="fa fa-binoculars"></i> Tugas</a></li>
                 </ul>
               </div>
           

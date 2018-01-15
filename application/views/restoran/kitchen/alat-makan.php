@@ -56,8 +56,8 @@
                           <th>Kode Barang</th>
                           <th>Nama Barang</th>
                           <th>Kategori</th>
-                          <th>Stok</th>
-                          <th width="100px">Aksi</th>
+                          <th width="50px">Stok</th>
+                          <th width="150px">Aksi</th>
 
                         </tr>
                       </thead>
@@ -80,12 +80,12 @@
                                               data-namaBrg='". $value['namaBrg']."'
                                               data-kategoriBrg='". $value['kategoriBrg']."'
                                               data-stokBrg='". $value['stokBrg']."'>
-                                              <i class='glyphicon glyphicon-pencil'></i>
+                                              <i class='glyphicon glyphicon-pencil'></i> Edit
                                        </button>&nbsp;&nbsp;
                                       <button type='button' class='btn btn-danger tombol'
                                           data-toggle='modal' data-target='#deleteModal'
                                           data-kodeBrg='". $value['kodeBrg']."'
-                                          data-namaBrg='". $value['namaBrg']."'><i class='glyphicon glyphicon-trash'></i>
+                                          data-namaBrg='". $value['namaBrg']."'><i class='glyphicon glyphicon-trash'></i> Hapus
                                       </button>
 
                                        "?>  </td>
@@ -124,12 +124,21 @@
             <input type="hidden" name="kodeBrg" class="form-control kodeBrg" id="kodeBrg">
             <div class="form-group">
               <label for="namaBrg" class="control-label">Nama barang :</label>
-              <input type="text" name="namaBrg" class="form-control" id="namaBrg" required oninvalid="this.setCustomValidity('Nama tidak boleh kosong')" oninput="setCustomValidity('')">
+              <select name="namaBrg" class="form-control" id="namaBrg" required oninvalid="this.setCustomValidity('Nama tidak boleh kosong')" oninput="setCustomValidity('')">
+                
+                <?php $i=1; 
+
+                foreach ($kitchen as $value) { ?>
+                                
+                    <option value="<?php echo $value['namaBrg']; ?>"><?php echo $value['namaBrg']; ?></option>
+
+                                  <?php $i++; } ?>
+              </select>
             </div>
 
             <div class="form-group">
               <label for="kategoriBrg" class="control-label">Kategori :</label>
-              <select type="text" name="kategoriBrg" class="form-control kategoriBrg" id="kategoriBrg" style="width: 150px">
+              <select type="text" name="kategoriBrg" class="form-control kategoriBrg" id="kategoriBrg" style="width: 150px;">
                 <option value="Chinaware">Chinaware</option>
                 <option value="Silverware">Silverware</option>
                 <option value="Glassware">Glassware</option>
