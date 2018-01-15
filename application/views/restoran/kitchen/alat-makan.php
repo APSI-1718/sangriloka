@@ -46,9 +46,9 @@
           </div>
         <?php } ?>
 
-              <center>
-                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#tambahModal"><span class="fa fa-plus"></span>&nbsp; Tambah Data</button>
-              </center>
+             
+                <button class="btn btn-info fa fa-plus-circle" type="button" data-toggle="modal" data-target="#tambahModal"> Tambah Data</button>
+             
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -74,15 +74,15 @@
                                 <td><?php echo $value['stokBrg']; ?></td>
                                 <td><?php
                                 echo "
-                                        <button type='button' class='btn btn-warning tombol'
+                                        <button type='button' class='btn btn-primary btn-xs tombol'
                                               data-toggle='modal' data-target='#editModal'
                                               data-kodeBrg='". $value['kodeBrg']."'
                                               data-namaBrg='". $value['namaBrg']."'
                                               data-kategoriBrg='". $value['kategoriBrg']."'
                                               data-stokBrg='". $value['stokBrg']."'>
-                                              <i class='glyphicon glyphicon-pencil'></i> Edit
+                                              <i class='fa fa-pencil-square-o'></i> Edit
                                        </button>&nbsp;&nbsp;
-                                      <button type='button' class='btn btn-danger tombol'
+                                      <button type='button' class='btn btn-danger btn-xs tombol'
                                           data-toggle='modal' data-target='#deleteModal'
                                           data-kodeBrg='". $value['kodeBrg']."'
                                           data-namaBrg='". $value['namaBrg']."'><i class='glyphicon glyphicon-trash'></i> Hapus
@@ -104,13 +104,73 @@
           </div>
         </div>
 
-
-
-
 <!-- Modal tambah data -->
+<div class="modal fade" id="tambahModal" role="dialog">
+    <div class="modal-dialog ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Tambah Alat Makan</h4>
+        </div>
+        <div class="modal-body">
+          <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url()?>Restoran/kitchen/alat_makan/tambah_data">
+                         <input type="hidden" name="kodeBrg" class="form-control kodeBrg" id="kodeBrg">
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="namaBrg">Nama Barang <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="namaBrg" name="namaBrg" required="required" class="form-control col-md-7 col-xs-12 namaBrg">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="kategoriBrg">Kategori <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select type="text" name="kategoriBrg" class="form-control col-md-7 col-xs-12 kategoriBrg" id="kategoriBrg" required="required">
+                                <option value="Chinaware">Chinaware</option>
+                                <option value="Silverware">Silverware</option>
+                                 <option value="Glassware">Glassware</option>
+                            </select>
+                                <style type="text/css">
+                                 option{margin-bottom:10px;}
+                                </style>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="namaBrg">Stok <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="stokBrg" name="stokBrg" required="required" class="form-control col-md-7 col-xs-12 stokBrg">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-5">
+              <button class="btn btn-primary" type="reset">Reset</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
 
-<div class="modal fade" id="tambahModal" tabindex="-1" role="dialog" aria-labelledby="tambahModalLabel" >
-    <div class="modal-dialog modal-sm" role="document">
+                    </form>
+                  </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal tambah data2 -->
+
+<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="tambahModalLabel" >
+    <div class="modal-dialog modal" role="document">
       <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -124,7 +184,9 @@
             <input type="hidden" name="kodeBrg" class="form-control kodeBrg" id="kodeBrg">
             <div class="form-group">
               <label for="namaBrg" class="control-label">Nama barang :</label>
-              <select name="namaBrg" class="form-control" id="namaBrg" required oninvalid="this.setCustomValidity('Nama tidak boleh kosong')" oninput="setCustomValidity('')">
+               <input  type="text" name="namaBrg" class="form-control" id="namaBrg" required oninvalid="this.setCustomValidity('Nama tidak boleh kosong')" oninput="setCustomValidity('')">
+
+              <!-- <select name="namaBrg" class="form-control" id="namaBrg" required oninvalid="this.setCustomValidity('Nama tidak boleh kosong')" oninput="setCustomValidity('')">
                 
                 <?php $i=1; 
 
@@ -133,7 +195,7 @@
                     <option value="<?php echo $value['namaBrg']; ?>"><?php echo $value['namaBrg']; ?></option>
 
                                   <?php $i++; } ?>
-              </select>
+              </select> -->
             </div>
 
             <div class="form-group">
@@ -164,45 +226,54 @@
 
 </div>
 
+
+
 <!-- Modal edit data -->
 
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" >
-    <div class="modal-dialog modal-sm" role="document" >
+    <div class="modal-dialog" role="document" >
       <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title edit" id="editModalLabel">Edit Data</h4>
         </div>
         <div class="modal-body">
-          <form method="post" action="<?php echo base_url() ?>Restoran/kitchen/alat_makan/edit_data">
-
-            <div class="form-group">
-              <input type="hidden" name="kodeBrg" class="form-control kodeBrg" id="kodeBrg">
-              <label for="namaBrg" class="control-label">Nama Barang :</label>
-              <input type="text" name="namaBrg" class="form-control namaBrg" id="namaBrg">
-            </div>
-
-            <div class="form-group">
-              <label for="stokBrg" class="control-label">Harga :</label>
-              <input type="text" name="stokBrg" class="form-control stokBrg" id="stokBrg">
-            </div>
-
-            <div class="form-group">
-              <label for="kategoriBrg" class="control-label">Kategori :</label>
-              <select type="text" name="kategoriBrg" class="form-control kategoriBrg" id="kategoriBrg" style="width: 150px">
-                <option value="Chinaware">Chinaware</option>
-                <option value="Silverware">Silverware</option>
-                <option value="Glassware">Glassware</option>
-              </select>Handphone
-              <style type="text/css">
-                option{margin-bottom:10px;}
-              </style>
-            </div>
-
-            <div class="form-group">
-              <label for="stokBrg" class="control-label">Stok :</label>
-              <input type="text" name="stokBrg" class="form-control stokBrg" id="stokBrg">
-            </div>
+          <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>Restoran/kitchen/alat_makan/edit_data">
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="kodeBrg">Kode Barang <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="kodeBrg" name="kodeBrg" required="required" class="form-control col-md-7 col-xs-12 kodeBrg" disabled>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="namaBrg">Nama Barang <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="namaBrg" name="namaBrg" required="required" class="form-control col-md-7 col-xs-12 namaBrg">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="kategoriBrg">Kategori <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select type="text" name="kategoriBrg" class="form-control col-md-7 col-xs-12 kategoriBrg" id="kategoriBrg" required="required">
+                                <option value="Chinaware">Chinaware</option>
+                                <option value="Silverware">Silverware</option>
+                                 <option value="Glassware">Glassware</option>
+                            </select>
+                                <style type="text/css">
+                                 option{margin-bottom:10px;}
+                                </style>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="namaBrg">Stok <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="stokBrg" name="stokBrg" required="required" class="form-control col-md-7 col-xs-12 stokBrg">
+                        </div>
+                      </div>
 
         </div>
         <div class="modal-footer">
