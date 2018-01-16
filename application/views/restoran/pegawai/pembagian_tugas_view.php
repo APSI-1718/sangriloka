@@ -93,7 +93,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" >ID Pegawai 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name='id_pegawai' value="<?php echo $this->Pembagian_tugas_model->id_pegawai(); ?>" required="required" class="form-control col-md-7 col-xs-12" readonly>
+                          <input type="text" name='id_pegawai' value="<?php echo $this->Pembagian_tugas_model->id_pegawai(); ?>" required="required" class="form-control col-md-7 col-xs-12" disabled>
                         </div>
                       </div>
                       <div class="form-group">
@@ -180,7 +180,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" >ID Pegawai 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name='id_pegawai'  required="required" class="form-control col-md-7 col-xs-12 id_pegawai"  readonly>
+                          <input type="text" name='id_pegawai'  required="required" class="form-control col-md-7 col-xs-12 id_pegawai"  disabled>
                         </div>
                       </div>
                       <div class="form-group">
@@ -218,7 +218,7 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Tugas 
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Tugas  <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <select name="tugas" class="form-control" required>

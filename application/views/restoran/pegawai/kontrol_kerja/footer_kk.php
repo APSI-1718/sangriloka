@@ -78,12 +78,14 @@
 
 <script type="text/javascript">
     $(document).ready(function() {
-    $('#table_cs').DataTable( {
-        "paging":   false,
-        "ordering": true,
-        "info":     true
-    } );
-
+    <?php $i=1; ?>
+    <?php foreach ($data_tugas as $data) { ?>        
+        $('#table_kk<?php echo $i; ?>').DataTable( {
+            "paging":   false,
+            "ordering": true,
+            "info":     true
+        } );
+    <?php $i++; } ?>
 } );
 </script>
 
