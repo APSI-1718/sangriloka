@@ -17,9 +17,13 @@ class M_stokmakanan extends CI_Model
 			$this->db->where($where);
 		}
 
-		$query = $this->db->get("stok_makanan");
+		$query = $this->db
+		// ->join('penerimaan_stok', 'penerimaan_stok.id_mkn = stok_makanan.id_mkn', 'right outer')
+		->get("stok_makanan");
+
 
 		return $query->result_array();
+
 	}
 
 	// function tambah_mkn($data){
