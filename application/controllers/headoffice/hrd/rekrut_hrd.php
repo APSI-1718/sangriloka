@@ -7,9 +7,11 @@ class rekrut_hrd extends CI_Controller {
 		parent::__construct();
 		$this->load->model('headoffice/hrd/rekrut_db');
 	}
+
 	public function rekrut()
 	{
 		$data['hrd'] = $this->rekrut_db->select();
+		$data['kodeunik'] = $this->rekrut_db->buat_kode();
 
 		$this->load->view('template/header');
 		$this->load->view('headoffice/hrd/menuhrd');
@@ -33,7 +35,6 @@ class rekrut_hrd extends CI_Controller {
 		}
 			$where = array ('no_pendaftaran' => $no_pendaftaran);
 			$this->rekrut_db->update($data, $where);
-
 			redirect('rekrut_hrd', 'refresh');
 	}
 
@@ -53,9 +54,9 @@ class rekrut_hrd extends CI_Controller {
 
 	function delete_data()
 	{
-		$nisn = $this->input->post('no_pendaftaran');
+		$no_pendaftaran = $this->input->post('no_pendaftaran');
 		$where = array ('no_pendaftaran' => $no_pendaftaran);
 		$this->rekrut_db->delete($where);
-		redirect('rekrut_hrd', 'refresh');
+		redirect('headoffice/hrd/rekrut_hrd/rekrut', 'refresh');
 	}
 }

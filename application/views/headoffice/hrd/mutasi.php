@@ -1,194 +1,137 @@
-<!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
-              <h3></h3>
+<div class="right_col" role="main">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+
+          <div class="x_title">
+            <h2>Form Mutasi<small> mohon diisi dengan identitas asli</small></h2>
+            <ul class="nav navbar-right panel_toolbox">
+              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+            </ul>
+          <div class="clearfix"></div>
+          </div>
+          
+        <div class="x_content">
+          <form id="demo-form2" method="post" action="<?php echo base_url('headoffice/hrd/mutasi_hrd/insert_data');?>" data-parsley-validate class="form-horizontal form-label-left">
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id. Mutasi <span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="text" id="id_mutasi" name="id_mutasi" required="required" value="<?= $kodeunik; ?>" class="form-control col-md-7 col-xs-12">
               </div>
             </div>
-            <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Form Mutasi<small> mohon diisi dengan identitas asli</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">No. Pendaftaran <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id. Mutasi <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tanggal <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">NIP <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nama Lengkap <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Posisi <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select class="form-control #" name="#">
-              <option value="#">Head Office</option>
-              <option value="#">Hotel</option>
-              <option value="#">Kolam Renang</option>
-              <option value="#">Restoran</option>
-            </select>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Jabatan <span class="required">*</span></label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select class="form-control #" name="#">
-              <option value="#">Admin</option>
-              <option value="#">HRD</option>
-              <option value="#">Koki</option>
-              <option value="#">Cleaning Service</option>
-            </select>
-                        </div>
-                      </div>
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-              <button class="btn btn-primary" type="reset">Batal</button>
-                          <button type="submit" class="btn btn-success">Simpan</button>
-                        </div>
-                      </div>
-
-                    </form>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tanggal <span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="text" id="ltanggal" name="tanggal" required="required" class="form-control col-md-7 col-xs-12">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">NIP <span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="text" id="id_pegawai" name="id_pegawai" class="form-control col-md-7 col-xs-12">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nama Lengkap <span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="text" id="nama" name="nama" required="required" class="form-control col-md-7 col-xs-12">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Posisi <span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <select class="form-control #" id="posisi" name="posisi">
+                  <option value="Head Office">Head Office</option>
+                  <option value="Hotel">Hotel</option>
+                  <option value="Kolam Renang">Kolam Renang</option>
+                  <option value="Restoran">Restoran</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Jabatan <span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <select class="form-control #" id="jabatan" name="jabatan">
+                  <option value="Admin">Admin</option>
+                  <option value="HRD">HRD</option>
+                  <option value="Koki">Koki</option>
+                  <option value="Cleaning Service">Cleaning Service</option>
+                </select>
+              </div>
+            </div>
+              <div class="ln_solid"></div>
+                <div class="form-group">
+                  <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                    <button class="btn btn-primary" type="reset">Batal</button>
+                    <button type="submit" class="btn btn-success">Simpan</button>
                   </div>
                 </div>
-              </div>
-            </div>
- <div class="clearfix"></div>
-
-            <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Daftar Para Pegawai</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <table id="datatable" class="table table-striped table-bordered">
-                      <thead>
-                        <tr>
-                          <th>NIP</th>
-                          <th>Nama</th>
-                          <th>Posisi</th>
-                          <th>Jabatan</th>
-                          <th>Tgl. Lahir</th>
-                          <th>JK</th>
-                          <th>Aksi</th>
-                        </tr>
-                      </thead>
-
-                      <tbody>
-                        <tr>
-                          <td>1010105551</td>
-                          <td>Adimas Dimas</td>
-                          <td>HRD</td>
-                          <td>Kepala Kepegawaian</td>
-                          <td>04/24/1997</td>
-                          <td>L</td>
-                          <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editmutasiModal"
-                          data-userid="#"><span class="glyphicon glyphicon-pencil"></span></button>
-                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletemutasiModal"
-                          data-userid="#"><span class="glyphicon glyphicon-trash"></span></button></td>
-                        </tr>
-                      </tbody>
-                    </table>
-
-            </div>
-          </div>
+          </form>
         </div>
-        <!-- /page content -->
-
-        <!-- footer content -->
-        <!-- <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer> -->
-        <!-- /footer content -->
+                
+        </div>
       </div>
     </div>
 
-    
+  <div class="clearfix"></div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
+                  
+          <div class="x_title">
+            <h2>Daftar Para Pegawai</h2>
+            <div class="clearfix"></div>
+          </div>
 
-    <!-- jQuery -->
-    <script src="<?php echo base_url() ?>vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="<?php echo base_url() ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="<?php echo base_url() ?>vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="<?php echo base_url() ?>vendors/nprogress/nprogress.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="<?php echo base_url() ?>vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- iCheck -->
-    <script src="<?php echo base_url() ?>vendors/iCheck/icheck.min.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="<?php echo base_url() ?>vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <!-- bootstrap-wysiwyg -->
-    <script src="<?php echo base_url() ?>vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-    <script src="<?php echo base_url() ?>vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-    <script src="<?php echo base_url() ?>vendors/google-code-prettify/src/prettify.js"></script>
-    <!-- jQuery Tags Input -->
-    <script src="<?php echo base_url() ?>vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
-    <!-- Switchery -->
-    <script src="<?php echo base_url() ?>vendors/switchery/dist/switchery.min.js"></script>
-    <!-- Select2 -->
-    <script src="<?php echo base_url() ?>vendors/select2/dist/js/select2.full.min.js"></script>
-    <!-- Parsley -->
-    <script src="<?php echo base_url() ?>vendors/parsleyjs/dist/parsley.min.js"></script>
-    <!-- Autosize -->
-    <script src="<?php echo base_url() ?>vendors/autosize/dist/autosize.min.js"></script>
-    <!-- jQuery autocomplete -->
-    <script src="<?php echo base_url() ?>vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
-    <!-- starrr -->
-    <script src="<?php echo base_url() ?>vendors/starrr/dist/starrr.js"></script>
-    <!-- Custom Theme Scripts -->
-    <script src="<?php echo base_url() ?>build/js/custom.min.js"></script>
+          <div class="x_content">
+            <table id="datatable" class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th>NIP</th>
+                  <th>Nama</th>
+                  <th>Posisi</th>
+                  <th>Jabatan</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <?php
+                  $i = 1;
+                    foreach ($hrd as $key => $value) {
+                ?>
+                <tr>
+                  <td><?php echo $value['id_pegawai'];?></td>
+                  <td><?php echo $value['nama'];?></td>
+                  <td><?php echo $value['posisi'];?></td>
+                  <td><?php echo $value['jabatan'];?></td>
+                  <td><button type="button" class="btn btn-success tombol" data-toggle="modal" data-target="#editmutasiModal" 
+                        data-id_mutasi="<?php echo $value['id_mutasi'];?>"
+                        data-tanggal="<?php echo $value['tanggal'];?>"
+                        data-id_pegawai="<?php echo $value['id_pegawai'];?>"
+                        data-nama="<?php echo $value['nama'];?>"
+                        data-posisi="<?php echo $value['posisi'];?>"
+                        data-jabatan="<?php echo $value['jabatan'];?>">
+                      <span class="glyphicon glyphicon-pencil"></span></button>
+                      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletemutasiModal"
+                        data-id_mutasi="<?php echo $value['id_mutasi'];?>"
+                        data-nama="<?php echo $value['nama'];?>">
+                      <span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+                <?php
+                  $i++;
+                  }
+                ?>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </div>
+        
+</div>
+  <footer>
+    <div class="pull-right">Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a></div>
+    <div class="clearfix"></div>
+  </footer>

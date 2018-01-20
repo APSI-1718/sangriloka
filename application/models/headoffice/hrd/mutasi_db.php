@@ -1,19 +1,19 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class rekrut_db extends CI_Model {
+class mutasi_db extends CI_Model {
 
 	function __construct(){
 		parent::__construct();
-		$this->table = "rekrutmen";
+		$this->table = "mutasi";
 	}
 
 	public function buat_kode()
 	{
-		$this->db->select('RIGHT(no_pendaftaran,4) as kode', FALSE);
-		$this->db->order_by('no_pendaftaran','DESC');    
+		$this->db->select('RIGHT(id_mutasi,4) as kode', FALSE);
+		$this->db->order_by('id_mutasi','DESC');    
 		$this->db->limit(1);    
-		$query = $this->db->get('rekrutmen');
+		$query = $this->db->get('mutasi');
 
 		if($query->num_rows() <> 0)
 		{
@@ -24,7 +24,7 @@ class rekrut_db extends CI_Model {
 		}
 
 		$kodemax = str_pad($kode, 4, "0", STR_PAD_LEFT);
-		$kodejadi = "P".$kodemax;
+		$kodejadi = "M".$kodemax;
 		return $kodejadi;
 	}
 
@@ -41,6 +41,12 @@ class rekrut_db extends CI_Model {
 	function insert($data)
 	{
 		$this->db->insert($this->table, $data);
+	}
+
+	function update($data, $where)
+	{
+		$this->db->where($where);
+		$this->db->update($this->table, $data);
 	}
 
 	function delete($where)

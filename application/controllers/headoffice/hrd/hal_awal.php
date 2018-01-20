@@ -7,5 +7,4 @@ class hal_awal extends CI_Controller {
 	{
 		$this->load->view('headoffice/hrd/login');
 	}
-
 }
