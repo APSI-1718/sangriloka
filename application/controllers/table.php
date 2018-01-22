@@ -26,5 +26,12 @@ class table extends CI_Controller {
 		$this->load->view('table/contoh_table');
 		$this->load->view('template/footer');
 	}
+	public function data_rekrutmen()
+	{
+		$this->load->view('template/header');
+		$this->load->view('template/menu');
+		$this->load->view('table/data_rekrutmen');
+		$this->load->view('template/footer');
+	}
 
 }
