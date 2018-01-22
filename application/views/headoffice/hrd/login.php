@@ -30,15 +30,21 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
+            <form id="demo-form2" method="post" action="<?php echo base_url('headoffice/hrd/hal_awal/insert_data');?>" data-parsley-validate class="form-horizontal form-label-left">
               <h1>Form Absensi</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Maukkan NIP" required="" />
+                <input type="text" class="form-control" placeholder="Tanggal" name="tanggal" id="tanggal" required="required" use value=<?php echo date('Y-m-d');?> readonly>
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Hadir</a>
-                <a class="reset_pass" href="#">Lupa NIP Anda?</a>
+                <input type="text" class="form-control" name="id_pegawai" id="id_pegawai" placeholder="Maukkan NIP" required="required">
               </div>
+              <div>
+                <input type="hidden" class="form-control" placeholder="Maukkan NIP" value="Hadir" name="status" id="status" required="required">
+              </div>
+              <div>
+                <button class="btn btn-default submit">Hadir</button>
+              </div>
+           
 
               <div class="clearfix"></div>
 
@@ -67,7 +73,7 @@
                 <input type="text" class="form-control" placeholder="Username" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="<?php echo base_url() ?>headoffice/hrd/hal_awal_hrd/beranda">Masuk</a>
+                <button class="btn btn-default submit" href="<?php echo base_url() ?>headoffice/hrd/hal_awal_hrd/beranda">Masuk</button>
               </div>
 
               <div class="clearfix"></div>

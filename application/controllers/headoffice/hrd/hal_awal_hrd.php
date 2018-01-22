@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class hal_awal_hrd extends CI_Controller {
 
-function __construct(){
+	function __construct(){
 		parent::__construct();
 		$this->load->model('headoffice/hrd/pegawai_db');
 	}
@@ -11,6 +11,7 @@ function __construct(){
 	public function beranda()
 	{
 		$data['hrd'] = $this->pegawai_db->select();
+		$data['kodeunik'] = $this->pegawai_db->buat_kode();
 
 		$this->load->view('template/header');
 		$this->load->view('headoffice/hrd/menuhrd');

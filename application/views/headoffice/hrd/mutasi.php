@@ -1,3 +1,5 @@
+<script src="<?php echo base_url()?>assets/js/jquery-new.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/custom.js"></script>
 <div class="right_col" role="main">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
@@ -16,19 +18,25 @@
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id. Mutasi <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="id_mutasi" name="id_mutasi" required="required" value="<?= $kodeunik; ?>" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="id_mutasi" name="id_mutasi" required="required" value="<?= $kodeunik; ?>" class="form-control col-md-7 col-xs-12" readonly>
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tanggal <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="ltanggal" name="tanggal" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="ltanggal" name="tanggal" required="required" class="form-control col-md-7 col-xs-12" use value=<?php echo date('Y-m-d');?> readonly>
               </div>
             </div>
             <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">NIP <span class="required">*</span></label>
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">NIP <span class="required">(isi jika pegawai)</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <input type="text" id="id_pegawai" name="id_pegawai" class="form-control col-md-7 col-xs-12">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-13" for="last-name">No. Daftar <span class="required">(isi jika bukan pegawai)</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="text" id="no_pendaftaran" name="no_pendaftaran" class="form-control col-md-7 col-xs-12">
               </div>
             </div>
             <div class="form-group">
@@ -105,17 +113,17 @@
                   <td><?php echo $value['nama'];?></td>
                   <td><?php echo $value['posisi'];?></td>
                   <td><?php echo $value['jabatan'];?></td>
-                  <td><button type="button" class="btn btn-success tombol" data-toggle="modal" data-target="#editmutasiModal" 
+                  <td><button type="button" class="btn btn-success panggilmutasi" data-toggle="modal" data-target="#editmutasiModal" 
                         data-id_mutasi="<?php echo $value['id_mutasi'];?>"
                         data-tanggal="<?php echo $value['tanggal'];?>"
                         data-id_pegawai="<?php echo $value['id_pegawai'];?>"
-                        data-nama="<?php echo $value['nama'];?>"
+                        data-nama_mutasi="<?php echo $value['nama'];?>"
                         data-posisi="<?php echo $value['posisi'];?>"
                         data-jabatan="<?php echo $value['jabatan'];?>">
                       <span class="glyphicon glyphicon-pencil"></span></button>
-                      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletemutasiModal"
+                      <button type="button" class="btn btn-danger panggilmutasi" data-toggle="modal" data-target="#deletemutasiModal"
                         data-id_mutasi="<?php echo $value['id_mutasi'];?>"
-                        data-nama="<?php echo $value['nama'];?>">
+                        data-nama_mutasi="<?php echo $value['nama'];?>">
                       <span class="glyphicon glyphicon-trash"></span></button></td>
                 </tr>
                 <?php

@@ -11,6 +11,7 @@ class pelatihan extends CI_Controller {
 	public function pelpeg()
 	{
 		$data['hrd'] = $this->pelatihan_db->select();
+		$data['kodeunik'] = $this->pelatihan_db->buat_kode();
 
 		$this->load->view('template/header');
 		$this->load->view('headoffice/hrd/menuhrd');

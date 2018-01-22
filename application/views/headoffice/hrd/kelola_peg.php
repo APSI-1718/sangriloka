@@ -14,7 +14,7 @@
               <tr>
                 <th>NIP</th>
                 <th>Nama</th>
-                <th>Absen</th>
+                <th>Hadir</th>
                 <th>Cuti</th>
               </tr>
             </thead>

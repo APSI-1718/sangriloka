@@ -1,3 +1,5 @@
+<script src="<?php echo base_url()?>assets/js/jquery-new.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/custom.js"></script>
 <div class="right_col" role="main">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
@@ -16,7 +18,7 @@
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Id. Cuti <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="id_cuti" name="id_cuti" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="id_cuti" name="id_cuti" required="required" class="form-control col-md-7 col-xs-12" value="<?= $kodeunik; ?>" readonly>
               </div>
             </div>
             <div class="form-group">
@@ -28,13 +30,13 @@
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nama Lengkap <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="nama" name="nama" required="required" class="form-control col-md-7 col-xs-12" disabled>
+                <input type="text" id="nama" name="nama" required="required" class="form-control col-md-7 col-xs-12">
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tanggal Mulai <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="tgl_mulai" name="tgl_mulai" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="tgl_mulai" name="tgl_mulai" required="required" class="form-control col-md-7 col-xs-12" use value=<?php echo date('Y-m-d');?> readonly>
               </div>
             </div>
             <div class="form-group">
@@ -46,7 +48,7 @@
             <div class="form-group">
               <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Keterangan <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="keterangan" name="keterangan" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="ket" name="ket" required="required" class="form-control col-md-7 col-xs-12">
               </div>
             </div>
               <div class="ln_solid"></div>
@@ -98,9 +100,10 @@
                   <td><?php echo $value['nama'];?></td>
                   <td><?php echo $value['tgl_mulai'];?></td>
                   <td><?php echo $value['tgl_akhir'];?></td>
-                  <td><?php echo $value['keterangan'];?></td>
-                  <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletecutiModal"
-                        data-id_cuti="<?php echo $value['id_cuti'];?>">
+                  <td><?php echo $value['ket'];?></td>
+                  <td><button type="button" class="btn btn-danger panggilcuti" data-toggle="modal" data-target="#deletecutiModal"
+                        data-id_cuti="<?php echo $value['id_cuti'];?>"
+                        data-nama="<?php echo $value['nama'];?>">
                       <span class="glyphicon glyphicon-trash"></span></button></td>
                 </tr>
                 <?php

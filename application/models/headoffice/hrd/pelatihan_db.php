@@ -8,6 +8,26 @@ class pelatihan_db extends CI_Model {
 		$this->table = "pelatihan";
 	}
 
+	public function buat_kode()
+	{
+		$this->db->select('RIGHT(id_pelatihan,3) as kode', FALSE);
+		$this->db->order_by('id_pelatihan','DESC');    
+		$this->db->limit(1);    
+		$query = $this->db->get('pelatihan');
+
+		if($query->num_rows() <> 0)
+		{
+			$data = $query->row();      
+			$kode = intval($data->kode) + 1;    
+		} else {
+			$kode = 1;    
+		}
+
+		$kodemax = str_pad($kode, 3, "0", STR_PAD_LEFT);
+		$kodejadi = "PL".$kodemax;
+		return $kodejadi;
+	}
+
 	function select($where = null)
 	{
 		if ($where != null) {

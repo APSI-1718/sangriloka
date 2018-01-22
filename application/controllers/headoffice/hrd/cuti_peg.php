@@ -11,6 +11,7 @@ class cuti_peg extends CI_Controller {
 	public function cuti()
 	{
 		$data['hrd'] = $this->cuti_db->select();
+		$data['kodeunik'] = $this->cuti_db->buat_kode();
 
 		$this->load->view('template/header');
 		$this->load->view('headoffice/hrd/menuhrd');
@@ -27,7 +28,7 @@ class cuti_peg extends CI_Controller {
 			'nama' => $this->input->post('nama'),
 			'tgl_mulai' => $this->input->post('tgl_mulai'),
 			'tgl_akhir' => $this->input->post('tgl_akhir'),
-			'keterangan' => $this->input->post('keterangan'));
+			'ket' => $this->input->post('ket'));
 
 		$this->cuti_db->insert($data);
 		redirect('headoffice/hrd/cuti_peg/cuti', 'refresh');

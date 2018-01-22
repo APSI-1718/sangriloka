@@ -26,6 +26,7 @@ class mutasi_hrd extends CI_Controller {
 			'id_mutasi' => $this->input->post('id_mutasi'),
 			'tanggal' => $this->input->post('tanggal'),
 			'id_pegawai' => $this->input->post('id_pegawai'),
+			'no_pendaftaran' => $this->input->post('no_pendaftaran'),
 			'nama' => $this->input->post('nama'),
 			'posisi' => $this->input->post('posisi'),
 			'jabatan' => $this->input->post('jabatan'));

@@ -1,3 +1,5 @@
+<script src="<?php echo base_url()?>assets/js/jquery-new.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/custom.js"></script>
 <div class="right_col" role="main">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
@@ -22,7 +24,7 @@
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">NIP <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="id_pegawai" name="id_pegawai" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="id_pegawai" name="id_pegawai" required="required" value="<?= $kodeunik; ?>" class="form-control col-md-7 col-xs-12" readonly>
               </div>
             </div>
             <div class="form-group">
@@ -34,13 +36,13 @@
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Posisi <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="posisi" name="posisi" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="posisi" name="posisi" required="required" class="form-control col-md-7 col-xs-12" readonly>
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Jabatan <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="jabatan" name="jabatan" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="jabatan" name="jabatan" required="required" class="form-control col-md-7 col-xs-12" readonly>
               </div>
             </div>
             <div class="form-group">
@@ -81,11 +83,14 @@
                 </div>
               </div>
               <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Username <span class="required">*</span></label>
+                <label for="username" class="control-label col-md-3 col-sm-3 col-xs-12">Username <span class="required">(isi jika admin)</span></label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <input type="text" id="username" name="username" required="required" class="form-control col-md-7 col-xs-12">
+                  <select class="form-control username" name="username">
+                    <option value="hoadm">hoadm (Admin HO)</option>
+                    <option value="hrd">hrd (HRD)</option>
+                  </select>
                 </div>
-                </div>
+              </div>
                   <div class="ln_solid"></div>
                     <div class="form-group">
                       <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
@@ -132,7 +137,7 @@
                   <td><?php echo $value['nama'];?></td>
                   <td><?php echo $value['posisi'];?></td>
                   <td><?php echo $value['jabatan'];?></td>
-                  <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editpegawaiModal"
+                  <td><button type="button" class="btn btn-success panggilpegawai" data-toggle="modal" data-target="#editpegawaiModal"
                         data-id_pegawai="<?php echo $value['id_pegawai'];?>"
                         data-nama="<?php echo $value['nama'];?>"
                         data-posisi="<?php echo $value['posisi'];?>"
@@ -144,7 +149,9 @@
                         data-email="<?php echo $value['email'];?>"
                         data-username="<?php echo $value['username'];?>">
                       <span class="glyphicon glyphicon-pencil"></span></button>
-                      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletepegawaiModal"  data-id_pegawai="<?php echo $value['id_pegawai'];?>">
+                      <button type="button" class="btn btn-danger panggilpegawai" data-toggle="modal" data-target="#deletepegawaiModal"
+                        data-id_pegawai="<?php echo $value['id_pegawai'];?>"
+                        data-nama="<?php echo $value['nama'];?>">
                       <span class="glyphicon glyphicon-trash"></span></button></td>
                 </tr>
                 <?php

@@ -1,3 +1,5 @@
+<script src="<?php echo base_url()?>assets/js/jquery-new.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/custom.js"></script>
 <div class="right_col" role="main">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
@@ -16,7 +18,7 @@
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id. Kinerja <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="id_kinerja" name="id_kinerja" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="id_kinerja" name="id_kinerja" required="required" class="form-control col-md-7 col-xs-12" value="<?= $kodeunik; ?>" readonly>
               </div>
             </div>
             <div class="form-group">
@@ -34,7 +36,7 @@
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tanggal Promosi/Demosi <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="tanggal" name="tanggal" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="tanggal" name="tanggal" required="required" class="form-control col-md-7 col-xs-12" Use value=<?php echo date('Y-m-d');?> readonly>
               </div>
             </div>
             <div class="form-group">
@@ -53,17 +55,16 @@
             <div class="form-group">
               <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Posisi <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="posisi" name="posisi" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="posisi" name="posisi" required="required" class="form-control col-md-7 col-xs-12" readonly>
               </div>
             </div>
             <div class="form-group">
               <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Jabatan <span class="required">*</span></label>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                  <select class="form-control #" id="jabatan" name="jabatan">
+                  <select class="form-control" id="jabatan" name="jabatan">
                     <option value="Admin">Admin</option>
-                    <option value="HRD">HRD</option>
+                    <option value="Security">Security</option>
                     <option value="Koki">Koki</option>
-                    <option value="Cleaning Service">Cleaning Service</option>
                   </select>
                 </div>
             </div>
@@ -119,16 +120,18 @@
                   <td><?php echo $value['jabatan'];?></td>
                   <td><?php echo $value['pro_dem'];?></td>
                   <td><?php echo $value['tanggal'];?></td>
-                  <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editkinerjaModal"
-                        data-id_kinerja="<?php echo $value['id_pegawai'];?>"
+                  <td><button type="button" class="btn btn-success panggilkinerja" data-toggle="modal" data-target="#editkinerjaModal"
+                        data-id_kinerja="<?php echo $value['id_kinerja'];?>"
                         data-id_pegawai="<?php echo $value['id_pegawai'];?>"
                         data-nama="<?php echo $value['nama'];?>"
                         data-tanggal="<?php echo $value['tanggal'];?>"
                         data-posisi="<?php echo $value['posisi'];?>"
                         data-jabatan="<?php echo $value['jabatan'];?>">
                       <span class="glyphicon glyphicon-pencil"></span></button>
-                      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletekinerjaModal"
-                        data-userid="#"><span class="glyphicon glyphicon-trash"></span></button></td>
+                      <button type="button" class="btn btn-danger panggilkinerja" data-toggle="modal" data-target="#deletekinerjaModal"
+                        data-id_kinerja="<?php echo $value['id_kinerja'];?>"
+                        data-nama="<?php echo $value['nama'];?>">
+                      <span class="glyphicon glyphicon-trash"></span></button></td>
                 </tr>
                 <?php
                   $i++;

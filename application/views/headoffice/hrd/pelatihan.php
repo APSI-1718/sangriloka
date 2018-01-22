@@ -1,3 +1,5 @@
+<script src="<?php echo base_url()?>assets/js/jquery-new.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/custom.js"></script>
 <div class="right_col" role="main">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
@@ -16,13 +18,13 @@
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Id. Pelatihan <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="id_pelatihan" name="id_pelatihan" required="required" class="form-control col-md-7 col-xs-12">
+                <input type="text" id="id_pelatihan" name="id_pelatihan" required="required" class="form-control col-md-7 col-xs-12" value="<?=$kodeunik;?>" readonly>
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tanggal <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="tanggal" name="tanggal" required="required" class="form-control col-md-7 col-xs-12" >
+                <input type="text" id="tanggal" name="tanggal" required="required" class="form-control col-md-7 col-xs-12" use value=<?php echo date('Y-m-d');?> readonly>
               </div>
             </div>
             <div class="form-group">
@@ -40,13 +42,13 @@
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Posisi <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="posisi" name="posisi" required="required" class="form-control col-md-7 col-xs-12" >
+                <input type="text" id="posisi" name="posisi" required="required" class="form-control col-md-7 col-xs-12" readonly>
               </div>
             </div>
             <div class="form-group">
               <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Jabatan <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="jabatan" name="jabatan" required="required" class="form-control col-md-7 col-xs-12" >
+                <input type="text" id="jabatan" name="jabatan" required="required" class="form-control col-md-7 col-xs-12" readonly>
               </div>
             </div>
               <div class="ln_solid"></div>
@@ -77,6 +79,7 @@
             <table id="datatable" class="table table-striped table-bordered">
               <thead>
                 <tr>
+                  <th>No.</th>
                   <th>Id. Pelatihan</th>
                   <th>Tanggal</th>
                   <th>Id. Mutasi</th>
@@ -93,14 +96,16 @@
                     foreach ($hrd as $key => $value) {
                 ?>
                 <tr>
+                  <td><?php echo $i;?></td>
                   <td><?php echo $value['id_pelatihan'];?></td>
                   <td><?php echo $value['tanggal'];?></td>
                   <td><?php echo $value['id_mutasi'];?></td>
                   <td><?php echo $value['nama'];?></td>
                   <td><?php echo $value['posisi'];?></td>
                   <td><?php echo $value['jabatan'];?></td>
-                  <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletepelatihanModal"
-                        data-id_pelatihan="<?php echo $value['id_pelatihan'];?>">
+                  <td><button type="button" class="btn btn-danger panggilpelatihan" data-toggle="modal" data-target="#deletepelatihanModal"
+                        data-id_pelatihan="<?php echo $value['id_pelatihan'];?>"
+                        data-nama="<?php echo $value['nama'];?>">
                       <span class="glyphicon glyphicon-trash"></span></button></td>
                 </tr>
                 <?php

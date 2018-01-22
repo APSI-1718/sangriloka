@@ -8,6 +8,26 @@ class cuti_db extends CI_Model {
 		$this->table = "cuti";
 	}
 
+	public function buat_kode()
+	{
+		$this->db->select('RIGHT(id_cuti,4) as kode', FALSE);
+		$this->db->order_by('id_cuti','DESC');    
+		$this->db->limit(1);    
+		$query = $this->db->get('cuti');
+
+		if($query->num_rows() <> 0)
+		{
+			$data = $query->row();      
+			$kode = intval($data->kode) + 1;    
+		} else {
+			$kode = 1;    
+		}
+
+		$kodemax = str_pad($kode, 4, "0", STR_PAD_LEFT);
+		$kodejadi = "C".$kodemax;
+		return $kodejadi;
+	}
+
 	function select($where = null)
 	{
 		if ($where != null) {

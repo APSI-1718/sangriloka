@@ -11,6 +11,7 @@ class kinerja_peg extends CI_Controller {
 	public function kinerja()
 	{
 		$data['hrd'] = $this->kinerja_db->select();
+		$data['kodeunik'] = $this->kinerja_db->buat_kode();
 
 		$this->load->view('template/header');
 		$this->load->view('headoffice/hrd/menuhrd');

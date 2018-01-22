@@ -8,6 +8,26 @@ class pegawai_db extends CI_Model {
 		$this->table = "pegawai";
 	}
 
+	public function buat_kode()
+	{
+		$this->db->select('RIGHT(id_pegawai,3) as kode', FALSE);
+		$this->db->order_by('id_pegawai','DESC');    
+		$this->db->limit(1);    
+		$query = $this->db->get('pegawai');
+
+		if($query->num_rows() <> 0)
+		{
+			$data = $query->row();      
+			$kode = intval($data->kode) + 1;    
+		} else {
+			$kode = 1;    
+		}
+
+		$kodemax = str_pad($kode, 3, "0", STR_PAD_LEFT);
+		$kodejadi = "SRL25".$kodemax;
+		return $kodejadi;
+	}
+
 	function select($where = null)
 	{
 		if ($where != null) {
