@@ -101,9 +101,9 @@
                           <td>120</td>
                           <td>Family</td>
                           <td>#</td>
-                          <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editpegawaiModal"
+                          <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editmejaModal"
                           data-userid="#"><span class="glyphicon glyphicon-pencil"></span></button>
-                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletepegawaiModal"
+                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletemejaModal"
                           data-userid="#"><span class="glyphicon glyphicon-trash"></span></button></td>
                         </tr>
                       </tbody>

@@ -101,9 +101,9 @@
                           <td>Waiter</td>
                           <td>Restoran</td>
                           <td>#</td>
-                          <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editpegawaiModal"
+                          <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#edittugasModal"
                           data-userid="#"><span class="glyphicon glyphicon-pencil"></span></button>
-                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletepegawaiModal"
+                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletetugasModal"
                           data-userid="#"><span class="glyphicon glyphicon-trash"></span></button></td>
                         </tr>
                       </tbody>
