@@ -1,15 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class kelola_tugas extends CI_Controller {
+class ri_event extends CI_Controller {
 
 
-	public function tugas()
+	public function revent()
 	{
 		$this->load->view('template/header');
 		$this->load->view('restoran/pengelolaan_restoran/menu_kr');
-		$this->load->view('restoran/pengelolaan_restoran/kelola_tugas');
-		$this->load->view('restoran/pengelolaan_restoran/modal');
+		$this->load->view('restoran/pengelolaan_restoran/rinc_event');
 		$this->load->view('template/footer');
 	}
 }
