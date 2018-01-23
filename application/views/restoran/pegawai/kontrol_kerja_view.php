@@ -9,7 +9,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                   <div class="x_panel">
                     <div class="x_title">
-                      <h2>Tugas : <?php echo $data['nama_tugas'] ?></small></h2>
+                      <h2>Tugas : <?php echo $data['Nama_tugas'] ?></small></h2>
                       <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
@@ -37,11 +37,11 @@
                                   <td><?php echo $dataP['nama_pegawai'] ?></td>
                                   <td>
                                     <?php if($x==1){ ?>
-                                      <a title="Tugas Selesai" href="<?php echo base_url() ?>Restoran/pegawai/Kontrol_Kerja/update_status_ck/<?php echo $dataP['id_pegawai']?>">
+                                      <a title="Tugas Selesai" href="<?php echo base_url() ?>Restoran/pegawai/Kontrol_Kerja/update_status_ck/<?php echo $dataP['no']?>">
                                         <button type="button" class="btn btn-primary btn-xs">Selesai Tugas</button>
                                       </a>
                                     <?php }else{ ?>
-                                      <a title="Tugas Selesai" href="<?php echo base_url() ?>Restoran/pegawai/Kontrol_Kerja/update_status_ck/<?php echo $dataP['id_pegawai']?>" <?php echo 'onclick="return confirm(\'Pegawai diatas belum melakukan tugas!!! Apakah ingin Melanjutkan?\')"' ?>>
+                                      <a title="Tugas Selesai" href="<?php echo base_url() ?>Restoran/pegawai/Kontrol_Kerja/update_status_ck/<?php echo $dataP['no']?>" <?php echo 'onclick="return confirm(\'Pegawai diatas belum melakukan tugas!!! Apakah ingin Melanjutkan?\')"' ?>>
                                         <button type="button" class="btn btn-primary btn-xs">Selesai Tugas</button>
                                       </a>
                                     <?php } ?>
