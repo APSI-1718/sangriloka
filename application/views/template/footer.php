@@ -15,6 +15,8 @@
     <script src="<?php echo base_url() ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- kitchen.js -->
     <script src="<?php echo base_url() ?>assets/kitchen.js"></script>
+    <!-- Service -->
+    <script src="<?php echo base_url() ?>assets/service.js"></script>
     <!-- FastClick -->
     <script src="<?php echo base_url() ?>vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
