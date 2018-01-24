@@ -15,21 +15,34 @@
                     <table id="table_cs" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>No</th>
+                          <th width="5">No</th>
                           <th>No Meja</th>
                           <th>Status</th>
-                          <th>Action</th>
+                          <th width="50">Action</th>
                         </tr>
                       </thead>
 
     
                       <tbody>
+                        <?php $x = 1; ?>
+                        <?php foreach ($data_meja as $data) { ?>
                         <tr>
-                          <td>1</td>
-                          <td>Accountant</td>
-                          <td>1</td>
-                          <td>1</td>
-	                    </tr>
+                          <td><?php echo $x; ?></td>
+                          <td><?php echo $data['no_meja'] ?></td>
+                          <td>
+                            <?php 
+                              if ($data['status']=='2') {
+                                 echo "Meminta di Bersihkan";
+                               } 
+                            ?>
+                          </td>
+                          <td>
+                            <a title="Meja Sudah di Bersihkan" href="<?php echo base_url() ?>Restoran/pegawai/CS/update_status_meja/<?php echo $data['no_meja']?>">
+                              <button type="button" class="btn btn-primary btn-xs">Meja Sudah di Bersihkan</button>
+                            </a>                         
+                          </td>
+                        </tr>
+                        <?php $x++; } ?>                       
                       
                       </tbody>
                     </table>

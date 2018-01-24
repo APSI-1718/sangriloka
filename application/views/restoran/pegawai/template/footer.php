@@ -83,11 +83,6 @@
         "ordering": true,
         "info":     true
     } );
-    $('#table_cs2').DataTable( {
-        "paging":   false,
-        "ordering": true,
-        "info":     true
-    } );
 
 } );
 </script>
