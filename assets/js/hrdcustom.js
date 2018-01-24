@@ -1,4 +1,4 @@
-$(document) .on ("click", '.panggil', function(e){
+$(document) .on ("click", '.panggilrekrut', function(e){
 	var no_pendaftaran = $(this) .data('no_pendaftaran');
 	var nama = $(this) .data('nama_rekrut');
 
@@ -7,7 +7,7 @@ $(document) .on ("click", '.panggil', function(e){
 	
 });
 
-$(document) .on("click", '.panggilmutasi', function(e){
+/*$(document) .on("click", '.panggilmutasi', function(e){
 	var id_mutasi = $(this) .data('id_mutasi');
 	var nama = $(this) .data('nama_mutasi');
 	var tanggal = $(this) .data('tanggal');
@@ -77,4 +77,4 @@ $(document) .on("click", '.panggilcuti', function(e){
 
 	$(".id_cuti") .val(id_cuti);
 	$(".nama") .val(nama);
-});
+});*/

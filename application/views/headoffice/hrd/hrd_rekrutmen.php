@@ -1,5 +1,5 @@
 <script src="<?php echo base_url()?>assets/js/jquery-new.js" type="text/javascript"></script>
-<script type="text/javascript" src="<?php echo base_url()?>assets/js/custom.js"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/hrdcustom.js"></script>
 <div class="right_col" role="main">
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
@@ -14,7 +14,7 @@
           </div>
                   
         <div class="x_content">
-          <form id="demo-form2" method="post" action="<?php echo base_url('headoffice/hrd/rekrut_hrd/insert_data');?>" data-parsley-validate class="form-horizontal form-label-left">
+          <form id="demo-form2" method="post" action="<?php echo base_url('headoffice/hrd/chrd_rekrutmen/insert_data');?>" data-parsley-validate class="form-horizontal form-label-left">
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">No. Daftar <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
@@ -40,7 +40,7 @@
                   <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
                     <input type="radio" name="j_kelamin" id="j_kelamin" value="L"> &nbsp; Laki-Laki &nbsp;
                   </label>
-                  <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                  <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
                     <input type="radio" name="j_kelamin" name="j_kelamin" value="P"> Perempuan
                   </label>
                 </div>
@@ -97,10 +97,10 @@
               </thead>
 
               <tbody>
-                <?php
+              <?php
                   $i = 1;
                     foreach ($hrd as $key => $value) {
-                ?>
+              ?>
                 <tr>
                   <td><?php echo $value['no_pendaftaran'];?></td>
                   <td><?php echo $value['nama'];?></td>
@@ -108,7 +108,7 @@
                   <td><?php echo $value['j_kelamin'];?></td>
                   <td><?php echo $value['tgl_lahir'];?></td>
                   <td><?php echo $value['tingkat_pend'];?></td>
-                  <td><button type="button" class="btn btn-danger panggil" data-toggle="modal" data-target="#deletedatarekrutModal"
+                  <td><button type="button" class="btn btn-danger panggilrekrut" data-toggle="modal" data-target="#deleterekrutModal"
                         data-no_pendaftaran="<?php echo $value['no_pendaftaran'];?>"
                         data-nama_rekrut="<?php echo $value['nama'];?>">
                       <span class="glyphicon glyphicon-trash"></span></button></td>
@@ -130,4 +130,3 @@
     <div class="pull-right">Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a></div>
     <div class="clearfix"></div>
   </footer>
-

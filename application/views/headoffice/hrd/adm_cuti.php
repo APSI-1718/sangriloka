@@ -1,6 +1,4 @@
-<script src="<?php echo base_url()?>assets/js/jquery-new.js" type="text/javascript"></script>
-<script type="text/javascript" src="<?php echo base_url()?>assets/js/custom.js"></script>
-<div class="right_col" role="main">
+<div class="right_col" role="main">   
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
@@ -14,11 +12,11 @@
           </div>
                   
         <div class="x_content">
-          <form id="demo-form2" method="post" action="<?php echo base_url('headoffice/hrd/cuti_peg/insert_data');?>" data-parsley-validate class="form-horizontal form-label-left">
+          <form id="demo-form2" method="#" action="#" data-parsley-validate class="form-horizontal form-label-left">
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Id. Cuti <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="id_cuti" name="id_cuti" required="required" class="form-control col-md-7 col-xs-12" value="<?= $kodeunik; ?>" readonly>
+                <input type="text" id="id_cuti" name="id_cuti" required="required" class="form-control col-md-7 col-xs-12" readonly>
               </div>
             </div>
             <div class="form-group">
@@ -64,8 +62,9 @@
         </div>
       </div>
     </div>
-            
+
   <div class="clearfix"></div>
+
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
@@ -90,26 +89,18 @@
               </thead>
 
               <tbody>
-                <?php
-                  $i = 1;
-                    foreach ($hrd as $key => $value) {
-                ?>
                 <tr>
-                  <td><?php echo $value['id_cuti'];?></td>
-                  <td><?php echo $value['id_pegawai'];?></td>
-                  <td><?php echo $value['nama'];?></td>
-                  <td><?php echo $value['tgl_mulai'];?></td>
-                  <td><?php echo $value['tgl_akhir'];?></td>
-                  <td><?php echo $value['ket'];?></td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
                   <td><button type="button" class="btn btn-danger panggilcuti" data-toggle="modal" data-target="#deletecutiModal"
-                        data-id_cuti="<?php echo $value['id_cuti'];?>"
-                        data-nama="<?php echo $value['nama'];?>">
+                        data-id_cuti="#"
+                        data-nama="#">
                       <span class="glyphicon glyphicon-trash"></span></button></td>
                 </tr>
-                <?php
-                  $i++;
-                  }
-                ?>
               </tbody>
             </table>
           </div>

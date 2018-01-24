@@ -52,6 +52,9 @@
                 <p class="change_link">Anda Ingin Masuk?
                   <a href="#signup" class="to_register"> Klik Disini! </a>
                 </p>
+                <p>
+                  <a href="<?php echo base_url() ?>halaman_awal/sangri" class="to_register"> Sangriloka </a>
+                </p>
 
                 <div class="clearfix"></div>
                 <br />
@@ -70,17 +73,23 @@
             <form>
               <h1>Form Login</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" placeholder="Username" required="required" />
               </div>
               <div>
-                <button class="btn btn-default submit" href="<?php echo base_url() ?>headoffice/hrd/hal_awal_hrd/beranda">Masuk</button>
+                <input type="text" class="form-control" placeholder="Password" required="required" />
+              </div>
+              <div>
+                <button class="btn btn-default submit">Masuk</button>
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
                 <p class="change_link">Anda Belum Absen?
-                  <a href="#signin" class="to_register"> Absen Klik Disini! </a>
+                  <a href="#signin" class="to_register"> Klik Disini! </a>
+                </p>
+                <p>
+                  <a href="<?php echo base_url() ?>halaman_awal/sangri" class="to_register"> Sangriloka </a>
                 </p>
 
                 <div class="clearfix"></div>
