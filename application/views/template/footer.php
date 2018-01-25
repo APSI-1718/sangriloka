@@ -14,7 +14,7 @@
     <!-- Bootstrap -->
     <script src="<?php echo base_url() ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- kitchen.js -->
-    <script src="<?php echo base_url() ?>assets/kitchen.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/kitchen.js"></script>
     <!-- Service -->
     <script src="<?php echo base_url() ?>assets/service.js"></script>
     <!-- FastClick -->
