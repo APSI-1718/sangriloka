@@ -1,55 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Sangriloka || APSI 2017 </title>
-
-    <!-- Bootstrap -->
-    <link href="<?php echo base_url() ?>vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="<?php echo base_url() ?>vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="<?php echo base_url() ?>vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="<?php echo base_url() ?>vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-  
-    <!-- bootstrap-progressbar -->
-    <link href="<?php echo base_url() ?>vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="<?php echo base_url() ?>vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-    <!-- bootstrap-daterangepicker -->
-    <link href="<?php echo base_url() ?>vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="<?php echo base_url() ?>build/css/custom.min.css" rel="stylesheet">
-
-        <link href="../vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
-    <link href="../vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
-
-
-    <link href="<?php echo base_url() ?>vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo base_url() ?>vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo base_url() ?>vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo base_url() ?>vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo base_url() ?>vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-  </head>
-
-  <body class="nav-md">
-
-
-
-
-
-
-
-
-
-
 <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -161,7 +109,7 @@
                     <?php 
                         $berhasil = $this->session->flashdata('berhasiltambah'); 
                         if((isset($berhasil)) && (!empty($berhasil))) { ?>
-                            <div class="alert alert-success" >
+                            <div class="alert alert-success hidden-alert" >
                                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                                 <?php print_r($berhasil); ?>
                             </div>
@@ -170,7 +118,7 @@
                     <?php 
                         $berhasil = $this->session->flashdata('berhasiledit'); 
                         if((isset($berhasil)) && (!empty($berhasil))) { ?>
-                            <div class="alert alert-success" >
+                            <div class="alert alert-success hidden-alert" >
                                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                                 <?php print_r($berhasil); ?>
                             </div>
@@ -179,7 +127,7 @@
                     <?php 
                         $berhasil = $this->session->flashdata('berhasilhapus'); 
                         if((isset($berhasil)) && (!empty($berhasil))) { ?>
-                            <div class="alert alert-success" >
+                            <div class="alert alert-success hidden-alert" >
                                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                                 <?php print_r($berhasil); ?>
                             </div>
@@ -212,14 +160,14 @@
                           <td><?php echo $value['nama_outbound']; ?></td>
                           <td><?php echo $value['keterangan']; ?></td>
                           <td>
-                            <button type="button" class="btn btn-success btn-xs tombol" title="Ubah data"
+                            <button type="button" class="btn btn-success btn-xs tomboloutbound" title="Ubah data"
                                             data-toggle="modal" data-target="#editModal"
                                             data-id_outbound="<?php echo $value['id_outbound']; ?>"
                                             data-nama_outbound="<?php echo $value['nama_outbound']; ?>"
                                             data-keterangan="<?php echo $value['keterangan']; ?>">
                                                 <span class="fa fa-pencil"></span>&nbsp; Ubah
                                         </button>
-                                        <button type="button" class="btn btn-danger btn-xs tombol" title="Hapus data"
+                                        <button type="button" class="btn btn-danger btn-xs tomboloutbound" title="Hapus data"
                                             data-toggle="modal" data-target="#deleteModal"
                                             data-id_outbound="<?php echo $value['id_outbound']; ?>"
                                             data-nama_outbound="<?php echo $value['nama_outbound']; ?>">
@@ -240,92 +188,107 @@
         </div>
 
 
+<div class="modal fade" id="tambahModal" tabindex="-1" role="dialog" aria-labelledby="tambahModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="tambahModalLabel"><i class="fa fa-plus"></i>&nbsp;&nbsp; Tambah Outbound</h4>
+      </div>
 
-
-
-
-
-
-
-        
-  <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+      <div class="modal-body">
+        <form data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?=base_url('outbound/master_outbound/outbound/tambah_outbound');?>">
+          <div class="form-group">
+            <input type="hidden" name="id_outbound" class="form-control" id="id_outbound" value="<?php echo $idoutbound; ?>">
           </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
+          <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Outbound <span class="required">*</span>
+            </label>
+            <div class="col-md-8 col-sm-8 col-xs-12">
+              <input type="text" name="nama_outbound" class="form-control" id="nama_outbound" required oninvalid="this.setCustomValidity('Silahkan isi kolom ini !')" oninput="setCustomValidity('')">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Keterangan <span class="required">*</span>
+            </label>
+            <div class="col-md-8 col-sm-8 col-xs-12">
+              <textarea name="keterangan" class="form-control" id="keterangan" required oninvalid="this.setCustomValidity('Silahkan isi kolom ini !')" oninput="setCustomValidity('')"></textarea>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-sm">Simpan</button>
+        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Batal</button>
+        </form>
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- jQuery -->
-    <script src="<?php echo base_url() ?>vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="<?php echo base_url() ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="<?php echo base_url() ?>vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="<?php echo base_url() ?>vendors/nprogress/nprogress.js"></script>
-    <!-- Chart.js -->
-    <script src="<?php echo base_url() ?>vendors/Chart.js/dist/Chart.min.js"></script>
-    <!-- gauge.js -->
-    <script src="<?php echo base_url() ?>vendors/gauge.js/dist/gauge.min.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="<?php echo base_url() ?>vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- iCheck -->
-    <script src="<?php echo base_url() ?>vendors/iCheck/icheck.min.js"></script>
-    <!-- Skycons -->
-    <script src="<?php echo base_url() ?>vendors/skycons/skycons.js"></script>
-    <!-- Flot -->
-    <script src="<?php echo base_url() ?>vendors/Flot/jquery.flot.js"></script>
-    <script src="<?php echo base_url() ?>vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="<?php echo base_url() ?>vendors/Flot/jquery.flot.time.js"></script>
-    <script src="<?php echo base_url() ?>vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="<?php echo base_url() ?>vendors/Flot/jquery.flot.resize.js"></script>
-    <!-- Flot plugins -->
-    <script src="<?php echo base_url() ?>vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="<?php echo base_url() ?>vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="<?php echo base_url() ?>vendors/flot.curvedlines/curvedLines.js"></script>
-    <!-- DateJS -->
-    <script src="<?php echo base_url() ?>vendors/DateJS/build/date.js"></script>
-    <!-- JQVMap -->
-    <script src="<?php echo base_url() ?>vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="<?php echo base_url() ?>vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="<?php echo base_url() ?>vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="<?php echo base_url() ?>vendors/moment/min/moment.min.js"></script>
-    <script src="<?php echo base_url() ?>vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title edit" id="editModalLabel"></h4>
+      </div>
 
-    <!-- Custom Theme Scripts -->
-    <script src="<?php echo base_url() ?>build/js/custom.min.js"></script>
+      <div class="modal-body">
+        <form data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?=base_url('outbound/master_outbound/outbound/ubah_outbound');?>">
+          <div class="form-group">
+            <input type="hidden" name="id_outbound" class="form-control id_outbound" id="id_outbound">
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Outbound <span class="required">*</span>
+            </label>
+            <div class="col-md-8 col-sm-8 col-xs-12">
+              <input type="text" name="nama_outbound" class="form-control nama_outbound" id="nama_outbound" required oninvalid="this.setCustomValidity('Silahkan isi kolom ini !')" oninput="setCustomValidity('')">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-md-3 col-sm-3 col-xs-12">Keterangan <span class="required">*</span>
+            </label>
+            <div class="col-md-8 col-sm-8 col-xs-12">
+              <textarea name="keterangan" class="form-control keterangan" id="keterangan" required oninvalid="this.setCustomValidity('Silahkan isi kolom ini !')" oninput="setCustomValidity('')"></textarea>
+            </div>
+          </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-sm">Simpan</button>
+        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Batal</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 
-        <script src="<?php echo base_url() ?>vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="<?php echo base_url() ?>vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <script src="<?php echo base_url() ?>vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="<?php echo base_url() ?>/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-    <script src="<?php echo base_url() ?>/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-    <script src="<?php echo base_url() ?>vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-    <script src="<?php echo base_url() ?>vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-    <script src="<?php echo base_url() ?>vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-    <script src="<?php echo base_url() ?>vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-    <script src="<?php echo base_url() ?>vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="<?php echo base_url() ?>vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-    <script src="<?php echo base_url() ?>vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="deleteModalLabel"><i class="fa fa-trash"></i>&nbsp; Delete Data</h4>
+      </div>
 
-        <!-- FastClick -->
-    <script src="<?php echo base_url() ?>vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="<?php echo base_url() ?>vendors/nprogress/nprogress.js"></script>
-    <!-- Dropzone.js -->
-    <script src="<?php echo base_url() ?>vendors/dropzone/dist/min/dropzone.min.js"></script>
-
-    <script src="<?=base_url('assets/js/outbound.js')?>"></script>
-
-    <script type="text/javascript">
-          $('.alert-success').fadeIn('slow').delay(5000).fadeOut('slow');
-        </script>
-  
-  </body>
-</html>
+      <div class="modal-body">
+        <div class="delete alert alert-danger" role="alert"></div>
+      </div>
+        
+      <div class="modal-footer">
+        <form method="post" action="<?=base_url('outbound/master_outbound/outbound/hapus_outbound');?>">
+          <input type="hidden" name="id_outbound" class="form-control id_outbound" id="id_outbound">
+          <button class="btn btn-danger btn-sm">Hapus</button>
+          <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Batal</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

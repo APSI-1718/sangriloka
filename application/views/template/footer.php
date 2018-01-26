@@ -17,6 +17,8 @@
     <script src="<?php echo base_url() ?>assets/js/kitchen.js"></script>
     <!-- Service -->
     <script src="<?php echo base_url() ?>assets/service.js"></script>
+    <!-- outbound -->
+    <script src="<?php echo base_url() ?>assets/js/outbound.js"></script>
     <!-- FastClick -->
     <script src="<?php echo base_url() ?>vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->

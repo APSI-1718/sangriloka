@@ -11,8 +11,9 @@
 
 		function index(){
 				$data['pegawai'] = $this->m_pegawai->select();
+				$this->load->view('template/header');
 				$this->load->view('outbound/master_outbound/v_pegawai', $data);
-				$this->load->view('outbound/master_outbound/v_pegawai_modal');
+				$this->load->view('template/footer');
 		}
 
 		function ubah_pegawai(){

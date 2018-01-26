@@ -35,4 +35,24 @@
 			$this->db->delete($this->table);
 		}
 
+		function id_outbound(){
+			$this->db->select('RIGHT(outbound.id_outbound,4) as kode', FALSE);
+			$this->db->order_by('id_outbound','DESC');
+			$this->db->limit(1);
+
+			$query = $this->db->get('outbound');
+
+			if ($query->num_rows() <> 0){
+				$data = $query->row();
+				$kode = intval($data->kode) + 1;
+			} else {
+				$kode = 1;
+			}
+
+			$kodemax = str_pad($kode, 4, "0", STR_PAD_LEFT);
+			$kodejadi = "111".$kodemax;
+
+			return $kodejadi;
+		}
+
 	}

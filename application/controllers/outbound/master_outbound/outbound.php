@@ -10,9 +10,11 @@
 		}
 
 		function index(){
+			    $data['idoutbound'] = $this->m_outbound->id_outbound();
 				$data['outbound'] = $this->m_outbound->select();
+				$this->load->view('template/header');
 				$this->load->view('outbound/master_outbound/v_outbound', $data);
-				$this->load->view('outbound/master_outbound/v_outbound_modal');
+				$this->load->view('template/footer');
 		}
 
 		function tambah_outbound(){

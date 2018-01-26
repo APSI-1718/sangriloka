@@ -11,7 +11,9 @@
 
 		function index(){
 			$data['absen'] = $this->m_absen->select();
+			$this->load->view('template/header');
 			$this->load->view('outbound/master_outbound/v_absen', $data);
+			$this->load->view('template/footer');
 		}
 
 	}

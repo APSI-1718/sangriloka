@@ -12,8 +12,9 @@
 
 		function index(){
 				$data['event'] = $this->m_event->select();
+				$this->load->view('template/header');
 				$this->load->view('outbound/master_outbound/v_event', $data);
-				$this->load->view('outbound/master_outbound/v_event_modal');
+				$this->load->view('template/footer');
 		}
 
 		function tambah_event(){
