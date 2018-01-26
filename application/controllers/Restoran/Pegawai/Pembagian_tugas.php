@@ -14,8 +14,9 @@ class Pembagian_tugas extends ci_controller
 	}
 	function index(){
 
-		$data['data_tugas'] = $this->Crud_model->select('tugas');	
-		$data['data_pegawai'] = $this->Crud_model->inner_join2('pegawai','tugas','id_tugas');	
+		$data['data_tugas'] = $this->Crud_model->select('kelolatugas');	
+		$data['data_pegawai'] = $this->Crud_model->select('pegawai');	
+		$data['pembagian_tugas'] = $this->Crud_model->inner_join3('kontol_kerja','pegawai','kelolatugas','id_pegawai','id_tugas');
 		$this->load->view('restoran/pegawai/template/header');
 		$this->load->view('restoran/pegawai/template/menu');
 		$this->load->view('restoran/pegawai/Pembagian_tugas_view',$data);
@@ -23,15 +24,12 @@ class Pembagian_tugas extends ci_controller
 	}
 	function tambah_pegawai(){
 		$data = array (
-			'id_pegawai' => $this->input->post('id_pegawai'),
-			'nama_pegawai' => $this->input->post('nama_pegawai'),
-			'username' => '-',
-			'password' => 'admin',
-			'jabatan' => $this->input->post('jabatan'),
+			'id_pegawai' => $this->input->post('pegawai'),
 			'id_tugas' => $this->input->post('tugas'),
+			'status_ck' => $this->input->post('status_ck')
 			);
 
-		$this->Crud_model->insert('pegawai',$data);
+		$this->Crud_model->insert('kontol_kerja',$data);
 		echo "<script type='text/javascript'>alert('Data ID Pegawai = ".$this->input->post('id_pegawai')." Berhasil di Tambahkan');</script>";	
 		$link = base_url().'Restoran/pegawai/Pembagian_Tugas';		
 		redirect($link,'refresh');
@@ -40,23 +38,19 @@ class Pembagian_tugas extends ci_controller
 	}
 	function update_pegawai(){
 		$data = array (
-			'nama_pegawai' => $this->input->post('nama_pegawai'),
-			'username' => '-',
-			'password' => 'admin',
-			'jabatan' => $this->input->post('jabatan'),
-			'id_tugas' => $this->input->post('tugas'),
+			'id_tugas' => $this->input->post('tugas')
 			);
-		$where = array('id_pegawai' => $this->input->post('id_pegawai'));
-		$this->Crud_model->update('pegawai', $data, $where);
-		echo "<script type='text/javascript'>alert('Data ID Pegawai = ".$this->input->post('id_pegawai')." Berhasil di Sunting');</script>";		
+		$where = array('no' => $this->input->post('no'));
+		$this->Crud_model->update('kontol_kerja', $data, $where);
+		echo "<script type='text/javascript'>alert('Data Berhasil di Sunting');</script>";		
 		$link = base_url().'Restoran/pegawai/Pembagian_Tugas';
 		redirect($link,'refresh');
 
 	}
 	function hapus_pegawai($id){
-		$where = array('id_pegawai' => $id);
-		$this->Crud_model->delete('pegawai', $where);
-		echo "<script type='text/javascript'>alert('Data ID Pegawai = ".$id." Berhasil di Hapus');</script>";		
+		$where = array('no' => $id);
+		$this->Crud_model->delete('kontol_kerja', $where);
+		echo "<script type='text/javascript'>alert('Data Berhasil di Hapus');</script>";		
 		$link = base_url().'Restoran/pegawai/Pembagian_Tugas';
 		redirect($link,'refresh');		
 	}

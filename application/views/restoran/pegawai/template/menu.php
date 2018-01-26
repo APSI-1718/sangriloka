@@ -15,7 +15,7 @@
               </div>
               <div class="profile_info">
                 <span>Selamat Datang,</span>
-                <h2>Sangri</h2>
+                <h2><?php echo $this->session->userdata('nama'); ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -38,7 +38,7 @@
  
                   <li><a href="<?php echo base_url() ?>Restoran/pegawai/Kontrol_Kerja"><i class="fa fa-binoculars"></i> Kontrol Kerja</a></li>
  
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/tugas"><i class="fa fa-binoculars"></i> Tugas</a></li>
+                  <!-- <li><a href="<?php echo base_url() ?>Restoran/pegawai/tugas"><i class="fa fa-binoculars"></i> Tugas</a></li> -->
                 </ul>
               </div>
           
@@ -56,82 +56,27 @@
               </div>
 
               <ul class="nav navbar-nav navbar-right">
+                <?php if($this->session->userdata('status_login')){ ?>
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">Sangri
+                    <img src="images/img.jpg" alt=""><?php echo $this->session->userdata('nama'); ?>
+
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
                     <li><a href="javascript:;"> Profile</a></li>
                    
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="<?php echo base_url() ?>restoran/pegawai/login/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
+                <?php }else{ ?>
 
-                <li role="presentation" class="dropdown">
-                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-green">6</span>
+                <li class="">
+                  <a href="<?php echo base_url(); ?>Restoran/pegawai/Login" class="user-profile" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">Login
                   </a>
-                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
-                </li>
+                </li>                
+                <?php } ?>
               </ul>
             </nav>
           </div>

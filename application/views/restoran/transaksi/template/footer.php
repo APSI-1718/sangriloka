@@ -13,8 +13,6 @@
     <script src="<?php echo base_url() ?>vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="<?php echo base_url() ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- kitchen.js -->
-    <script src="<?php echo base_url() ?>assets/kitchen.js"></script>
     <!-- FastClick -->
     <script src="<?php echo base_url() ?>vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->

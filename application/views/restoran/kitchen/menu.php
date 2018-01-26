@@ -27,7 +27,7 @@
               <div class="menu_section">
 
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url() ?>Restoran/kitchen/beranda_kitchen"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="<?php echo base_url() ?>Restoran/kitchen/beranda_kitchen"><i class="fa fa-home"></i> Dashboard</a></li>
                   <li><a href="<?php echo base_url() ?>"><i class="fa fa-edit"></i> Kelola Order</a></li>
 
                   <li><a><i class="fa fa-desktop"></i> Kelola Stok <span class="fa fa-chevron-down"></span></a>

@@ -5,12 +5,15 @@
             <div class="page-title">
               <div class="title_left">
                 <h3>Absensi </h3>
+                <?php foreach ($absen as $data) {
+                  $absen = true;
+                } ?>
               </div>
             </div>
               <div class="title_right">
                 <div class="  form-group pull-right top_search">
                   <div class="input-group">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#AbsenMasuk">Absen Masuk</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" <?php if ($absen){echo "disabled";} ?> data-target="#AbsenMasuk">Absen Masuk</button>
 
                   </div>
                 </div>
@@ -75,22 +78,25 @@
           <div class="modal-body">
 
             <div id="testmodal2" style="padding: 5px 20px;">
-              <form id="antoform2" class="form-horizontal calender" role="form">
+                <form action="Absensi/absen_masuk" method="post" class="form-horizontal calender" role="form">
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Password</label>
                   <div class="col-sm-9">
-                    <input type="password" class="form-control" id="title2" name="password">
+                    <input type="password" class="form-control" id="title2" name="password" required>
                   </div>
                 </div>
 
 
-              </form>
+              
             </div>
           </div>
           <div class="modal-footer">
+            
             <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary antosubmit2">Save changes</button>
+            <input type="submit"  class="btn btn-primary antosubmit2" name="submit" value="Absen">
+             </form>
           </div>
+         
         </div>
       </div>
     </div>
@@ -235,14 +241,17 @@ var CURRENT_URL = window.location.href.split('#')[0].split('?')[0],
           },
           editable: true,
           events: [
-          {
-          title: 'Masuk',
-          start: new Date(2018, 01-1, 1,08,30)
-          }, 
-          {
-          title: 'Keluar',
-          start: new Date(2018, 01-1, 1,15,30)
-          }, 
+          <?php foreach ($data_absensi as $data) { ?>
+          <?php 
+            $tahun = substr($data['tanggal'],0,4);
+            $bulan = substr($data['tanggal'],5,2);
+            $tanggal = substr($data['tanggal'],8,2);
+          ?>
+            {
+            title: '<?php echo $data['status'] ?>',
+            start: new Date(<?php echo $tahun; ?>, <?php echo $bulan; ?>-1, <?php echo $tanggal; ?>,08,30)
+            }, 
+          <?php  } ?>
 
           ]
         });
