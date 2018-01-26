@@ -7,23 +7,29 @@ $(document) .on ("click", '.panggilrekrut', function(e){
 	
 });
 
-/*$(document) .on("click", '.panggilmutasi', function(e){
+(document) .on("click", '.panggilmutasi', function(e){
 	var id_mutasi = $(this) .data('id_mutasi');
-	var nama = $(this) .data('nama_mutasi');
+	var nama = $(this) .data('nama');
 	var tanggal = $(this) .data('tanggal');
 	var id_pegawai = $(this) .data('id_pegawai');
 	var posisi = $(this) .data('posisi');
 	var jabatan = $(this) .data('jabatan');
+	var j_kelamin = $(this) .data('j_kelamin');
+	var tgl_lahir = $(this) .data('tgl_lahir');
+	var alamat = $(this) .data('alamat');
 
 	$(".id_mutasi") .val(id_mutasi);
-	$(".nama_mutasi") .val(nama);
+	$(".nama") .val(nama);
 	$(".tanggal") .val(tanggal);
 	$(".id_pegawai") .val(id_pegawai);
 	$(".posisi") .val(posisi);
 	$(".jabatan") .val(jabatan);
+	$(".j_kelamin") .val(j_kelamin);
+	$(".tgl_lahir") .val(tgl_lahir);
+	$(".alamat") .val(alamat);
 });
 
-$(document) .on("click", '.panggilpegawai', function(e){
+/*$(document) .on("click", '.panggilpegawai', function(e){
 	var id_pegawai = $(this) .data('id_pegawai');
 	var nama = $(this) .data('nama');
 	var posisi = $(this) .data('posisi');
