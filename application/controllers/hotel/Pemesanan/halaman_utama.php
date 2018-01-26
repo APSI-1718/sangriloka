@@ -8,7 +8,7 @@ class halaman_utama extends CI_Controller {
 	{
 		$this->load->view('hotel/pendaftaran/template/header');
 		$this->load->view('hotel/pendaftaran/template/menu');
-		$this->load->view('hotel/pendaftaran/table');
+		$this->load->view('hotel/pendaftaran/isi');
 		$this->load->view('hotel/pendaftaran/template/footer');
 	}
 }
