@@ -135,20 +135,19 @@
                             <td>1</td>
                             <td><?php echo $data['nama_pegawai'] ?></td>
                             <?php for ($y=1; $y <= $tanggal ; $y++) { ?>
+                            <td>
                               <?php foreach ($data_absensi_bulan as $dataa) { ?> 
                                 <?php if($dataa['id_pegawai']==$data['id_pegawai']){ ?>
                                   <?php if(substr($dataa['tanggal'], 8,2)==$y){ ?>
                                     <?php if($dataa['status']=='Masuk'){ ?>
-                                      <td><?php echo 'M' ?></td>
+                                      <?php echo 'M' ?>
                                     <?php }elseif($dataa['status']=='Sakit'){ ?>
-                                      <td><?php echo 'S' ?></td>
+                                      <?php echo 'S' ?>
                                     <?php } ?>
-                                  <?php }else{ ?>
-                                    <td></td>
                                   <?php } ?>
                                 <?php } ?>
-                                
-                              <?php } ?> 
+                              <?php } ?>
+                            </td>   
                             <?php } ?>                          
                           </tr>
                         <?php } ?>
