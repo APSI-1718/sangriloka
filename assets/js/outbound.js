@@ -1,4 +1,4 @@
-// $('.hidden-alert').show('slow').delay(5000).hide('slow');
+$('.hidden-alert').show('slow').delay(5000).hide('slow');
 
 $(document).on("click", '.tomboloutbound', function (e) {
 	var id_outbound = $(this).data('id_outbound');
