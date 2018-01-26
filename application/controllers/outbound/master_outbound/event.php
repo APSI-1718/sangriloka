@@ -12,6 +12,7 @@
 
 		function index(){
 				$data['event'] = $this->m_event->select();
+			    $data['idevent'] = $this->m_event->id_event();
 				$this->load->view('template/header');
 				$this->load->view('outbound/master_outbound/v_event', $data);
 				$this->load->view('template/footer');

@@ -170,7 +170,7 @@
       <div class="modal-body">
         <form data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?=base_url('outbound/master_outbound/event/tambah_event');?>">
           <div class="form-group">
-            <input type="hidden" name="id_event" class="form-control" id="id_event">
+            <input type="hidden" name="id_event" class="form-control" id="id_event" value="<?php echo $idevent; ?>">
           </div>
           <div class="form-group">
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Tgl Pemesanan <span class="required">*</span>
