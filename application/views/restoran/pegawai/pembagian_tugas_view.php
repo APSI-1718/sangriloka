@@ -347,15 +347,9 @@
   if (no == '<?php echo $data['no'] ?>') {
     $('#p<?php echo $data['id_pegawai'] ?>').attr('selected', true);
      <?php foreach ($data_pegawai as $data2) { ?> 
-     <?php 
-      if ($data2['jk']=='L') {
-        $jk2 = 'Laki - Laki';
-      }else if ($data2['jk']=='P') {
-        $jk2 = 'Perempuan';
-      }        
-     ?>   
+ 
       $('#nama2').val('<?php echo $data2['nama_pegawai']; ?>');
-      $('#jk2').val('<?php echo $jk2; ?>');
+      $('#jk2').val('<?php if($data2['jk']=='L') {echo  'Laki - Laki';}else if ($data2['jk']=='P') {echo  'Perempuan';} ?>');
       $('#tl2').val('<?php echo $data2['tgl_lahir']; ?>');
       $('#nt2').val('<?php echo $data2['no_tlp']; ?>');
       $('#email2').val('<?php echo $data2['email']; ?>');
@@ -389,16 +383,12 @@ $('#selectpegawai').change(function(){
   var pilihpegawai = $(this).val();
   <?php foreach ($data_pegawai as $data) { ?>
   <?php 
-    if ($data['jk']=='L') {
-      $jk = 'Laki - Laki';
-    }else if ($data['jk']=='P') {
-      $jk = 'Perempuan';
-    }
+    
 
    ?>
     if (pilihpegawai == '<?php echo $data['id_pegawai'] ?>') {
       $('#nama').val('<?php echo $data['nama_pegawai']; ?>');
-      $('#jk').val('<?php echo $jk; ?>');
+      $('#jk').val('<?php if($data['jk']=='L') {echo  'Laki - Laki';}else if ($data['jk']=='P') {echo  'Perempuan';} ?>');
       $('#tl').val('<?php echo $data['tgl_lahir']; ?>');
       $('#nt').val('<?php echo $data['no_tlp']; ?>');
       $('#email').val('<?php echo $data['email']; ?>');
@@ -421,20 +411,16 @@ $('#selectpegawai').change(function(){
   <?php } ?>
 
 }); 
+
 $('#selectpegawai2').change(function(){
   var pilihpegawai = $(this).val();
   <?php foreach ($data_pegawai as $data) { ?>
   <?php 
-    if ($data['jk']=='L') {
-      $jk = 'Laki - Laki';
-    }else if ($data['jk']=='P') {
-      $jk = 'Perempuan';
-    }
 
    ?>
     if (pilihpegawai == '<?php echo $data['id_pegawai'] ?>') {
       $('#nama2').val('<?php echo $data['nama_pegawai']; ?>');
-      $('#jk2').val('<?php echo $jk; ?>');
+      $('#jk2').val('<?php if($data['jk']=='L') {echo  'Laki - Laki';}else if ($data['jk']=='P') {echo  'Perempuan';} ?>');
       $('#tl2').val('<?php echo $data['tgl_lahir']; ?>');
       $('#nt2').val('<?php echo $data['no_tlp']; ?>');
       $('#email2').val('<?php echo $data['email']; ?>');
@@ -457,5 +443,7 @@ $('#selectpegawai2').change(function(){
   <?php } ?>
 
 }); 
+
+
 
 </script>

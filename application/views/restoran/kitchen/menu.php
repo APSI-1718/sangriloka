@@ -28,15 +28,19 @@
 
                 <ul class="nav side-menu">
                   <li><a href="<?php echo base_url() ?>Restoran/kitchen/beranda_kitchen"><i class="fa fa-home"></i> Dashboard</a></li>
-                  <li><a href="<?php echo base_url() ?>"><i class="fa fa-edit"></i> Kelola Order</a></li>
+                  <li><a href="<?php echo base_url() ?>Restoran/kitchen/kelola_order"><i class="fa fa-edit"></i> Kelola Order</a></li>
 
                   <li><a><i class="fa fa-desktop"></i> Kelola Stok <span class="fa fa-chevron-down"></span></a>
                      <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url() ?>Restoran/kitchen/stok_makanan">Stok Bahan Makanan</a></li>
                       <li><a href="<?php echo base_url() ?>Restoran/kitchen/alat_makan">Peralatan Makan</a></li>
+                      <li><a href="<?php echo base_url() ?>Restoran/kitchen/stok_makanan">Stok Bahan Makanan</a></li>
+                      <li><a href="<?php echo base_url() ?>Restoran/kitchen/stok_makanan/detail_makanan">Detail Bahan Makanan</a></li>
+                      
                     </ul>
                   </li>
 
+                  <li><a href="<?php echo base_url() ?>Restoran/kitchen/pengajuan_stok"><i class="fa fa-arrow-circle-up"></i> Pengajuan Stok</a></li>
+                  <li><a href="<?php echo base_url() ?>Restoran/kitchen/penerimaan_stok"><i class="fa fa-arrow-circle-down"></i> Penerimaan Stok</a></li>
                 </ul>
               </div>
 

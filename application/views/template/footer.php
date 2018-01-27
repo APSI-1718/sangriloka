@@ -14,11 +14,16 @@
     <!-- Bootstrap -->
     <script src="<?php echo base_url() ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- kitchen.js -->
-    <script src="<?php echo base_url() ?>assets/kitchen.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/kitchen/kitchen.js"></script>
     <!-- Service -->
     <script src="<?php echo base_url() ?>assets/service.js"></script>
+<<<<<<< HEAD
     <!-- Fodcourt -->
     <script src="<?php echo base_url() ?>assets/foodcourt.js"></script>
+=======
+    <!-- outbound -->
+    <script src="<?php echo base_url() ?>assets/js/outbound.js"></script>
+>>>>>>> 13e8797bd994bb8ec8da5389a0945b7cf2144f8f
     <!-- FastClick -->
     <script src="<?php echo base_url() ?>vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
