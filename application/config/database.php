@@ -78,11 +78,7 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-<<<<<<< HEAD
-	'database' => 'db_sangriloka',
-=======
-	'database' => 'sangrilokadb',
->>>>>>> 71ecca74a9aa6a806d94a6e4c14451dd5ea93b8c
+	'database' => 'sangriloka_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -17,6 +17,8 @@
     <script src="<?php echo base_url() ?>assets/kitchen.js"></script>
     <!-- Service -->
     <script src="<?php echo base_url() ?>assets/service.js"></script>
+    <!-- Fodcourt -->
+    <script src="<?php echo base_url() ?>assets/foodcourt.js"></script>
     <!-- FastClick -->
     <script src="<?php echo base_url() ?>vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
