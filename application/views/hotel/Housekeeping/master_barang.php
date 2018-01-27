@@ -132,6 +132,12 @@
                         </div>
                       </div>
                       <div class="form-group">
+                        <label class="control-label col-md-12 col-sm-12 col-xs-12" >Jenis Barang </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input  name="jenis_barang" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group">
                         <label class="control-label col-md-12 col-sm-12 col-xs-12" >Jumlah</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <input  name="jumlah" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
@@ -208,6 +214,12 @@
                         <label class="control-label col-md-12 col-sm-12 col-xs-12" >Keterangan Barang </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <input  name="keterangan_barang" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-12 col-sm-12 col-xs-12" >Jenis Barang </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input  name="jenis_barang" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
                         </div>
                       </div>
                       <br>

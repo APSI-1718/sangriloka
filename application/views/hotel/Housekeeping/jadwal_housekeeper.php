@@ -25,7 +25,7 @@
                   <div class="x_title">
                     <h3><small>Daftar Jadwal Shif</small></h3>
                     <div class="input-group">
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Pembagian Tugas</button>
+                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Tambah Data</button>
                           </div>
                     <div class="clearfix"></div>
                   </div>
