@@ -13,7 +13,7 @@ class clogin extends CI_Controller {
 		$this->load->view('headoffice/hrd/login');
 	}
 
-	public function cek_login() {
+	/*public function cek_login() {
 		$data = array('username' => $this->input->post('username', TRUE),
 						'password' => md5($this->input->post('password', TRUE))
 			);
@@ -34,7 +34,7 @@ class clogin extends CI_Controller {
 			elseif ($this->session->userdata('level')=='member') {
 				redirect('member/c_member');
 			}		
-		}
+		}*/
 
 	function insert_data()
 	{
