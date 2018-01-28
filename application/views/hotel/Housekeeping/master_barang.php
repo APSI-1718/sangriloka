@@ -199,53 +199,53 @@
                       <div class="form-group">
                         <label class="control-label col-md-12 col-sm-12 col-xs-12" >ID Barang<span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name='id_barang' value="" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name='id_barang' value="<?php echo $data['id_barang'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <br>
                       <div class="form-group">
                         <label class="control-label col-md-12 col-sm-12 col-xs-12">Nama Barang <span class="required">*</span></label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input  name="nama_barang" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                          <input  name="nama_barang" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['nama_barang'] ?>">
                         </div>
                       </div>
                       <br>
                       <div class="form-group">
                         <label class="control-label col-md-12 col-sm-12 col-xs-12" >Keterangan Barang </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input  name="keterangan_barang" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                            <input  name="keterangan_barang" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['keterangan_barang'] ?>">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-12 col-sm-12 col-xs-12" >Jenis Barang </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input  name="jenis_barang" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                            <input  name="jenis_barang" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['jenis_barang'] ?>">
                         </div>
                       </div>
                       <br>
                       <div class="form-group">
                         <label class="control-label col-md-12 col-sm-12 col-xs-12" >Jumlah</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input  name="jumlah" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                            <input  name="jumlah" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['jumlah'] ?>">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-12 col-sm-12 col-xs-12" >Jumlah Barang Bagus</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input  name="jumlah_barang_bagus" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                            <input  name="jumlah_barang_bagus" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['jumlah_barang_bagus'] ?>">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-12 col-sm-12 col-xs-12" >Jumlah Barang Rusak</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input  name="jumlah_barang_rusak" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                            <input  name="jumlah_barang_rusak" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['jumlah_barang_rusak'] ?>">
                         </div>
                       </div>
                       <br>
                       <div class="form-group">
                         <label class="control-label col-md-12 col-sm-12 col-xs-12" >Status Barang</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <input  name="status_barang" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                            <input  name="status_barang" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['status_barang'] ?>">
                         </div>
                       </div>
                       <br>                            
