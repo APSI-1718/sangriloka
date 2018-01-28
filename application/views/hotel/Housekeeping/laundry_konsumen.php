@@ -177,14 +177,14 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" >Nama Laundry <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name='Nama_Laundry' value="" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name='Nama_Laundry' value="<?php echo $data['Nama_Laundry'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Laundry 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input  name="Jenis_Laundry" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                          <input  name="Jenis_Laundry" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['Jenis_Laundry'] ?>">
                         </div>
                       </div>
                       <div class="form-group">
@@ -192,7 +192,7 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           
-                            <input  name="Berat_Laundry" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                            <input  name="Berat_Laundry" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['Berat_Laundry'] ?>">
               
                           
                         </div>
@@ -201,14 +201,14 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Total Laundry 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input  name="Total_Laundry" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                          <input  name="Total_Laundry" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['Total_Laundry'] ?>">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Status Cucian 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input  name="Status_Cucian" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                          <input  name="Status_Cucian" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['Status_Cucian'] ?>">
                         </div>
                       </div>                            
                       <div class="ln_solid"></div>
@@ -238,15 +238,18 @@
 
 <script type="text/javascript">
  $(document).on("click", '.tombol', function(e){
-  var idjadwal = $(this).data('idjadwal');
-  var tanggal = $(this).data('tanggal');
-  var shif = $(this).data('shif');
+  var Nama_Laundry = $(this).data('Nama_Laundry');
+  var Jenis_Laundry = $(this).data('Jenis_Laundry');
+  var Berat_Laundry = $(this).data('Berat_Laundry');
+  var Total_Laundry = $(this).data('Total_Laundry');
+  var Status_Cucian = $(this).data('Status_Cucian');
 
 
-  $(".idjadwal").val(idjadwal);
-  $(".tanggal").val(tanggal);
-  $(".shif").val(shif);
-
+  $(".Nama_Laundry").val(Nama_Laundry);
+  $(".Jenis_Laundry").val(Jenis_Laundry);
+  $(".Berat_Laundry").val(Berat_Laundry);
+  $(".Total_Laundry").val(Total_Laundry);
+  $(".Status_Cucian").val(Status_Cucian);
   //$("#p").addClass("active");
  
   $(".edit").text('Edit Data "' + idjadwal + '"');

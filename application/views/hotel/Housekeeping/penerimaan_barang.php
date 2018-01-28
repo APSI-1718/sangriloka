@@ -42,6 +42,35 @@
                           <th class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 68px;">Keterangan Penerimaan</th>
                         </tr>
                       </thead>
+                      <tbody>
+                        <?php foreach ($data_penerimaan as $data) { ?>
+                          
+                          <tr>
+                            <td><?php echo $data['id_penerimaan'] ?></td>
+                            <td><?php echo $data['id_pengajuan'] ?></td>
+                            <td><?php echo $data['tanggal_penerimaan'] ?></td>
+                            <td>
+                              <?php if ($data['status_penerimaan']=='Terima'){?>
+                                <a href="<?php echo base_url() ?>Hotel/Housekeeping/barang/update_penerimaan/<?php echo $data['id_penerimaan'] ?>/Belum" class="tooltip-success" data-rel="tooltip" title="Edit" data-placement="Ubah">
+                                  <button type="button" class="btn btn-danger tombol">
+                                    Belum
+                                  </button>
+                                </a>      
+                              <?php }else{ ?>
+                                <a href="<?php echo base_url() ?>Hotel/Housekeeping/barang/update_penerimaan/<?php echo $data['id_penerimaan'] ?>/Terima" class="tooltip-success" data-rel="tooltip" title="Edit" data-placement="Ubah">
+                                  <button type="button" class="btn btn-primary tombol">
+                                    Terima
+                                  </button>
+                                </a>                              
+                              <?php } ?>
+                            </td>
+                            <td><?php echo $data['keterangan_penerimaan'] ?></td>
+
+                          </tr>
+                      
+                        <?php } ?>
+
+                      </tbody>
                   </div>
                 </div>
               </div>
