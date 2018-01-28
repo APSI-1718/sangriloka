@@ -15,20 +15,23 @@
             <div class="clearfix"></div>
             <div class="col-md-5 col-sm-5 col-xs-12">
               <p style=""> Jenis Laporan </p>
-                <div class="" id="" >
-                  <select name="" aria-controls="" class="form-control">
-                    <option value="">Atribut 1</option>
-                    <option value="">Atribut 2</option>
+                <div class="" id="attribut" >
+                  <select name="" aria-controls="" class="form-control attribut">
+                    <option value="id_worksheet">Id Worksheet</option>
+                    <option value="jenis">Jenis</option>
+                    <option value="jumlah">Jumlah</option>
+                    <option value="tanggal">Tanggal</option>
                   </select>
                 </div>
             </div>
 
             <div class="col-md-5 col-sm-5 col-xs-12" style="clear: left; margin-top: 20px; ">
-              <p style=""> Tanggal Laporan </p>
+             <!--  <p style=""> Tanggal Laporan </p> -->
                 <div class="input-group" style="">
-                  	<input type="text" class="form-control" placeholder="dd/mm/yyy">
+                  	<input type="text" class="form-control nilaiattribut" placeholder="Masukan Atribut Pencarian">
                   	<span class="input-group-btn">
-                    		<button class="btn btn-default" type="button">Sortir </button>
+                    		<!-- <button class="btn btn-default sortir" data-link="laporan_keuangan/laporan_keuangan_view" data-table="laporan_keuangan" data-kolomtable="" type="button">Sortir </button> -->
+                        <button class="btn btn-default sortir" data-link="jurnal/jurnal_view" data-table="jurnal" data-kolom="Id Jurnal-Jenis-Jumlah-Tanggal- " data-kolomtable="id_jurnal-jenis-jumlah-tanggal" type="button">Sortir</button>
                   	</span>
               	</div>
             </div>
