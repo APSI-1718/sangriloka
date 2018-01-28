@@ -14,34 +14,29 @@
               <thead>
                 <tr>
                   <th>No.</th>
-                  <th>Id. Pelatihan</th>
-                  <th>Tanggal</th>
-                  <th>Id. Mutasi</th>
+                  <th>NIP</th>
                   <th>Nama</th>
                   <th>Posisi</th>
                   <th>Jabatan</th>
-                  <th>Aksi</th>
                 </tr>
               </thead>
 
               <tbody>
+              <?php
+                $i = 1;
+                  foreach ($gabungpel as $gp){
+              ?>
                 <tr>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td><button type="button" class="btn btn-success panggilpelatihan" data-toggle="modal" data-target="#tambahpelatihanModal"
-                        data-id_pelatihan="#"
-                        data-nama="#">
-                  <span class="glyphicon glyphicon-pencil"></span></button>
-                  <button type="button" class="btn btn-danger panggilpelatihan" data-toggle="modal" data-target="#deletepelatihanModal"
-                        data-id_pelatihan="#"
-                        data-nama="#">
-                      <span class="glyphicon glyphicon-trash"></span></button></td>
+                  <td><?php echo $i;?></td>
+                  <td><?php echo $gp->id_pegawai?></td>
+                  <td><?php echo $gp->nama?></td>
+                  <td><?php echo $gp->posisi?></td>
+                  <td><?php echo $gp->jabatan?></td>
                 </tr>
+                <?php
+                  $i++;
+                }
+                ?>
               </tbody>
             </table>
           </div>

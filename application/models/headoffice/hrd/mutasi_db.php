@@ -48,25 +48,29 @@ class mutasi_db extends CI_Model {
 		return $nipjadi;
 	}
 
-	function select($where = null)
-	{
-		if ($where != null) {
-			$this->db->where($where);
-		}
+	public function tampil(){
+    	$this->db->select('mutasi.*, rekrutmen.nama, rekrutmen.alamat, rekrutmen.j_kelamin, rekrutmen.tgl_lahir, rekrutmen.no_tlp, rekrutmen.email'); //mengambil semua data dari tabel data_users dan users
+    	$this->db->from('mutasi'); //dari tabel data_users
+    	$this->db->join('rekrutmen', 'rekrutmen.no_pendaftaran = mutasi.no_pendaftaran'); //menyatukan tabel users menggunakan left join
 
-		$query = $this->db->get($this->table);
-		return $query->result_array();
+    	$data = $this->db->get(); //mengambil seluruh data
+    	return $data->result(); //mengembalikan data
+  }
+
+	function update($data, $where)
+	{
+		$this->db->where($where);
+		$this->db->update($this->table, $data);
 	}
-
-	function insert($data,$where,$table)
-	{
-		$query = $this->db->get('rekrutmen');
-		$this->db->insert($this->table, $data);
 
 	function delete($where)
 	{
 		$this->db->where($where);
 		$this->db->delete($this->table);
 	}
-}
+
+	function insert($data)
+	{
+		$this->db->insert($this->table, $data);
+	}
 }

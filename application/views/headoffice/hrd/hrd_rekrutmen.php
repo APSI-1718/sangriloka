@@ -22,6 +22,12 @@
               </div>
             </div>
             <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Tanggal <span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="text" name="tanggal" id="tanggal" required="required" use value=<?php echo date('Y-m-d');?> class="form-control col-md-7 col-xs-12" readonly>
+              </div>
+            </div>
+            <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nama Lengkap <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <input type="text" id="nama" name="nama" required="required" class="form-control col-md-7 col-xs-12">
@@ -50,6 +56,18 @@
               <label class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal Lahir <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <input id="tgl_lahir" name="tgl_lahir" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12">No. Telepon <span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input id="no_tlp" name="no_tlp" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12">Email <span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input id="email" name="email" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
               </div>
             </div>
             <div class="form-group">
@@ -87,6 +105,7 @@
               <thead>
                 <tr>
                   <th>No. Daftar</th>
+                  <th>Tanggal</th>
                   <th>Nama</th>
                   <th>Alamat</th>
                   <th>JK</th>
@@ -103,6 +122,7 @@
               ?>
                 <tr>
                   <td><?php echo $value['no_pendaftaran'];?></td>
+                  <td><?php echo $value['tanggal'];?></td>
                   <td><?php echo $value['nama'];?></td>
                   <td><?php echo $value['alamat'];?></td>
                   <td><?php echo $value['j_kelamin'];?></td>

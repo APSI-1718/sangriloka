@@ -13,37 +13,32 @@
             <table id="datatable" class="table table-striped table-bordered">
               <thead>
                 <tr>
+                  <th>No.</th>
                   <th>NIP</th>
                   <th>Nama</th>
                   <th>Posisi</th>
                   <th>Jabatan</th>
-                  <th>Aksi</th>
+                  <th>Kehadiran</th>
                 </tr>
               </thead>
 
               <tbody>
+              <?php
+                $i = 1;
+                  foreach ($gabungkp as $kp){
+              ?>
                 <tr>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td><button type="button" class="btn btn-success panggilkelola" data-toggle="modal" data-target="#editkelolaModal"
-                        data-id_pegawai="#"
-                        data-nama="#"
-                        data-posisi="#"
-                        data-jabatan="#"
-                        data-alamat="#"
-                        data-j_kelamin="#"
-                        data-tgl_lahir="#"
-                        data-no_tlp="#"
-                        data-email="#"
-                        data-username="#">
-                      <span class="glyphicon glyphicon-pencil"></span></button>
-                      <button type="button" class="btn btn-danger panggilkelola" data-toggle="modal" data-target="#deletekelolaModal"
-                        data-id_kinerja="#"
-                        data-nama="#">
-                      <span class="glyphicon glyphicon-trash"></span></button></td>
+                  <td><?php echo $i;?></td>
+                  <td><?php echo $kp->id_pegawai?></td>
+                  <td><?php echo $kp->nama?></td>
+                  <td><?php echo $kp->posisi?></td>
+                  <td><?php echo $kp->jabatan?></td>
+                  <td><?php echo $kp->tanggal_absen?></td>
                 </tr>
+                <?php
+                  $i++;
+                }
+                ?>
               </tbody>
            </table>
           </div>

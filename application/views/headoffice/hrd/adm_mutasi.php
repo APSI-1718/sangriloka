@@ -4,6 +4,57 @@
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
+                  
+          <div class="x_title">
+            <h2>Form Mutasi</h2>
+            <ul class="nav navbar-right panel_toolbox">
+              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+            </ul>
+          <div class="clearfix"></div>
+          </div>
+                  
+        <div class="x_content">
+          <form id="demo-form2" method="post" action="<?php echo base_url('headoffice/hrd/cadm_mutasi/insert_data');?>" data-parsley-validate class="form-horizontal form-label-left">
+            <div class="form-group">
+              <div class="form-group">
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="hidden" name="id_mutasi" id="id_mutasi" required="required" class="form-control col-md-7 col-xs-12" value="<?= $kodeunik; ?>" readonly>
+              </div>
+            </div>
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tanggal <span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="text" id="tanggal" name="tanggal" required="required" class="form-control col-md-7 col-xs-12" use value=<?php echo date('Y-m-d');?> readonly>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">NIP <span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="text" id="id_pegawai" name="id_pegawai" required="required" class="form-control col-md-7 col-xs-12" value="<?= $nipoto; ?>" readonly>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-md-3 col-sm-3 col-xs-12">No. Daftar <span class="required">*</span></label>
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <input id="no_pendaftaran" name="no_pendaftaran" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+              </div>
+            </div>
+              <div class="ln_solid"></div>
+                <div class="form-group">
+                  <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                    <button class="btn btn-primary" type="reset">Batal</button>
+                    <button type="submit" class="btn btn-success">Simpan</button>
+                  </div>
+                </div>
+          </form>
+        </div>
+                
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="x_panel">
   
           <div class="x_title">
             <h2>Daftar Para Pegawai</h2>
@@ -14,10 +65,11 @@
             <table id="datatable" class="table table-striped table-bordered">
               <thead>
                 <tr>
+                  <th>NIP</th>
                   <th>Nama</th>
-                  <th>J. Kelamin</th>
-                  <th>tgl_lahir</th>
-                  <th>Alamat</th>
+                  <th>Posisi</th>
+                  <th>Jabatan</th>
+                  <th>Status</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
@@ -25,25 +77,31 @@
               <tbody>
               <?php
                 $i = 1;
-                  foreach ($mutpeg as $key => $value){
+                  foreach ($gabung as $g){
               ?>
                 <tr>
-                  <td><?php echo $value['nama']?></td>
-                  <td><?php echo $value['j_kelamin']?></td>
-                  <td><?php echo $value['tgl_lahir']?></td>
-                  <td><?php echo $value['alamat']?></td>
-                  <td><button type="button" class="btn btn-success panggilmutasi" data-toggle="modal" data-target="#editmutasiModal" 
-                        
-                        data-nama="<?php echo $value['nama'];?>"
-                        data-j_kelamin="<?php echo $value['j_kelamin'];?>"
-                        data-tgl_lahir="<?php echo $value['tgl_lahir'];?>"
-                        data-alamat="<?php echo $value['alamat'];?>"
-                        data-posisi="<?php echo $value['posisi'];?>"
-                        data-jabatan="<?php echo $value['jabatan'];?>">
+                  <td><?php echo $g->id_pegawai?></td>
+                  <td><?php echo $g->nama?></td>
+                  <td><?php echo $g->posisi?></td>
+                  <td><?php echo $g->jabatan?></td>
+                  <td><?php echo $g->status?></td>
+                  <td><button type="button" class="btn btn-success panggilmutasi" data-toggle="modal" data-target="#editmutasiModal"
+                        data-id_mutasi="<?php echo $g->id_mutasi?>"
+                        data-no_pendaftaran="<?php echo $g->no_pendaftaran?>"                       
+                        data-tanggal="<?php echo $g->tanggal?>"
+                        data-id_pegawai="<?php echo $g->id_pegawai?>"
+                        data-nama="<?php echo $g->nama?>"
+                        data-jabatan="<? echo $g->jabatan?>"
+                        data-status="<? echo $g->status?>"
+                        data-posisi="<? echo $g->posisi?>"
+                        data-no_tlp="<?php echo $g->no_tlp?>"
+                        data-email="<?php echo $g->email?>"
+                        data-username="<?php echo $g->username?>"
+                        data-password="<?php echo $g->password?>">
                       Mutasi</button>
                       <button type="button" class="btn btn-danger panggilmutasi" data-toggle="modal" data-target="#deletemutasiModal"
-                        data-id_mutasi="#"
-                        data-nama_mutasi="#">
+                        data-id_mutasi="<?php echo $g->id_mutasi?>"
+                        data-nama="<?php echo $g->nama?>">
                       <span class="glyphicon glyphicon-trash"></span></button></td>
                 </tr>
                 <?php
