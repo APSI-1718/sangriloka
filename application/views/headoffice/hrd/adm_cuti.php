@@ -1,10 +1,12 @@
+<script src="<?php echo base_url()?>assets/js/jquery-new.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/hrdcustom.js"></script>
 <div class="right_col" role="main">   
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
                   
           <div class="x_title">
-            <h2>Form Cuti Pegawai<small> mohon diisi dengan identitas asli</small></h2>
+            <h2>Form Cuti Pegawai</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
             </ul>
@@ -12,23 +14,17 @@
           </div>
                   
         <div class="x_content">
-          <form id="demo-form2" method="#" action="#" data-parsley-validate class="form-horizontal form-label-left">
+          <form id="demo-form2" method="post" action="<?php echo base_url('headoffice/hrd/cadm_cuti/insert_data');?>" data-parsley-validate class="form-horizontal form-label-left">
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Id. Cuti <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="id_cuti" name="id_cuti" required="required" class="form-control col-md-7 col-xs-12" readonly>
+                <input type="text" id="id_cuti" name="id_cuti" required="required" class="form-control col-md-7 col-xs-12" value="<?= $kodeunik; ?>" readonly>
               </div>
             </div>
             <div class="form-group">
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Id. Pegawai <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <input type="text" id="id_pegawai" name="id_pegawai" required="required" class="form-control col-md-7 col-xs-12">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nama Lengkap <span class="required">*</span></label>
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <input type="text" id="nama" name="nama" required="required" class="form-control col-md-7 col-xs-12">
               </div>
             </div>
             <div class="form-group">
@@ -89,18 +85,26 @@
               </thead>
 
               <tbody>
+              <?php
+                $i = 1;
+                  foreach ($gabungcuti as $c){
+              ?>
                 <tr>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
-                  <td>NULL</td>
+                  <td><?php echo $c->id_cuti?></td>
+                  <td><?php echo $c->id_pegawai?></td>
+                  <td><?php echo $c->nama?></td>
+                  <td><?php echo $c->tgl_mulai?></td>
+                  <td><?php echo $c->tgl_akhir?></td>
+                  <td><?php echo $c->ket?></td>
                   <td><button type="button" class="btn btn-danger panggilcuti" data-toggle="modal" data-target="#deletecutiModal"
-                        data-id_cuti="#"
-                        data-nama="#">
+                        data-id_cuti="<?php echo $c->id_cuti?>"
+                        data-nama="<?php echo $c->nama?>">
                       <span class="glyphicon glyphicon-trash"></span></button></td>
                 </tr>
+                <?php
+                  $i++;
+                }
+                ?>
               </tbody>
             </table>
           </div>

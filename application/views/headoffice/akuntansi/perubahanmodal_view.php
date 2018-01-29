@@ -15,21 +15,23 @@
 		
 		<div class="clearfix"></div>
 			<div class="title_right" style="float: left;">
-				<button type="button" class="btn btn-info" data-toggle="" data-target="#"> Tambah Modal </button>
+				<button type="button" class="btn btn-info" data-toggle="modal" data-target="#TambahPerubahanModal"> Tambah Modal </button>
 			</div>	
 
 			<div class="col-md-7 col-sm-10 col-xs-12 form-group pull-right top_search">
-				<div class="dataTables_length" id="datatable_length">
-					<select name="datatable_length" aria-controls="datatable" class="form-control input-sm">
-						<option value="">Atribut 1</option>
-						<option value="">Atribut 2</option>
+				<div class="attribut" id="datatable_length">
+					<select name="datatable_length" aria-controls="datatable" class="form-control attribut">
+            <option value="id_perubahanModal">Id Perubahan Modal</option>
+            <option value="nama_perubahanModal">Nama Perubahan</option>
+            <option value="jumlaht">Jumlah</option>
+						<option value="tanggal">Tanggal</option>
 					</select>
 				</div>
 
 				<div class="input-group">
-                    <input type="text" class="form-control" placeholder="Masukan nilai Atribut yang akan di sortir.." style="font-size: 9;">
+                    <input type="text" class="form-control nilaiattribut" placeholder="Masukan nilai Atribut yang akan di sortir.." style="font-size: 9;">
                     <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Sortir </button>
+                      <button class="btn btn-default sortir" data-link="perubahanmodal/perubahanmodal_view" data-table="perubahanmodal" data-kolom="Id Perubahan Modal-Nama Perubahan-Jumlah-Tanggal- " data-kolomtable="id_perubahanModal-nama_perubahanModal-jumlah-tanggal" type="button">Sortir </button>
                     </span>
                 </div>
             </div>
@@ -48,65 +50,19 @@
                 </thead>
 
                 <tbody>
+                  <?php foreach ($perubahan_modal as $key => $value) { ?>
                   <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Investasi</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
+                    <td class=" "><?php echo $value['id_perubahanModal'] ?></td>
+                    <td class=" "><?php echo $value['nama_perubahanModal'] ?></td>
+                    <td class="a-left a-left"><?php echo $value['jumlah'] ?></td>
+                    <td class="last"><?php echo $value['tanggal'] ?></td>
                     <td class="a-center">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Edit</i></button>
+                      <a href="#" data-toggle="modal" data-target="#editPerubahanModal">
+                        <button type="button" data-id="<?php echo $value['id_perubahanModal'] ?>" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true">Edit</i></button>
                       </a>
                     </td>
                   </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Investasi</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Edit</i></button>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Investasi</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Edit</i></button>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Investasi</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Edit</i></button>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Investasi</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Edit</i></button>
-                      </a>
-                    </td>
-                  </tr>
+                  <?php } ?>
                 </tbody>
               </table>
             </div>

@@ -7,27 +7,49 @@ $(document) .on ("click", '.panggilrekrut', function(e){
 	
 });
 
-(document) .on("click", '.panggilmutasi', function(e){
+$(document) .on("click", '.panggilmutasi', function(e){
 	var id_mutasi = $(this) .data('id_mutasi');
+	var no_pendaftaran = $(this) .data('no_pendaftaran');
 	var nama = $(this) .data('nama');
 	var tanggal = $(this) .data('tanggal');
 	var id_pegawai = $(this) .data('id_pegawai');
 	var posisi = $(this) .data('posisi');
 	var jabatan = $(this) .data('jabatan');
+	var status = $(this) .data('status');
+	var pil_kinerja = $(this) .data('pil_kinerja');
 	var j_kelamin = $(this) .data('j_kelamin');
 	var tgl_lahir = $(this) .data('tgl_lahir');
 	var alamat = $(this) .data('alamat');
+	var no_tlp = $(this) .data('no_tlp');
+	var email = $(this) .data('email');
+	var username = $(this) .data('username');
+	var password = $(this) .data('password');
 
 	$(".id_mutasi") .val(id_mutasi);
+	$(".no_pendaftaran") .val(no_pendaftaran);
 	$(".nama") .val(nama);
 	$(".tanggal") .val(tanggal);
 	$(".id_pegawai") .val(id_pegawai);
 	$(".posisi") .val(posisi);
 	$(".jabatan") .val(jabatan);
+	$(".status") .val(status);
+	$(".pil_kinerja") .val(pil_kinerja);
 	$(".j_kelamin") .val(j_kelamin);
 	$(".tgl_lahir") .val(tgl_lahir);
 	$(".alamat") .val(alamat);
+	$(".no_tlp") .val(no_tlp);
+	$(".email") .val(email);
+	$(".username") .val(username);
+	$(".password") .val(password);
 });
+
+$(document) .on("click", '.panggilcuti', function(e){
+	var id_cuti = $(this) .data('id_cuti');
+	var nama = $(this) .data('nama');
+
+	$(".id_cuti") .val(id_cuti);
+	$(".nama") .val(nama);
+	});
 
 /*$(document) .on("click", '.panggilpegawai', function(e){
 	var id_pegawai = $(this) .data('id_pegawai');

@@ -16,9 +16,11 @@
             <div class="col-md-5 col-sm-5 col-xs-12">
               <p style=""> Jenis Laporan </p>
                 <div class="" id="" >
-                  <select name="" aria-controls="" class="form-control">
-                    <option value="">Atribut 1</option>
-                    <option value="">Atribut 2</option>
+                  <select name="attribut" aria-controls="" class="form-control attribut">
+                    <option value="id_worksheet">Id Worksheet</option>
+                    <option value="jenis">Jenis</option>
+                    <option value="jumlah">Jumlah</option>
+                    <option value="tanggal">Tanggal</option>
                   </select>
                 </div>
             </div>
@@ -26,9 +28,9 @@
             <div class="col-md-5 col-sm-5 col-xs-12" style="clear: left; margin-top: 20px; ">
               <p style=""> Tanggal Laporan </p>
                 <div class="input-group" style="">
-                  	<input type="text" class="form-control" placeholder="dd/mm/yyy">
+                  	<input type="text" class="form-control nilaiattribut" placeholder="dd/mm/yyy">
                   	<span class="input-group-btn">
-                    		<button class="btn btn-default" type="button">Sortir </button>
+                    	<button class="btn btn-default sortir" data-link="ringkasan_laporan/ringkasanlaporan_view" data-table="ringkasanlaporan" data-kolom="Id Worksheet-Jenis-Jumlah-Tanggal- " data-kolomtable="id_worksheet-jenis-jumlah-tanggal" type="button">Sortir</button>
                   	</span>
               	</div>
             </div>
@@ -39,73 +41,25 @@
                 <thead>
                   <tr class="headings">
                     <th class="column-title">Id Worksheet</th>
-                    <th class="column-title">Jenis </th>
-                    <th class="column-title">Jumlah </th>
-                    <th class="column-title">Tanggal </th>
+                    <th class="column-title">Jenis</th>
+                    <th class="column-title">Jumlah</th>
+                    <th class="column-title">Tanggal</th>
                     <th></th>
                   </tr>
                 </thead>
 
                 <tbody>
+                  <?php foreach ($ringkasan as $key => $value) { ?>
                   <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Laporan Keuangan Mingguan</td>
-                    <td class=" ">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
+                    <td class=" "><?php echo $value['id_worksheet']; ?></td>
+                    <td class=" "><?php echo $value['jenis']; ?></td>
+                    <td class=" "><?php echo $value['jumlah']; ?></td>
+                    <td class="last"><?php echo $value['tanggal']; ?></td>
                     <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
+                      <a href="#"></a><input type="checkbox" class="flat" name="" value="<?php echo $value['id_worksheet']; ?>">
                     </td>
                   </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Laporan Keuangan Mingguan</td>
-                    <td class=" ">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Laporan Keuangan Mingguan</td>
-                    <td class=" ">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Laporan Keuangan Mingguan</td>
-                    <td class=" ">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Laporan Keuangan Mingguan</td>
-                    <td class=" ">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Laporan Keuangan Mingguan</td>
-                    <td class=" ">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
+                  <?php } ?>
                 </tbody>
               </table>
             </div>

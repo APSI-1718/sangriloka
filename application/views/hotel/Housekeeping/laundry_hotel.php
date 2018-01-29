@@ -166,14 +166,14 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" >Nama Cucian <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name='Nama_Cucian' value="" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" name='Nama_Cucian' value="<?php echo $data['Nama_Cucian'] ?>" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Cucian 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input  name="Jenis_cucian" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                          <input  name="Jenis_cucian" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['Jenis_cucian'] ?>">
                         </div>
                       </div>
                       <div class="form-group">
@@ -181,7 +181,7 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           
-                            <input  name="Berat_Cucian" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
+                            <input  name="Berat_Cucian" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" value="<?php echo $data['Berat_Cucian'] ?>">
               
                           
                         </div>
@@ -190,7 +190,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal Cucian 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input  name="Tanggal_cucian" class="date-picker form-control col-md-7 col-xs-12" required="required" type="date">
+                          <input  name="Tanggal_cucian" class="date-picker form-control col-md-7 col-xs-12" required="required" type="date" value="<?php echo $data['Tanggal_cucian'] ?>">
                         </div>
                       </div>                            
                       <div class="ln_solid"></div>
@@ -220,19 +220,20 @@
 
 <script type="text/javascript">
  $(document).on("click", '.tombol', function(e){
-  var idjadwal = $(this).data('idjadwal');
-  var tanggal = $(this).data('tanggal');
-  var shif = $(this).data('shif');
+  var Nama_Cucian = $(this).data('Nama_Cucian');
+  var Jenis_cucian = $(this).data('Jenis_cucian');
+  var Berat_Cucian = $(this).data('Berat_Cucian');
+  var Tanggal_cucian = $(this).data('Tanggal_cucian');
 
 
-  $(".idjadwal").val(idjadwal);
-  $(".tanggal").val(tanggal);
-  $(".shif").val(shif);
-
+  $(".Nama_Cucian").val(Nama_Cucian);
+  $(".Jenis_cucian").val(Jenis_cucian);
+  $(".Berat_Cucian").val(Berat_Cucian);
+  $(".Tanggal_cucian").val(Tanggal_cucian);
   //$("#p").addClass("active");
  
-  $(".edit").text('Edit Data "' + idjadwal + '"');
-  $(".delete").html('Apakah anda yakin akan menghapus data dengan nama <strong>"' + idjadwal + '"</strong> ?');
+  $(".edit").text('Edit Data "' + Nama_Cucian + '"');
+  $(".delete").html('Apakah anda yakin akan menghapus data dengan nama <strong>"' + Nama_Cucian + '"</strong> ?');
   $(".logout").html('Apakah anda yakin ingin <strong>logout</strong> ?');
 
   // $('#pass').tooltip({
