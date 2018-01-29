@@ -22,10 +22,10 @@ class Alat_makan extends CI_Controller {
 	function tambah_data() {
 
 			$data = array (
-			'kodeBrg' => $id['kodebarang'] = $this->M_alatmakan->insert_kodeBrg(),
-			'namaBrg' => $this->input->post('namaBrg'),
-			'kategoriBrg' => $this->input->post('kategoriBrg'),
-			'stokBrg' => $this->input->post('stokBrg')
+			'kode_am' => $id['kodebarang'] = $this->M_alatmakan->insert_kodeAm(),
+			'nama_am' => $this->input->post('nama_am'),
+			'kategori_am' => $this->input->post('kategori_am'),
+			'stok_am' => $this->input->post('stok_am')
 
 			);
 
@@ -37,24 +37,24 @@ class Alat_makan extends CI_Controller {
 			}
 
 	function edit_form() {
-				$id = $this->input->get('kodeBrg');
-				$where = array ('kodeBrg' => $id);
+				$id = $this->input->get('kode_am');
+				$where = array ('kode_am' => $id);
 				$data['kitchen'] = $this->M_alatmakan->select($where);
 				$this->load->view('edit-form', $data);
 			}
 
 			function edit_data() {
-				$id = $this->input->post('kodeBrg');
+				$id = $this->input->post('kode_am');
 
 				 $data = array (
-				 	'namaBrg' => $this->input->post('namaBrg'),
-				 	'kategoriBrg' => $this->input->post('kategoriBrg'),
-				 	'stokBrg' => $this->input->post('stokBrg')
+				 	'nama_am' => $this->input->post('nama_am'),
+				 	'kategori_am' => $this->input->post('kategori_am'),
+				 	'stok_am' => $this->input->post('stok_am')
 
 				 	);
 
 
-			$where = array ('kodeBrg' => $id);
+			$where = array ('kode_am' => $id);
 
 			$this->session->set_flashdata('editdata', "Data berhasil diubah");
 
@@ -64,8 +64,8 @@ class Alat_makan extends CI_Controller {
 		}
 
 	function delete_data() {
-		$id = $this->input->post('kodeBrg');
-		$where = array ('kodeBrg' => $id); $this->M_alatmakan->delete($where);
+		$id = $this->input->post('kode_am');
+		$where = array ('kode_am' => $id); $this->M_alatmakan->delete($where);
 
 		$this->session->set_flashdata('deletedata', "Data berhasil dihapus");
 

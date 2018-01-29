@@ -33,6 +33,8 @@
 
                   <li><a href="<?php echo base_url() ?>Restoran/transaksi/pembayaran/bayar"><i class="fa fa-money"></i> Pembayaran </a>
                   </li>
+                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/Kelola_menu"><i class="fa fa-windows"></i> Kelola Menu </a>
+                  </li>
                 </ul>
               </div>
           

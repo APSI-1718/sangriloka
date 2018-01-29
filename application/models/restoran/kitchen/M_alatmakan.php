@@ -45,9 +45,9 @@ class M_alatmakan extends CI_Model
 
 
 
-	function insert_kodeBrg() {
-			$this->db->select('RIGHT(alat_makan.kodeBrg,3) as kode', FALSE);
-			$this->db->order_by('kodeBrg', 'DESC');
+	function insert_kodeAm() {
+			$this->db->select('RIGHT(alat_makan.kode_am,3) as kode', FALSE);
+			$this->db->order_by('kode_am', 'DESC');
 			$this->db->limit(1);
 
 			$query =  $this->db->get('alat_makan');
