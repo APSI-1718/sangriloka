@@ -14,16 +14,18 @@
 
 			<div class="col-md-7 col-sm-10 col-xs-12 form-group pull-right top_search">
 				<div class="dataTables_length" id="datatable_length">
-					<select name="datatable_length" aria-controls="datatable" class="form-control input-sm">
-						<option value="">Atribut 1</option>
-						<option value="">Atribut 2</option>
+					<select name="attribut" aria-controls="datatable" class="form-control attribut">
+            <option value="id_maintenance">Kode</option>
+            <option value="jenis">Jenis</option>
+            <option value="jumlah">Jumlah</option>
+						<option value="tanggal">Tanggal</option>
 					</select>
 				</div>
 
 				<div class="input-group">
-            <input type="text" class="form-control" placeholder="Masukan nilai Atribut yang akan di sortir.." style="font-size: 9;">
+            <input type="text" class="form-control nilaiattribut" placeholder="Masukan nilai Atribut yang akan di sortir.." style="font-size: 9;">
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Sortir </button>
+              <button class="btn btn-default sortir" data-link="kelola_maintenance/maintenance_view" data-table="maintenance" data-kolom="Kode-Jenis-Jumlah-Tanggal- " data-kolomtable="id_maintenance-jenis-jumlah-tanggal" type="button">Sortir </button>
             </span>
         </div>
       </div>
@@ -33,86 +35,28 @@
               <table class="table table-striped table-bordered jambo_table bulk_action">
                 <thead>
                   <tr class="headings">
-                    <th class="column-title">Kode </th>
-                    <th class="column-title">Jenis </th>
-                    <th class="column-title">Jumlah </th>
-                    <th class="column-title">Tanggal </th>
+                    <th class="column-title">Kode</th>
+                    <th class="column-title">Jenis</th>
+                    <th class="column-title">Jumlah</th>
+                    <th class="column-title">Tanggal</th>
                     <th></th>
                   </tr>
                 </thead>
 
                 <tbody>
+                  <?php foreach ($maintenance as $key => $value) { ?>
                   <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Kithen</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
+                    <td class=" "><?php echo $value['id_maintenance'] ?></td>
+                    <td class=" "><?php echo $value['jenis'] ?></td>
+                    <td class="a-left a-left"><?php echo $value['jumlah'] ?></td>
+                    <td class="last"><?php echo $value['tanggal'] ?></td>
                     <td class="a-center">
                       <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses</i></button>
+                        <button type="button" data-kode="<?php echo $value['id_maintenance'] ?>" data-keterangan="<?php echo $value['keterangan'] ?>" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses</i></button>
                       </a>
                     </td>
                   </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Kithen</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses</i></button>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Kithen</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses</i></button>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Kithen</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses</i></button>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Kithen</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses</i></button>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Kithen</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses</i></button>
-                      </a>
-                    </td>
-                  </tr>
+                  <?php } ?>
                 </tbody>
               </table>
               <div class="clearfix"></div>

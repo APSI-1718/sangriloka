@@ -7,8 +7,8 @@ class halaman_utama extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('template/header');
-		$this->load->view('template/menu');
-		$this->load->view('table');
+		$this->load->view('kolam_renang/foodcourt/v_halaman_utama');
+		$this->load->view('kolam_renang/foodcourt/v_selamat-datang');
 		$this->load->view('template/footer');
 	}
 }

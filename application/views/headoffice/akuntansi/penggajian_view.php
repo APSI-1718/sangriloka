@@ -20,16 +20,18 @@
 
 			<div class="col-md-7 col-sm-10 col-xs-12 form-group pull-right top_search">
 				<div class="dataTables_length" id="datatable_length">
-					<select name="datatable_length" aria-controls="datatable" class="form-control input-sm">
-						<option value="">Atribut 1</option>
-						<option value="">Atribut 2</option>
+					<select name="attribut" aria-controls="datatable" class="form-control attribut">
+            <option value="id_penggajian">Id Penggajian</option>
+            <option value="jumlah">Jumlah</option>
+            <option value="tgl_awal">Tanggal Awal</option>
+            <option value="tgl_akhir">Tanggal Akhir</option>
 					</select>
 				</div>
 
 				<div class="input-group">
-                    <input type="text" class="form-control" placeholder="Masukan nilai Atribut yang akan di sortir.." style="font-size: 9;">
+                    <input type="text" class="form-control nilaiattribut" placeholder="Masukan nilai Atribut yang akan di sortir.." style="font-size: 9;">
                     <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Sortir </button>
+                      <button class="btn btn-default sortir" data-link="penggajian/penggajian_view" data-table="penggajian" data-kolim="Id Penggajian-Jumlah-Tanggal-Tanggal Awal-Tanggal Akhir- " data-kolomtable="id_penggajian-jumlah-tgl_awal-tgl_akhir" type="button">Sortir </button>
                     </span>
                 </div>
             </div>
@@ -48,78 +50,19 @@
                 </thead>
 
                 <tbody>
+                  <?php foreach ($penggajian as $key => $value) { ?>
                   <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">200</td>
-                    <td class=" ">May 23, 2014 11:47:56 PM</td>
-                    <td class=" ">May 23, 2014 11:47:56 PM </td>
+                    <td class=" "><?php echo $value['id_penggajian'] ?></td>
+                    <td class=" "><?php echo $value['jumlah'] ?></td>
+                    <td class=" "><?php echo $value['tgl_awal'] ?></td>
+                    <td class=" "><?php echo $value['tgl_akhir'] ?></td>
                     <td class=" ">
                       <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses </i></button>
+                        <button type="button" data-id="<?php echo $value['id_penggajian'] ?>" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses </i></button>
                       </a>
                     </td>
                   </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">200</td>
-                    <td class=" ">May 23, 2014 11:47:56 PM</td>
-                    <td class=" ">May 23, 2014 11:47:56 PM </td>
-                    <td class=" ">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses </i></button>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">200</td>
-                    <td class=" ">May 23, 2014 11:47:56 PM</td>
-                    <td class=" ">May 23, 2014 11:47:56 PM </td>
-                    <td class=" ">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses </i></button>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">200</td>
-                    <td class=" ">May 23, 2014 11:47:56 PM</td>
-                    <td class=" ">May 23, 2014 11:47:56 PM </td>
-                    <td class=" ">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses </i></button>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">200</td>
-                    <td class=" ">May 23, 2014 11:47:56 PM</td>
-                    <td class=" ">May 23, 2014 11:47:56 PM </td>
-                    <td class=" ">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses </i></button>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">200</td>
-                    <td class=" ">May 23, 2014 11:47:56 PM</td>
-                    <td class=" ">May 23, 2014 11:47:56 PM </td>
-                    <td class=" ">
-                      <a href="#">
-                      	<button type="button" class="btn btn-primary"><i style="color: white; " class="fa fa-pencil-square-o" aria-hidden="true"> Proses </i></button>
-                      </a>
-                    </td>
-                  </tr>
-
+                  <?php } ?>
                 </tbody>
               </table>
             </div>

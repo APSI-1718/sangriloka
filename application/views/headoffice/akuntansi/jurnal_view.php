@@ -19,16 +19,18 @@
 
 			<div class="col-md-7 col-sm-10 col-xs-12 form-group pull-right top_search">
 				<div class="dataTables_length" id="datatable_length">
-					<select name="datatable_length" aria-controls="datatable" class="form-control input-sm">
-						<option value="">Atribut 1</option>
-						<option value="">Atribut 2</option>
+					<select name="attribut" aria-controls="datatable" class="form-control attribut">
+						<option value="id_jurnal">Id Jurnal</option>
+            <option value="jenis">Jenis</option>
+						<option value="jumlah">Jumlah</option>
+            <option value="tanggal">Tanggal</option>
 					</select>
 				</div>
 
 				<div class="input-group">
-            <input type="text" class="form-control" placeholder="Masukan nilai Atribut yang akan di sortir.." style="font-size: 9;">
+            <input type="text" class="form-control nilaiattribut" placeholder="Masukan nilai Atribut yang akan di sortir.." style="font-size: 9;">
             <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Sortir </button>
+              <button class="btn btn-default sortir" data-link="jurnal/jurnal_view" data-table="jurnal" data-kolom="Id Jurnal-Jenis-Jumlah-Tanggal- " data-kolomtable="id_jurnal-jenis-jumlah-tanggal" type="button">Sortir</button>
             </span>
         </div>
       </div>
@@ -39,59 +41,25 @@
                 <thead>
                   <tr class="headings">
                     <th class="column-title">Id Jurnal</th>
-                    <th class="column-title">Jenis </th>
-                    <th class="column-title">Jumlah </th>
-                    <th class="column-title">Tanggal </th>
+                    <th class="column-title">Jenis</th>
+                    <th class="column-title">Jumlah</th>
+                    <th class="column-title">Tanggal</th>
                     <th></th>
                   </tr>
                 </thead>
 
                 <tbody>
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Jurnal Keuangan mingguan</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Jurnal Keuangan mingguan</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Jurnal Keuangan mingguan</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Jurnal Keuangan mingguan</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Jurnal Keuangan mingguan</td>
-                    <td class="a-left a-left">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
+                  <?php foreach ($jurnal as $key => $value) { ?>
+                    <tr class="even pointer">
+                      <td class=" "><?php echo $value['id_jurnal'] ?></td>
+                      <td class=" "><?php echo $value['jenis'] ?></td>
+                      <td class="a-left a-left"><?php echo $value['jumlah'] ?></td>
+                      <td class="last"><?php echo $value['tanggal'] ?></td>
+                      <td class="a-center ">
+                        <a href="#"></a><input type="checkbox" class="flat" name="" value="<?php echo $value['id_jurnal'] ?>">
+                      </td>
+                    </tr>
+                  <?php } ?>
                 </tbody>
               </table>
             </div>
