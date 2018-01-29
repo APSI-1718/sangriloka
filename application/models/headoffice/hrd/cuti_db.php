@@ -28,17 +28,16 @@ class cuti_db extends CI_Model {
 		return $kodejadi;
 	}
 
-	function select($where = null)
-	{
-		if ($where != null) {
-			$this->db->where($where);
-		}
+	public function tampilcuti(){
+    	$this->db->select('cuti.*, mutasi.nama'); //mengambil semua data dari tabel data_users dan users
+    	$this->db->from('cuti'); //dari tabel data_users
+    	$this->db->join('mutasi', 'mutasi.id_pegawai = cuti.id_pegawai'); //menyatukan tabel users menggunakan left join
 
-		$query = $this->db->get($this->table);
-		return $query->result_array();
-	}
+    	$data = $this->db->get(); //mengambil seluruh data
+    	return $data->result(); //mengembalikan data
+  }
 
-	function insert($data)
+  function insert($data)
 	{
 		$this->db->insert($this->table, $data);
 	}

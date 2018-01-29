@@ -4,12 +4,7 @@
 <div class="clearfix"></div>
 
             <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Data Absensi <small>Tanggal : </small></h2>
-
-                    <ul class="nav navbar-right panel_toolbox">
+<!--                     <ul class="nav navbar-right panel_toolbox">
                       <div class="btn-group">
                         <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle btn-sm" type="button" aria-expanded="false">Hari Ini <span class="caret"></span>
                         </button>
@@ -18,33 +13,104 @@
                           </li>
                           <li><a href="#">Bulan Ini</a>
                           </li>
-                          <li><a href="#">Tahun Ini</a>
-                          </li>
+
                           <li class="divider"></li>
-
-
                         </ul>
                       </div>
+                    </ul> -->
+
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Data Absensi Hari Ini<small>Tanggal : <?php echo date('Y-m-d') ?></small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
                     </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-            
-<!--                     <table id="datatable" class="table table-striped table-bordered">
+
+                    <table class="table">
                       <thead>
                         <tr>
-                          <th>No</th>
-                          <th>Tanggal Absensi</th>
-                          <th>Kode Pegawai</th>
-                          <th>Nama Karyawan</th>
-                          <th>Masuk</th>
-                          <th>Keluar</th>
-                          <th>edit</th>
-                          <th>hapus</th>
+                          <th>#</th>
+                          <th>Nama</th>
+                          <th>Status</th>
                         </tr>
-                      </thead>datatable
- -->
-                    <table id="" class="table table-striped table-bordered" >
+                      </thead>
+                      <tbody>
+                        <form action="update_absensi_hari" method="post">
+                        <?php $x = 1; $status_full = '0'; ?>
+                        <?php foreach ($data_pegawai as $data) { ?>
+                          <tr>
+                            <th scope="row"><?php echo $x; ?></th>
+                            <td><?php echo $data['nama_pegawai'] ?></td>
+                            <td>
+                              
+                              <?php 
+                               $xs = '';
+                                foreach ($data_absensi as $dataa) {
+                                 
+                                  if ($dataa['id_pegawai'] == $data['id_pegawai']) {
+                                      $xs = $dataa['status']; 
+                                     
+                                      
+                                  }
+                                }
+                                if ($xs){
+                                  echo $xs;
+                                  echo "<input type='hidden' name='status".$data['id_pegawai']."'  value='Masuk'>";
+                                }else{
+                                  echo "<input type='text' name='status".$data['id_pegawai']."' placeholder='Keterangan Tidak Masuk'";
+                                  $status_full = '1';
+                                }
+                                $xs = '';
+                               ?>
+                            </td>
+                          
+                          </tr>
+                        <?php $x++; } ?>
+                        <tr >
+                          <td  colspan="3">
+                            <input style="float:right" <?php if($status_full=='0'){echo 'disabled';} ?> type="submit" name="submit" value="Absensi Selesai" class="btn btn-primary btn-sm" <?php echo 'onclick="return confirm(\'Data Tidak Bisa di Rubah!!! Apakah ingin Melanjutkan?\')"' ?>>
+                          </td>
+                        </tr>
+                        </form>
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Data Absensi Bulan Ini<small>Bulan : <?php echo date('M') ?></small></h2>
+
+
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <?php 
+                      $tahun = date('Y'); //Mengambil tahun saat ini
+                      $bulan = date('m'); //Mengambil bulan saat ini
+                      $tanggal = cal_days_in_month(CAL_GREGORIAN, $bulan, $tahun);
+                    ?>            
+
+                    <table id="" class="table table-striped table-bordered table-responsive" >
 
                       <thead >
                         <tr>
@@ -54,54 +120,41 @@
 
                         </tr>
                         <tr>
-
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
-                          <th>1</th>
+                          <?php for ($i=1; $i <= $tanggal ; $i++) { ?>
+                            <th><?php echo $i; ?></th>
+                          <?php } ?>
+                          
 
                         </tr>
 
                       </thead>
 
                       <tbody>
-                 
-                        <tr>
-                          <td>1</td>
-                          <td>Accountant</td>
-                          <td>1</td>
-
-                        </tr>
-                        
+                        <?php foreach ($data_pegawai as $data) { ?>                        
+                          <tr>
+                            <td>1</td>
+                            <td><?php echo $data['nama_pegawai'] ?></td>
+                            <?php for ($y=1; $y <= $tanggal ; $y++) { ?>
+                            <td>
+                              <?php foreach ($data_absensi_bulan as $dataa) { ?> 
+                                <?php if($dataa['id_pegawai']==$data['id_pegawai']){ ?>
+                                  <?php if(substr($dataa['tanggal'], 8,2)==$y){ ?>
+                                    <?php if($dataa['status']=='Masuk'){ ?>
+                                      <?php echo 'M' ?>
+                                    <?php }elseif($dataa['status']=='Sakit'){ ?>
+                                      <?php echo 'S' ?>
+                                    <?php } ?>
+                                  <?php } ?>
+                                <?php } ?>
+                              <?php } ?>
+                            </td>   
+                            <?php } ?>                          
+                          </tr>
+                        <?php } ?>
                       </tbody>
                     </table>
+
+
                   </div>
                 </div>
               </div>
