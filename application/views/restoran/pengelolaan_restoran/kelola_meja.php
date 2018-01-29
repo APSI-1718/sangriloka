@@ -1,4 +1,6 @@
 <!-- page content -->
+<script src="<?php echo base_url()?>assets/js/jquery-new.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo base_url()?>assets/js/custom_kr.js"></script>
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
@@ -16,43 +18,34 @@
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
                     </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                    <form id="demo-form2" method="post" action="<?php echo base_url('Restoran/kelola_tugas/kelola_meja/insert_data');?>" data-parsley-validate class="form-horizontal form-label-left">
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">ID Meja <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="id_meja" name="id_meja" required="required" class="form-control col-md-7 col-xs-12" value="<?= $kodeunik; ?>">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Jumlah Meja <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="jumlah_meja" name="jumlah_meja" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                         </div>
                         <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Type Meja <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
+                          <input type="text" id="type_meja" name="type_meja" required="required" class="form-control col-md-7 col-xs-12">
                       </div>
                       </div>
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name"># <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="last-name" name="last-name" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                        </div>
                       
                       <div class="ln_solid"></div>
                       <div class="form-group">
@@ -90,22 +83,31 @@
                           <th>ID Meja</th>
                           <th>Jumlah Meja</th>
                           <th>Type Meja</th>
-                          <th>#</th>
                           <th>Aksi</th>
                         </tr>
                       </thead>
 
                       <tbody>
+                      <?php
+                      $i=1;
+                        foreach($kelmej as $key => $value){
+                          ?>
                         <tr>
-                          <td>FM001</td>
-                          <td>120</td>
-                          <td>Family</td>
-                          <td>#</td>
-                          <td><button type="button" class="btn btn-success" data-toggle="modal" data-target="#editmejaModal"
-                          data-userid="#"><span class="glyphicon glyphicon-pencil"></span></button>
-                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deletemejaModal"
-                          data-userid="#"><span class="glyphicon glyphicon-trash"></span></button></td>
+                          <td><?php echo $value['id_meja'];?></td>
+                          <td><?php echo $value['jumlah_meja'];?></td>
+                          <td><?php echo $value['type_meja'];?></td>
+                          <td><button type="button" class="btn btn-success panggilmeja" data-toggle="modal" data-target="#editmejaModal"
+                          data-id_meja="<?php echo $value['id_meja'];?>"
+                          data-jumlah_meja="<?php echo $value['jumlah_meja'];?>"
+                          data-type_meja="<?php echo $value['type_meja'];?>"><span class="glyphicon glyphicon-pencil"></span></button>
+                          <button type="button" class="btn btn-danger panggilmeja" data-toggle="modal" data-target="#deletemejaModal"
+                          data-id_meja="<?php echo $value['id_meja'];?>"
+                          data-jumlah_meja="<?php echo $value['jumlah_meja'];?>"><span class="glyphicon glyphicon-trash"></span></button></td>
                         </tr>
+                        <?php
+                        $i++;
+                      }
+                        ?>
                       </tbody>
                     </table>
                     <!-- <div class="right_col" role="main">
