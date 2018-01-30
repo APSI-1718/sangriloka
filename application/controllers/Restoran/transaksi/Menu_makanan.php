@@ -84,7 +84,7 @@ class Menu_makanan extends CI_Controller
 
 	function insert_data(){
 		$data = array ( 
-			'id_pemesanan' 	=> $this->input->post('id_pemesanan'),
+			'id_pemesanan' 	=> $id['idpemesanan'] = $this->M_kelolaorder->insert_id_pemesanan(),
 			'nama_menu' => $this->input->post('nama_menu'),
 			'Qty' => $this->input->post('Qty'),
 			'total' => $this->input->post('total'),
@@ -95,11 +95,13 @@ class Menu_makanan extends CI_Controller
 			);
 		$this->m_menumakanan->insert_data($data);
 		echo '<script>alert("Pesanan telah diterima");</script>';
-		redirect('restoran/transaksi/menu_makanan/success', 'refresh'); 
+		redirect('restoran/kitchen/kelola_order/lihat_pesanan', 'refresh'); 
 	}
 
 	function success(){
-		$this->load->view('restoran/transaksi/v_daftarpesanan');
+		$this->load->view('restoran/transaksi/template/header');
+		$this->load->view('restoran/transaksi/v_lihatpesanan', $data);
+		$this->load->view('restoran/transaksi/template/footer2');
 	}
 }
  ?>

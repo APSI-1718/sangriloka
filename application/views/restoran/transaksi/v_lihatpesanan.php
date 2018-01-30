@@ -36,11 +36,6 @@
                         <tr>
                           <th>No.</th>
                           <th>ID Pemesanan</th>
-<<<<<<< HEAD
-                          <th>No. Meja</th>
-                          <th>ID Order</th>
-=======
->>>>>>> 08654b508d8b91e087390b22cac69db4a6ecc8d6
                           <th>Nama Pesanan</th>
                           <th>No. Meja</th>
                           <th>Qty</th>
@@ -84,5 +79,4 @@
                 </div>
               </div>
                   </div>
-                </div>
                 </div>

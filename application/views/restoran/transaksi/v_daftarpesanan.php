@@ -16,7 +16,7 @@
 
                         </ul>
                         <ul class="nav navbar-nav navbar-right" >
-                        <li><a href="<?php echo base_url()?>Restoran/transaksi/menu_makanan/insert_data" style="background-color: #8EF193; font-size: 18px;"><span class="badge bg-red" style="font-size: 15px;"><?php echo $order ?></span> Pesanan</a></li>
+                        <li><a href="<?php echo base_url()?>Restoran/kitchen/kelola_order/lihat_pesanan" style="background-color: #8EF193; font-size: 18px;"><span class="badge bg-red" style="font-size: 15px;"><?php echo $order ?></span> Pesanan</a></li>
                       </ul>
                     </nav>
                   <div class="x_title">
@@ -39,7 +39,7 @@ $i = 1;
                   data-id_pesanan="<?php echo $value['id_menu'];?>" 
                   data-gambar_menu="<?php echo $value['gambar_menu']?>" 
                   data-nama_menu="<?php echo $value['nama_menu']?>"
-                  data-harga_menu="<?php echo $value['harga_menu'];?>"
+                  data-harga_menu="<?php echo $value['harga_menu']?>">
 
                         <img class="img img-responsive gambar_menu" style="width: 480px; height: 195px" src="<?php echo base_url() ?>assets/gambar_menu/<?php echo $value['gambar_menu'];?>"></a></div>
                         <div style=" position: relative ; top: 10px; background-color: black; opacity: 0.8"><center>
@@ -81,16 +81,7 @@ $i = 1;
                       <input type="hidden" name="tgl_pemesanan" value="<?php echo date("Y-m-d");?>">
                       <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
                       <input type="hidden" name="statusBayar" class="form-control col-md-7 col-xs-12 statusBayar" value="Belum Dibayar">
-                     
-                          
-
-                     <!-- <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="tgl_pemesanan">Tanggal Pemesanan<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="date" id="tgl_pemesanan" name="tgl_pemesanan" value="<?php echo date("Y-m-d"); ?>" required="required" class="form-control col-md-7 col-xs-12 tgl_pemesanan" readonly>
-                        </div>
-                      </div>       -->       
+                           
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nama_menu">Nama Menu <span class="required">*</span>
                         </label>
@@ -100,10 +91,10 @@ $i = 1;
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="qty">Qty <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Qty">Qty <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" id="qty" name="qty" required="required" class="form-control col-md-7 col-xs-12 qty">
+                          <input type="number" id="qty" name="Qty" required="required" class="form-control col-md-7 col-xs-12 qty">
                         </div>
                       </div>
 
@@ -119,7 +110,7 @@ $i = 1;
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="harga_menu">Total Harga <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="total" name="total_harga" required="required" class="form-control col-md-7 col-xs-12 total_harga" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #2D7207">
+                          <input type="text" id="total" name="total" required="required" class="form-control col-md-7 col-xs-12 total_harga" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #2D7207">
                         </div>
                       </div>
             

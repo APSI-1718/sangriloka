@@ -116,7 +116,7 @@
                         <label for="kembali" class="control-label col-md-3 col-sm-3 col-xs-12">Total Kembali</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text"  name="kembali" required="required" class="form-control col-md-7 col-xs-12 kembali" readonly>
-                          <input type="text"  name="kembaliNum" required="required" class="form-control col-md-7 col-xs-12 kembaliNum">
+                          <input type="hidden"  name="kembaliNum" required="required" class="form-control col-md-7 col-xs-12 kembaliNum">
                         </div>
                       </div>
                     

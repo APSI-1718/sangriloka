@@ -52,14 +52,8 @@ $i = 1;
                   data-id_pesanan="<?php echo $value['id_menu'];?>" 
                   data-gambar_menu="<?php echo $value['gambar_menu']?>" 
                   data-nama_menu="<?php echo $value['nama_menu']?>"
-<<<<<<< HEAD
-
                   data-harga_menu="<?php echo $value['harga_menu'];?>">
 
-=======
-                  data-harga_menu="<?php echo $value['harga_menu'];?>">
-
->>>>>>> 08654b508d8b91e087390b22cac69db4a6ecc8d6
                         <img class="img img-responsive" style="width: 480px; height: 195px" src="<?php echo base_url() ?>assets/gambar_menu/<?php echo $value['gambar_menu'];?>"></a></div>
                         <div style=" position: relative ; top: 10px; background-color: black; opacity: 0.8"><center>
                           <a style=" font-family: 'roboto' ; font-size: 16px; font-weight: bold; color: white;" href="#"><?php echo $value['nama_menu']; ?>
@@ -86,13 +80,7 @@ $i = 1;
                 
 
 
-<<<<<<< HEAD
-<!-- Modal preview pemesanan -->
                 <!-- Modal preview pemesanan -->
-
-=======
-                <!-- Modal preview pemesanan -->
->>>>>>> 08654b508d8b91e087390b22cac69db4a6ecc8d6
 
 <div class="modal fade" id="pemesananModal" tabindex="-1" role="dialog" aria-labelledby="pemesananModalLabel" >
     <div class="modal-dialog" role="document" >
@@ -106,16 +94,8 @@ $i = 1;
 
                       <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
                       <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
-<<<<<<< HEAD
-                  
-                    
-                      
-
-              
-
-=======
+                      <input type="hidden" name="statusBayar" class="form-control col-md-7 col-xs-12 statusBayar" value="Belum Dibayar">
                      
->>>>>>> 08654b508d8b91e087390b22cac69db4a6ecc8d6
                 <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
                 <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
                 <input type="hidden" name="tgl_pemesanan" required="required" class="form-control col-md-7 col-xs-12 tgl_pemesanan" value="<?php echo date('Y-m-d')?>">
@@ -133,7 +113,7 @@ $i = 1;
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
 
-                          <input type="number" id="nama_menu" name="qty" required="required" class="form-control col-md-7 col-xs-12 qty">
+                          <input type="number" id="nama_menu" name="qty" required="required" class="form-control col-md-7 col-xs-12 qty" min="1">
                         </div>
                       </div>
 
