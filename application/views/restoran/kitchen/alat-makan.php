@@ -5,7 +5,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Data Peralatan Makan <small>Users</small></h2>
+                    <h2>Data Peralatan Makan </h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -22,7 +22,7 @@
         <?php
               $berhasil = $this->session->flashdata('tambahdata');
               if ((isset($berhasil)) && (!empty($berhasil))) {?>
-              <div class="alert alert-info alertalat">
+              <div class="alert alert-success alertalat">
               <a href="#" class="close" data-dismiss="alert">&times;</a>
         <?php print_r($berhasil);?>
           </div>
@@ -31,7 +31,7 @@
         <?php
               $berhasil = $this->session->flashdata('editdata');
               if ((isset($berhasil)) && (!empty($berhasil))) {?>
-              <div class="alert alert-info alertalat">
+              <div class="alert alert-success alertalat">
               <a href="#" class="close" data-dismiss="alert">&times;</a>
         <?php print_r($berhasil);?>
           </div>
@@ -40,7 +40,7 @@
         <?php
               $berhasil = $this->session->flashdata('deletedata');
               if ((isset($berhasil)) && (!empty($berhasil))) {?>
-              <div class="alert alert-info alertalat">
+              <div class="alert alert-success alertalat">
               <a href="#" class="close" data-dismiss="alert">&times;</a>
         <?php print_r($berhasil);?>
           </div>
@@ -113,8 +113,6 @@
           <h4 class="modal-title">Tambah Alat Makan</h4>
         </div>
         <div class="modal-body">
-          <div class="x_content">
-                    <br />
                     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url()?>Restoran/kitchen/alat_makan/tambah_data">
                          <input type="hidden" name="kode_am" class="form-control kode_am" id="kode_am">
                       <div class="form-group">
@@ -145,21 +143,14 @@
                           <input type="text" id="stok_am" name="stok_am" required="required" class="form-control col-md-7 col-xs-12 stok_am">
                         </div>
                       </div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-5">
-              <button class="btn btn-primary" type="reset">Reset</button>
-                          <button type="submit" class="btn btn-success">Tambah</button>
-                        </div>
-                      </div>
-
-                    </form>
                   </div>
 
-        </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-success">Tambah</button>
         </div>
       </div>
+    </form>
     </div>
   </div>
 </div>

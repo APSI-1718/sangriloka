@@ -33,6 +33,7 @@ class Kelola_order extends CI_Controller {
 	function order_makanan(){
 		$data = array ( 
 			'id_pemesanan' 	=> $id['idpemesanan'] = $this->M_kelolaorder->insert_id_pemesanan(),
+			'tgl_pemesanan' => $this->input->post('tgl_pemesanan'),
 			'status' 		=> $this->input->post('status'),
 			'nama_menu'	 	=> $this->input->post('nama_menu'), 
 			'qty' 			=> $this->input->post('qty'), 
