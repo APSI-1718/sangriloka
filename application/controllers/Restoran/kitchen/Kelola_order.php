@@ -27,7 +27,6 @@ class Kelola_order extends CI_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('restoran/transaksi/v_lihatpesanan', $data);
-		$this->load->view('restoran/transaksi/template/footer2');
 		
 	}
 

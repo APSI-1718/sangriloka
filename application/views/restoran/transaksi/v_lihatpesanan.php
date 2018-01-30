@@ -35,9 +35,13 @@
                       <thead>
                         <tr>
                           <th>No.</th>
+<<<<<<< HEAD
                           <th>ID Pemesanan</th>
-                          <th>Nama Pesanan</th>
                           <th>No. Meja</th>
+=======
+                          <th>ID Order</th>
+>>>>>>> 55a17e095dfa8ff80280a717c680633efa324344
+                          <th>Nama Pesanan</th>
                           <th>Qty</th>
                           <th>Status</th>
                           <th>Aksi</th>    
@@ -52,7 +56,6 @@
                                 <td><?php echo "$i."?></td>
                                 <td><?php echo $value['id_pemesanan']; ?></td>
                                 <td><?php echo $value['nama_menu']; ?></td>
-                                <td><?php echo $value['no_meja']; ?></td>
                                 <td><?php echo $value['Qty']; ?></td>
                                 <td>
                                 <?php
