@@ -100,7 +100,7 @@ $i = 1;
 =======
                 <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
                 <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
-                <input type="hidden" name="tgl_pemesanan" required="required" class="form-control col-md-7 col-xs-12 tgl_pemesanan" value="<?php echo date('Y-m-d')?>">
+                <input type="hidden" name="tgl_pemesanan" required="required" class="form-control col-md-7 col-xs-12 tgl_pemesanan" value="<?php echo date("Y-m-d")?>">
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nama_menu">Nama Menu <span class="required">*</span>

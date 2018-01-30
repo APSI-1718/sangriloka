@@ -40,7 +40,6 @@ $i = 1;
                   data-gambar_menu="<?php echo $value['gambar_menu']?>" 
                   data-nama_menu="<?php echo $value['nama_menu']?>"
                   data-harga_menu="<?php echo $value['harga_menu'];?>"
-                  data-harga_menuNum ="<?php echo $value['harga_menu'];?>">
 
                         <img class="img img-responsive gambar_menu" style="width: 480px; height: 195px" src="<?php echo base_url() ?>assets/gambar_menu/<?php echo $value['gambar_menu'];?>"></a></div>
                         <div style=" position: relative ; top: 10px; background-color: black; opacity: 0.8"><center>
@@ -83,13 +82,7 @@ $i = 1;
                       <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
                       <input type="hidden" name="statusBayar" class="form-control col-md-7 col-xs-12 statusBayar" value="Belum Dibayar">
                      
-                    
-                     <!--  <div class="form-group">
-                        
-                          <center><img class="img img-responsive gambar_menu" width="400px" src="<?php echo base_url('assets/gambar_menu/'.$value['gambar_menu']);?>"></center>
-                        </div> -->
-                      
-                      
+                          
 
                      <!-- <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="tgl_pemesanan">Tanggal Pemesanan<span class="required">*</span>
@@ -119,7 +112,6 @@ $i = 1;
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="harga_menu" name="harga_menu" required="required" class="form-control col-md-7 col-xs-12 harga_menu" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #2D7207">
-                          
                         </div>
                       </div>
 
