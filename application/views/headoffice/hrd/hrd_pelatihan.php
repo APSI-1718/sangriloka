@@ -14,6 +14,7 @@
               <thead>
                 <tr>
                   <th>No.</th>
+<<<<<<< HEAD
                   <th>Id. Pelatihan</th>
                   <th>Tanggal</th>
                   <th>Id. Mutasi</th>
@@ -21,10 +22,17 @@
                   <th>Posisi</th>
                   <th>Jabatan</th>
                   <th>Aksi</th>
+=======
+                  <th>NIP</th>
+                  <th>Nama</th>
+                  <th>Posisi</th>
+                  <th>Jabatan</th>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                 </tr>
               </thead>
 
               <tbody>
+<<<<<<< HEAD
                 <tr>
                   <td>NULL</td>
                   <td>NULL</td>
@@ -42,6 +50,23 @@
                         data-nama="#">
                       <span class="glyphicon glyphicon-trash"></span></button></td>
                 </tr>
+=======
+              <?php
+                $i = 1;
+                  foreach ($gabungpel as $gp){
+              ?>
+                <tr>
+                  <td><?php echo $i;?></td>
+                  <td><?php echo $gp->id_pegawai?></td>
+                  <td><?php echo $gp->nama?></td>
+                  <td><?php echo $gp->posisi?></td>
+                  <td><?php echo $gp->jabatan?></td>
+                </tr>
+                <?php
+                  $i++;
+                }
+                ?>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
               </tbody>
             </table>
           </div>

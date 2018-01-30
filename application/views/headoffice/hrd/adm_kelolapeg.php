@@ -13,15 +13,24 @@
             <table id="datatable" class="table table-striped table-bordered">
               <thead>
                 <tr>
+<<<<<<< HEAD
+=======
+                  <th>No.</th>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                   <th>NIP</th>
                   <th>Nama</th>
                   <th>Posisi</th>
                   <th>Jabatan</th>
+<<<<<<< HEAD
                   <th>Aksi</th>
+=======
+                  <th>Kehadiran</th>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                 </tr>
               </thead>
 
               <tbody>
+<<<<<<< HEAD
                 <tr>
                   <td>NULL</td>
                   <td>NULL</td>
@@ -44,6 +53,24 @@
                         data-nama="#">
                       <span class="glyphicon glyphicon-trash"></span></button></td>
                 </tr>
+=======
+              <?php
+                $i = 1;
+                  foreach ($gabungkp as $kp){
+              ?>
+                <tr>
+                  <td><?php echo $i;?></td>
+                  <td><?php echo $kp->id_pegawai?></td>
+                  <td><?php echo $kp->nama?></td>
+                  <td><?php echo $kp->posisi?></td>
+                  <td><?php echo $kp->jabatan?></td>
+                  <td><?php echo $kp->tanggal_absen?></td>
+                </tr>
+                <?php
+                  $i++;
+                }
+                ?>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
               </tbody>
            </table>
           </div>

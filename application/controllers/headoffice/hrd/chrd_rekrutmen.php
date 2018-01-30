@@ -24,10 +24,19 @@ class chrd_rekrutmen extends CI_Controller {
 	{
 		$data = array(
 			'no_pendaftaran' => $this->input->post('no_pendaftaran'),
+<<<<<<< HEAD
+=======
+			'tanggal' => $this->input->post('tanggal'),
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 			'nama' => $this->input->post('nama'),
 			'alamat' => $this->input->post('alamat'),
 			'j_kelamin' => $this->input->post('j_kelamin'),
 			'tgl_lahir' => $this->input->post('tgl_lahir'),
+<<<<<<< HEAD
+=======
+			'no_tlp' => $this->input->post('no_tlp'),
+			'email' => $this->input->post('email'),
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 			'tingkat_pend' => $this->input->post('tingkat_pend'));
 
 		$this->rekrut_db->insert($data);

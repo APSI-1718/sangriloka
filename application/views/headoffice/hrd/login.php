@@ -30,10 +30,17 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
+<<<<<<< HEAD
             <form id="demo-form2" method="post" action="<?php echo base_url('headoffice/hrd/hal_awal/insert_data');?>" data-parsley-validate class="form-horizontal form-label-left">
               <h1>Form Absensi</h1>
               <div>
                 <input type="text" class="form-control" placeholder="Tanggal" name="tanggal" id="tanggal" required="required" use value=<?php echo date('Y-m-d');?> readonly>
+=======
+            <form id="demo-form2" method="post" action="<?php echo base_url('clogin/insert_data');?>" data-parsley-validate class="form-horizontal form-label-left">
+              <h1>Form Absensi</h1>
+              <div>
+                <input type="text" class="form-control" placeholder="Tanggal" name="tanggal_absen" id="tanggal_absen" required="required" use value=<?php echo date('Y-m-d');?> readonly>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
               </div>
               <div>
                 <input type="text" class="form-control" name="id_pegawai" id="id_pegawai" placeholder="Maukkan NIP" required="required">

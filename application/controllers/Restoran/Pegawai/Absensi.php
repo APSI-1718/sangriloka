@@ -13,6 +13,7 @@ class Absensi extends CI_controller
 
 	}
 	function index(){
+<<<<<<< HEAD
 		$where = "id_pegawai = '".$this->session->userdata('id_pegawai')."' AND tanggal = '".date('Y-m-d')."'";
 		$where2 = array('id_pegawai' => $this->session->userdata('id_pegawai'));
 
@@ -23,6 +24,19 @@ class Absensi extends CI_controller
 		$this->load->view('restoran/pegawai/template/menu');
 		$this->load->view('restoran/pegawai/absensi_view',$data);
 		// $this->load->view('restoran/pegawai/template/footer');			
+=======
+		// $where = "id_pegawai = '".$this->session->userdata('id_pegawai')."' AND tanggal = '".date('Y-m-d')."'";
+		// $where2 = array('id_pegawai' => $this->session->userdata('id_pegawai'));
+
+		// $data['absen'] = $this->Crud_model->select('absensi',$where);
+		// $data['data_absensi'] = $this->Crud_model->select('absensi',$where2);
+		$data['data_pegawai'] = $this->Crud_model->inner_join3("kontrol_kerja","pegawai","kelolatugas","id_pegawai","id_tugas");
+		$where =  array('tanggal' => date('Y-m-d'));
+		$this->load->view('restoran/pegawai/template/header');
+		$this->load->view('restoran/pegawai/template/menu');
+		$this->load->view('restoran/pegawai/absensi_view',$data);
+		$this->load->view('restoran/pegawai/template/footer');			
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 	}
 	function data(){
 		$data['data_pegawai'] = $this->Crud_model->select('pegawai');
@@ -36,6 +50,25 @@ class Absensi extends CI_controller
 		$this->load->view('restoran/pegawai/data_absensi_view',$data);
 		$this->load->view('restoran/pegawai/template/footer');	
 	}
+<<<<<<< HEAD
+=======
+	function selesai_absensi(){
+		foreach ( $this->Crud_model->inner_join3("kontrol_kerja","pegawai","kelolatugas","id_pegawai","id_tugas") as $data) {
+				$id_pegawai = "id_pegawai".$data['id_pegawai'];
+				$absen = "absensi".$data['id_pegawai'];
+					$data = array (
+						'tanggal' => date('Y-m-d'),
+						'id_pegawai' => $this->input->post($id_pegawai),
+						'status' => $this->input->post($absen)
+						);
+
+					$this->Crud_model->insert('absensi',$data);			
+		}
+					echo "<script type='text/javascript'>alert('Absensi Berhasil');</script>";	
+					$link = base_url().'Restoran/pegawai/absensi';		
+					redirect($link,'refresh');					
+	}
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 	function absen_masuk(){
 		if($this->input->post('submit')){
 			$password = $this->input->post('password');
