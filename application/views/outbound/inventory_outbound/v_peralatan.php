@@ -28,8 +28,8 @@
     
                 <ul class="nav side-menu">
                   <li><a href="<?=base_url('outbound/inventory_outbound/peralatan')?>"><i class="fa fa-edit"></i> Kelola Peralatan</a></li>
-                  <li><a href="<?=base_url('#')?>"><i class="fa fa-group"></i> Kelola Perawatan</a></li>
-                  <li><a href="<?=base_url('#')?>"><i class="fa fa-check-square-o"></i> Pengajuan Pralatan</a></li>
+                  <li><a href="<?=base_url('outbound/inventory_outbound/perawatan')?>"><i class="fa fa-group"></i> Kelola Perawatan</a></li>
+                  <li><a href="<?=base_url('outbound/inventory_outbound/pengajuan')?>"><i class="fa fa-check-square-o"></i> Pengajuan Peralatan</a></li>
                   <li><a href="<?=base_url('#')?>"><i class="fa fa-calendar"></i> Penerimaan Peralatan</a></li>
                   
                 </ul>
@@ -110,10 +110,11 @@
                       <thead>
                         <tr>
                           <th>No</th>
-                          <th>ID Peralatan</th>
                           <th>Nama Pealatan</th>
                           <th>Jenis</th>
                           <th>Jumlah</th>
+                          <th>Keterangan</th>
+                          <th>Status</th>
                           <th>Aksi</th>
                         </tr>
                       </thead>
@@ -124,10 +125,11 @@
                       ?>
                         <tr>
                           <td><?php echo $i++; ?></td>
-                          <td><?php echo $value['id']; ?></td>
                           <td><?php echo $value['nama']; ?></td>
                           <td><?php echo $value['jenis']; ?></td>
                           <td><?php echo $value['jumlah']; ?></td>
+                          <td><?php echo $value['keterangan']; ?></td>
+                          <td><?php echo $value['status']; ?></td>
                           <td>
                             <a class="btn btn-success btn-sm" href="<?php echo base_url('outbound/inventory_outbound/peralatan/form_edit_peralatan?id='.$value['id']) ?>">Edit</a>
 				<a class="btn btn-danger btn-sm" href="<?php echo base_url('outbound/inventory_outbound/peralatan/hapus_peralatan/?id='.$value['id']) ?>" onClick="return confirm('Yakin HAPUS data ini?')">Hapus</a>

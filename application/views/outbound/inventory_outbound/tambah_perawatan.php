@@ -1,3 +1,6 @@
+<?php
+$tanggal=date("Y-m-d");
+?>	
 	<div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
@@ -30,7 +33,7 @@
                   <li><a href="<?=base_url('outbound/inventory_outbound/peralatan')?>"><i class="fa fa-edit"></i> Kelola Peralatan</a></li>
                   <li><a href="<?=base_url('outbound/inventory_outbound/perawatan')?>"><i class="fa fa-group"></i> Kelola Perawatan</a></li>
                   <li><a href="<?=base_url('outbound/inventory_outbound/pengajuan')?>"><i class="fa fa-check-square-o"></i> Pengajuan Peralatan</a></li>
-                  <li><a href="<?=base_url('#')?>"><i class="fa fa-calendar"></i> enerimaan Peralatan</a></li>
+                  <li><a href="<?=base_url('#')?>"><i class="fa fa-calendar"></i> penerimaan Peralatan</a></li>
                   
                 </ul>
               </div>
@@ -92,7 +95,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Kelola Peralatan</h2>
+                    <h2>Kelola Pengajuan</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -105,33 +108,30 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      <?php
-		foreach ($peralatan as $row)
-		{
-	?>
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-				<form class="form-horizontal" method="post" action="<?php echo base_url('outbound/inventory_outbound/peralatan/edit_peralatan') ?>">
-				<label for="id">ID Peralatan</label>
-				<input class="form-control" type="text" name="id" value="<?php echo $row['id']; ?>" readonly>
-				<label>Nama Peralatan</label>
-				<input class="form-control" type="text" name="nama" value="<?php echo $row['nama']; ?>">
-				<label>Jenis</label>
-				<input  class="form-control" type="text" name="jenis" value="<?php echo $row['jenis']; ?>">
-				<label>Jumlah</label>
-				<input class="form-control" type="text" name="jumlah" value="<?php echo $row['jumlah']; ?>">
-				<label>Keterangan</label>
-				<input class="form-control" type="text" name="keterangan" value="<?php echo $row['keterangan']; ?>">
-				<label>Status</label>
-				<input class="form-control" type="text" name="status" value="<?php echo $row['status']; ?>">
-				<br>
-				<input class="btn btn-primary" type="submit" name="submit" value="Simpan">	
-	</form>
-		</div>
-	</div>
-	<?php
-		}
-	?>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <form action="<?php echo base_url('outbound/inventory_outbound/perawatan/tambah_perawatan') ?>" method="POST" role="form">
+                            <legend>Form Tambah Perawatan</legend>
+                              <div class="form-group">
+                                <label for=""></label>
+                                <input type="text" class="form-control" name="id_perawatan" placeholder="Masukan ID Pengajuan">
+                                <label for="">Tanggal Perawatan</label>
+                                <input type="text" class="form-control" name="tanggal_perawatan" value="<?php echo $tanggal ?>" readonly>
+                                <label for="">Keterangan Perawatan</label>
+                                <input type="text" class="form-control" name="keterangan_perawatan" placeholder="Masukan Keterangan">
+                                <label for="">Jenis Perawatan</label>
+                                <input type="text" class="form-control" name="jenis_perawatan" placeholder="Masukan Jenis Perawatan">
+                                <label for="">Pengajuan Biaya</label>
+                                <input type="text" class="form-control" name="pengajuan_biaya" placeholder="Masukan Jumlah Biaya">
+                                <label for="">Pengaju</label>
+                                <input type="text" class="form-control" name="pengaju" value="outbound" readonly>
+                              </div>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
 
 
                   </div>

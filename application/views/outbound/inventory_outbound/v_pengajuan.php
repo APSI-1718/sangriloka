@@ -1,4 +1,4 @@
-	<div class="container body">
+<div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
@@ -30,7 +30,7 @@
                   <li><a href="<?=base_url('outbound/inventory_outbound/peralatan')?>"><i class="fa fa-edit"></i> Kelola Peralatan</a></li>
                   <li><a href="<?=base_url('outbound/inventory_outbound/perawatan')?>"><i class="fa fa-group"></i> Kelola Perawatan</a></li>
                   <li><a href="<?=base_url('outbound/inventory_outbound/pengajuan')?>"><i class="fa fa-check-square-o"></i> Pengajuan Peralatan</a></li>
-                  <li><a href="<?=base_url('#')?>"><i class="fa fa-calendar"></i> enerimaan Peralatan</a></li>
+                  <li><a href="<?=base_url('#')?>"><i class="fa fa-calendar"></i> Penerimaan Peralatan</a></li>
                   
                 </ul>
               </div>
@@ -51,7 +51,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">Sangri &nbsp; &nbsp;
+                    <img src="images/img.jpg" alt="">Outbound Sangriloka &nbsp; &nbsp;
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -92,7 +92,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Kelola Peralatan</h2>
+                    <h2>Pengajuan peralatan</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -105,34 +105,36 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      <?php
-		foreach ($peralatan as $row)
-		{
-	?>
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-				<form class="form-horizontal" method="post" action="<?php echo base_url('outbound/inventory_outbound/peralatan/edit_peralatan') ?>">
-				<label for="id">ID Peralatan</label>
-				<input class="form-control" type="text" name="id" value="<?php echo $row['id']; ?>" readonly>
-				<label>Nama Peralatan</label>
-				<input class="form-control" type="text" name="nama" value="<?php echo $row['nama']; ?>">
-				<label>Jenis</label>
-				<input  class="form-control" type="text" name="jenis" value="<?php echo $row['jenis']; ?>">
-				<label>Jumlah</label>
-				<input class="form-control" type="text" name="jumlah" value="<?php echo $row['jumlah']; ?>">
-				<label>Keterangan</label>
-				<input class="form-control" type="text" name="keterangan" value="<?php echo $row['keterangan']; ?>">
-				<label>Status</label>
-				<input class="form-control" type="text" name="status" value="<?php echo $row['status']; ?>">
-				<br>
-				<input class="btn btn-primary" type="submit" name="submit" value="Simpan">	
-	</form>
-		</div>
-	</div>
-	<?php
-		}
-	?>
+                  	<a class="btn btn-primary btn-sm" href="<?php echo base_url('outbound/inventory_outbound/pengajuan/form_tambah_pengajuan')?>">Tambah</a>
+                      <table id="datatable" class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>Tanggal Pengajuan</th>
+                          <th>Keterangan Pengajuan</th>
+                          <th>Jumlah</th>
+                          <th>Jenis</th>
+                          <th>Pengaju</th>
+                          <th>Status Pengajuan</th>
+                        </tr>
+                      </thead>
 
+                      <tbody>
+                      <?php $i = 1;
+                        foreach ($pengajuan as $key => $value){
+                      ?>
+                        <tr>
+                          <td><?php echo $i++; ?></td>
+                          <td><?php echo $value['tanggal_pengajuan']; ?></td>
+                          <td><?php echo $value['keterangan_pengajuan']; ?></td>
+                          <td><?php echo $value['jumlah']; ?></td>
+                          <td><?php echo $value['jenis']; ?></td>
+                          <td><?php echo $value['pengaju']; ?></td>
+                          <td><?php echo $value['status_pengajuan']; ?></td>
+                        </tr>
+                      <?php } ?>
+                      </tbody>
+                      </table> 
 
                   </div>
                 </div>

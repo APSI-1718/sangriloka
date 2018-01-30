@@ -28,8 +28,8 @@
     
                 <ul class="nav side-menu">
                   <li><a href="<?=base_url('outbound/inventory_outbound/peralatan')?>"><i class="fa fa-edit"></i> Kelola Peralatan</a></li>
-                  <li><a href="<?=base_url('#')?>"><i class="fa fa-group"></i> Kelola Perawatan</a></li>
-                  <li><a href="<?=base_url('#')?>"><i class="fa fa-check-square-o"></i> Pengajuan Pralatan</a></li>
+                  <li><a href="<?=base_url('outbound/inventory_outbound/perawatan')?>"><i class="fa fa-group"></i> Kelola Perawatan</a></li>
+                  <li><a href="<?=base_url('outbound/inventory_outbound/pengajuan')?>"><i class="fa fa-check-square-o"></i> Pengajuan Peralatan</a></li>
                   <li><a href="<?=base_url('#')?>"><i class="fa fa-calendar"></i> enerimaan Peralatan</a></li>
                   
                 </ul>
@@ -119,6 +119,10 @@
                                 <input type="text" class="form-control" name="jenis" placeholder="Masukan Jenis">
                                 <label for="">Jumlah</label>
                                 <input type="text" class="form-control" name="jumlah" placeholder="Masukan Jumlah">
+                                <label for="">Keterangan</label>
+                                <input type="text" class="form-control" name="keterangan" placeholder="Masukan Keterangan">
+                                <label for="">Status</label>
+                                <input type="text" class="form-control" name="status" placeholder="Masukan Status">
                               </div>
                             <button type="submit" class="btn btn-primary">Simpan</button>
                           </form>

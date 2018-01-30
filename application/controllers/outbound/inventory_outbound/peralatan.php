@@ -43,6 +43,8 @@
       		'id' => $this->input->post('id'),
       		'nama' => $this->input->post('nama'),
       		'jenis' => $this->input->post('jenis'),
+      		'keterangan'=>$this->input->post('keterangan'),
+  		    'status'=>$this->input->post('status'),
       		'jumlah' => $this->input->post('jumlah')
       		);
       		$where = array ('id' => $id);
@@ -63,6 +65,8 @@
   		  $data = array(
   		      'nama'=>$this->input->post('nama'),
   		      'jenis'=>$this->input->post('jenis'),
+  		      'keterangan'=>$this->input->post('keterangan'),
+  		      'status'=>$this->input->post('status'),
   		      'jumlah'=>$this->input->post('jumlah')
   		    );
   		  $this->TPeralatan->insert($data);
