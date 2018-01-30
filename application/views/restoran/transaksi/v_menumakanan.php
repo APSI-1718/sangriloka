@@ -32,7 +32,7 @@ echo('<br>');
 
 $i = 1;
   foreach ($menumkn as $key => $value) { ?> 
-<div class="col-md-2 col-xs-4 col-sm-4" id="frameprd" style="margin-right: 50px">
+<div class="col-md-2 col-xs-4 col-sm-4" id="frameprd" style="margin-right: 60px">
 <div class="thumbnail" style="height: 200px; width: 300px;">
 
   <div class="tn" style="height: 130px"><a href="#" class="gambarTombol" data-toggle="modal" data-target="#pemesananModal"
