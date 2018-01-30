@@ -104,6 +104,7 @@ reader.readAsDataURL(input.files[0]);
   	var id_menu= $(this).data('id_menu');
    	var nama_menu= $(this).data('nama_menu');
    	var harga_menu= $(this).data('harga_menu');
+   	var harga_menuNum= $(this).data('harga_menuNum');
    	var gambar_menu= $(this).data('gambar_menu');
    	var qty= $(this).data('qty');
    	var total_harga= $(this).data('total_harga');
@@ -113,7 +114,16 @@ reader.readAsDataURL(input.files[0]);
   	$('.gambar_menu').val(gambar_menu);
   	$('.nama_menu').val(nama_menu);
   	$('.harga_menu').val(harga_menu);
+  	$('.harga_menuNum').val(harga_menuNum);
   	$('.qty').val(qty);
+<<<<<<< HEAD
+
+  	var total_harga = parseint(qty)*parseint(harga_menuNum);
+  	$('.total_harga').parseint(val(total_harga));
+
+  
+=======
+>>>>>>> 55a17e095dfa8ff80280a717c680633efa324344
 	
 	});
 

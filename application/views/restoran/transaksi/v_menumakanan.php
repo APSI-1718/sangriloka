@@ -36,10 +36,17 @@ $i = 1;
 <div class="thumbnail" style="height: 200px; width: 300px;">
 
   <div class="tn" style="height: 130px"><a href="#" class="gambarTombol" data-toggle="modal" data-target="#pemesananModal"
-                  data-id_pesanan="<?php echo $value['id_menu'];?>" 
+                  data-id_menu="<?php echo $value['id_menu'];?>" 
+                  data-no_meja="<?php echo $value['no_meja'];?>"
+                  data-Qty="<?php echo $value['Qty'];?>"
                   data-gambar_menu="<?php echo $value['gambar_menu']?>" 
                   data-nama_menu="<?php echo $value['nama_menu']?>"
+<<<<<<< HEAD
+                  data-harga_menu="Rp. <?php echo number_format($value['harga_menu'],2,",",".");?>"
+                  data-harga_menuNum ="<?php echo $value['harga_menu'];?>">
+=======
                   data-harga_menu="<?php echo $value['harga_menu']?>">
+>>>>>>> 55a17e095dfa8ff80280a717c680633efa324344
 
                         <img class="img img-responsive gambar_menu" style="width: 480px; height: 195px" src="<?php echo base_url() ?>assets/gambar_menu/<?php echo $value['gambar_menu'];?>"></a></div>
                         <div style=" position: relative ; top: 10px; background-color: black; opacity: 0.8"><center>
@@ -73,13 +80,35 @@ $i = 1;
       <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title pemesanan" id="pemesananModalLabel">Form pemesanan</h4>
+            <h4 class="modal-title pemesanan" id="pemesananModalLabel">Form Pemesanan</h4>
         </div>
         <div class="modal-body">
           <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>Restoran/kitchen/kelola_order/order_makanan">
+<<<<<<< HEAD
+                      <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
+                      <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
+                      <input type="hidden" name="statusBayar" class="form-control col-md-7 col-xs-12 statusBayar" value="Belum Dibayar">
+                     
+                    
+                     <!--  <div class="form-group">
+                        
+                          <center><img class="img img-responsive gambar_menu" width="400px" src="<?php echo base_url('assets/gambar_menu/'.$value['gambar_menu']);?>"></center>
+                        </div> -->
+                      
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="no_meja">No Meja<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="number" id="no_meja" name="no_meja" required="required" class="form-control col-md-7 col-xs-12 no_meja">
+                        </div>
+                      </div>                      
+
+              
+=======
                 <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
                 <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
                 <input type="hidden" name="tgl_pemesanan" required="required" class="form-control col-md-7 col-xs-12 tgl_pemesanan" value="<?php echo date('Y-m-d')?>">
+>>>>>>> 55a17e095dfa8ff80280a717c680633efa324344
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nama_menu">Nama Menu <span class="required">*</span>
                         </label>
@@ -92,7 +121,11 @@ $i = 1;
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="qty">Qty <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
+<<<<<<< HEAD
+                          <input type="number" id="Qty" name="Qty" required="required" class="form-control col-md-7 col-xs-12 Qty">
+=======
                           <input type="number" id="qty" name="qty" required="required" class="form-control col-md-7 col-xs-12 qty" min="1">
+>>>>>>> 55a17e095dfa8ff80280a717c680633efa324344
                         </div>
                       </div>
 
@@ -101,6 +134,7 @@ $i = 1;
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="harga_menu" name="harga_menu" required="required" class="form-control col-md-7 col-xs-12 harga_menu" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #2D7207">
+                          <input type="text" id="harga_menuNum" name="harga_menuNum" required="required" class="form-control col-md-7 col-xs-12 harga_menuNum" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #2D7207">
                         </div>
                       </div>
 

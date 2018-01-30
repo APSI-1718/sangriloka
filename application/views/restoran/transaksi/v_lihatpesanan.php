@@ -35,7 +35,12 @@
                       <thead>
                         <tr>
                           <th>No.</th>
+<<<<<<< HEAD
+                          <th>ID Pemesanan</th>
+                          <th>No. Meja</th>
+=======
                           <th>ID Order</th>
+>>>>>>> 55a17e095dfa8ff80280a717c680633efa324344
                           <th>Nama Pesanan</th>
                           <th>Qty</th>
                           <th>Status</th>
