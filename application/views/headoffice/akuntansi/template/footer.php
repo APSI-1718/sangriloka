@@ -53,7 +53,7 @@
     <script src="<?php echo base_url() ?>build/js/custom.min.js"></script>
 
 
-        <script src="<?php echo base_url() ?>vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="<?php echo base_url() ?>vendors/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="<?php echo base_url() ?>vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
     <script src="<?php echo base_url() ?>vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
     <script src="<?php echo base_url() ?>/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
@@ -73,5 +73,49 @@
     <!-- Dropzone.js -->
     <script src="<?php echo base_url() ?>vendors/dropzone/dist/min/dropzone.min.js"></script>
 
+    <!-- Sortir -->
+    <script type="text/javascript">
+        $('.sortir').click(function(){
+            var table           = $(this).data('table');
+            var attribut        = $('.attribut').val();
+            var nilai           = $('.nilaiattribut').val();
+            var link            = $(this).data('link');
+            var datakolom       = $(this).data('kolom');
+            var kolom           = datakolom.split("-");
+            var datakolomtable  = $(this).data('kolomtable');
+            var datatable       = datakolomtable.split("-");
+
+            $.ajax({
+                url:'<?php echo base_url(); ?>headoffice/akuntansi/hal_awal_akuntansi/listArray',
+                type:'POST',
+                data:{table: table, attribut: attribut, nilai: nilai},
+                async: true,
+                error: function(){
+                    alert('Gagal!');
+                },
+                success: function(result){
+                    array = JSON.parse(result);
+                    console.log(array);
+
+                    $('tbody').empty();
+                    for (var i = 0; i < array.length; i++) {
+                        $('tbody').append('<tr class="even pointer"></tr>');
+                        for (var j = 0; j < datatable.length; j++) {
+                            $('tbody tr:nth-child('+ (i+1) +')').append('<td>'+ array[i][datatable[j]] +'</td>');
+                        }
+                    }
+
+                    $('thead tr').empty();
+                    
+                    for (var i = 0; i < kolom.length; i++) {
+                        $('thead tr').append('<th>'+ kolom[i] +'</th>')
+                    }
+
+                    // $('tbody').empty();
+                    // $('tbody').append(text);
+                }
+            });
+        });
+    </script>
   </body>
 </html>

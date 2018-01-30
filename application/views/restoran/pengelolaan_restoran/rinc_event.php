@@ -3,6 +3,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
+<<<<<<< HEAD
                 <h3>Invoice <small>Some examples to get you started</small></h3>
               </div>
 
@@ -14,6 +15,11 @@
                       <button class="btn btn-default" type="button">Go!</button>
                     </span>
                   </div>
+=======
+              </div>
+              <div class="title_right"
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                 </div>
               </div>
             </div>
@@ -24,6 +30,7 @@
               <div class="col-md-12">
                 <div class="x_panel">
                   <div class="x_title">
+<<<<<<< HEAD
                     <h2>Invoice Design <small>Sample user invoice design</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -40,6 +47,9 @@
                       <li><a class="close-link"><i class="fa fa-close"></i></a>
                       </li>
                     </ul>
+=======
+                    <h2>Rincian Event</h2>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -49,13 +59,18 @@
                       <div class="row">
                         <div class="col-xs-12 invoice-header">
                           <h1>
+<<<<<<< HEAD
                                           <i class="fa fa-globe"></i> Invoice.
+=======
+                                          <i class="fa fa-birthday-cake"></i> Rincian Event.
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                                           <small class="pull-right">Date: 16/08/2016</small>
                                       </h1>
                         </div>
                         <!-- /.col -->
                       </div>
                       <!-- info row -->
+<<<<<<< HEAD
                       <div class="row invoice-info">
                         <div class="col-sm-4 invoice-col">
                           From
@@ -88,6 +103,19 @@
                           <b>Payment Due:</b> 2/22/2014
                           <br>
                           <b>Account:</b> 968-34567
+=======
+                      
+                        <!-- /.col -->
+                        <div class="col-sm-4 invoice-col">
+                          <b>ID Event 121000040</b>
+                          <br>
+                          <br>
+                          <b>Nama Event:</b> Wedding Party
+                          <br>
+                          <b>Tanggal Penyelenggaraan:</b> 2018/06/01
+                          <br>
+                          <b>Status:</b> Belum di cek
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                         </div>
                         <!-- /.col -->
                       </div>
@@ -99,16 +127,23 @@
                           <table class="table table-striped">
                             <thead>
                               <tr>
+<<<<<<< HEAD
                                 <th>Qty</th>
                                 <th>Product</th>
                                 <th>Serial #</th>
                                 <th style="width: 59%">Description</th>
                                 <th>Subtotal</th>
+=======
+                                <th>No</th>
+                                <th>Kebutuhan</th>
+                                <th>Jumlah</th>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <td>1</td>
+<<<<<<< HEAD
                                 <td>Call of Duty</td>
                                 <td>455-981-221</td>
                                 <td>El snort testosterone trophy driving gloves handsome gerry Richardson helvetica tousled street art master testosterone trophy driving gloves handsome gerry Richardson
@@ -135,12 +170,36 @@
                                 <td>422-568-642</td>
                                 <td>Tousled lomo letterpress erry Richardson helvetica tousled street art master helvetica tousled street art master, El snort testosterone</td>
                                 <td>$25.99</td>
+=======
+                                <td>Meja Dinner</td>
+                                <td>20 set</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Waiter</td>
+                                <td>5 orang</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>Minuman</td>
+                                <td>80</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>Makanan</td>
+                                <td>80</td>
+                                
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                               </tr>
                             </tbody>
                           </table>
                         </div>
                         <!-- /.col -->
                       </div>
+<<<<<<< HEAD
                       <!-- /.row -->
 
                       <div class="row">
@@ -184,13 +243,21 @@
                         <!-- /.col -->
                       </div>
                       <!-- /.row -->
+=======
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 
                       <!-- this row will not appear when printing -->
                       <div class="row no-print">
                         <div class="col-xs-12">
                           <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Print</button>
+<<<<<<< HEAD
                           <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>
                           <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Generate PDF</button>
+=======
+                          <button class="btn btn-success pull-right"><i class="fa fa-check"></i> Terima</button>
+                          <button class="btn btn-danger pull-right"><i class="fa fa-reply"></i> Tolak</button>
+                          <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> Ubah Ke File PDF</button>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                         </div>
                       </div>
                     </section>

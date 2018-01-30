@@ -37,17 +37,14 @@ class Crud_model extends CI_Model{
 		$this->db->join($table2, $table1.'.'.$where1.' = '.$table2.'.'.$where1);
 		$query = $this->db->get();	
 		return $query->result_array();			
-
 	}
-	function inner_join3($table1,$table2,$where1){
+	function inner_join3($table1,$table2,$table3,$where1,$where2){
 		$this->db->select('*');    
 		$this->db->from($table1);
 		$this->db->join($table2, $table1.'.'.$where1.' = '.$table2.'.'.$where1);
-		$this->db->order_by("status_ck", "asc");
-		$this->db->order_by("id_pegawai", "asc");
-
+		$this->db->join($table3, $table1.'.'.$where2.' = '.$table3.'.'.$where2);
 		$query = $this->db->get();	
 		return $query->result_array();			
+	}	
 
-	}
 }
