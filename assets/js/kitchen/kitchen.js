@@ -116,14 +116,13 @@ reader.readAsDataURL(input.files[0]);
   	$('.harga_menu').val(harga_menu);
   	$('.harga_menuNum').val(harga_menuNum);
   	$('.qty').val(qty);
-<<<<<<< HEAD
+
 
   	var total_harga = parseint(qty)*parseint(harga_menuNum);
   	$('.total_harga').parseint(val(total_harga));
 
   
-=======
->>>>>>> 55a17e095dfa8ff80280a717c680633efa324344
+
 	
 	});
 

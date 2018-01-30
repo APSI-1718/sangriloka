@@ -39,7 +39,7 @@ $i = 1;
                   data-id_pesanan="<?php echo $value['id_menu'];?>" 
                   data-gambar_menu="<?php echo $value['gambar_menu']?>" 
                   data-nama_menu="<?php echo $value['nama_menu']?>"
-                  data-harga_menu="Rp. <?php echo number_format($value['harga_menu'],2,",",".");?>"
+                  data-harga_menu="<?php echo $value['harga_menu'];?>"
                   data-harga_menuNum ="<?php echo $value['harga_menu'];?>">
 
                         <img class="img img-responsive gambar_menu" style="width: 480px; height: 195px" src="<?php echo base_url() ?>assets/gambar_menu/<?php echo $value['gambar_menu'];?>"></a></div>
@@ -119,7 +119,7 @@ $i = 1;
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="harga_menu" name="harga_menu" required="required" class="form-control col-md-7 col-xs-12 harga_menu" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #2D7207">
-                          <input type="text" id="harga_menuNum" name="harga_menuNum" required="required" class="form-control col-md-7 col-xs-12 harga_menuNum" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #2D7207">
+                          
                         </div>
                       </div>
 

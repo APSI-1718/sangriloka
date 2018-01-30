@@ -41,12 +41,9 @@ $i = 1;
                   data-Qty="<?php echo $value['Qty'];?>"
                   data-gambar_menu="<?php echo $value['gambar_menu']?>" 
                   data-nama_menu="<?php echo $value['nama_menu']?>"
-<<<<<<< HEAD
-                  data-harga_menu="Rp. <?php echo number_format($value['harga_menu'],2,",",".");?>"
-                  data-harga_menuNum ="<?php echo $value['harga_menu'];?>">
-=======
-                  data-harga_menu="<?php echo $value['harga_menu']?>">
->>>>>>> 55a17e095dfa8ff80280a717c680633efa324344
+                  data-harga_menu="<?php echo $value['harga_menu'];?>"
+                  >>">
+
 
                         <img class="img img-responsive gambar_menu" style="width: 480px; height: 195px" src="<?php echo base_url() ?>assets/gambar_menu/<?php echo $value['gambar_menu'];?>"></a></div>
                         <div style=" position: relative ; top: 10px; background-color: black; opacity: 0.8"><center>
@@ -84,16 +81,12 @@ $i = 1;
         </div>
         <div class="modal-body">
           <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>Restoran/kitchen/kelola_order/order_makanan">
-<<<<<<< HEAD
+
                       <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
                       <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
                       <input type="hidden" name="statusBayar" class="form-control col-md-7 col-xs-12 statusBayar" value="Belum Dibayar">
                      
-                    
-                     <!--  <div class="form-group">
-                        
-                          <center><img class="img img-responsive gambar_menu" width="400px" src="<?php echo base_url('assets/gambar_menu/'.$value['gambar_menu']);?>"></center>
-                        </div> -->
+                  
                       
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="no_meja">No Meja<span class="required">*</span>
@@ -108,7 +101,7 @@ $i = 1;
                 <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
                 <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
                 <input type="hidden" name="tgl_pemesanan" required="required" class="form-control col-md-7 col-xs-12 tgl_pemesanan" value="<?php echo date('Y-m-d')?>">
->>>>>>> 55a17e095dfa8ff80280a717c680633efa324344
+
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nama_menu">Nama Menu <span class="required">*</span>
                         </label>
@@ -121,11 +114,7 @@ $i = 1;
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="qty">Qty <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-<<<<<<< HEAD
                           <input type="number" id="Qty" name="Qty" required="required" class="form-control col-md-7 col-xs-12 Qty">
-=======
-                          <input type="number" id="qty" name="qty" required="required" class="form-control col-md-7 col-xs-12 qty" min="1">
->>>>>>> 55a17e095dfa8ff80280a717c680633efa324344
                         </div>
                       </div>
 
