@@ -59,56 +59,6 @@
                       <a href="#"></a><input type="checkbox" class="flat" name="">
                     </td>
                   </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Laporan Keuangan Mingguan</td>
-                    <td class=" ">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Laporan Keuangan Mingguan</td>
-                    <td class=" ">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Laporan Keuangan Mingguan</td>
-                    <td class=" ">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Laporan Keuangan Mingguan</td>
-                    <td class=" ">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
-
-                  <tr class="even pointer">
-                    <td class=" ">000001</td>
-                    <td class=" ">Laporan Keuangan Mingguan</td>
-                    <td class=" ">01</td>
-                    <td class="last">May 23, 2014 11:47:56 PM </td>
-                    <td class="a-center ">
-                      <a href="#"></a><input type="checkbox" class="flat" name="">
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
