@@ -87,7 +87,7 @@
                             </div>
                             <small>57% Complete</small>
                           </td>
-                          <td>
+                          <td> 
                             <button type="button" class="btn btn-success btn-xs">Success</button>
                           </td>
                           <td>

@@ -117,13 +117,11 @@
                       </div>
 
                         <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="tanggal_masuk">Set Expired <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="tanggal_masuk">Set Kadaluarsa <span class="required">*</span>
                         </label>
-                        <div class="col-md-4 col-sm-4 col-xs-12">
-                          <input type="text" id="tanggal_expired" name="tanggal_expired" required="required" class="form-control col-md-7 col-xs-12 tanggal_expired" placeholder="Jangka waktu expired">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="date" id="tanggal_expired" name="tanggal_expired" required="required" class="form-control col-md-7 col-xs-12 tanggal_expired">
                         </div>
-                        <left><label class="control-label col-md-2 col-sm-2 col-xs-12" style="text-align: left;">Hari
-                        </label></left>
                       </div>
 
                      

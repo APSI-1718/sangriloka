@@ -47,7 +47,7 @@ class M_kelolaorder extends CI_Model
 			}
 
 			$kodemax = str_pad($kode, 3, "0", STR_PAD_LEFT);
-			$kodejadi = "ORD".$kodemax;
+			$kodejadi = "PSN".$kodemax;
 
 			return $kodejadi;
 		}

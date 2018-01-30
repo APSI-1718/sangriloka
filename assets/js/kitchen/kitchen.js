@@ -70,7 +70,7 @@ $(document).on("click", '.status1', function(e){
 
 });
 
-$('.alertkelmenu').show('fast').delay(5000).hide('fast');
+$('.alertalat').show('fast').delay(5000).hide('fast');
 
 
 $(document).on("change", '#cboItem', function(e){
@@ -116,37 +116,24 @@ reader.readAsDataURL(input.files[0]);
   	$('.harga_menu').val(harga_menu);
   	$('.harga_menuNum').val(harga_menuNum);
   	$('.qty').val(qty);
+<<<<<<< HEAD
 
   	var total_harga = parseint(qty)*parseint(harga_menuNum);
   	$('.total_harga').parseint(val(total_harga));
 
   
+=======
+>>>>>>> 55a17e095dfa8ff80280a717c680633efa324344
 	
 	});
 
-  $(".qty").on("change", function(e){
- 	var harga_menu = $(".harga_menu").val();
- 	var jumlah = $(".jumlah").val();
+ $(document).on("click", '#qty', function(e){
+ 	var qty = $(this).val();
+ 	var harga_menu = $('#harga_menu').val();
+ 	var hasil = qty * harga_menu;
 
- 	var total_harga = harga_menu * qty;
-	$(".total_harga").val(total_harga);
-
-	//Format RP Total
-		var TotalRP = $(".total_harga").val();
-
-	var number_string = TotalRP.toString(),
-		sisa = number_string.length % 3,
-		rupiah = number_string.substr(0,sisa),
-		ribuan = number_string.substr(sisa).match(/\d{3}/g);
-
-		if(ribuan){
-			separator = sisa ? '.' : '';
-			rupiah += separator + ribuan.join('.');
-		}
-
-	$(".total_harga_Rp").val("Rp. " + rupiah);
-	
-});
+ 	$('#total').val(hasil);
+ });
 
  //  $(".qty").on("click", function(e){
  // 	var harga_menu 	= $(".harga_menu").val();
