@@ -52,7 +52,7 @@ $i = 1;
                   data-id_pesanan="<?php echo $value['id_menu'];?>" 
                   data-gambar_menu="<?php echo $value['gambar_menu']?>" 
                   data-nama_menu="<?php echo $value['nama_menu']?>"
-                  data-harga_menu="Rp. <?php echo number_format($value['harga_menu'],2,",",".");?>">
+                  data-harga_menu="<?php echo $value['harga_menu'];?>">
 
                         <img class="img img-responsive" style="width: 480px; height: 195px" src="<?php echo base_url() ?>assets/gambar_menu/<?php echo $value['gambar_menu'];?>"></a></div>
                         <div style=" position: relative ; top: 10px; background-color: black; opacity: 0.8"><center>
@@ -95,16 +95,6 @@ $i = 1;
                       <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
                       <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
                      
-                    
-                     <!--  <div class="form-group">
-                        
-                          <center><img class="img img-responsive gambar_menu" width="400px" src="<?php echo base_url('assets/gambar_menu/'.$value['gambar_menu']);?>"></center>
-                        </div> -->
-                      
-                      
-
-              
-
                 <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
                 <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
                 <input type="hidden" name="tgl_pemesanan" required="required" class="form-control col-md-7 col-xs-12 tgl_pemesanan" value="<?php echo date('Y-m-d')?>">
@@ -123,9 +113,6 @@ $i = 1;
                         <div class="col-md-6 col-sm-6 col-xs-12">
 
                           <input type="number" id="nama_menu" name="qty" required="required" class="form-control col-md-7 col-xs-12 qty">
-
-                          <input type="number" id="qty" name="qty" required="required" class="form-control col-md-7 col-xs-12 qty" min="1">
-
                         </div>
                       </div>
 
