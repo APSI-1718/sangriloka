@@ -35,10 +35,10 @@
 
     
                       <tbody>
-                        <?php foreach ($pembagian_tugas as $data) { ?>
+                        <?php $x=1; foreach ($pembagian_tugas as $data) { ?>
                           
                           <tr>
-                            <td>1</td>
+                            <td><?php echo $x; ?></td>
                             <td><?php echo $data['nama_pegawai'] ?></td>
                             <td><?php echo $data['alamat'] ?></td>
                             <td><?php echo $data['jk'] ?></td>
@@ -62,7 +62,7 @@
 
                           </tr>
                       
-                        <?php } ?>
+                        <?php $x++; } ?>
 
                       </tbody>
                     </table>
@@ -95,8 +95,9 @@
                           <select name="pegawai" class="form-control" id='selectpegawai' ninvalid="this.setCustomValidity('Kolom Pegawai Tidak Boleh di Kosongkan!!!')" required>
                             <option value="000">Pilih Pegawai...</option>
                             <?php foreach ($data_pegawai as $data) { ?>
+                            <?php if($this->Pembagian_tugas_model->jumlah_absensi_sekarang($data['id_pegawai'])==1){echo "";}else{ ?>
                               <option  value="<?php echo $data['id_pegawai'] ?>"><?php echo $data['id_pegawai'].' - '.$data['nama_pegawai']; ?></option>
-                            <?php } ?>
+                            <?php }} ?>
               
                           </select>
                         </div>

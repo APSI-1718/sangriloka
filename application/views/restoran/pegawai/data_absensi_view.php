@@ -4,22 +4,9 @@
 <div class="clearfix"></div>
 
             <div class="row">
-<!--                     <ul class="nav navbar-right panel_toolbox">
-                      <div class="btn-group">
-                        <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle btn-sm" type="button" aria-expanded="false">Hari Ini <span class="caret"></span>
-                        </button>
-                        <ul role="menu" class="dropdown-menu">
-                          <li><a href="#">Hari Ini</a>
-                          </li>
-                          <li><a href="#">Bulan Ini</a>
-                          </li>
 
-                          <li class="divider"></li>
-                        </ul>
-                      </div>
-                    </ul> -->
 
-              <div class="col-md-6 col-sm-6 col-xs-12">
+<!--               <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Data Absensi Hari Ini<small>Tanggal : <?php echo date('Y-m-d') ?></small></h2>
@@ -94,9 +81,23 @@
                   </div>
                 </div>
               </div>
-
+ -->
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
+                    <ul class="nav navbar-right panel_toolbox">
+                      <div class="btn-group">
+                        <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle btn-sm" type="button" aria-expanded="false">Hari Ini <span class="caret"></span>
+                        </button>
+                        <ul role="menu" class="dropdown-menu">
+                          <li><a href="#">Hari Ini</a>
+                          </li>
+                          <li><a href="#">Bulan Ini</a>
+                          </li>
+
+                          <li class="divider"></li>
+                        </ul>
+                      </div>
+                    </ul>                  
                   <div class="x_title">
                     <h2>Data Absensi Bulan Ini<small>Bulan : <?php echo date('M') ?></small></h2>
 
