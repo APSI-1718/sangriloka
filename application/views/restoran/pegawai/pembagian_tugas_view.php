@@ -35,10 +35,17 @@
 
     
                       <tbody>
+<<<<<<< HEAD
+                        <?php foreach ($pembagian_tugas as $data) { ?>
+                          
+                          <tr>
+                            <td>1</td>
+=======
                         <?php $x=1; foreach ($pembagian_tugas as $data) { ?>
                           
                           <tr>
                             <td><?php echo $x; ?></td>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                             <td><?php echo $data['nama_pegawai'] ?></td>
                             <td><?php echo $data['alamat'] ?></td>
                             <td><?php echo $data['jk'] ?></td>
@@ -95,9 +102,14 @@
                           <select name="pegawai" class="form-control" id='selectpegawai' ninvalid="this.setCustomValidity('Kolom Pegawai Tidak Boleh di Kosongkan!!!')" required>
                             <option value="000">Pilih Pegawai...</option>
                             <?php foreach ($data_pegawai as $data) { ?>
+<<<<<<< HEAD
+                              <option  value="<?php echo $data['id_pegawai'] ?>"><?php echo $data['id_pegawai'].' - '.$data['nama_pegawai']; ?></option>
+                            <?php } ?>
+=======
                             <?php if($this->Pembagian_tugas_model->jumlah_absensi_sekarang($data['id_pegawai'])==1){echo "";}else{ ?>
                               <option  value="<?php echo $data['id_pegawai'] ?>"><?php echo $data['id_pegawai'].' - '.$data['nama_pegawai']; ?></option>
                             <?php }} ?>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
               
                           </select>
                         </div>
@@ -159,6 +171,7 @@
                         </div>
                       </div>
 
+<<<<<<< HEAD
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" >Posisi 
                         </label>
@@ -170,6 +183,19 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" > Pilih Tugas <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
+=======
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Posisi 
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text"  class="form-control col-md-7 col-xs-12" id='posisi' disabled>
+                        </div>
+                      </div>                                                                                
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" > Pilih Tugas <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                           <select name="tugas" class="form-control" id='select' oninvalid="this.setCustomValidity('Kolom Tugas Tidak Boleh di Kosongkan!!!')" required>
                             <option value="">Pilih Tugas..</option>
                             <?php foreach ($data_tugas as $data) { ?>
@@ -212,6 +238,7 @@
                     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action='Pembagian_tugas/update_pegawai'>
 
 
+<<<<<<< HEAD
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" >Pilih Pegawai  
                         </label>
@@ -249,18 +276,57 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text"   class="form-control col-md-7 col-xs-12" id='tl2' disabled>
+=======
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Pilih Pegawai  
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select disabled name="pegawai" class="form-control" id='selectpegawai2' ninvalid="this.setCustomValidity('Kolom Pegawai Tidak Boleh di Kosongkan!!!')" required>
+                            <option value="000">Pilih Pegawai...</option>
+                            <?php foreach ($data_pegawai as $data) { ?>
+                              <option id="<?php echo 'p'.$data['id_pegawai']; ?>" value="<?php echo $data['id_pegawai'] ?>"><?php echo $data['id_pegawai'].' - '.$data['nama_pegawai']; ?></option>
+                            <?php } ?>
+              
+                          </select>
+                        </div>
+                      </div>      
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Nama Lengkap
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" class="form-control col-md-7 col-xs-12" id='nama2' disabled>
+                          <input type="hidden" name="no" class="no">
+                        </div>
+                      </div>
+
+
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Jenis Kelamin 
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text"  class="form-control col-md-7 col-xs-12" id='jk2' disabled>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                         </div>
                       </div>
 
                       <div class="form-group">
+<<<<<<< HEAD
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" > No Telp 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text"   class="form-control col-md-7 col-xs-12" id='nt2' disabled>
+=======
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Tanggal Lahir 
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text"   class="form-control col-md-7 col-xs-12" id='tl2' disabled>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                         </div>
                       </div>
 
                       <div class="form-group">
+<<<<<<< HEAD
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" >Email 
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -268,6 +334,46 @@
                         </div>
                       </div>
                       <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Alamat</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea class="resizable_textarea form-control" id='alamat2' disabled></textarea>
+=======
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" > No Telp 
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text"   class="form-control col-md-7 col-xs-12" id='nt2' disabled>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+<<<<<<< HEAD
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Jabatan 
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text"  class="form-control col-md-7 col-xs-12" id='jabatan2' disabled>
+=======
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Email 
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text"  class="form-control col-md-7 col-xs-12" id='email2' disabled>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" >Posisi 
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text"  class="form-control col-md-7 col-xs-12" id='posisi2' disabled>
+                        </div>
+                      </div>                                                                                
+                      <div class="form-group">
+<<<<<<< HEAD
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" > Pilih Tugas <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+=======
                         <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Alamat</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <textarea class="resizable_textarea form-control" id='alamat2' disabled></textarea>
@@ -293,6 +399,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" > Pilih Tugas <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                           <select name="tugas" class="form-control" id='select' oninvalid="this.setCustomValidity('Kolom Tugas Tidak Boleh di Kosongkan!!!')" required>
                             <option value="">Pilih Tugas..</option>
                             <?php foreach ($data_tugas as $data) { ?>

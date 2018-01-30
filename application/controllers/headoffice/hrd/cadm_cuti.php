@@ -3,6 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class cadm_cuti extends CI_Controller {
 
+<<<<<<< HEAD
+	public function cuti()
+	{
+		$this->load->view('template/header');
+		$this->load->view('headoffice/hrd/adm_menu');
+		/*$this->load->view('headoffice/hrd/modal');*/
+		$this->load->view('headoffice/hrd/adm_cuti');
+		$this->load->view('template/footer');
+	}
+=======
 	function __construct(){
 		parent::__construct();
 		$this->load->model('headoffice/hrd/cuti_db');
@@ -40,4 +50,5 @@ class cadm_cuti extends CI_Controller {
 		$this->cuti_db->delete($where);
 		redirect('headoffice/hrd/cadm_cuti/cuti', 'refresh');
 	}
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 }

@@ -16,7 +16,11 @@ class Kontrol_kerja extends Ci_controller
 	}
 	function index(){
 		$data['data_tugas'] = $this->Crud_model->select('kelolatugas');	
+<<<<<<< HEAD
+		$data['data_pegawai'] = $this->Kontrol_kerja_model->inner_join_kk('kontol_kerja','pegawai','kelolatugas','id_pegawai','id_tugas');
+=======
 		$data['data_pegawai'] = $this->Kontrol_kerja_model->inner_join_kk('kontrol_kerja','pegawai','kelolatugas','id_pegawai','id_tugas');
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 
 
 
@@ -31,7 +35,11 @@ class Kontrol_kerja extends Ci_controller
 			'status_ck' => $status_ck
 		);
 		$where = array('no' => $id);
+<<<<<<< HEAD
+		$this->Crud_model->update('kontol_kerja', $data, $where);
+=======
 		$this->Crud_model->update('kontrol_kerja', $data, $where);
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 		echo "<script type='text/javascript'>alert('Berhasil... Pegawai Telah Melakukan Tugas');</script>";		
 		$link = base_url().'Restoran/pegawai/Kontrol_kerja';
 		redirect($link,'refresh');	

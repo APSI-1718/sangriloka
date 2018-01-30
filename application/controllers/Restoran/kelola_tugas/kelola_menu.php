@@ -3,6 +3,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class kelola_menu extends CI_Controller {
 
+<<<<<<< HEAD
+
+	public function menu()
+	{
+		$this->load->view('template/header');
+		$this->load->view('restoran/pengelolaan_restoran/menu_kr');
+		$this->load->view('restoran/pengelolaan_restoran/kelola_menu');
+		$this->load->view('restoran/pengelolaan_restoran/modal');
+		$this->load->view('template/footer');
+	}
+}
+=======
 function __construct(){
 		parent::__construct();
 		$this->load->model('restoran/pengelolaan_restoran/kelola_menudb');
@@ -64,3 +76,4 @@ function __construct(){
 
 }
 
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0

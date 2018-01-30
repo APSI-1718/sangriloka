@@ -21,7 +21,7 @@
 			<div class="col-md-7 col-sm-10 col-xs-12 form-group pull-right top_search">
 				<div class="dataTables_length" id="datatable_length">
 					<select name="attribut" aria-controls="datatable" class="form-control attribut">
-            <option value="id_penggajian">Id Penggajian</option>
+            <option value="id_penggajian">Id Penggajihan</option>
             <option value="jumlah">Jumlah</option>
             <option value="tgl_awal">Tanggal Awal</option>
             <option value="tgl_akhir">Tanggal Akhir</option>
@@ -50,9 +50,9 @@
                 </thead>
 
                 <tbody>
-                  <?php foreach ($penggajian as $key => $value) { ?>
+                  <?php foreach ($penggajihan as $key => $value) { ?>
                   <tr class="even pointer">
-                    <td class=" "><?php echo $value['id_penggajian'] ?></td>
+                    <td class=" "><?php echo $value['id_penggajihan'] ?></td>
                     <td class=" "><?php echo $value['jumlah'] ?></td>
                     <td class=" "><?php echo $value['tgl_awal'] ?></td>
                     <td class=" "><?php echo $value['tgl_akhir'] ?></td>

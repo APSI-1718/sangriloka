@@ -27,19 +27,19 @@
               <div class="menu_section">
     
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url() ?>"><i class="fa fa-home"></i> Home </a></li>
-                  <li><a><i class="fa fa-edit"></i> Pendaftaran</a>
+                  <li><a href="<?php echo base_url() ?>hotel/Pemesanan/halaman_utama"><i class="fa fa-home"></i> Beranda </a></li>
+                  <li><a href="<?php echo base_url() ?>hotel/Pemesanan/Pendaftaran"><i class="fa fa-edit"></i>Pendaftaran</a>
                   </li>
-                  <li><a><i class="fa fa-money"></i> Pembayaran</a>
+                  <li><a href="<?php echo base_url() ?>hotel/Pemesanan/pembayaran"><i class="fa fa-money"></i>Pembayaran</a>
                   </li>
                   <li><a><i class="fa fa-table"></i> Master Kamar <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="<?php echo base_url() ?>table/tables">Kelola Kamar</a></li>
-                      <li><a href="<?php echo base_url() ?>table/tables_dynamic">Fasilitas Kamar</a></li>
-                      <li><a href="<?php echo base_url() ?>table/contoh_table">Jenis Kamar</a></li>
+                      <li><a href="<?php echo base_url() ?>hotel/Pemesanan/kamar">Kelola Kamar</a></li>
+                      <li><a href="<?php echo base_url() ?>hotel/Pemesanan/fasilitas">Fasilitas Kamar</a></li>
+                      <li><a href="<?php echo base_url() ?>hotel/Pemesanan/jenis">Jenis Kamar</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-bar-chart-o"></i> Absensi </a>
+                  <li><a href="<?php echo base_url() ?>hotel/Pemesanan/Absensi"><i class="fa fa-bar-chart-o"></i> Absensi </a>
                   </li>
                 </ul>
               </div>
@@ -67,72 +67,7 @@
                     <li><a href="javascript:;"> Profile</a></li>
                    
                     <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                  </ul>
-                </li>
-
-                <li role="presentation" class="dropdown">
-                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-green">6</span>
-                  </a>
-                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
+                 </ul>
                 </li>
               </ul>
             </nav>

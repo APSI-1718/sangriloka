@@ -8,9 +8,11 @@
         <!-- /footer content -->
       </div>
     </div>
-
+    
+    <!-- Daftar.js -->
+    <script src="<?php echo base_url() ?>assets/Daftar.js"></script>
     <!-- jQuery -->
-    <script src="<?php echo base_url() ?>vendors/jquery/dist/jquery.min.js"></script>
+        <script src="<?php echo base_url() ?>vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="<?php echo base_url() ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
@@ -73,3 +75,17 @@
   
   </body>
 </html>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('datatable').DataTable( {
+        "paging":   false,
+        "ordering": true,
+        "info":     true
+    } );
+
+} );
+</script>
+

@@ -22,12 +22,15 @@
               </div>
             </div>
             <div class="form-group">
+<<<<<<< HEAD
+=======
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Tanggal <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <input type="text" name="tanggal" id="tanggal" required="required" use value=<?php echo date('Y-m-d');?> class="form-control col-md-7 col-xs-12" readonly>
               </div>
             </div>
             <div class="form-group">
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nama Lengkap <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <input type="text" id="nama" name="nama" required="required" class="form-control col-md-7 col-xs-12">
@@ -59,6 +62,8 @@
               </div>
             </div>
             <div class="form-group">
+<<<<<<< HEAD
+=======
               <label class="control-label col-md-3 col-sm-3 col-xs-12">No. Telepon <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <input id="no_tlp" name="no_tlp" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text">
@@ -71,6 +76,7 @@
               </div>
             </div>
             <div class="form-group">
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
               <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Tingkat Pendidikan <span class="required">*</span></label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <input type="text" id="tingkat_pend" name="tingkat_pend" required="required" class="form-control col-md-7 col-xs-12">
@@ -105,7 +111,10 @@
               <thead>
                 <tr>
                   <th>No. Daftar</th>
+<<<<<<< HEAD
+=======
                   <th>Tanggal</th>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                   <th>Nama</th>
                   <th>Alamat</th>
                   <th>JK</th>
@@ -122,7 +131,10 @@
               ?>
                 <tr>
                   <td><?php echo $value['no_pendaftaran'];?></td>
+<<<<<<< HEAD
+=======
                   <td><?php echo $value['tanggal'];?></td>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                   <td><?php echo $value['nama'];?></td>
                   <td><?php echo $value['alamat'];?></td>
                   <td><?php echo $value['j_kelamin'];?></td>

@@ -3,6 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class chrd_kinerja extends CI_Controller {
 
+<<<<<<< HEAD
+	public function kinerja()
+	{
+		$this->load->view('template/header');
+		$this->load->view('headoffice/hrd/hrd_menu');
+		/*$this->load->view('headoffice/hrd/modal');*/
+		$this->load->view('headoffice/hrd/hrd_kinerja');
+		$this->load->view('template/footer');
+	}
+=======
 	function __construct()
 	{
 	parent::__construct();
@@ -59,4 +69,5 @@ class chrd_kinerja extends CI_Controller {
 			$this->mutasi_db->update($data, $where);
 			redirect('headoffice/hrd/chrd_kinerja/kinerja', 'refresh');
 	}
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 }

@@ -90,3 +90,7 @@ function __construct()
 		redirect('hotel/service/room_set_up', 'refresh');
 		}
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0

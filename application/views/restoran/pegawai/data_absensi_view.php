@@ -4,6 +4,9 @@
 <div class="clearfix"></div>
 
             <div class="row">
+<<<<<<< HEAD
+<!--                     <ul class="nav navbar-right panel_toolbox">
+=======
 
 
 <!--               <div class="col-md-6 col-sm-6 col-xs-12">
@@ -85,6 +88,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <ul class="nav navbar-right panel_toolbox">
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                       <div class="btn-group">
                         <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle btn-sm" type="button" aria-expanded="false">Hari Ini <span class="caret"></span>
                         </button>
@@ -97,6 +101,95 @@
                           <li class="divider"></li>
                         </ul>
                       </div>
+<<<<<<< HEAD
+                    </ul> -->
+
+              <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Data Absensi Hari Ini<small>Tanggal : <?php echo date('Y-m-d') ?></small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>#</th>
+                          <th>Nama</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <form action="update_absensi_hari" method="post">
+                        <?php $x = 1; $status_full = '0'; ?>
+                        <?php foreach ($data_pegawai as $data) { ?>
+                          <tr>
+                            <th scope="row"><?php echo $x; ?></th>
+                            <td><?php echo $data['nama_pegawai'] ?></td>
+                            <td>
+                              
+                              <?php 
+                               $xs = '';
+                                foreach ($data_absensi as $dataa) {
+                                 
+                                  if ($dataa['id_pegawai'] == $data['id_pegawai']) {
+                                      $xs = $dataa['status']; 
+                                     
+                                      
+                                  }
+                                }
+                                if ($xs){
+                                  echo $xs;
+                                  echo "<input type='hidden' name='status".$data['id_pegawai']."'  value='Masuk'>";
+                                }else{
+                                  echo "<input type='text' name='status".$data['id_pegawai']."' placeholder='Keterangan Tidak Masuk'";
+                                  $status_full = '1';
+                                }
+                                $xs = '';
+                               ?>
+                            </td>
+                          
+                          </tr>
+                        <?php $x++; } ?>
+                        <tr >
+                          <td  colspan="3">
+                            <input style="float:right" <?php if($status_full=='0'){echo 'disabled';} ?> type="submit" name="submit" value="Absensi Selesai" class="btn btn-primary btn-sm" <?php echo 'onclick="return confirm(\'Data Tidak Bisa di Rubah!!! Apakah ingin Melanjutkan?\')"' ?>>
+                          </td>
+                        </tr>
+                        </form>
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Data Absensi Bulan Ini<small>Bulan : <?php echo date('M') ?></small></h2>
+
+
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+=======
                     </ul>                  
                   <div class="x_title">
                     <h2>Data Absensi Bulan Ini<small>Bulan : <?php echo date('M') ?></small></h2>
@@ -105,6 +198,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                     <?php 
                       $tahun = date('Y'); //Mengambil tahun saat ini
                       $bulan = date('m'); //Mengambil bulan saat ini

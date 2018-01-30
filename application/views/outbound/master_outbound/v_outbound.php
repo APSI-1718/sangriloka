@@ -109,7 +109,11 @@
                     <?php 
                         $berhasil = $this->session->flashdata('berhasiltambah'); 
                         if((isset($berhasil)) && (!empty($berhasil))) { ?>
+<<<<<<< HEAD
+                            <div class="alert alert-success hidden-alert" >
+=======
                             <div class="alert alert-info hidden-alert" >
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                                 <?php print_r($berhasil); ?>
                             </div>
@@ -118,7 +122,11 @@
                     <?php 
                         $berhasil = $this->session->flashdata('berhasiledit'); 
                         if((isset($berhasil)) && (!empty($berhasil))) { ?>
+<<<<<<< HEAD
+                            <div class="alert alert-success hidden-alert" >
+=======
                             <div class="alert alert-info hidden-alert" >
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                                 <?php print_r($berhasil); ?>
                             </div>
@@ -127,7 +135,11 @@
                     <?php 
                         $berhasil = $this->session->flashdata('berhasilhapus'); 
                         if((isset($berhasil)) && (!empty($berhasil))) { ?>
+<<<<<<< HEAD
+                            <div class="alert alert-success hidden-alert" >
+=======
                             <div class="alert alert-info hidden-alert" >
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                                 <a href="#" class="close" data-dismiss="alert">&times;</a>
                                 <?php print_r($berhasil); ?>
                             </div>

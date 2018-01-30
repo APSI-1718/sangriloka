@@ -19,6 +19,8 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
+=======
 </div>
 
 <div class="modal fade" id="editmutasiModal" tabindex="-1" role="dialog" aria-labelledby="editmutasiModalLabel">
@@ -225,4 +227,5 @@
 			</div>
 		</div>
 	</div>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 </div>

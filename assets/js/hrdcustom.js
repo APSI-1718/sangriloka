@@ -7,14 +7,25 @@ $(document) .on ("click", '.panggilrekrut', function(e){
 	
 });
 
+<<<<<<< HEAD
+/*$(document) .on("click", '.panggilmutasi', function(e){
+	var id_mutasi = $(this) .data('id_mutasi');
+	var nama = $(this) .data('nama_mutasi');
+=======
 $(document) .on("click", '.panggilmutasi', function(e){
 	var id_mutasi = $(this) .data('id_mutasi');
 	var no_pendaftaran = $(this) .data('no_pendaftaran');
 	var nama = $(this) .data('nama');
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 	var tanggal = $(this) .data('tanggal');
 	var id_pegawai = $(this) .data('id_pegawai');
 	var posisi = $(this) .data('posisi');
 	var jabatan = $(this) .data('jabatan');
+<<<<<<< HEAD
+
+	$(".id_mutasi") .val(id_mutasi);
+	$(".nama_mutasi") .val(nama);
+=======
 	var status = $(this) .data('status');
 	var pil_kinerja = $(this) .data('pil_kinerja');
 	var j_kelamin = $(this) .data('j_kelamin');
@@ -28,10 +39,16 @@ $(document) .on("click", '.panggilmutasi', function(e){
 	$(".id_mutasi") .val(id_mutasi);
 	$(".no_pendaftaran") .val(no_pendaftaran);
 	$(".nama") .val(nama);
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 	$(".tanggal") .val(tanggal);
 	$(".id_pegawai") .val(id_pegawai);
 	$(".posisi") .val(posisi);
 	$(".jabatan") .val(jabatan);
+<<<<<<< HEAD
+});
+
+$(document) .on("click", '.panggilpegawai', function(e){
+=======
 	$(".status") .val(status);
 	$(".pil_kinerja") .val(pil_kinerja);
 	$(".j_kelamin") .val(j_kelamin);
@@ -52,6 +69,7 @@ $(document) .on("click", '.panggilcuti', function(e){
 	});
 
 /*$(document) .on("click", '.panggilpegawai', function(e){
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 	var id_pegawai = $(this) .data('id_pegawai');
 	var nama = $(this) .data('nama');
 	var posisi = $(this) .data('posisi');
