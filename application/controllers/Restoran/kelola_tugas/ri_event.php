@@ -9,6 +9,7 @@ class ri_event extends CI_Controller {
 		$this->load->view('template/header');
 		$this->load->view('restoran/pengelolaan_restoran/menu_kr');
 		$this->load->view('restoran/pengelolaan_restoran/rinc_event');
+		$this->load->view('restoran/pengelolaan_restoran/modal');
 		$this->load->view('template/footer');
 	}
 }
