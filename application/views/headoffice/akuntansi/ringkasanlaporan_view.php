@@ -64,7 +64,8 @@
             </div>
             <div class="clearfix"></div>
             <div style="margin-left: 90%;">
-              <a class="btn btn-default buttons-print btn-sm" tabindex="0" aria-controls="" href="#"><span>Print</span></a>
+              <a  class="btn btn-primary buttons-print btn-sm" tabindex="0" aria-controls="" href="<?php echo base_url()?>headoffice/akuntansi/print_data/print_ringkasanlaporan"><span>Print</span></a>
+              <!-- <li><a href="<?php echo base_url() ?>headoffice/akuntansi/hal_awal_akuntansi/beranda"><i class="fa fa-home"></i> Beranda</a></li> -->
           	</div>
     </div>
 		</div>
