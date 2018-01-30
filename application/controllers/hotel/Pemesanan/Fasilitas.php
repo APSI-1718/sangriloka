@@ -6,7 +6,7 @@ class Fasilitas extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Pemesanan_model/M_Fasilitas');
+		$this->load->model('hotel/Pemesanan_model/M_Fasilitas');
 	}
 
 	public function index()

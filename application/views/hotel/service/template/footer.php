@@ -8,6 +8,8 @@
         <!-- /footer content -->
       </div>
     </div>
+    <!-- service.js -->
+    <script src="<?php echo base_url() ?>../asset/service.js"></script>
 
     <!-- jQuery -->
     <script src="<?php echo base_url() ?>vendors/jquery/dist/jquery.min.js"></script>
@@ -70,6 +72,9 @@
     <script src="<?php echo base_url() ?>vendors/nprogress/nprogress.js"></script>
     <!-- Dropzone.js -->
     <script src="<?php echo base_url() ?>vendors/dropzone/dist/min/dropzone.min.js"></script>
+
+
+
   
   </body>
 </html>

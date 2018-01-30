@@ -1,4 +1,4 @@
- 
+7 
 <div class="right_col" role="main">
 <div class="clearfix"></div>
 
@@ -57,8 +57,8 @@
                           
                           <th>Tgl Checkin</th>
                           <th>Tgl Checkout</th>
-                          <th>Kamar</th>
-                          <th>Status</th>
+                          <!-- <th>Kamar</th>
+                          <th>Status</th> -->
                           <th>Rincian</th>
                           <th>Aksi</th>
                         </tr>
@@ -77,14 +77,14 @@
                             <td><?php echo $value['tgl_checkout'] ?></td>
                             
                             
-                             <td><button class="btn btn-info" data-toggle='modal' data-target="#Status<?php echo $value['id_pendaftar'];?>">
+                             <!-- <td><button class="btn btn-info" data-toggle='modal' data-target="#Status<?php echo $value['id_pendaftar'];?>">
                               <?php if ($value['status']==0) {
                                 echo "Verifikasi";
                               }
                               else {
                                 echo "Terverifikasi";
                               } ?></button>
-                            </td>    
+                            </td>     -->
                             <td>            
                           <button class="btn btn-info" data-toggle='modal' data-target="#rincian<?php echo $value['id_pendaftar'];?>"><i style="color: white" class="fa fa-file-text-o" aria-hidden="true"></i></button></td>
 
@@ -92,8 +92,8 @@
                           <button class="btn btn-info" data-toggle='modal' data-target="#edit<?php echo $value['id_pendaftar'];?>"><i style="color: white" class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
 
                             <a href='<?php echo base_url() ?>hotel/Pemesanan/Pendaftaran/hapus_pendaftar/<?php echo $value['id_pendaftar']?>' onclick="javascript: return confirm('Anda Yakin Ingin Menghapus Data?')"><button type="button" class="btn btn-danger"><i style="color: white" class="fa fa-trash-o" aria-hidden="true"></i></button></a></td>  
-                            <td><?php 
-                            foreach ($jenis as $key =>$value){ echo $value['jenis'] ?><?php } ?></td>
+                          <!--   <td><?php 
+                            foreach ($jenis as $key =>$value){ echo $value['jenis'] ?><?php } ?></td> -->
                           </tr>
                       <?php $i++;}?>
                       </tbody>

@@ -9,6 +9,7 @@ class kelola_tugas extends CI_Controller {
 		$this->load->view('template/header');
 		$this->load->view('restoran/pengelolaan_restoran/menu_kr');
 		$this->load->view('restoran/pengelolaan_restoran/kelola_tugas');
+		$this->load->view('restoran/pengelolaan_restoran/modal');
 		$this->load->view('template/footer');
 	}
 }

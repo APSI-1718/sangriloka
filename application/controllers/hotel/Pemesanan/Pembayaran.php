@@ -6,8 +6,8 @@ class Pembayaran extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Pemesanan_model/M_Pembayaran');
-		$this->load->model('Pemesanan_model/M_Pendaftaran');
+		$this->load->model('hotel/Pemesanan_model/M_Pembayaran');
+		$this->load->model('hotel/Pemesanan_model/M_Pendaftaran');
 	}
 
 	public function index()
