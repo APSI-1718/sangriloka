@@ -10,7 +10,7 @@ class print_data extends CI_Controller {
 
 	public function print_ringkasanlaporan()
 	{
-		$data['perubahan_modal'] = $this->m_databases->select('perubahan_modal')->result_array();
+		$data['laporan'] = $this->m_databases->select('ringkasan_laporan')->result_array();
 
 		$this->load->view('headoffice/akuntansi/template/header');
 		$this->load->view('headoffice/akuntansi/print_ringkasanlaporan', $data);
@@ -18,7 +18,7 @@ class print_data extends CI_Controller {
 
 	public function print_laporankeuangan()
 	{
-		$data['perubahan_modal'] = $this->m_databases->select('perubahan_modal')->result_array();
+		$data['ringkasan'] = $this->m_databases->select('ringkasan_laporan')->result_array();
 
 		$this->load->view('headoffice/akuntansi/template/header');
 		$this->load->view('headoffice/akuntansi/print_laporankeuangan', $data);
