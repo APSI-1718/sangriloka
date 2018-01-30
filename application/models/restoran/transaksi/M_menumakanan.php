@@ -2,9 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed'); 
 
 class M_menumakanan extends CI_Model { 
+
 	function __construct() { 
 		parent::__construct(); 
-		$this->table = "menu_makanan"; } 
+		$this->table = "menu_makanan"; 
+	} 
 
 		function select($where = null) { 
 			if ($where != null) { 
@@ -97,7 +99,23 @@ class M_menumakanan extends CI_Model {
 			
 		}
 
-		
+		function updatepesan($data,$where)
+		{
+			$this->db->where($where);
+			$this->db->update("pemesanan", $data);
+		}
+	
+		function pesanan($where)
+		{
+			$this->db->where('id_pemesanan',$where);
+			$hasil = $this->db->get('menu_makanan,pemesanan');
+			return $hasil->result_array();
+		}
+
+		function insert_data($data)
+		{
+			$this->db->insert('pemesanan',$data);
+		}
 	}
 
 	

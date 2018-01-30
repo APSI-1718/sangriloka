@@ -7,13 +7,13 @@ class Menu_makanan extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('restoran/transaksi/M_menumakanan');
+		$this->load->model('restoran/transaksi/m_menumakanan');
 		$this->load->model('restoran/kitchen/M_kelolaorder');
 	}
 
 	function index(){
 		
-		$jumlah = $this->M_menumakanan->hitung_data('id_menu') ;
+		$jumlah = $this->m_menumakanan->hitung_data('id_menu') ;
 
 		$config = array();
 		$config['base_url'] = base_url() . 'Menu_makanan/index';
@@ -36,11 +36,11 @@ class Menu_makanan extends CI_Controller
 
 		$this->pagination->initialize($config);
 		$data['links'] = $this->pagination->create_links();
-		$data['menumkn'] = $this->M_menumakanan->tampil_pagination_produk($config['per_page'], $this->uri->segment(3));
+		$data['menumkn'] = $this->m_menumakanan->tampil_pagination_produk($config['per_page'], $this->uri->segment(3));
 		$data['order'] = $this->M_kelolaorder->jumlah_order();
 
 		$this->load->view('restoran/transaksi/template/header');
-		$this->load->view('restoran/transaksi/v_menumakanan', $data);
+		$this->load->view('restoran/transaksi/v_daftarpesanan', $data);
 		$this->load->view('restoran/transaksi/template/footer2');
 				
 	}
@@ -48,7 +48,7 @@ class Menu_makanan extends CI_Controller
 
 	function tampil_kategori($ktg){
 		
-		$jumlah = $this->M_menumakanan->hitung_data('id_menu') ;
+		$jumlah = $this->m_menumakanan->hitung_data('id_menu') ;
 
 		$config = array();
 		$config['base_url'] = base_url() . 'Menu_makanan/index';
@@ -71,9 +71,9 @@ class Menu_makanan extends CI_Controller
 
 		$this->pagination->initialize($config);
 		$data['links'] = $this->pagination->create_links();
-		$data['menumkn'] = $this->M_menumakanan->tampil_pagination_produk($config['per_page'], $this->uri->segment(3)); 
+		$data['menumkn'] = $this->m_menumakanan->tampil_pagination_produk($config['per_page'], $this->uri->segment(3)); 
 		
-			$data['menumkn'] = $this->M_menumakanan->tampil_kategori($ktg);
+			$data['menumkn'] = $this->m_menumakanan->tampil_kategori($ktg);
 			$data['order'] = $this->M_kelolaorder->jumlah_order();
 
 		$this->load->view('restoran/transaksi/template/header');
@@ -82,6 +82,24 @@ class Menu_makanan extends CI_Controller
 			
 	}
 
+	function insert_data(){
+		$data = array ( 
+			'id_pemesanan' 	=> $this->input->post('id_pemesanan'),
+			'nama_menu' => $this->input->post('nama_menu'),
+			'Qty' => $this->input->post('Qty'),
+			'total' => $this->input->post('total'),
+			'tgl_pemesanan' => $this->input->post('tgl_pemesanan'),
+			'no_meja' => $this->input->post('no_meja'),
+			'status' 		=> $this->input->post('status'),
+			'statusBayar'   => $this->input->post('statusBayar'),
+			);
+		$this->m_menumakanan->insert_data($data);
+		echo '<script>alert("Pesanan telah diterima");</script>';
+		redirect('restoran/transaksi/menu_makanan/success', 'refresh'); 
+	}
 
+	function success(){
+		$this->load->view('restoran/transaksi/v_daftarpesanan');
+	}
 }
  ?>

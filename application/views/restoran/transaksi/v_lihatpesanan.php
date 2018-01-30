@@ -35,7 +35,7 @@
                       <thead>
                         <tr>
                           <th>No.</th>
-                          <th>ID Order</th>
+                          <th>ID Pemesanan</th>
                           <th>No. Meja</th>
                           <th>Nama Pesanan</th>
                           <th>Qty</th>
