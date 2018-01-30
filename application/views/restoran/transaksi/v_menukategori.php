@@ -94,6 +94,7 @@ $i = 1;
 
                       <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
                       <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
+                      <input type="hidden" name="statusBayar" class="form-control col-md-7 col-xs-12 statusBayar" value="Belum Dibayar">
                      
                 <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
                 <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
@@ -112,7 +113,7 @@ $i = 1;
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
 
-                          <input type="number" id="nama_menu" name="qty" required="required" class="form-control col-md-7 col-xs-12 qty">
+                          <input type="number" id="nama_menu" name="qty" required="required" class="form-control col-md-7 col-xs-12 qty" min="1">
                         </div>
                       </div>
 
