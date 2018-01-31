@@ -10,7 +10,7 @@ class perubahan_modal extends CI_Controller {
 
 	public function perubahanmodal_view()
 	{
-		$data['perubahanmodal'] = $this->m_databases->select('perubahan_modal')->result_array();
+		$data['perubahan_modal'] = $this->m_databases->select('perubahan_modal')->result_array();
 
 		$this->load->view('headoffice/akuntansi/template/header');
 		$this->load->view('headoffice/akuntansi/template/menu');
