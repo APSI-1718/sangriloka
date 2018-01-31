@@ -5,7 +5,7 @@ class M_Jenis extends CI_Model{
 
 	function __construct(){
 		parent::__construct();
-		$this->table="jenis";
+		$this->table="jenis_kamar";
 	}
 
 	function select($where = null){

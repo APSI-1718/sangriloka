@@ -46,7 +46,7 @@
           </div>
         <?php } ?>
 
-             <button type="button" class="btn btn-info fa fa-plus-circle" data-toggle="modal" data-target="#tambahModal"> Pendaftaran</button>
+             <button type="button" class="btn btn-info fa fa-plus-circle" data-toggle="modal" data-target="#tambahModal"> Tambah Data</button>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -76,22 +76,13 @@
                             <td><?php echo $value['tgl_checkin'] ?></td>
                             <td><?php echo $value['tgl_checkout'] ?></td>
                             
-                            
-                             <!-- <td><button class="btn btn-info" data-toggle='modal' data-target="#Status<?php echo $value['id_pendaftar'];?>">
-                              <?php if ($value['status']==0) {
-                                echo "Verifikasi";
-                              }
-                              else {
-                                echo "Terverifikasi";
-                              } ?></button>
-                            </td>     -->
                             <td>            
-                          <button class="btn btn-info" data-toggle='modal' data-target="#rincian<?php echo $value['id_pendaftar'];?>"><i style="color: white" class="fa fa-file-text-o" aria-hidden="true"></i></button></td>
+                          <button class="btn btn-success" data-toggle='modal' data-target="#rincian<?php echo $value['id_pendaftar'];?>"><i style="color: white" aria-hidden="true">Rincian</i></button></td>
 
                           <td>
-                          <button class="btn btn-info" data-toggle='modal' data-target="#edit<?php echo $value['id_pendaftar'];?>"><i style="color: white" class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                          <button class="btn btn-info" data-toggle='modal' data-target="#edit<?php echo $value['id_pendaftar'];?>"><i style="color: white" aria-hidden="true">Ubah</i></button>
 
-                            <a href='<?php echo base_url() ?>hotel/Pemesanan/Pendaftaran/hapus_pendaftar/<?php echo $value['id_pendaftar']?>' onclick="javascript: return confirm('Anda Yakin Ingin Menghapus Data?')"><button type="button" class="btn btn-danger"><i style="color: white" class="fa fa-trash-o" aria-hidden="true"></i></button></a></td>  
+                            <a href='<?php echo base_url() ?>hotel/Pemesanan/Pendaftaran/hapus_pendaftar/<?php echo $value['id_pendaftar']?>' onclick="javascript: return confirm('Anda Yakin Ingin Menghapus Data?')"><button type="button" class="btn btn-danger"><i style="color: white"  aria-hidden="true">Hapus</i></button></a></td>  
                           <!--   <td><?php 
                             foreach ($jenis as $key =>$value){ echo $value['jenis'] ?><?php } ?></td> -->
                           </tr>
@@ -112,7 +103,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Form Pendaftaran</h4>
+          <h4 class="modal-title">Form Tambah Data</h4>
         </div>
         <div class="modal-body">
           <div class="x_content">
@@ -123,7 +114,7 @@
                         <label for="tgl_pendaftaran" class="control-label col-md-3 col-sm-3 col-xs-12">Tgl Pendaftaran</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <?php
-                            $tanggal=date("Y/m/d");
+                            $tanggal=date("m/d/Y");
                           ?>
                            <input type="text"  name="tgl_pendaftaran" required="required" class="form-control col-md-7 col-xs-12" readonly="date-now" value="<?php echo "$tanggal"?>">
                         </div>
@@ -194,7 +185,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                         <select name="jenis" class="form-control col-md-7 col-xs-12">
                           <?php 
-                          foreach ($jenis as $key => $value) {
+                          foreach ($jenis_kamar as $key => $value) {
                             ?>
                             <option value="<?php echo $value['jenis'];?>"><?php echo $value['jenis'];?></option>
                             <?php
@@ -257,7 +248,7 @@ $i = 1;
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Rincian Data Pendaftar</h4>
+          <h4 class="modal-title">Rincian Data Pendaftaran</h4>
         </div>
         <div class="modal-body">
                     <table style="margin:20px auto;">
@@ -334,12 +325,13 @@ $i++;
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Form Ubah Data Pendaftar</h4>
+          <h4 class="modal-title">Form Ubah Data Pendaftaran</h4>
         </div>
         <div class="modal-body">
           <div class="x_content">
                     <br />
                   <form id="editmodal" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>hotel/Pemesanan/Pendaftaran/ubah_pendaftar">
+                  <input type="hidden" name="id_pendaftar" value="<?php echo $value['id_pendaftar'];?>" class="form-control">
 
                     <div class="form-group">
                         <label for="tgl_pendaftaran" class="control-label col-md-3 col-sm-3 col-xs-12">Tgl Pendaftaran</label>

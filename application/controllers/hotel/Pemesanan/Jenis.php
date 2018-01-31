@@ -11,7 +11,7 @@ class Jenis extends CI_Controller {
 
 	public function index()
 	{
-		$data['jenis'] = $this->M_Jenis->select();	
+		$data['jenis_kamar'] = $this->M_Jenis->select();	
 
 		$this->load->view('hotel/pendaftaran/template/header');
 		$this->load->view('hotel/pendaftaran/template/menu');
@@ -33,13 +33,13 @@ class Jenis extends CI_Controller {
 	function ubah_jenis(){
 		$id = $this->input->post('id_jenis');
 		$jenis = $this->input->post('jenis');
-		$Harga =  $this->input->post('Harga');
+		$Harga =  $this->input->post('harga');
 		
 		$data = array (
 
 			'jenis' => $jenis,
 			'id_jenis' => $id,
-			'Harga' => $Harga
+			'harga' => $Harga
 			);
 
 		$where = array('id_jenis' => $id);

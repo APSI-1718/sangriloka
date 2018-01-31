@@ -46,7 +46,7 @@
           </div>
         <?php } ?>
 
-             <button type="button" class="btn btn-info fa fa-plus-circle" data-toggle="modal" data-target="#tambahModal"> Jenis Kamar</button>
+             <button type="button" class="btn btn-info fa fa-plus-circle" data-toggle="modal" data-target="#tambahModal"> Tambah Data</button>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -62,7 +62,7 @@
                       <tbody>
                         <?php 
                         $i=1;
-                        foreach ($jenis as $key =>$value){ ?>
+                        foreach ($jenis_kamar as $key =>$value){ ?>
                           <tr>
                             <td><?php echo $i; ?></td>
                             <td><?php echo $value['jenis'] ?></td>
@@ -70,12 +70,12 @@
                             <td><?php echo $value['harga'] ?></td>
                             
                             <td>                 
-                          <button class="btn btn-info" data-toggle='modal' data-target="#rincian<?php echo $value['id_jenis'];?>"><i style="color: white" class="fa fa-file-text-o" aria-hidden="true"></i></button></td>
+                          <button class="btn btn-success" data-toggle='modal' data-target="#rincian<?php echo $value['id_jenis'];?>"><i style="color: white" aria-hidden="true">Rincian</i></button></td>
 
                           <td>
-                          <button class="btn btn-info" data-toggle='modal' data-target="#edit<?php echo $value['id_jenis'];?>"><i style="color: white" class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                          <button class="btn btn-info" data-toggle='modal' data-target="#edit<?php echo $value['id_jenis'];?>"><i style="color: white" aria-hidden="true">Ubah</i></button>
 
-                            <a href='<?php echo base_url() ?>hotel/Pemesanan/Jenis/hapus_jenis/<?php echo $value['id_jenis']?>' onclick="javascript: return confirm('Anda Yakin Ingin Menghapus Data?')"><button type="button" class="btn btn-danger"><i style="color: white" class="fa fa-trash-o" aria-hidden="true"></i></button></a></td>  
+                            <a href='<?php echo base_url() ?>hotel/Pemesanan/Jenis/hapus_jenis/<?php echo $value['id_jenis']?>' onclick="javascript: return confirm('Anda Yakin Ingin Menghapus Data?')"><button type="button" class="btn btn-danger"><i style="color: white" aria-hidden="true">Hapus</i></button></a></td>  
                           </tr>
                       <?php $i++;}?>
                       </tbody>
@@ -150,7 +150,7 @@
   <!--  Modal rincian-->
 <?php
 $i = 1;
-    foreach ($jenis as $key => $value) {
+    foreach ($jenis_kamar as $key => $value) {
 ?>
   <div class="modal fade" id="rincian<?php echo $value['id_jenis'];?>" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog ">
@@ -192,18 +192,19 @@ $i++;
 ?>
 
 <!-- modal edit -->
-   <?php $i = 1; foreach($jenis as $key => $value){ ?>
+   <?php $i = 1; foreach($jenis_kamar as $key => $value){ ?>
   <div class="modal fade" id="edit<?php echo $value['id_jenis'];?>" role="dialog" aria-labelledby="myModalLabel">
 <div class="modal-dialog ">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Form Ubah Data Kamar</h4>
+          <h4 class="modal-title">Form Ubah Data Jenis Kamar</h4>
         </div>
         <div class="modal-body">
           <div class="x_content">
                     <br />
                   <form id="editmodal" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>hotel/Pemesanan/Jenis/ubah_jenis">
+                  <input type="hidden" name="id_jenis" value="<?php echo $value['id_jenis'];?>" class="form-control">
 
                       <div class="form-group">
                         <label for="jenis" class="control-label col-md-3 col-sm-3 col-xs-12" >Nama

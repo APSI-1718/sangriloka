@@ -5,7 +5,7 @@ class M_Pembayaran extends CI_Model{
 
 	function __construct(){
 		parent::__construct();
-		$this->table="pembayaran";
+		$this->table="pembayaran_homestay";
 	}
 
 	function select($where = null){
@@ -33,7 +33,7 @@ class M_Pembayaran extends CI_Model{
 	}
 	function buat_kode()
 	{
-		$this->db->select('RIGHT(pembayaran.id_pembayaran,6) as kode', FALSE);
+		$this->db->select('RIGHT(pembayaran_homestay.id_pembayaran,6) as kode', FALSE);
 		$this->db->order_by('id_pembayaran','DESC');
 		$this->db->limit(1);
 		$query = $this->db->get($this->table);

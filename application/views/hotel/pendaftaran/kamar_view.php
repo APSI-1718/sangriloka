@@ -46,7 +46,7 @@
           </div>
         <?php } ?>
 
-             <button type="button" class="btn btn-info fa fa-plus-circle" data-toggle="modal" data-target="#tambahModal"> Kamar</button>
+             <button type="button" class="btn btn-info fa fa-plus-circle" data-toggle="modal" data-target="#tambahModal"> Tambah Data</button>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -69,21 +69,14 @@
                             <td><?php echo $value['no_kmr'] ?></td><!-- 
                             <td><?php echo $value['jenis'] ?></td> -->
                             <td><?php echo $value['lokasi'] ?></td>
-                            <td><button class="btn btn-info" data-toggle='modal' data-target="#Status<?php echo $value['id_kmr'];?>">
-                              <?php if ($value['no_kmr']==0) {
-                                echo "Verifikasi";
-                              }
-                              else {
-                                echo "Terverifikasi";
-                              } ?></button>
-                            </td>    
+                            <td></td>    
                             <td>
-                          <button class="btn btn-info" data-toggle='modal' data-target="#rincian<?php echo $value['id_kmr'];?>"><i style="color: white" class="fa fa-file-text-o" aria-hidden="true"></i></button></td>
+                          <button class="btn btn-success" data-toggle='modal' data-target="#rincian<?php echo $value['id_kmr'];?>"><i style="color: white" aria-hidden="true">Rincian</i></button></td>
 
                           <td>
-                          <button class="btn btn-info" data-toggle='modal' data-target="#edit<?php echo $value['id_kmr'];?>"><i style="color: white" class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                          <button class="btn btn-info" data-toggle='modal' data-target="#edit<?php echo $value['id_kmr'];?>"><i style="color: white" aria-hidden="true">Ubah</i></button>
 
-                            <a href='<?php echo base_url() ?>hotel/Pemesanan/Kamar/hapus_kamar/<?php echo $value['id_kmr']?>' onclick="javascript: return confirm('Anda Yakin Ingin Menghapus Data?')"><button type="button" class="btn btn-danger"><i style="color: white" class="fa fa-trash-o" aria-hidden="true"></i></button></a></td>  
+                            <a href='<?php echo base_url() ?>hotel/Pemesanan/Kamar/hapus_kamar/<?php echo $value['id_kmr']?>' onclick="javascript: return confirm('Anda Yakin Ingin Menghapus Data?')"><button type="button" class="btn btn-danger"><i style="color: white" aria-hidden="true">Hapus</i></button></a></td>  
                           </tr>
                       <?php $i++;}?>
                       </tbody>
@@ -102,7 +95,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Form Kamar</h4>
+          <h4 class="modal-title">Form Tambah Data</h4>
         </div>
         <div class="modal-body">
           <div class="x_content">
@@ -128,7 +121,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                          <select name="jenis" class="form-control col-md-7 col-xs-12">
                           <?php 
-                          foreach ($jenis as $key => $value) {
+                          foreach ($jenis_kamar as $key => $value) {
                             ?>
                             <option value="<?php echo $value['jenis'];?>"><?php echo $value['jenis'];?></option>
                             <?php
@@ -194,11 +187,13 @@ $i = 1;
                              </tr>
                              <tr>
                                 <td>Jenis</td>
-                                <td>: <?php echo $value['jenis'];?></td>
+                                <td>: <?php $i = 1; foreach ($jenis as $key => $value) {
+                                    ?><?php echo $value['jenis'];?><?php $i++;}?></td>
                              </tr>
                              <tr>
                                 <td>Lokasi</td>
-                                <td>: <?php echo $value['lokasi'];?></td>
+                                <td>: <?php foreach ($kamar as $key => $value) {
+                                    ?><?php echo $value['lokasi'];?><?php } ?></td>
                              </tr>
                             
                                                          
@@ -232,6 +227,7 @@ $i++;
           <div class="x_content">
                     <br />
                   <form id="editmodal" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>hotel/Pemesanan/Kamar/ubah_kamar">
+                  <input type="hidden" name="id_kmr" value="<?php echo $value['id_kmr'];?>" class="form-control">
 
                     
                       <div class="form-group">
@@ -242,13 +238,13 @@ $i++;
                         </div>
                       </div> 
                       
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label for="jenis" class="control-label col-md-3 col-sm-3 col-xs-12" >Jenis
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text"  name="jenis" value="<?php echo $value['jenis'];?>" class="form-control col-md-7 col-xs-12">
                         </div>
-                      </div>
+                      </div> -->
 
                       <div class="form-group">
                         <label for="lokasi" class="control-label col-md-3 col-sm-3 col-xs-12" >Lokasi

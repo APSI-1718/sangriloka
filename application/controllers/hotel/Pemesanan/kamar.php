@@ -14,7 +14,7 @@ class Kamar extends CI_Controller {
 	{
 		$data['kode'] = $this->M_Kamar->buat_kode();
 		$data['kamar'] = $this->M_Kamar->select();	
-		$data['jenis'] = $this->M_Jenis->select();	
+		$data['jenis_kamar'] = $this->M_Jenis->select();	
 
 		$this->load->view('hotel/pendaftaran/template/header');
 		$this->load->view('hotel/pendaftaran/template/menu');
