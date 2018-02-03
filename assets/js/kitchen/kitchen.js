@@ -73,6 +73,9 @@ $(document).on("click", '.status1', function(e){
 $('.alertalat').show('fast').delay(5000).hide('fast');
 
 
+$('.alertpengajuan').show('fast').delay(5000).hide('fast');
+
+
 $(document).on("change", '#cboItem', function(e){
 	var kode_mkn			= $(this).find(' :selected').data('kode_mkn');
 	var jenis_mkn 			= $(this).find(' :selected').data('jenis_mkn');
@@ -116,19 +119,28 @@ reader.readAsDataURL(input.files[0]);
   	$('.harga_menu').val(harga_menu);
   	$('.harga_menuNum').val(harga_menuNum);
   	$('.qty').val(qty);
-<<<<<<< HEAD
-
-=======
->>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 
   	var total_harga = parseint(qty)*parseint(harga_menuNum);
   	$('.total_harga').parseint(val(total_harga));
 
-<<<<<<< HEAD
-  
+	
+	});
 
-=======
->>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
+  $(document).on("click", '.Tomboleditpesanan', function(e){
+  	var id_pemesanan= $(this).data('id_pemesanan');
+   	var nama_menu= $(this).data('nama_menu');
+   	var harga_menu= $(this).data('harga_menu');
+   	var Qty= $(this).data('Qty');
+   	var total_harga= $(this).data('total_harga');
+   	
+
+   	$('.id_pemesanan').val(id_pemesanan);
+  	$('.Qty').val(Qty);
+  	$('.nama_menu').val(nama_menu);
+  	$('.harga_menu').val(harga_menu);
+  	$('.total_harga').val(total_harga);
+  	$('.qty').val(qty);
+
 	
 	});
 
