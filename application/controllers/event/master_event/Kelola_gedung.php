@@ -29,7 +29,7 @@ class Kelola_gedung extends CI_Controller {
 		$this->load->view('event/master_event/template/footer');
 
 	}
-	public function insert(){
+	public function tambah(){
 
 		$data = array(
 			'id_gedung' => $this->M_Kelola_gedung->kode(),
@@ -38,9 +38,10 @@ class Kelola_gedung extends CI_Controller {
 			'status_gedung' => $this->input->post('status-gedung'),
 			);
 		$this->M_Kelola_gedung->insert($data);
+		$this->session->set_flashdata('tambahdata', "Data berhasil ditambah");
 		redirect('event/master_event/kelola_gedung/KelolaGedung','refresh');
 	}
-	public function update(){
+	public function ubah(){
 		$id =  $this->input->post('id-gedung');
 		$data = array(
 			'jenis_gedung' => $this->input->post('jenis-gedung'),
@@ -49,14 +50,16 @@ class Kelola_gedung extends CI_Controller {
 			);
 		$where = array('id_gedung' =>  $id);
 		$this->M_Kelola_gedung->update($data,$where);
+		$this->session->set_flashdata('editdata', "Data berhasil diubah");
 		redirect('event/master_event/kelola_gedung/KelolaGedung','refresh');
 	}
 
-	public function delete(){
+	public function hapus(){
 		$id =  $this->input->post('id_gedung');
 
 		$where = array('id_gedung' =>  $id);
 		$this->M_Kelola_gedung->delete($where);
+		$this->session->set_flashdata('deletedata', "Data berhasil dihapus");
 		redirect('event/master_event/kelola_gedung/KelolaGedung','refresh');
 
 	}

@@ -1,4 +1,4 @@
-$(document).on("click", '.tombolbarang', function(e){
+$(document).on("click", '.tombolpaket', function(e){
 	var id_paket = $(this).data('idpaket');
 	var nama_paket = $(this).data('namapaket');
 	var harga_paket = $(this).data('hargapaket');
@@ -11,5 +11,7 @@ $(document).on("click", '.tombolbarang', function(e){
 
 
 	$(".editalat").text('Ubah "'+id_paket+'"');
-	$(".deletealat").html('Apakah anda yakin akan mengahapus data dengan nama paket <strong>"' + id_paket +'"</strong> ?');
+	$(".deletepaket").html('Apakah anda  akan mengahapus data  <strong>"' + nama_paket +'"</strong> ?');
 });
+
+$('.alertpaket').show('fast').delay(5000).hide('fast');
