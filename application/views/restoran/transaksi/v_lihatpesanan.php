@@ -1,7 +1,7 @@
 <script type="text/javascript">
    setTimeout(function(){
        location.reload();
-   },1000);
+   },5000);
 </script>
 
                   <div class="x_panel">
@@ -35,9 +35,9 @@
                       <thead>
                         <tr>
                           <th>No.</th>
-                          <th>ID Order</th>
-                          <th>No. Meja</th>
+                          <th>ID Pemesanan</th>
                           <th>Nama Pesanan</th>
+                          <th>No. Meja</th>
                           <th>Qty</th>
                           <th>Status</th>
                           <th>Aksi</th>    
@@ -51,17 +51,17 @@
                                 <tr>
                                 <td><?php echo "$i."?></td>
                                 <td><?php echo $value['id_pemesanan']; ?></td>
-                                <td><?php echo $value['no_meja']; ?></td>
                                 <td><?php echo $value['nama_menu']; ?></td>
+                                <td><?php echo $value['no_meja']; ?></td>
                                 <td><?php echo $value['Qty']; ?></td>
                                 <td>
                                 <?php
                                   if ($value['status'] == 1) {
-                                    echo "<button class='btn btn-warning'>Pending</button>";
+                                    echo "<button class='btn btn-warning btn-sm'>Pending</button>";
                                   } else if ($value['status'] == 2) {
-                                    echo "<button class='btn btn-primary'>Sedang Dimasak</button>";
+                                    echo "<button class='btn btn-info btn-sm'>Sedang Dimasak</button>";
                                   } else if ($value['status'] == 3) {
-                                    echo "<button class='btn btn-success'>Selesai Dimasak</button>";
+                                    echo "<button class='btn btn-success btn-sm'>Selesai Dimasak</button>";
                                   }
                                    
                                 ?>

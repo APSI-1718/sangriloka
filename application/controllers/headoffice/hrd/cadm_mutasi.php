@@ -3,6 +3,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class cadm_mutasi extends CI_Controller {
 
+<<<<<<< HEAD
+	public function mutasi()
+	{
+		$this->load->view('template/header');
+		$this->load->view('headoffice/hrd/adm_menu');
+		/*$this->load->view('headoffice/hrd/modal');*/
+		$this->load->view('headoffice/hrd/adm_mutasi');
+		$this->load->view('template/footer');
+	}
+=======
 	function __construct()
 	{
 		parent::__construct();
@@ -78,4 +88,5 @@ class cadm_mutasi extends CI_Controller {
 		$this->mutasi_db->delete($where);
 		redirect('headoffice/hrd/cadm_mutasi/mutasi', 'refresh');
 	}
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 }

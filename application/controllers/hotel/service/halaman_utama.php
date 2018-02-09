@@ -8,7 +8,7 @@ class halaman_utama extends CI_Controller {
 	{
 		$this->load->view('hotel/service/template/header');
 		$this->load->view('hotel/service/template/menu');
-		$this->load->view('table');
+		$this->load->view('hotel/service/selamat_datang');
 		$this->load->view('hotel/service/template/footer');
 	}
 }

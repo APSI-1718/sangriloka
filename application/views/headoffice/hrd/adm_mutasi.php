@@ -1,11 +1,18 @@
+<<<<<<< HEAD
+<div class="right_col" role="main">
+  <div class="clearfix"></div>
+=======
 <script src="<?php echo base_url()?>assets/js/jquery-new.js" type="text/javascript"></script>
 <script type="text/javascript" src="<?php echo base_url()?>assets/js/hrdcustom.js"></script>
 <div class="right_col" role="main">
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
     <div class="row">
       <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
                   
           <div class="x_title">
+<<<<<<< HEAD
+=======
             <h2>Form Mutasi</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
@@ -57,6 +64,7 @@
         <div class="x_panel">
   
           <div class="x_title">
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
             <h2>Daftar Para Pegawai</h2>
             <div class="clearfix"></div>
           </div>
@@ -69,12 +77,35 @@
                   <th>Nama</th>
                   <th>Posisi</th>
                   <th>Jabatan</th>
+<<<<<<< HEAD
+=======
                   <th>Status</th>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                   <th>Aksi</th>
                 </tr>
               </thead>
 
               <tbody>
+<<<<<<< HEAD
+                <tr>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td><button type="button" class="btn btn-success panggilmutasi" data-toggle="modal" data-target="#editmutasiModal" 
+                        data-id_mutasi="#"
+                        data-tanggal="#"
+                        data-id_pegawai="#"
+                        data-nama_mutasi="#"
+                        data-posisi="#"
+                        data-jabatan="#">
+                      Mutasi</button>
+                      <button type="button" class="btn btn-danger panggilmutasi" data-toggle="modal" data-target="#deletemutasiModal"
+                        data-id_mutasi="#"
+                        data-nama_mutasi="#">
+                      <span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+=======
               <?php
                 $i = 1;
                   foreach ($gabung as $g){
@@ -108,6 +139,7 @@
                   $i++;
                 }
                 ?>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
               </tbody>
             </table>
           </div>

@@ -27,13 +27,16 @@ class Kelola_order extends CI_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('restoran/transaksi/v_lihatpesanan', $data);
+		$this->load->view('restoran/transaksi/template/footer2');
 		
 	}
 
 	function order_makanan(){
 		$data = array ( 
 			'id_pemesanan' 	=> $id['idpemesanan'] = $this->M_kelolaorder->insert_id_pemesanan(),
+			'tgl_pemesanan' => $this->input->post('tgl_pemesanan'),
 			'status' 		=> $this->input->post('status'),
+			'statusBayar'   => $this->input->post('statusBayar'),
 			'nama_menu'	 	=> $this->input->post('nama_menu'), 
 			'qty' 			=> $this->input->post('qty'), 
 			);

@@ -9,7 +9,7 @@ class Alat_makan extends CI_Controller {
 		$this->load->model('restoran/kitchen/M_alatmakan');
 	}
 
-	public function index()
+	public function lihat_am()
 	{
 		$data['kitchen']= $this->M_alatmakan->select();
 
@@ -32,7 +32,7 @@ class Alat_makan extends CI_Controller {
 			 $this->M_alatmakan->insert($data);
 
 			 $this->session->set_flashdata('tambahdata', "Data berhasil ditambahkan");
-			 redirect('restoran/kitchen/alat_makan', 'refresh');
+			 redirect('restoran/kitchen/alat_makan/lihat_am', 'refresh');
 
 			}
 
@@ -43,7 +43,7 @@ class Alat_makan extends CI_Controller {
 				$this->load->view('edit-form', $data);
 			}
 
-			function edit_data() {
+	function edit_data() {
 				$id = $this->input->post('kode_am');
 
 				 $data = array (
@@ -60,7 +60,7 @@ class Alat_makan extends CI_Controller {
 
 			$this->M_alatmakan->update($data, $where);
 
-			redirect('restoran/kitchen/alat_makan', 'refresh');
+			redirect('restoran/kitchen/alat_makan/lihat_am', 'refresh');
 		}
 
 	function delete_data() {
@@ -69,6 +69,6 @@ class Alat_makan extends CI_Controller {
 
 		$this->session->set_flashdata('deletedata', "Data berhasil dihapus");
 
-		redirect('restoran/kitchen/alat_makan', 'refresh');
+		redirect('restoran/kitchen/alat_makan/lihat_am', 'refresh');
 		}
 }

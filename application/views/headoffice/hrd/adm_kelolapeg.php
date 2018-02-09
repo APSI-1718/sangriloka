@@ -13,16 +13,47 @@
             <table id="datatable" class="table table-striped table-bordered">
               <thead>
                 <tr>
+<<<<<<< HEAD
+=======
                   <th>No.</th>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                   <th>NIP</th>
                   <th>Nama</th>
                   <th>Posisi</th>
                   <th>Jabatan</th>
+<<<<<<< HEAD
+                  <th>Aksi</th>
+=======
                   <th>Kehadiran</th>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                 </tr>
               </thead>
 
               <tbody>
+<<<<<<< HEAD
+                <tr>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td><button type="button" class="btn btn-success panggilkelola" data-toggle="modal" data-target="#editkelolaModal"
+                        data-id_pegawai="#"
+                        data-nama="#"
+                        data-posisi="#"
+                        data-jabatan="#"
+                        data-alamat="#"
+                        data-j_kelamin="#"
+                        data-tgl_lahir="#"
+                        data-no_tlp="#"
+                        data-email="#"
+                        data-username="#">
+                      <span class="glyphicon glyphicon-pencil"></span></button>
+                      <button type="button" class="btn btn-danger panggilkelola" data-toggle="modal" data-target="#deletekelolaModal"
+                        data-id_kinerja="#"
+                        data-nama="#">
+                      <span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+=======
               <?php
                 $i = 1;
                   foreach ($gabungkp as $kp){
@@ -39,6 +70,7 @@
                   $i++;
                 }
                 ?>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
               </tbody>
            </table>
           </div>

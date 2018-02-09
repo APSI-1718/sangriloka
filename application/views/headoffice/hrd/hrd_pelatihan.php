@@ -14,14 +14,43 @@
               <thead>
                 <tr>
                   <th>No.</th>
+<<<<<<< HEAD
+                  <th>Id. Pelatihan</th>
+                  <th>Tanggal</th>
+                  <th>Id. Mutasi</th>
+                  <th>Nama</th>
+                  <th>Posisi</th>
+                  <th>Jabatan</th>
+                  <th>Aksi</th>
+=======
                   <th>NIP</th>
                   <th>Nama</th>
                   <th>Posisi</th>
                   <th>Jabatan</th>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
                 </tr>
               </thead>
 
               <tbody>
+<<<<<<< HEAD
+                <tr>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td>NULL</td>
+                  <td><button type="button" class="btn btn-success panggilpelatihan" data-toggle="modal" data-target="#tambahpelatihanModal"
+                        data-id_pelatihan="#"
+                        data-nama="#">
+                  <span class="glyphicon glyphicon-pencil"></span></button>
+                  <button type="button" class="btn btn-danger panggilpelatihan" data-toggle="modal" data-target="#deletepelatihanModal"
+                        data-id_pelatihan="#"
+                        data-nama="#">
+                      <span class="glyphicon glyphicon-trash"></span></button></td>
+                </tr>
+=======
               <?php
                 $i = 1;
                   foreach ($gabungpel as $gp){
@@ -37,6 +66,7 @@
                   $i++;
                 }
                 ?>
+>>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
               </tbody>
             </table>
           </div>

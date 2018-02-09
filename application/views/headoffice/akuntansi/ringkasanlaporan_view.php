@@ -26,9 +26,8 @@
             </div>
 
             <div class="col-md-5 col-sm-5 col-xs-12" style="clear: left; margin-top: 20px; ">
-              <p style=""> Tanggal Laporan </p>
                 <div class="input-group" style="">
-                  	<input type="text" class="form-control nilaiattribut" placeholder="dd/mm/yyy">
+                  	<input type="text" class="form-control nilaiattribut" placeholder="Masukan Atribut Pencarian">
                   	<span class="input-group-btn">
                     	<button class="btn btn-default sortir" data-link="ringkasan_laporan/ringkasanlaporan_view" data-table="ringkasanlaporan" data-kolom="Id Worksheet-Jenis-Jumlah-Tanggal- " data-kolomtable="id_worksheet-jenis-jumlah-tanggal" type="button">Sortir</button>
                   	</span>
@@ -63,9 +62,10 @@
                 </tbody>
               </table>
             </div>
-<div class="clearfix"></div>
+            <div class="clearfix"></div>
             <div style="margin-left: 90%;">
-              <a class="btn btn-default buttons-print btn-sm" tabindex="0" aria-controls="" href="#"><span>Print</span></a>
+              <a  class="btn btn-primary buttons-print btn-sm" tabindex="0" aria-controls="" href="<?php echo base_url()?>headoffice/akuntansi/print_data/print_ringkasanlaporan"><span>Print</span></a>
+              <!-- <li><a href="<?php echo base_url() ?>headoffice/akuntansi/hal_awal_akuntansi/beranda"><i class="fa fa-home"></i> Beranda</a></li> -->
           	</div>
     </div>
 		</div>

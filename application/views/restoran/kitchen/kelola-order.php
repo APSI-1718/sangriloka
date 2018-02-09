@@ -27,6 +27,7 @@
                         <tr>
                           <th>No.</th>
                           <th>ID Pemesanan</th>
+                          <th>No Meja</th>
                           <th>Nama Menu</th>
                           <th>Qty</th>
                           <th>Tanggal</th>
@@ -42,19 +43,21 @@
                                 <tr>
                                 <td><?php echo "$i."?></td>
                                 <td><?php echo $value['id_pemesanan']; ?></td>
+                                <td><?php echo $value['no_meja']; ?></td>
                                 <td><?php echo $value['nama_menu']; ?></td>
                                 <td><?php echo $value['Qty']; ?></td>
                                 <td><?php echo $value['tgl_pemesanan']; ?></td>
                                 <td>
                                 <?php
                                   if ($value['status'] == 1) {
-                                    echo "<button class='btn btn-warning'>Pending</button>";
+                                    echo "<button class='btn btn-warning btn-sm'>Pending</button>";
                                   } else if ($value['status'] == 2) {
-                                    echo "<button class='btn btn-primary'>Sedang Dimasak</button>";
+                                    echo "<button class='btn btn-info btn-sm'>Sedang Dimasak</button>";
                                   } else if ($value['status'] == 3) {
-                                    echo "<button class='btn btn-success'>Selesai Dimasak</button>";
+                                    echo "<button class='btn btn-success btn-sm'>Selesai Dimasak</button>";
+                                  } else if ($value['status'] == 4) {
+                                    echo "<button class='btn btn-danger btn-sm'>Pesanan Habis</button>";
                                   }
-                                   
 
                                 ?>
 
@@ -66,14 +69,15 @@
                                     <input type="hidden" name="status" class="status">
 
                                     <?php
+                                    $u = 3;
                                       if ($value['status']==1) {?>
-                                      <button type='submit' class='btn btn-success btn-xs status1'
+                                      <button type='submit' class='btn btn-info btn-xs status1'
                                       data-id_pemesanan="<?php echo $value['id_pemesanan']?>"
                                       data-status="<?php echo $value['status']?>">
                                               <i class='fa fa-mail-forward'></i> Sedang Dimasak
                                        </button>
 
-                                       <button type='button' class='btn btn-warning btn-xs tombol'>
+                                       <button type='button' class='btn btn-success btn-xs tombol'>
                                               <i class='fa fa-mail-forward'></i> Selesai Dimasak
                                        </button>
                                     <?php
@@ -86,10 +90,10 @@
                                               <i class='fa fa-mail-forward'></i> Selesai Dimasak
                                        </button>
 
-                                   <?php  } 
+                                   <?php  }  
 
                                    else { ?>
-                                          <button class="btn btn-default" type="button">Orderan Selesai</button>
+                                          <button class="btn btn-default btn-sm" type="button">Pesanan selesai</button>
                                       
                                   <?php  }?>
         

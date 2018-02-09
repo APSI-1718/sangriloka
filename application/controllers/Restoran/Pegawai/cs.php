@@ -12,7 +12,8 @@ class CS extends CI_controller
 
 	}
 	function index(){
-		$data['data_meja'] = $this->Crud_model->select('meja');
+		$where =  array('status' => '2');
+		$data['data_meja'] = $this->Crud_model->select('meja',$where);
 		$this->load->view('restoran/pegawai/template/header');
 		$this->load->view('restoran/pegawai/template/menu',$data);
 		$this->load->view('restoran/pegawai/cs_view');
