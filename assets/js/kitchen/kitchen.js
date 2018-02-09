@@ -17,6 +17,26 @@ $(document).on("click", '.tombolalat', function(e){
 
 });
 
+$(document).on("click", '.tombolmakanan', function(e){
+	var kode_mkn		= $(this).data('kode_mkn');
+	var nama_mkn 		= $(this).data('nama_mkn');
+	var jenis_mkn 		= $(this).data('jenis_mkn');
+	var stok_mkn 		= $(this).data('stok_mkn');
+
+
+	$(".kode_mkn").val(kode_mkn);
+	$(".nama_mkn").val(nama_mkn);
+	$(".jenis_mkn").val(jenis_mkn);
+	$(".stok_mkn").val(stok_mkn);
+	
+	
+
+	$(".edit").text('Edit Data "' + nama_mkn +'"');
+	$(".delete").html('Apakah anda ingin menghapus data <strong>"'+nama_mkn+'"</strong> ?');
+	$(".hapusstok").html('Apakah anda ingin menghapus stok <strong>"'+nama_mkn+'"</strong> ?');
+
+});
+
 $(document).on("click", '.tombolmenu', function(e){
 	var id_menu			= $(this).data('id_menu');
 	var nama_menu 		= $(this).data('nama_menu');
@@ -71,6 +91,9 @@ $(document).on("click", '.status1', function(e){
 });
 
 $('.alertalat').show('fast').delay(5000).hide('fast');
+$('.alertpenerimaan').show('fast').delay(5000).hide('fast');
+$('.alertmakanan').show('fast').delay(5000).hide('fast');
+$('.alertpengajuan').show('fast').delay(5000).hide('fast');
 
 
 $(document).on("change", '#cboItem', function(e){
@@ -116,19 +139,28 @@ reader.readAsDataURL(input.files[0]);
   	$('.harga_menu').val(harga_menu);
   	$('.harga_menuNum').val(harga_menuNum);
   	$('.qty').val(qty);
-<<<<<<< HEAD
-
-=======
->>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
 
   	var total_harga = parseint(qty)*parseint(harga_menuNum);
   	$('.total_harga').parseint(val(total_harga));
 
-<<<<<<< HEAD
-  
+	
+	});
 
-=======
->>>>>>> fd58cdfb379aadf2ff2c70a0f8bf8325c698e7e0
+  $(document).on("click", '.Tomboleditpesanan', function(e){
+  	var id_pemesanan= $(this).data('id_pemesanan');
+   	var nama_menu= $(this).data('nama_menu');
+   	var harga_menu= $(this).data('harga_menu');
+   	var Qty= $(this).data('Qty');
+   	var total_harga= $(this).data('total_harga');
+   	
+
+   	$('.id_pemesanan').val(id_pemesanan);
+  	$('.Qty').val(Qty);
+  	$('.nama_menu').val(nama_menu);
+  	$('.harga_menu').val(harga_menu);
+  	$('.total_harga').val(total_harga);
+  	$('.qty').val(qty);
+
 	
 	});
 

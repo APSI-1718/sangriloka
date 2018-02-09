@@ -3,7 +3,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="<?php echo base_url() ?>" class="site_title"><i class="fa fa-leaf"></i> <span>SANGRILOKA</span></a>
+              <a href="<?php echo base_url() ?>event/master_event/kelola_gedung/KelolaGedung" class="site_title"><i class="fa fa-leaf"></i> <span>SANGRILOKA</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -15,7 +15,7 @@
               </div>
               <div class="profile_info">
                 <span>Selamat Datang,</span>
-                <h2>Sangri</h2>
+                <h2>Dawa</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -27,9 +27,6 @@
               <div class="menu_section">
     
                 <ul class="nav side-menu">
-
-                  <li><a href="<?php echo base_url() ?>event/master_event/beranda"> <i class="fa fa-home"></i> Beranda </a>  
-                  </li>
                 
                   <li><a href="<?php echo base_url() ?>event/master_event/kelola_gedung/KelolaGedung"> <i class="fa fa-briefcase"></i> Kelola Gedung </a>  
                   </li>
@@ -37,16 +34,8 @@
                   <li><a href="<?php echo base_url() ?>event/master_event/kelola_paket/KelolaPaket"> <i class="fa fa-edit"></i> Kelola Paket </a>
 
                   </li>
-                  <li><a href="<?php echo base_url() ?>event/master_event/kelola_absensi"> <i class="fa fa-table"></i> Kelola Absensi</a>
-                    
-                  </li>
-                  <li><a href="<?php echo base_url() ?>event/master_event/kelola_pegawai"> <i class="fa fa-user"></i> Kelola Pegawai  </a>
-                  
-                  </li>
-                  <li><a href="<?php echo base_url() ?>event/master_event/kelola_pelanggan"> <i class="fa fa-book"></i> Kelola Pelanggan </a>
-                    
-                  </li>
-                  
+                  <li><a href="<?php echo base_url() ?>event/master_event/Absensi"> <i class="fa fa-table"></i> Absensi</a>
+                       
                  
               </div>
           
@@ -56,7 +45,7 @@
         </div>
 
         <!-- top navigation -->
-        <div class="top_nav">
+        <!-- <div class="top_nav">
           <div class="nav_menu">
             <nav>
               <div class="nav toggle">
@@ -143,5 +132,5 @@
               </ul>
             </nav>
           </div>
-        </div>
+        </div> -->
         <!-- /top navigation -->

@@ -11,9 +11,10 @@
 
     <!-- jQuery -->
     <script src="<?php echo base_url() ?>vendors/jquery/dist/jquery.min.js"></script>
-    <script src="<?php echo base_url() ?>build/js/transaksiresto.js"></script>
+    
     <!-- Bootstrap -->
     <script src="<?php echo base_url() ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url() ?>build/js/transaksiresto.js"></script>
     <!-- kitchen.js -->
     <script src="<?php echo base_url() ?>assets/js/kitchen/kitchen.js"></script>
     <!-- Service -->

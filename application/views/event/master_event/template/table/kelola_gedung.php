@@ -17,6 +17,33 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+                  <?php
+              $berhasil = $this->session->flashdata('tambahdata');
+              if ((isset($berhasil)) && (!empty($berhasil))) {?>
+              <div class="alert alert-success alertgedung">
+              <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <?php print_r($berhasil);?>
+          </div>
+        <?php } ?>
+
+        <?php
+              $berhasil = $this->session->flashdata('editdata');
+              if ((isset($berhasil)) && (!empty($berhasil))) {?>
+              <div class="alert alert-success alertgedung">
+              <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <?php print_r($berhasil);?>
+          </div>
+        <?php } ?>
+
+        <?php
+              $berhasil = $this->session->flashdata('deletedata');
+              if ((isset($berhasil)) && (!empty($berhasil))) {?>
+              <div class="alert alert-success alertgedung">
+              <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <?php print_r($berhasil);?>
+          </div>
+        <?php } ?>
+
              <button type="button" class="btn btn-info " data-toggle="modal" data-target="#ModalTambahBarang"> Tambah</button>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
@@ -40,13 +67,13 @@
                           <td><?php echo $value['jenis_gedung'];?></td>
                           <td><?php echo $value['jumlah_kuota'];?></td>
                           <td><?php echo $value['status_gedung'];?></td>
-                          <td><button type="button" class="btn btn-primary tombolbarang" data-toggle="modal" data-target="#ModalUbahBarang" 
+                          <td><button type="button" class="btn btn-primary tombolgedung" data-toggle="modal" data-target="#ModalUbahBarang" 
                           data-idgedung="<?php echo $value['id_gedung'];?>" 
                           data-jenisgedung="<?php echo $value['jenis_gedung'];?>" 
                           data-jumlahkuota="<?php echo $value['jumlah_kuota'];?>" 
-                          data-statusgedung="<?php echo $value['status_gedung'];?>" > Edit</button>
+                          data-statusgedung="<?php echo $value['status_gedung'];?>" > Ubah</button>
                           
-                          <button type="button" class="btn btn-danger tombolbarang" data-toggle="modal" data-target="#ModalHapusBarang" 
+                          <button type="button" class="btn btn-danger tombolgedung" data-toggle="modal" data-target="#ModalHapusBarang" 
                           data-idgedung="<?php echo $value['id_gedung'];?>" 
                           data-jenisgedung="<?php echo $value['jenis_gedung'];?>" > Hapus</button></td>
                         </tr>
@@ -68,13 +95,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Form Kelola Gedung</h4>
+          <h4 class="modal-title">Form Tambah Gedung</h4>
         </div>
         <div class="modal-body">
           <div class="x_content">
                     <br />
                     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"
-                    method="post" action="<?php echo base_url() ?>event/master_event/kelola_gedung/insert">
+                    method="post" action="<?php echo base_url() ?>event/master_event/kelola_gedung/tambah">
 
                      
                           <input type="hidden" id="id-gedung" name="id-gedung" required="required" class="form-control col-md-7 col-xs-12">
@@ -114,7 +141,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success"> Tambah</button>
+          <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
         </form>
         </div>
       </div>
@@ -129,22 +156,16 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Edit Gedung</h4>
+          <h4 class="modal-title">Form Ubah Gedung</h4>
         </div>
         <div class="modal-body">
           <div class="x_content">
                     <br />
                     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"
-                    method="post" action="<?php echo base_url() ?>event/master_event/kelola_gedung/update">
+                    method="post" action="<?php echo base_url() ?>event/master_event/kelola_gedung/ubah">
 
 
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nama-barang">Id Gedung <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="id-gedung" name="id-gedung" required="required" class="form-control col-md-7 col-xs-12 id_gedung">
-                        </div>
-                      </div>
+                      <input type="hidden" id="id-gedung" name="id-gedung" required="required" class="form-control col-md-7 col-xs-12 id_gedung">
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nama-barang">Jenis Gedung <span class="required">*</span>
                         </label>
@@ -181,7 +202,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary"></i> Edit</button>
+          <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
         </form>
         </div>
       </div>
@@ -196,13 +217,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Hapus Barang</h4>
+          <h4 class="modal-title">Hapus Gedung</h4>
         </div>
         <div class="modal-body">
-          <div class="deletealat alert alert-danger" role="alert"></div>
+          <div class="deletegedung alert alert-danger" role="alert"></div>
           <div class="x_content">
                     <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>event/master_event/kelola_gedung/delete">
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>event/master_event/kelola_gedung/hapus">
 
                       <input type="text" name="id_gedung" class="id_gedung">                  
                       <div class="ln_solid"></div>

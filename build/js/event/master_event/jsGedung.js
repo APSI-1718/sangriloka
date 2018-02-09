@@ -1,4 +1,4 @@
-$(document).on("click", '.tombolbarang', function(e){
+$(document).on("click", '.tombolgedung', function(e){
 	var id_gedung = $(this).data('idgedung');
 	var jenis_gedung = $(this).data('jenisgedung');
 	var jumlah_kuota = $(this).data('jumlahkuota');
@@ -9,5 +9,8 @@ $(document).on("click", '.tombolbarang', function(e){
 	$(".jumlah_kuota").val(jumlah_kuota);
 	$(".status_gedung").val(status_gedung);
 	$(".editalat").text('Ubah "'+id_gedung+'"');
-	$(".deletealat").html('Apakah anda yakin akan mengahapus data dengan nama paket <strong>"' + id_gedung +'"</strong> ?');
+	$(".deletegedung").html('Apakah anda  akan mengahapus data  <strong>"' + jenis_gedung +'"</strong> ?');
 });
+
+
+$('.alertgedung').show('fast').delay(5000).hide('fast');

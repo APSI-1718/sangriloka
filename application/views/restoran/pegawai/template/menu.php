@@ -27,7 +27,7 @@
               <div class="menu_section">
     
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url() ?>Restoran/pegawai/index"><i class="fa fa-home"></i> Home</a></li>
+
  
                   <li><a href="<?php echo base_url() ?>Restoran/pegawai/Absensi"><i class="fa fa-book"></i> Absensi</a></li>
                   <li><a href="<?php echo base_url() ?>Restoran/pegawai/Absensi/data"><i class="fa fa-book"></i> Data Absensi</a></li>
@@ -73,7 +73,7 @@
 
                 <li class="">
                   <a href="<?php echo base_url(); ?>Restoran/pegawai/Login" class="user-profile" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">Login
+                    <img src="images/img.jpg" alt="">
                   </a>
                 </li>                
                 <?php } ?>
