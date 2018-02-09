@@ -54,11 +54,10 @@
                           <th>Tgl Pendaftaran</th>
                           <th>No Pendaftaran</th>
                           <th>Nama Pendaftar</th>
-                          
                           <th>Tgl Checkin</th>
                           <th>Tgl Checkout</th>
-                          <!-- <th>Kamar</th>
-                          <th>Status</th> -->
+                          <th>Kamar</th> 
+                         <!--  <th>Harga</th> -->
                           <th>Rincian</th>
                           <th>Aksi</th>
                         </tr>
@@ -68,23 +67,22 @@
                         <?php 
                         $i=1;
                         foreach ($pendaftaran as $key =>$value){ ?>
-                          <tr>
-                            <td><?php echo $i; ?></td>
-                            <td><?php echo $value['tgl_pendaftaran'] ?></td>
-                            <td><?php echo $value['id_pendaftar'] ?></td>
-                            <td><?php echo $value['nama_pendaftar'] ?></td>
-                            <td><?php echo $value['tgl_checkin'] ?></td>
-                            <td><?php echo $value['tgl_checkout'] ?></td>
-                            
-                            <td>            
+                        <tr>
+                          <td><?php echo $i; ?></td>
+                          <td><?php echo $value['tgl_pendaftaran'] ?></td>
+                          <td><?php echo $value['id_pendaftar'] ?></td>
+                          <td><?php echo $value['nama_pendaftar'] ?></td>
+                          <td><?php echo $value['tgl_checkin'] ?></td>
+                          <td><?php echo $value['tgl_checkout'] ?></td>
+                          <td><?php echo $value['jenis']; ?></td> 
+                          <td>            
                           <button class="btn btn-success" data-toggle='modal' data-target="#rincian<?php echo $value['id_pendaftar'];?>"><i style="color: white" aria-hidden="true">Rincian</i></button></td>
 
                           <td>
                           <button class="btn btn-info" data-toggle='modal' data-target="#edit<?php echo $value['id_pendaftar'];?>"><i style="color: white" aria-hidden="true">Ubah</i></button>
-
-                            <a href='<?php echo base_url() ?>hotel/Pemesanan/Pendaftaran/hapus_pendaftar/<?php echo $value['id_pendaftar']?>' onclick="javascript: return confirm('Anda Yakin Ingin Menghapus Data?')"><button type="button" class="btn btn-danger"><i style="color: white"  aria-hidden="true">Hapus</i></button></a></td>  
-                          <!--   <td><?php 
-                            foreach ($jenis as $key =>$value){ echo $value['jenis'] ?><?php } ?></td> -->
+                            <a href='<?php echo base_url() ?>hotel/Pemesanan/Pendaftaran/hapus_pendaftar/<?php echo $value['id_pendaftar']?>' onclick="javascript: return confirm('Anda Yakin Ingin Menghapus Data?')"><button type="button" class="btn btn-danger"><i style="color: white"  aria-hidden="true">Hapus</i></button></a>
+                          </td>  
+                          
                           </tr>
                       <?php $i++;}?>
                       </tbody>
@@ -96,6 +94,7 @@
             </div>
           </div>
         </div>
+
         <!-- tambahmodal -->
 
     <div class="modal fade" id="tambahModal" role="dialog" aria-labelledby="TambahModalLabel">
@@ -114,7 +113,7 @@
                         <label for="tgl_pendaftaran" class="control-label col-md-3 col-sm-3 col-xs-12">Tgl Pendaftaran</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <?php
-                            $tanggal=date("m/d/Y");
+                            $tanggal=date("Y/m/d");
                           ?>
                            <input type="text"  name="tgl_pendaftaran" required="required" class="form-control col-md-7 col-xs-12" readonly="date-now" value="<?php echo "$tanggal"?>">
                         </div>
@@ -188,7 +187,7 @@
                           foreach ($jenis_kamar as $key => $value) {
                             ?>
                             <option value="<?php echo $value['jenis'];?>"><?php echo $value['jenis'];?></option>
-                            <?php
+                            <?php 
                             }
                             ?>
                         </select>
@@ -210,14 +209,7 @@
                         </div>
                       </div>      
 
-                       <!-- <div class="form-group">
-                        <label for="lamainap" class="control-label col-md-3 col-sm-3 col-xs-12" >lama inap
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text"  name="lamainap" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div> -->   
-                             <div class="ln_solid"></div>
+                      <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
 
@@ -238,7 +230,7 @@
   </div>
 </div>
 
-  <!--  Modal rincian-->
+<!--  Modal rincian-->
 <?php
 $i = 1;
     foreach ($pendaftaran as $key => $value) {
@@ -248,7 +240,7 @@ $i = 1;
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Rincian Data Pendaftaran</h4>
+          <h4 class="modal-title">Rincian Data</h4>
         </div>
         <div class="modal-body">
                     <table style="margin:20px auto;">
@@ -325,7 +317,7 @@ $i++;
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Form Ubah Data Pendaftaran</h4>
+          <h4 class="modal-title">Form Ubah Data</h4>
         </div>
         <div class="modal-body">
           <div class="x_content">
@@ -401,7 +393,7 @@ $i++;
                       <div class="form-group">
                         <label for="jenis" class="control-label col-md-3 col-sm-3 col-xs-12">Kamar</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text"  name="tgl_checkin" class="form-control col-md-7 col-xs-12 jenis" value="<?php echo $value['jenis'];?>">
+                          <input type="text"  name="jenis" class="form-control col-md-7 col-xs-12 jenis" value="<?php echo $value['jenis'];?>">
                         </div>
                       </div>      
 
@@ -420,14 +412,7 @@ $i++;
                         </div>
                       </div>      
 
-                    <!--   <div class="form-group">
-                        <label for="lamainap" class="control-label col-md-3 col-sm-3 col-xs-12" >lama inap
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                           <input type="text"  name="lamainap" class="form-control col-md-7 col-xs-12 lamainap" value="<?php echo $value['lamainap'];?>">
-                        </div>
-                      </div>    -->  
-                    <div class="ln_solid"></div>
+                      <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <button data-dismiss="modal" class="btn btn-primary btn-md">Batal</button>

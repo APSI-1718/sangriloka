@@ -51,8 +51,8 @@
                       <thead>
                         <tr>
                           <th>#</th>
-                          <td>No Kamar</td><!-- 
-                          <th>Jenis</th> -->
+                          <td>No Kamar</td>
+                          <th>Jenis</th>
                           <th>Lokasi</th>
                           <th>Status</th>
                           <th>Rincian</th>
@@ -66,8 +66,8 @@
                         foreach ($kamar as $key =>$value){ ?>
                           <tr>
                             <td><?php echo $i; ?></td>
-                            <td><?php echo $value['no_kmr'] ?></td><!-- 
-                            <td><?php echo $value['jenis'] ?></td> -->
+                            <td><?php echo $value['no_kmr'] ?></td>
+                            <td><?php echo $value['jenis'] ?></td>
                             <td><?php echo $value['lokasi'] ?></td>
                             <td></td>    
                             <td>
@@ -110,7 +110,7 @@
                       </div>
                                         
                       <div class="form-group">
-                        <label for="no_kmr" class="control-label col-md-3 col-sm-3 col-xs-12" >No Kamar</label>
+                        <label for="no_kmr" class="control-label col-md-3 col-sm-3 col-xs-12">No kamar</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text"  name="no_kmr" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
@@ -171,7 +171,7 @@ $i = 1;
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Rincian Data Kamar</h4>
+          <h4 class="modal-title">Rincian Data</h4>
         </div>
         <div class="modal-body">
                     <table style="margin:20px auto;">
@@ -187,13 +187,11 @@ $i = 1;
                              </tr>
                              <tr>
                                 <td>Jenis</td>
-                                <td>: <?php $i = 1; foreach ($jenis as $key => $value) {
-                                    ?><?php echo $value['jenis'];?><?php $i++;}?></td>
+                                <td>: <?php echo $value['jenis'];?></td>
                              </tr>
                              <tr>
                                 <td>Lokasi</td>
-                                <td>: <?php foreach ($kamar as $key => $value) {
-                                    ?><?php echo $value['lokasi'];?><?php } ?></td>
+                                <td>: <?php echo $value['lokasi'];?></td>
                              </tr>
                             
                                                          
@@ -221,7 +219,7 @@ $i++;
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Form Ubah Data Kamar</h4>
+          <h4 class="modal-title">Form Ubah Data</h4>
         </div>
         <div class="modal-body">
           <div class="x_content">
@@ -238,13 +236,13 @@ $i++;
                         </div>
                       </div> 
                       
-                      <!-- <div class="form-group">
+                      <div class="form-group">
                         <label for="jenis" class="control-label col-md-3 col-sm-3 col-xs-12" >Jenis
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text"  name="jenis" value="<?php echo $value['jenis'];?>" class="form-control col-md-7 col-xs-12">
                         </div>
-                      </div> -->
+                      </div>
 
                       <div class="form-group">
                         <label for="lokasi" class="control-label col-md-3 col-sm-3 col-xs-12" >Lokasi

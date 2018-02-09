@@ -40,3 +40,23 @@ $(document).on("click", '.tomboln',function(e){
 
 	$(".delete").html('Apakah notifikasi dengan judul <strong>"'+judul_notifikasi+'"</strong> akan dihapus?');
 });
+
+$(document).on("click", '.tmblUbah',function(e){
+	$("#antoform3").attr('action','../notifikasi/agenda/edit_data');
+
+
+});
+
+$(document).on("click", '.tmblHapus',function(e){
+	$("#antoform2").attr('action','../notifikasi/agenda/delete_data');
+	
+	
+});
+
+$(document).on("click", '#tomboldel',function(e){
+	var judul_agenda = $('#title2').val();
+	$("#id").val($("#id_agenda").val());
+	$(".delete").html('Apakah agenda dengan judul <strong>"'+judul_agenda+'"</strong> akan dihapus?');
+	
+	
+});

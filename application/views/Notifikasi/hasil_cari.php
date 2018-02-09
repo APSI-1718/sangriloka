@@ -22,7 +22,7 @@
 									}else{
 										echo "Data tidak ditemukan";
 										} ?></a>
-                                      </h2>
+                                     
                           <div class="byline">
                             <span></span>
                           </div>

@@ -17,7 +17,7 @@ class kel_konten extends CI_Controller {
 			'gambar_konten' => $this->input->post('gambar'));
 
 		$this->konten_db->insert($data);
-		redirect('notifikasi/detail_konten', 'refresh');
+		redirect('notifikasi/utama', 'refresh');
 	}
 
 	function edit_data()
@@ -29,7 +29,7 @@ class kel_konten extends CI_Controller {
 		
 			$where = array ('id_konten' => $id_konten);
 			$this->konten_db->update($data, $where);
-			redirect('notifikasi/detail_konten', 'refresh');
+			redirect('notifikasi/utama', 'refresh');
 	}
 
 	function delete_data()
@@ -37,6 +37,6 @@ class kel_konten extends CI_Controller {
 		$id_konten = $this->input->post('id');
 		$where = array ('id_konten' => $id_konten);
 		$this->konten_db->delete($where);
-		redirect('notifikasi/detail_konten', 'refresh');
+		redirect('notifikasi/utama', 'refresh');
 	}
 }

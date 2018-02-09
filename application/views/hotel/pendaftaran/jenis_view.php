@@ -94,7 +94,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Form Tambah Jenis Kamar</h4>
+          <h4 class="modal-title">Form Tambah Data</h4>
         </div>
         <div class="modal-body">
           <div class="x_content">
@@ -157,7 +157,7 @@ $i = 1;
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Rincian Data Jenis Kamar</h4>
+          <h4 class="modal-title">Rincian Data</h4>
         </div>
         <div class="modal-body">
                     <table style="margin:20px auto;">
@@ -198,7 +198,7 @@ $i++;
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Form Ubah Data Jenis Kamar</h4>
+          <h4 class="modal-title">Form Ubah Data</h4>
         </div>
         <div class="modal-body">
           <div class="x_content">

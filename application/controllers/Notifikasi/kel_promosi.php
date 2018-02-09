@@ -37,6 +37,6 @@ class kel_promosi extends CI_Controller {
 		$id_konten = $this->input->post('id');
 		$where = array ('id_promosi' => $id_konten);
 		$this->promosi_db->delete($where);
-		redirect('notifikasi/detail_promosi', 'refresh');
+		redirect('notifikasi/promosi', 'refresh');
 	}
 }

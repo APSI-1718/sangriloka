@@ -1,5 +1,18 @@
 <!-- page content -->
     <div class="right_col" role="main">
+
+
+              <div class="title_left">
+                <div class="col-md-4 col-sm-6 col-xs-6 form-group">
+                  <div class="input-group">
+                
+                   <button class="btn btn-primary btn-sm" type="button" data-toggle="modal" data-target="#modaltambahevent"><i class="fa fa-plus-circle">&nbsp;Tambah</i></button>
+                
+                  </div>
+                </div>
+            </div>
+
+         
              <div class="title_right">
               <div class="col-md-3 col-sm-6 col-xs-6 form-group pull-right top_search">
                <form action="<?php echo base_url('notifikasi/cari_konten/hasil')?>" action="GET">
@@ -13,7 +26,7 @@
               </div>
             </div>
 
-     <div class="col-md-12 col-sm-9 col-xs-12">
+     <div class="col-md-12 col-sm-6 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
                   <h2>Konten</h2>
@@ -21,6 +34,7 @@
                   <div class="clearfix"></div>
                 </div>
                <?php foreach ($event as $key => $value){?>
+                
 
                 <div class="x_content">
                   <ul class="list-unstyled timeline">
@@ -31,23 +45,27 @@
                         </div>
                         <div class="block_content">
                           <h2 class="title">
-                                          <a href="../notifikasi/detail_konten"><?php echo $value ['judul_konten']; ?></a>
+                                          <span><?php echo $value ['judul_konten']; ?></span>
                                       </h2>
                           <div class="byline">
                             <span><?php echo $value ['waktu_tanggal']; ?></span>
                           </div>
-                          <p class="excerpt"><?php echo word_limiter( $value ['isi_konten'], 23); ?>
+                          <p class="excerpt"><?php echo ( $value ['isi_konten']); ?>
                           </p>
+                           
+                       <button href="#" class="btn btn-info btn-sm tombol2" data-toggle="modal" data-target="#modaleditevent" data-id="<?php echo $value ['id_konten'];?>" data-judul="<?php echo $value ['judul_konten'];?>" data-isi="<?php echo $value ['isi_konten'];?>" ><i class="fa fa-pencil"></i></button>
+                            
+                            <button href="#" class="btn btn-danger btn-sm tombol2" data-toggle="modal" data-target="#modalhapusevent" data-id="<?php echo $value ['id_konten'];?>" data-judul="<?php echo $value ['judul_konten'];?>"><i class="fa fa-trash-o"></i></button>
                         </div>
                       </div>
+
                     </li>
                   </ul>
                 </div> <?php } ?>
               </div>
             </div>
-
-           
-          </div> 
+          </div>
+          
 
    <div id="modaltambahevent" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -63,13 +81,13 @@
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Judul</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="judul" name="judul" required="required">
+                    <input type="text" class="form-control" id="judul" name="judul" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Isi Konten</label>
                   <div class="col-sm-9">
-                    <textarea class="form-control" style="height:55px;" id="isi" name="isi" ></textarea>
+                    <textarea class="form-control" style="height:55px;" id="isi" name="isi" required></textarea>
                   </div>
                 </div>
                  <div class="form-group">
@@ -80,7 +98,7 @@
                  <div class="form-group">
                   <label class="col-sm-3 control-label">Gambar</label>
                   <div class="col-sm-9">
-                    <input type="file" class="form-control" id="gambar" name="gambar">
+                    <input type="file" class="form-control" id="gambar" name="gambar" required>
                   </div>
                 </div>
              
@@ -109,13 +127,13 @@
                   <input type="hidden" class="form-control" id="id" name="id">
                   <label class="col-sm-3 control-label">Judul</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control judul" id="judul" name="judul">
+                    <input type="text" class="form-control judul" id="judul" name="judul" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-3 control-label">Isi Konten</label>
                   <div class="col-sm-9">
-                    <textarea class="form-control isi" style="height:55px;" id="isi" name="isi"></textarea>
+                    <textarea class="form-control isi" style="height:55px;" id="isi" name="isi" required></textarea>
                   </div>
                 </div>
                  <div class="form-group">
@@ -128,7 +146,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Batal</button>
-            <button type="submit" class="btn btn-primary antosubmit">Simpan</button> </form>
+            <button type="submit" class="btn btn-primary antosubmit">Ubah</button> </form>
           </div>
         </div>
       </div>

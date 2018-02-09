@@ -20,7 +20,7 @@ class Kelola_paket extends CI_Controller {
 		$this->load->view('event/master_event/template/footer');
 
 	}
-	public function insert(){
+	public function tambah(){
 
 		$data = array(
 			'id_paket' => $this->M_Kelola_paket->kode(),
@@ -29,9 +29,10 @@ class Kelola_paket extends CI_Controller {
 			'detail_paket' => $this->input->post('detail-paket'),
 			);
 		$this->M_Kelola_paket->insert($data);
+		$this->session->set_flashdata('tambahdata', "Data berhasil ditambah");
 		redirect('event/master_event/kelola_paket/KelolaPaket','refresh');
 	}
-	public function update(){
+	public function ubah(){
 		$id =  $this->input->post('id-paket');
 		$data = array(
 			'nama_paket' => $this->input->post('nama-paket'),
@@ -40,14 +41,16 @@ class Kelola_paket extends CI_Controller {
 			);
 		$where = array('id_paket' =>  $id);
 		$this->M_Kelola_paket->update($data,$where);
+		$this->session->set_flashdata('editdata', "Data berhasil diubah");
 		redirect('event/master_event/kelola_paket/KelolaPaket','refresh');
 	}
 
-	public function delete(){
+	public function hapus(){
 		$id =  $this->input->post('id_paket');
 
 		$where = array('id_paket' =>  $id);
 		$this->M_Kelola_paket->delete($where);
+		$this->session->set_flashdata('deletedata', "Data berhasil dihapus");
 		redirect('event/master_event/kelola_paket/KelolaPaket','refresh');
 
 	}

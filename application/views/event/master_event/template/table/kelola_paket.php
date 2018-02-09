@@ -17,6 +17,32 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+        <?php
+              $berhasil = $this->session->flashdata('tambahdata');
+              if ((isset($berhasil)) && (!empty($berhasil))) {?>
+              <div class="alert alert-success alertpaket">
+              <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <?php print_r($berhasil);?>
+          </div>
+        <?php } ?>
+
+        <?php
+              $berhasil = $this->session->flashdata('editdata');
+              if ((isset($berhasil)) && (!empty($berhasil))) {?>
+              <div class="alert alert-success alertpaket">
+              <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <?php print_r($berhasil);?>
+          </div>
+        <?php } ?>
+
+        <?php
+              $berhasil = $this->session->flashdata('deletedata');
+              if ((isset($berhasil)) && (!empty($berhasil))) {?>
+              <div class="alert alert-success alertpaket">
+              <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <?php print_r($berhasil);?>
+          </div>
+        <?php } ?>
              <button type="button" class="btn btn-info " data-toggle="modal" data-target="#ModalTambahBarang"> Tambah</button>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
@@ -40,13 +66,13 @@
                           <td><?php echo $value['nama_paket'];?></td>
                           <td><?php echo $value['harga_paket'];?></td>
                           <td><?php echo $value['detail_paket'];?></td>
-                          <td><button type="button" class="btn btn-primary tombolbarang" data-toggle="modal" data-target="#ModalUbahBarang" 
+                          <td><button type="button" class="btn btn-primary tombolpaket" data-toggle="modal" data-target="#ModalUbahBarang" 
                           data-idpaket="<?php echo $value['id_paket'];?>" 
                           data-namapaket="<?php echo $value['nama_paket'];?>" 
                           data-hargapaket="<?php echo $value['harga_paket'];?>" 
-                          data-detailpaket="<?php echo $value['detail_paket'];?>" > Edit</button>
+                          data-detailpaket="<?php echo $value['detail_paket'];?>" > Ubah</button>
                           
-                          <button type="button" class="btn btn-danger tombolbarang" data-toggle="modal" data-target="#ModalHapusBarang" 
+                          <button type="button" class="btn btn-danger tombolpaket" data-toggle="modal" data-target="#ModalHapusBarang" 
                           data-idpaket="<?php echo $value['id_paket'];?>" 
                           data-namapaket="<?php echo $value['nama_paket'];?>" > Hapus</button></td>
                         </tr>
@@ -68,13 +94,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Form Kelola Gedung</h4>
+          <h4 class="modal-title">Form Tambah Paket</h4>
         </div>
         <div class="modal-body">
           <div class="x_content">
                     <br />
                     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"
-                    method="post" action="<?php echo base_url() ?>event/master_event/kelola_paket/insert">
+                    method="post" action="<?php echo base_url() ?>event/master_event/kelola_paket/tambah">
 
                      
                           <input type="hidden" id="id-paket" name="id-paket" required="required" class="form-control col-md-7 col-xs-12">
@@ -114,7 +140,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success"> Tambah</button>
+          <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
         </form>
         </div>
       </div>
@@ -129,22 +155,16 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Edit Paket</h4>
+          <h4 class="modal-title">Form Ubah Paket</h4>
         </div>
         <div class="modal-body">
           <div class="x_content">
                     <br />
                     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"
-                    method="post" action="<?php echo base_url() ?>event/master_event/kelola_paket/update">
+                    method="post" action="<?php echo base_url() ?>event/master_event/kelola_paket/ubah">
 
 
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="id-paket">Id Paket <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="id-paket" name="id-paket" required="required" class="form-control col-md-7 col-xs-12 id_paket">
-                        </div>
-                      </div>
+                      <input type="hidden" id="id-paket" name="id-paket" required="required" class="form-control col-md-7 col-xs-12 id_paket">
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nama-paket">Nama Paket <span class="required">*</span>
                         </label>
@@ -181,7 +201,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary"> Edit</button>
+          <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Simpan</button>
         </form>
         </div>
       </div>
@@ -199,10 +219,10 @@
           <h4 class="modal-title">Hapus Paket</h4>
         </div>
         <div class="modal-body">
-          <div class="deletealat alert alert-danger" role="alert"></div>
+          <div class="deletepaket alert alert-danger" role="alert"></div>
           <div class="x_content">
                     <br />
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>event/master_event/kelola_paket/delete">
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>event/master_event/kelola_paket/hapus">
 
                       <input type="text" name="id_paket" class="id_paket">                  
                       <div class="ln_solid"></div>

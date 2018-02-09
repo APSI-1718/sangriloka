@@ -17,27 +17,28 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                  <!-- sesiaon -->
-                   <?php
-                    $berhasil = $this->session->flashdata('tambahdata');
-                    if ((isset($berhasil)) && (!empty($berhasil))) {?>
-                    <div class="alert alert-success">
-                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+
+            <!-- flashdata -->
+             <?php
+              $berhasil = $this->session->flashdata('tambahdata');
+              if ((isset($berhasil)) && (!empty($berhasil))) {?>
+              <div class="alert alert-success">
+              <a href="#" class="close" data-dismiss="alert">&times;</a>
               <?php print_r($berhasil);?>
-                </div>
-        <?php } ?>
+              </div>
+             <?php } ?>
 
              <button type="button" class="btn btn-info fa fa-plus-circle" data-toggle="modal" data-target="#tambahModal"> Tambah Data</button>
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
                         <th>#</th>
-                          <th>No Pembayaran</th>
-                          <!-- <th>Nama</th> -->
+                          <th>No Pembayaran</th>                          
                           <th>Tgl Transaksi</th>
+                          <th>Nama</th>
                           <th>Pembayaran Loudry</th>
                           <th>Total Harga</th>
-                          <th>Cetak</th>
+                          <th>Rincian</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -48,12 +49,14 @@
                           <tr>
                           <td><?php echo $i; ?></td>
                             <td><?php echo $value['id_pembayaran'];?></td>
-                            <!-- <td><?php echo $value['nama_pendaftar'] ?></td> -->
                             <td><?php echo $value['tgl_transaksi'] ?></td>
+                            <td><?php echo $value['nama_pendaftar'] ?></td>
                             <td></td>
                             <td><?php echo $value['Total'] ?></td>
-                            <td><button class="btn btn-info" data-toggle='modal' data-target="#rincian<?php echo $value['id_pembayaran'];?>"><i style="color: white" aria-hidden="true">Cetak</i></button></td>
-
+                            
+                            <td><button class="btn btn-info" data-toggle='modal' data-target="#rincian<?php echo $value['id_pembayaran'];?>"><i style="color: white" aria-hidden="true">Rincian
+                            </i></button>
+                           </td>
                           </tr>
                       <?php $i++;}?>
                       </tbody>
@@ -102,40 +105,26 @@
                           ?>
                             
                           </select>
-                      </div>
+                        </div>
                       </div>
                      
-                       <div class="form-group">
+                      <div class="form-group">
                         <label for="tgl_transaksi" class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal Transaksi</label>
                          <div class="col-md-6 col-sm-6 col-xs-12">
                           <?php
                             $tanggal=date("Y/m/d");
                           ?>
                            <input type="text"  name="tgl_transaksi" required="required" class="form-control col-md-7 col-xs-12" readonly="date-now" value="<?php echo "$tanggal"?>">
-                           </div>
+                         </div>
                       </div>
-                      
-                     <!-- <div class="form-group">
-                        <label for="Loundry" class="control-label col-md-3 col-sm-3 col-xs-12" >Loundry
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text"  name="Loundry" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div> -->
-
-                        <div class="form-group">
+                
+                      <div class="form-group">
                         <label for="Total" class="control-label col-md-3 col-sm-3 col-xs-12">Total Harga</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                          <input type="text"  name="Total" required="required" class="form-control col-md-7 col-xs-12">
                         </div>
                       </div>
 
-                      <!-- <div class="form-group">
-                        <label for="Ket" class="control-label col-md-3 col-sm-3 col-xs-12">Keterangan</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                           <input type="text"  name="Ket" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>    -->  
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
@@ -170,7 +159,7 @@ $i = 1;
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Rincian Data Pembayaran</h4>
+          <h4 class="modal-title">Rincian Data</h4>
         </div>
         <div class="modal-body">
                     <table style="margin:20px auto;">
@@ -207,68 +196,4 @@ $i++;
 }
 ?>
 
-<!-- modal edit -->
-   <?php $i = 1; foreach($pembayaran_homestay as $key => $value){ ?>
-  <div class="modal fade" id="edit<?php echo $value['id_pembayaran'];?>" role="dialog" aria-labelledby="myModalLabel">
-<div class="modal-dialog ">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Form Ubah Data Pembayaran</h4>
-        </div>
-        <div class="modal-body">
-          <div class="x_content">
-                    <br />
-                  <form id="editmodal" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>hotel/Pemesanan/Pembayaran/ubah_bayar">
-                  <input type="hidden" name="id_pembayaran" value="<?php echo $value['id_pembayaran'];?>" class="form-control">
 
-                      <div class="form-group">
-                        <label for="tgl_transaksi" class="control-label col-md-3 col-sm-3 col-xs-12" >Tgl Transaksi
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" name="tgl_transaksi" value="<?php echo $value['tgl_transaksi'];?>" class="form-control col-md-7 col-xs-12" >
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="id" class="control-label col-md-3 col-sm-3 col-xs-12" >No Pembayaran
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" name="id_pembayaran" value="<?php echo $value['id_pembayaran'];?>" class="form-control col-md-7 col-xs-12" >
-                        </div>
-                      </div> 
-                      
-                      <!-- <div class="form-group">
-                        <label for="nama" class="control-label col-md-3 col-sm-3 col-xs-12" >Nama Lengkap
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text"  name="nama_pendaftar" value="<?php echo $value['nama_pendaftar'];?>" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div> -->
-                      
-                      <div class="form-group">
-                        <label for="Total" class="control-label col-md-3 col-sm-3 col-xs-12">Total Harga</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                         <input type="text"  name="Total" value="<?php echo $value['Total'];?>" class="form-control col-md-7 col-xs-12 Total">
-                        </div>
-                      </div>
-                    
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button data-dismiss="modal" class="btn btn-primary btn-md">Batal</button>
-                          <button class="btn btn-success">Simpan</button>
-                        </div>
-                      </div>
-                    </form>
-                   
-                  </div>
-        </div>
-        <div class="modal-footer">
-        </div>
-        </div>
-        </div>
-        </div>
-          <?php
-$i++;} ?>
-  

@@ -10,9 +10,10 @@ class cari_konten extends CI_Controller {
 	public function hasil()
 	{
 		$data2['cari'] = $this->C_konten->cariData();
-		$this->load->view('template/header');
+		
+		$this->load->view('notifikasi/template/header');
 		$this->load->view('notifikasi/home');
 		$this->load->view('notifikasi/hasil_cari', $data2);
-		$this->load->view('template/footer');
+		$this->load->view('notifikasi/template/footer');
 	}
 }

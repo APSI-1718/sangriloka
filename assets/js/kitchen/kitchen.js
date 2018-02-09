@@ -17,6 +17,26 @@ $(document).on("click", '.tombolalat', function(e){
 
 });
 
+$(document).on("click", '.tombolmakanan', function(e){
+	var kode_mkn		= $(this).data('kode_mkn');
+	var nama_mkn 		= $(this).data('nama_mkn');
+	var jenis_mkn 		= $(this).data('jenis_mkn');
+	var stok_mkn 		= $(this).data('stok_mkn');
+
+
+	$(".kode_mkn").val(kode_mkn);
+	$(".nama_mkn").val(nama_mkn);
+	$(".jenis_mkn").val(jenis_mkn);
+	$(".stok_mkn").val(stok_mkn);
+	
+	
+
+	$(".edit").text('Edit Data "' + nama_mkn +'"');
+	$(".delete").html('Apakah anda ingin menghapus data <strong>"'+nama_mkn+'"</strong> ?');
+	$(".hapusstok").html('Apakah anda ingin menghapus stok <strong>"'+nama_mkn+'"</strong> ?');
+
+});
+
 $(document).on("click", '.tombolmenu', function(e){
 	var id_menu			= $(this).data('id_menu');
 	var nama_menu 		= $(this).data('nama_menu');
@@ -71,6 +91,9 @@ $(document).on("click", '.status1', function(e){
 });
 
 $('.alertalat').show('fast').delay(5000).hide('fast');
+$('.alertpenerimaan').show('fast').delay(5000).hide('fast');
+$('.alertmakanan').show('fast').delay(5000).hide('fast');
+$('.alertpengajuan').show('fast').delay(5000).hide('fast');
 
 
 $('.alertpengajuan').show('fast').delay(5000).hide('fast');

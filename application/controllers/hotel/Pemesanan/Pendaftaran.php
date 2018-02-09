@@ -31,8 +31,10 @@ class Pendaftaran extends CI_Controller {
 			'alamat' => $this->input->post('alamat'),
 			'notlp' => $this->input->post('notlp'),
 			'email' => $this->input->post('email'),
+			'jenis' => $this->input->post('jenis'),
+			// 'harga'=> $this->input->post('harga'),
 			'tgl_checkin' => $this->input->post('tgl_checkin'),
-			'tgl_checkout' => $this->input->post('tgl_checkout'),
+			'tgl_checkout' => $this->input->post('tgl_checkout')
 			);
 
 		$this->M_Pendaftaran->insert($data);
@@ -67,6 +69,8 @@ class Pendaftaran extends CI_Controller {
 		$alamat =  $this->input->post('alamat');
 		$notlp =  $this->input->post('notlp');
 		$email =  $this->input->post('email');
+		$jenis = $this->input->post('jenis');
+		// $harga = $this->input->post('harga');
 		$tgl_checkin =  $this->input->post('tgl_checkin');
 		$tgl_checkout =  $this->input->post('tgl_checkout');
 		$data = array (
@@ -78,6 +82,8 @@ class Pendaftaran extends CI_Controller {
 			'alamat' => $alamat,
 			'notlp' => $notlp,
 			'email' => $email,
+			'jenis'=> $jenis,
+			// 'harga' => $harga,
 			'tgl_checkin' => $tgl_checkin,
 			'tgl_checkout' => $tgl_checkout
 			);
