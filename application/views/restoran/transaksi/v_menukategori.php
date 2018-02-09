@@ -52,7 +52,7 @@ $i = 1;
                   data-id_pesanan="<?php echo $value['id_menu'];?>" 
                   data-gambar_menu="<?php echo $value['gambar_menu']?>" 
                   data-nama_menu="<?php echo $value['nama_menu']?>"
-                  data-harga_menu="<?php echo $value['harga_menu'];?>">
+                  data-harga_menu="<?php echo $value['harga_menu'];?>"
 
                         <img class="img img-responsive" style="width: 480px; height: 195px" src="<?php echo base_url() ?>assets/gambar_menu/<?php echo $value['gambar_menu'];?>"></a></div>
                         <div style=" position: relative ; top: 10px; background-color: black; opacity: 0.8"><center>
@@ -130,6 +130,13 @@ $i = 1;
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="total" name="total_harga" required="required" class="form-control col-md-7 col-xs-12 total_harga" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #2D7207">
+                        </div>
+                      </div>
+                         <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="no_meja">No Meja<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="no_meja" name="no_meja" required="required" class="form-control col-md-7 col-xs-12 no_meja" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #152865">
                         </div>
                       </div>
             

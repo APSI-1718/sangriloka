@@ -124,7 +124,6 @@
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
 
-                          <button class="btn btn-danger" type="reset">Reset</button>
                           <button type="submit" class="btn btn-success" href=" . base_url() . restoran/transaksi/transaksi">Bayar</button>
                         </div>
                       </div>

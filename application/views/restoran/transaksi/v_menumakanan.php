@@ -19,13 +19,7 @@
                         <li><a href="<?php echo base_url()?>Restoran/kitchen/kelola_order/lihat_pesanan" style="background-color: #8EF193; font-size: 18px;"><span class="badge bg-red" style="font-size: 15px;"><?php echo $order ?></span> Pesanan</a></li>
                       </ul>
                     </nav>
-                  <div class="x_title">
-                    <br>
-                    <h2>Daftar Menu Makanan & Minuman</h2>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content col-md-9 col-sm-12 col-xs-12" >
-                
+      
 <div class="thumbnails">
 <?php
 echo('<br>');
@@ -35,12 +29,13 @@ $i = 1;
 <div class="col-md-2 col-xs-4 col-sm-4" id="frameprd" style="margin-right: 60px">
 <div class="thumbnail" style="height: 200px; width: 300px;">
 
-  <div class="tn" style="height: 130px"><a href="#" class="gambarTombol" data-toggle="modal" data-target="#pemesananModal"
+<div class="tn" style="height: 130px"><a href="#" class="gambarTombol" data-toggle="modal" data-target="#pemesananModal"
                   data-id_menu="<?php echo $value['id_menu'];?>" 
                   data-Qty="<?php echo $value['Qty'];?>"
                   data-gambar_menu="<?php echo $value['gambar_menu']?>" 
                   data-nama_menu="<?php echo $value['nama_menu']?>"
-                  data-harga_menu="<?php echo $value['harga_menu'];?>">
+                  data-harga_menu="<?php echo $value['harga_menu'];?>"
+                  data-no_meja="<?php echo $value['no_meja'];?>">
                   
 
 
@@ -84,19 +79,8 @@ $i = 1;
                       <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
                       <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
                       <input type="hidden" name="statusBayar" class="form-control col-md-7 col-xs-12 statusBayar" value="Belum Dibayar">
-                     
-                      
-                      <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="no_meja">No Meja<span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" id="no_meja" name="no_meja" required="required" class="form-control col-md-7 col-xs-12 no_meja" min="1">
-                        </div>
-                      </div>                      
-
-                <input type="hidden" name="id_pemesanan" class="form-control col-md-7 col-xs-12 id_pemesanan">
-                <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
-                <input type="hidden" name="tgl_pemesanan" required="required" class="form-control col-md-7 col-xs-12 tgl_pemesanan" value="<?php echo date('Y-m-d')?>">
+                      <input type="hidden" name="no_meja" class="form-control col-md-7 col-xs-12 no_meja" value="1">
+                      <input type="hidden" name="tgl_pemesanan" required="required" class="form-control col-md-7 col-xs-12 tgl_pemesanan" value="<?php echo date('Y-m-d')?>">
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nama_menu">Nama Menu <span class="required">*</span>
                         </label>
@@ -130,6 +114,13 @@ $i = 1;
                           <input type="text" id="total" name="total_harga" required="required" class="form-control col-md-7 col-xs-12 total_harga" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #2D7207">
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="no_meja">No Meja<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="no_meja" name="no_meja" required="required" class="form-control col-md-7 col-xs-12 no_meja" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #152865">
+                        </div>
+                      </div>
             
 
         </div>
@@ -141,4 +132,3 @@ $i = 1;
       </div>
     </div>
 </div>
-                

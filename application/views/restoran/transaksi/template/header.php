@@ -14,7 +14,7 @@
     <!-- Font Awesome -->
     <link href="<?php echo base_url() ?>vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- Menu Css -->
-    <link href="<?=base_url('assets/css/menustyle.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/css/menustyle.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="<?php echo base_url() ?>vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->

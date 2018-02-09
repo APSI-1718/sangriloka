@@ -27,10 +27,10 @@
               <div class="menu_section">
     
                 <ul class="nav side-menu">
-                  <li><a href="<?php echo base_url()  ?>Restoran/transaksi/halaman_utama"><i class="fa fa-home"></i> Home </a></li>
+                  <li><a href="<?php echo base_url()  ?>Restoran/transaksi/halaman_utama"><i class="fa fa-home"></i> Beranda </a></li>
                   <li><a href="<?php echo base_url() ?>Restoran/transaksi/transaksi"><i class="fa fa-money"></i> Transaksi </a>
                   </li>
-                  <li><a href="<?php echo base_url() ?>Restoran/transaksi/Kelola_menu"><i class="fa fa-windows"></i> Menu </a>
+                  <!-- <li><a href="<?php echo base_url() ?>Restoran/transaksi/Kelola_menu"><i class="fa fa-windows"></i> Menu </a> -->
                   </li>
                 </ul>
               </div>
