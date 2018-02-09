@@ -23,7 +23,7 @@
                         <tr>
                           <th>No.</th>
                           <th width="120px">ID Pemesanan</th>
-                          <th>Nama Menu</th>
+                          <th>Nama Pesanan</th>
                           <th>Qty</th>
                           <th>No Meja</th>
                           <th>Tanggal</th>

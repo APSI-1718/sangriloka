@@ -8,7 +8,9 @@ class Menu_makanan extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('restoran/transaksi/m_menumakanan');
+		$this->load->model('restoran/transaksi/m_cart');
 		$this->load->model('restoran/kitchen/M_kelolapesanan');
+		$this->load->library('cart');
 	}
 
 	function index(){
@@ -77,7 +79,7 @@ class Menu_makanan extends CI_Controller
 			$data['pesanan'] = $this->M_kelolapesanan->jumlah_order();
 
 		$this->load->view('restoran/transaksi/template/header');
-		$this->load->view('restoran/transaksi/v_menukategori', $data);
+		$this->load->view('restoran/transaksi/v_menukategori2', $data);
 		$this->load->view('restoran/transaksi/template/footer2');		 
 			
 	}

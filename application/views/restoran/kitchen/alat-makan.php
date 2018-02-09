@@ -129,10 +129,10 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nama_am">Stok <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12 hidden" for="nama_am">Stok <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="stok_am" name="stok_am" required="required" class="form-control col-md-7 col-xs-12 stok_am">
+                          <input type="hidden" id="stok_am" name="stok_am" required="required" class="form-control col-md-7 col-xs-12 stok_am" value="0">
                         </div>
                       </div>
                   </div>
@@ -155,7 +155,7 @@
       <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title edit" id="editModalLabel">Edit Data</h4>
+            <h4 class="modal-title edit" id="editModalLabel">Ubah Data</h4>
         </div>
         <div class="modal-body">
           <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>Restoran/kitchen/alat_makan/edit_data">
@@ -191,7 +191,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nama_am">Stok <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="stok_am" name="stok_am" required="required" class="form-control col-md-7 col-xs-12 stok_am">
+                          <input type="text" id="stok_am" name="stok_am" required="required" class="form-control col-md-7 col-xs-12 stok_am" readonly="true">
                         </div>
                       </div>
 

@@ -16,7 +16,7 @@
 
                         </ul>
                         <ul class="nav navbar-nav navbar-right" >
-                        <li><a href="<?php echo base_url()?>Restoran/kitchen/kelola_order/lihat_pesanan" style="background-color: #8EF193; font-size: 18px;"><span class="badge bg-red" style="font-size: 15px;"><?php echo $order ?></span> Pesanan</a></li>
+                        <li><a href="<?php echo base_url()?>Restoran/kitchen/kelola_pesanan/lihat_pesanan" style="background-color: #8EF193; font-size: 18px;"><span class="badge bg-red" style="font-size: 15px;"><?php echo $pesanan ?></span> Pesanan</a></li>
                       </ul>
                     </nav>
                   <div class="x_title">
@@ -113,7 +113,6 @@ $i = 1;
                           <input type="text" id="total" name="total" required="required" class="form-control col-md-7 col-xs-12 total_harga" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #2D7207">
                         </div>
                       </div>
-                      
             
 
         </div>

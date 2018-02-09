@@ -4,19 +4,21 @@
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_title">
-                    <h5>Pilih Penerimaan :
-                    <select>
-                      <option>Bahan Makanan</option>
-                      <option>Peralatan Makan</option>
-                    </select>
-                  </h5>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Pilih Penerimaan
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="<?php echo base_url() ?>Restoran/kitchen/Penerimaan_stok_BM"><h5>Bahan Makanan</h5></a></li>
+                          <li><a href="<?php echo base_url() ?>Restoran/kitchen/Penerimaan_stok_AM"><h5>Peralatan Makan</h5></a></li>
+                        </ul>
+                      </div> 
                   
                     <div class="clearfix"></div>
                   </div>
                 <div class="x_panel">
             
                   <div class="x_title">
-                    <h2>Penerimaan Stok<small>Bahan Makanan</small></h2>
+                    <h2>Penerimaan Stok &nbsp;<b>Bahan Makanan</b></h2>
                   
                     <div class="clearfix"></div>
                   </div>
@@ -58,7 +60,7 @@
                                 <td><?php echo $value['kode_mkn']; ?></td>
                                 <td><?php echo $value['nama_mkn']; ?></td>
                                 <td><?php echo $value['jumlah_masuk']; ?></td>
-                                <td><button class="btn btn-success tombolterima" data-toggle="modal" 
+                                <td><button class="btn btn-success btn-sm tombolterima" data-toggle="modal" 
                                   data-target="#terimaModal"
                                               data-id_penerimaan="<?php echo $value['id_penerimaan']?>"
                                               data-tanggal_masuk="<?php echo $value['tanggal_penerimaan']?>"
@@ -143,7 +145,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success">Simpan</button>
+          <button type="submit" class="btn btn-success">Terima</button>
         </div>
       </div>
     </form>

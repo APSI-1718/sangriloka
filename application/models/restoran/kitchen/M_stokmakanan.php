@@ -70,6 +70,21 @@ class M_stokmakanan extends CI_Model
 			$this->db->update("stok_bahan_makanan", $data);
 		}
 
+		function delete($where) {
+			$this->db->where($where);
+			$this->db->delete("stok_bahan_makanan");
+		}
+
+	function hapus_pengajuan($where) {
+			$this->db->where($where);
+			$this->db->delete("pengajuan_bahan_makanan");
+		}
+
+	function update_pengajuan($data, $where) {
+			$this->db->where($where);
+			$this->db->update("pengajuan_bahan_makanan", $data);
+		}
+
 	function terima_stok($data) {
 		
 			$this->db->insert('detail_bahan_makanan', $data);

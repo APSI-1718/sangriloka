@@ -15,7 +15,7 @@ class Penerimaan_stok_BM extends CI_Controller {
 
 		$this->load->view('template/header');
 		$this->load->view('restoran/kitchen/menu');
-		$this->load->view('restoran/kitchen/penerimaan-stok', $data);
+		$this->load->view('restoran/kitchen/penerimaan-stok-bm', $data);
 		$this->load->view('template/footer');
 	}
 

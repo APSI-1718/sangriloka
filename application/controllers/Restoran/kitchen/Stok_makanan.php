@@ -46,6 +46,41 @@ class Stok_makanan extends CI_Controller {
 
 			}
 
+			function edit_form() {
+				$id = $this->input->get('kode_mkn');
+				$where = array ('kode_mkn' => $id);
+				$data['kitchen'] = $this->M_stokmakanan->select($where);
+				$this->load->view('edit-form', $data);
+			}
+
+	function edit_data() {
+				$id = $this->input->post('kode_mkn');
+
+				 $data = array (
+				 	'nama_mkn' => $this->input->post('nama_mkn'),
+				 	'jenis_mkn' => $this->input->post('jenis_mkn')	 	
+
+				 	);
+
+
+			$where = array ('kode_mkn' => $id);
+
+			$this->session->set_flashdata('editdatamkn', "Data berhasil diubah");
+
+			$this->M_stokmakanan->update($data, $where);
+
+			redirect('restoran/kitchen/Stok_makanan', 'refresh');
+		}
+
+	function delete_data() {
+		$id = $this->input->post('kode_mkn');
+		$where = array ('kode_mkn' => $id); $this->M_stokmakanan->delete($where);
+
+		$this->session->set_flashdata('deletedatamkn', "Data berhasil dihapus");
+
+		redirect('restoran/kitchen/Stok_makanan', 'refresh');
+		}
+
 
 			function hapus_stok($where) {
 

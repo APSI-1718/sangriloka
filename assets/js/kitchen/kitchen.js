@@ -17,7 +17,26 @@ $(document).on("click", '.tombolalat', function(e){
 
 });
 
-$(document).on("click", '.tombolmakanan', function(e){
+$(document).on("click", '.tomboleditpengajuan', function(e){
+	var kode_mkn		= $(this).data('kode_mkn');
+	var nama_mkn 		= $(this).data('nama_mkn');
+	var kode_am		= $(this).data('kode_am');
+	var nama_am 		= $(this).data('nama_am');
+	var id_pengajuan 		= $(this).data('id_pengajuan');
+	var jumlah_permintaan 		= $(this).data('jumlah_permintaan');
+
+
+	$(".kode_mkn").val(kode_mkn);
+	$(".nama_mkn").val(nama_mkn);
+	$(".kode_am").val(kode_am);
+	$(".nama_am").val(nama_am);
+	$(".jumlah_permintaan").val(jumlah_permintaan);
+	$(".id_pengajuan").val(id_pengajuan);
+	
+
+});
+
+$(document).on("click", '.tombolmkn', function(e){
 	var kode_mkn		= $(this).data('kode_mkn');
 	var nama_mkn 		= $(this).data('nama_mkn');
 	var jenis_mkn 		= $(this).data('jenis_mkn');
@@ -31,7 +50,7 @@ $(document).on("click", '.tombolmakanan', function(e){
 	
 	
 
-	$(".edit").text('Edit Data "' + nama_mkn +'"');
+	$(".editmkn").text('Edit Data "' + nama_mkn +'"');
 	$(".delete").html('Apakah anda ingin menghapus data <strong>"'+nama_mkn+'"</strong> ?');
 	$(".hapusstok").html('Apakah anda ingin menghapus stok <strong>"'+nama_mkn+'"</strong> ?');
 
@@ -60,8 +79,10 @@ $(document).on("click", '.tombolmenu', function(e){
 
 
 $(document).on("click", '.tombolterima', function(e){
-	var kode_mkn			= $(this).data('kode_mkn');
+	var kode_mkn		= $(this).data('kode_mkn');
 	var nama_mkn 		= $(this).data('nama_mkn');
+	var kode_am			= $(this).data('kode_am');
+	var nama_am			= $(this).data('nama_am');
 	var jumlah_masuk 	= $(this).data('jumlah_masuk');
 	var id_penerimaan 	= $(this).data('id_penerimaan');
 	var tanggal_masuk	= $(this).data('tanggal_masuk');
@@ -69,15 +90,12 @@ $(document).on("click", '.tombolterima', function(e){
 
 	$(".kode_mkn").val(kode_mkn);
 	$(".nama_mkn").val(nama_mkn);
+	$(".kode_am").val(kode_am);
+	$(".nama_am").val(nama_am);
 	$(".id_penerimaan").val(id_penerimaan);
 	$(".tanggal_masuk").val(tanggal_masuk);
 	$(".jumlah_masuk").val(jumlah_masuk);
 	
-	
-	
-
-	$(".edit").text('Edit Data "' + nama_am +'"');
-	$(".delete").html('Apakah anda ingin menghapus data <strong>"'+nama_am+'"</strong> ?');
 
 });
 
@@ -90,14 +108,25 @@ $(document).on("click", '.status1', function(e){
 
 });
 
+// Kumpulan Alert
+
 $('.alertalat').show('fast').delay(5000).hide('fast');
 $('.alertpenerimaan').show('fast').delay(5000).hide('fast');
 $('.alertmakanan').show('fast').delay(5000).hide('fast');
 $('.alertpengajuan').show('fast').delay(5000).hide('fast');
-
-
 $('.alertpengajuan').show('fast').delay(5000).hide('fast');
 
+
+$(document).on("change", '#cboItem2', function(e){
+	var kode_am			= $(this).find(' :selected').data('kode_am');
+	var kategori_am 			= $(this).find(' :selected').data('kategori_am');
+	
+
+	$(".kode_am").val(kode_am);
+	$(".kategori_am").val(kategori_am);
+	
+
+});
 
 $(document).on("change", '#cboItem', function(e){
 	var kode_mkn			= $(this).find(' :selected').data('kode_mkn');
@@ -109,7 +138,6 @@ $(document).on("change", '#cboItem', function(e){
 	
 
 });
-
 
 function readURL(input) { // Mulai membaca inputan gambar
 if (input.files && input.files[0]) {

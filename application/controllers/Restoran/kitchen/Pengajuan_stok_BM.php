@@ -39,5 +39,35 @@ class Pengajuan_stok_BM extends CI_Controller {
 
 			}
 
+	function hapus_pengajuan($where) {
+
+			$id = $where;
+
+			 $where = array ('id_pengajuan' => $id); 
+			 $this->M_stokmakanan->hapus_pengajuan($where);
+			 $this->session->set_flashdata('hapuspengajuan', "Pengajuan berhasil dibatalkan ");
+			 redirect('restoran/kitchen/Pengajuan_stok_BM', 'refresh');
+
+			}
+
+	function edit_data() {
+				$id = $this->input->post('id_pengajuan');
+
+				 $data = array (
+				 	'nama_mkn' => $this->input->post('nama_mkn'),
+				 	'kode_mkn' => $this->input->post('kode_mkn'),
+				 	'jumlah_permintaan' => $this->input->post('jumlah_permintaan'),	 	
+
+				 	);
+
+
+			$where = array ('id_pengajuan' => $id);
+
+			$this->session->set_flashdata('editpengajuan', "Data pengajuan berhasil diubah");
+
+			$this->M_stokmakanan->update_pengajuan($data, $where);
+
+			redirect('restoran/kitchen/Pengajuan_stok_BM', 'refresh');
+		}
 }
 
