@@ -3,12 +3,12 @@
        <div class="title_left">
                 <div class="col-md-4 col-sm-6 col-xs-6 form-group">
                   <div class="input-group">
-                   <a href="../notifikasi/utama" class="btn btn-default btn-sm" type="button" ><i class="fa fa-chevron-left">&nbsp; Halaman utama</i></a>
+                   <a href="<?php echo base_url() ?>notifikasi/beranda" class="btn btn-default btn-sm" type="button" ><i class="fa fa-chevron-left">&nbsp; Halaman utama</i></a>
                   </div>
                 </div>
             </div>
 
-     <div class="col-md-9 col-sm-6 col-xs-12">
+     <div class="col-md-12 col-sm-6 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
                   <h2>Semua Notifikasi</h2>
@@ -33,6 +33,7 @@
                           </div>
                           <p class="excerpt"><?php echo ( $value ['isi_notifikasi']); ?>
                           </p>
+                          <button href="#" class="btn btn-danger btn-sm tomboln" data-toggle="modal" data-target="#modalhapusnotifikasi" data-id="<?php echo $value ['id_notifikasi'];?>" data-judul="<?php echo $value ['judul_notifikasi'];?>"><i class="fa fa-trash-o"></i> Hapus </button>
                         </div>
                       </div>
                     </li>
@@ -40,30 +41,6 @@
                 </div> <?php } ?>
               </div>
             </div>
-
-            <?php foreach ($notifikasi as $key => $value) {
-                  ?>
-            <div class="col-md-3 col-sm-6 col-xs-9">
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2><i class="fa fa-gear"></i>&nbsp;AKSI</h2>
-                  <div class="clearfix"></div>
-                </div>
-                
-                <div class="x_content">
-                  <ul class="list-unstyled timeline">
-                    <li>
-                         <center>
-                          
-                            <button href="#" class="btn btn-danger btn-sm tomboln" data-toggle="modal" data-target="#modalhapusnotifikasi" data-id="<?php echo $value ['id_notifikasi'];?>" data-judul="<?php echo $value ['judul_notifikasi'];?>"><i class="fa fa-trash-o"></i> Hapus </button>
-                        
-                        </center>
-                    </li>
-                  </ul>
-                </div>
-
-              </div>
-            </div><?php } ?>
           </div> 
 
   

@@ -11,7 +11,7 @@
 
     <!-- jQuery -->
     <script src="<?php echo base_url() ?>vendors/jquery/dist/jquery.min.js"></script>
-    <script src="<?php echo base_url() ?>build/js/outbond/kostum.js"></script>
+    <script src="<?php echo base_url() ?>build/js/kostum.js"></script>
     <!-- Bootstrap -->
     <script src="<?php echo base_url() ?>vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- kitchen.js -->
