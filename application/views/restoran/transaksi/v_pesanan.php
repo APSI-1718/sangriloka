@@ -18,11 +18,11 @@
                   <nav class="navbar navbar-inverse">
                        
                         <ul class="nav navbar-nav" style="font-size: 20px">
-                          <li class="active"><a href="<?php echo base_url()?>Restoran/transaksi/menu_makanan">Home</a></li>
-                          <li><a href="<?php echo base_url()?>Restoran/transaksi/menu_makanan/tampil_kategori/Appetizer" style="background-color: #FF8636">Appetizer</a></li>
-                          <li><a href="<?php echo base_url()?>Restoran/transaksi/menu_makanan/tampil_kategori/Main_Course" style="background-color: #E8E231">Main Course</a></li>
-                          <li><a href="<?php echo base_url()?>Restoran/transaksi/menu_makanan/tampil_kategori/Dessert" style="background-color: #E559B2">Dessert</a></li>
-                          <li><a href="<?php echo base_url()?>Restoran/transaksi/menu_makanan/tampil_kategori/Minuman" style="background-color: #59B9E5">Minuman</a></li>
+                          <li class="active"><a href="<?php echo base_url()?>Restoran/transaksi/cart">Home</a></li>
+                          <li><a href="<?php echo base_url()?>Restoran/transaksi/cart/tampil_kategori/Appetizer" style="background-color: #FF8636">Appetizer</a></li>
+                          <li><a href="<?php echo base_url()?>Restoran/transaksi/cart/tampil_kategori/Main_Course" style="background-color: #E8E231">Main Course</a></li>
+                          <li><a href="<?php echo base_url()?>Restoran/transaksi/cart/tampil_kategori/Dessert" style="background-color: #E559B2">Dessert</a></li>
+                          <li><a href="<?php echo base_url()?>Restoran/transaksi/cart/tampil_kategori/Minuman" style="background-color: #59B9E5">Minuman</a></li>
 
                         </ul>
                         

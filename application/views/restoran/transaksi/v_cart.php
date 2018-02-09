@@ -9,10 +9,10 @@
                        
                         <ul class="nav navbar-nav" style="font-size: 20px">
                           <li class="active"><a href="<?php echo base_url()?>Restoran/transaksi/cart">Home</a></li>
-                          <li><a href="<?php echo base_url()?>Restoran/transaksi/menu_makanan/tampil_kategori/Appetizer" style="background-color: #FF8636">Appetizer</a></li>
-                          <li><a href="<?php echo base_url()?>Restoran/transaksi/menu_makanan/tampil_kategori/Main_Course" style="background-color: #E8E231">Main Course</a></li>
-                          <li><a href="<?php echo base_url()?>Restoran/transaksi/menu_makanan/tampil_kategori/Dessert" style="background-color: #E559B2">Dessert</a></li>
-                          <li><a href="<?php echo base_url()?>Restoran/transaksi/menu_makanan/tampil_kategori/Minuman" style="background-color: #59B9E5">Minuman</a></li>
+                          <li><a href="<?php echo base_url()?>Restoran/transaksi/cart/tampil_kategori/Appetizer" style="background-color: #FF8636">Appetizer</a></li>
+                          <li><a href="<?php echo base_url()?>Restoran/transaksi/cart/tampil_kategori/Main_Course" style="background-color: #E8E231">Main Course</a></li>
+                          <li><a href="<?php echo base_url()?>Restoran/transaksi/cart/tampil_kategori/Dessert" style="background-color: #E559B2">Dessert</a></li>
+                          <li><a href="<?php echo base_url()?>Restoran/transaksi/cart/tampil_kategori/Minuman" style="background-color: #59B9E5">Minuman</a></li>
 
                         </ul>
                         <ul class="nav navbar-nav navbar-right" >
@@ -32,11 +32,11 @@ echo('<br>');
 
 foreach ($menu as $row) :
 ?>
-<div class="col-md-2 col-xs-6 col-sm-6" id="frameprd" style="margin-right: 60px">
-<div class="thumbnail">               
-            <img width="200" src="<?php echo base_url().'assets/gambar_menu/'.$row->gambar_menu;?>">
+<div class="col-md-2 col-xs-6 col-sm-6">
+<div class="thumbnail" style="height: 300px">               
+            <img width="200" style="height: 130px" src="<?php echo base_url().'assets/gambar_menu/'.$row->gambar_menu;?>">
             <div class="caption">
-              <h4><?php echo $row->nama_menu;?></h4>
+              <center><h4 style="height: 40px"><?php echo $row->nama_menu;?></h4></center>
               <div class="row">
                 <div class="col-md-7">
                   <h4><?php echo 'Rp '.number_format($row->harga_menu);?></h4>

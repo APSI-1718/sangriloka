@@ -3,19 +3,34 @@
 
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_title">
+                    <h5>Pilih Penerimaan :
+                    <select>
+                      <option>Bahan Makanan</option>
+                      <option>Peralatan Makan</option>
+                    </select>
+                  </h5>
+                  
+                    <div class="clearfix"></div>
+                  </div>
                 <div class="x_panel">
+            
                   <div class="x_title">
-                    <h2>Penerimaan Stok <small>Users</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-              
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
+                    <h2>Penerimaan Stok<small>Bahan Makanan</small></h2>
+                  
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+
+                              <?php
+              $berhasil = $this->session->flashdata('penerimaan');
+              if ((isset($berhasil)) && (!empty($berhasil))) {?>
+              <div class="alert alert-success alertpenerimaan">
+              <a href="#" class="close" data-dismiss="alert">&times;</a>
+              <?php print_r($berhasil);?>
+              </div>
+              <?php } ?>
+
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -77,7 +92,7 @@
         </div>
         <div class="modal-body">
          
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url()?>Restoran/kitchen/stok_makanan/terima_stok">
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url()?>Restoran/kitchen/Penerimaan_stok_BM/terima_stok">
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="id_penerimaan">ID Penerimaan <span class="required">*</span>
                         </label>

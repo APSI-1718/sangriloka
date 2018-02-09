@@ -8,7 +8,7 @@ class Menu_makanan extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('restoran/transaksi/m_menumakanan');
-		$this->load->model('restoran/kitchen/M_kelolaorder');
+		$this->load->model('restoran/kitchen/M_kelolapesanan');
 	}
 
 	function index(){
@@ -37,7 +37,7 @@ class Menu_makanan extends CI_Controller
 		$this->pagination->initialize($config);
 		$data['links'] = $this->pagination->create_links();
 		$data['menumkn'] = $this->m_menumakanan->tampil_pagination_produk($config['per_page'], $this->uri->segment(3));
-		$data['order'] = $this->M_kelolaorder->jumlah_order();
+		$data['pesanan'] = $this->M_kelolapesanan->jumlah_order();
 
 		$this->load->view('restoran/transaksi/template/header');
 		$this->load->view('restoran/transaksi/v_daftarpesanan', $data);
@@ -74,7 +74,7 @@ class Menu_makanan extends CI_Controller
 		$data['menumkn'] = $this->m_menumakanan->tampil_pagination_produk($config['per_page'], $this->uri->segment(3)); 
 		
 			$data['menumkn'] = $this->m_menumakanan->tampil_kategori($ktg);
-			$data['order'] = $this->M_kelolaorder->jumlah_order();
+			$data['pesanan'] = $this->M_kelolapesanan->jumlah_order();
 
 		$this->load->view('restoran/transaksi/template/header');
 		$this->load->view('restoran/transaksi/v_menukategori', $data);
@@ -84,7 +84,7 @@ class Menu_makanan extends CI_Controller
 
 	function insert_data(){
 		$data = array ( 
-			'id_pemesanan' 	=> $id['idpemesanan'] = $this->M_kelolaorder->insert_id_pemesanan(),
+			'id_pemesanan' 	=> $id['idpemesanan'] = $this->M_kelolapesanan->insert_id_pemesanan(),
 			'nama_menu' => $this->input->post('nama_menu'),
 			'Qty' => $this->input->post('Qty'),
 			'total' => $this->input->post('total'),
@@ -95,7 +95,7 @@ class Menu_makanan extends CI_Controller
 			);
 		$this->m_menumakanan->insert_data($data);
 		echo '<script>alert("Pesanan telah diterima");</script>';
-		redirect('restoran/kitchen/kelola_order/lihat_pesanan', 'refresh'); 
+		redirect('restoran/kitchen/kelola_pesanan/lihat_pesanan', 'refresh'); 
 	}
 
 	function success(){

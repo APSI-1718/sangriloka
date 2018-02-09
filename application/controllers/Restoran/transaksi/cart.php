@@ -9,7 +9,7 @@ class cart extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('restoran/transaksi/m_cart');
-		$this->load->model('restoran/kitchen/M_kelolaorder');
+		$this->load->model('restoran/kitchen/M_kelolapesanan');
 		$this->load->library('cart');
 	}
 
@@ -91,8 +91,20 @@ class cart extends CI_Controller
 
 		$this->m_cart->insert_meja($data);
 		echo '<script>alert("Pesanan telah diterima");</script>';
-		redirect('Restoran/kitchen/kelola_order/lihat_pesanan','refresh');
+		redirect('Restoran/kitchen/kelola_pesanan/lihat_pesanan','refresh');
 		$this->cart->destroy();
+	}
+
+	function tampil_kategori($ktg){
+		
+		
+		$data['menu'] = $this->m_cart->tampil_kategori($ktg);
+			
+
+		$this->load->view('restoran/transaksi/template/header');
+		$this->load->view('restoran/transaksi/v_menukategori', $data);
+		$this->load->view('restoran/transaksi/template/footer2');		 
+			
 	}
 }
 

@@ -6,19 +6,11 @@
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Data Peralatan Makan </h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
 
         <!-- Flash Data -->
-
         <?php
               $berhasil = $this->session->flashdata('tambahdata');
               if ((isset($berhasil)) && (!empty($berhasil))) {?>
@@ -80,7 +72,7 @@
                                               data-nama_am='". $value['nama_am']."'
                                               data-kategori_am='". $value['kategori_am']."'
                                               data-stok_am='". $value['stok_am']."'>
-                                              <i class='fa fa-pencil-square-o'></i> Edit
+                                              <i class='fa fa-pencil-square-o'></i> Ubah
                                        </button>&nbsp;&nbsp;
                                       <button type='button' class='btn btn-danger btn-xs tombolalat'
                                           data-toggle='modal' data-target='#deleteModal'
@@ -147,7 +139,7 @@
 
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-          <button type="submit" class="btn btn-success">Tambah</button>
+          <button type="submit" class="btn btn-success">Simpan</button>
         </div>
       </div>
     </form>
@@ -205,7 +197,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-btn-default" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-btn-default" data-dismiss="modal">Batal</button>
           <button type="submit" class="btn btn-primary">Simpan</button>
         </div>
         </form>
@@ -220,7 +212,7 @@
       <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="deleteModalLabel">Delete Data</h4>
+            <h4 class="modal-title" id="deleteModalLabel">Hapus Data</h4>
         </div>
         <div class="modal-body">
           <div class="delete alert alert-danger"></div>
@@ -228,8 +220,8 @@
         <div class="modal-footer">
             <form method="post" action="<?php echo base_url() ?>Restoran/kitchen/alat_makan/delete_data">
               <input type="hidden" name="kode_am" class="form-control kode_am" id="kode_am">
-          <button type="button" class="btn btn-btn-default" data-dismiss="modal">Cancel</button>
-          <button class="btn btn-danger" type="submit">Delete</button>
+          <button type="button" class="btn btn-btn-default" data-dismiss="modal">Batal</button>
+          <button class="btn btn-danger" type="submit">Hapus</button>
         </div>
         </form>
       </div>

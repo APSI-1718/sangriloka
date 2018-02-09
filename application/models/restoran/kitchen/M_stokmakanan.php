@@ -65,7 +65,12 @@ class M_stokmakanan extends CI_Model
 
 	}
 
-	function tambah_stok($data) {
+	function update($data, $where) {
+			$this->db->where($where);
+			$this->db->update("stok_bahan_makanan", $data);
+		}
+
+	function terima_stok($data) {
 		
 			$this->db->insert('detail_bahan_makanan', $data);
 		}
@@ -108,7 +113,7 @@ class M_stokmakanan extends CI_Model
 			return $kodejadi;
 		}
 
-		function insert_id_pengajuan() {
+		function insert_id_pengajuan_BM() {
 			$this->db->select('RIGHT(pengajuan_bahan_makanan.id_pengajuan,3) as kode', FALSE);
 			$this->db->order_by('id_pengajuan', 'DESC');
 			$this->db->limit(1);
@@ -123,7 +128,7 @@ class M_stokmakanan extends CI_Model
 			}
 
 			$kodemax = str_pad($kode, 3, "0", STR_PAD_LEFT);
-			$kodejadi = "PJN".$kodemax;
+			$kodejadi = "PJN-BM-".$kodemax;
 
 			return $kodejadi;
 		}
