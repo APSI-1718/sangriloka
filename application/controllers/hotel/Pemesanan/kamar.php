@@ -25,6 +25,7 @@ class Kamar extends CI_Controller {
 		$data = array (
 			'id_kmr' => $this->input->post('id_kmr'),
 			'no_kmr' => $this->input->post('no_kmr'),
+			'jenis'	=> $this->input->post('jenis'),
 			'lokasi' => $this->input->post('lokasi'),
 		);
 
@@ -37,9 +38,11 @@ class Kamar extends CI_Controller {
 		$id = $this->input->post('id_kmr');
 		$no_kmr = $this->input->post('no_kmr');
 		$lokasi =  $this->input->post('lokasi');
+		$jenis = $this->input->post('jenis');
 		$data = array (
 			'id_kmr' => $id,
 			'no_kmr' => $no_kmr,
+			'jenis' => $jenis,
 			'lokasi' => $lokasi
 			);
 

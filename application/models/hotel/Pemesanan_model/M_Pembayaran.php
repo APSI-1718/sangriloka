@@ -18,6 +18,13 @@ class M_Pembayaran extends CI_Model{
 		return $query->result_array();
 	}
 
+	public function get() 
+	{
+	  	
+		$hasil=$this->db->get('pendaftaran');
+		return $hasil->result();
+	}
+
 	function insert($data){
 		$this->db->insert($this->table, $data);
 	}
@@ -31,6 +38,7 @@ class M_Pembayaran extends CI_Model{
 		$this->db->where($where);
 		$this->db->delete($this->table);
 	}
+
 	function buat_kode()
 	{
 		$this->db->select('RIGHT(pembayaran_homestay.id_pembayaran,6) as kode', FALSE);

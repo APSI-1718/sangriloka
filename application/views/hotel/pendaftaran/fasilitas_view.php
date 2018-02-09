@@ -84,7 +84,7 @@
           </div>
         </div>
 
-        <!-- tambahmodal -->
+    <!-- tambahmodal -->
     <div class="modal fade" id="tambahModal" role="dialog" aria-labelledby="TambahModalLabel">
     <div class="modal-dialog ">
       <div class="modal-content">
@@ -112,20 +112,6 @@
                         </div>
                       </div>
 \
-                      <!-- <div class="form-group">
-                        <label for="jml" class="control-label col-md-3 col-sm-3 col-xs-12">Jumlah</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text"  name="jml" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="harga" class="control-label col-md-3 col-sm-3 col-xs-12">Harga</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                         <input type="text"  name="harga" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div> -->
-
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
@@ -145,61 +131,11 @@
       </div>
     </div>
   </div>
-
-
 </div>
 
-  <!--  Modal rincian-->
-<!-- <?php
-$i = 1;
-    foreach ($fasilitas as $key => $value) {
-?>
-  <div class="modal fade" id="rincian<?php echo $value['id_fas'];?>" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog ">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Rincian Data Fasilitas</h4>
-        </div>
-        <div class="modal-body">
-                    <table style="margin:20px auto;">
-                            <tr>
-                                <td>ID</td>
-                                <td>: <?php echo $value['id_fas']; ?></td>
-                            </tr>
-                             <tr>
-                                <td>Nama Fasilitas</td>
-                                <td>: <?php echo $value['nama_fas'];?></td>
-                             </tr>
-                             <tr>
-                                <td>Jumlah</td>
-                                <td>: <?php echo $value['jml'];?></td>
-                             </tr>
-                             <tr>
-                             <td>Harga</td>
-                               <td>: <?php echo $value['harga'];?></td>
-                             </tr>
-                             
-                        </label>
-                       
-                    </table>
-                  </div>
-
-        </div>
-        <div class="modal-footer">
-        </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <?php
-$i++;
-}
-?> -->
-
 <!-- modal edit -->
-   <?php $i = 1; foreach($fasilitas as $key => $value){ ?>
-  <div class="modal fade" id="edit<?php echo $value['id_fas'];?>" role="dialog" aria-labelledby="myModalLabel">
+<?php $i = 1; foreach($fasilitas as $key => $value){ ?>
+<div class="modal fade" id="edit<?php echo $value['id_fas'];?>" role="dialog" aria-labelledby="myModalLabel">
 <div class="modal-dialog ">
       <div class="modal-content">
         <div class="modal-header">
@@ -208,50 +144,28 @@ $i++;
         </div>
         <div class="modal-body">
           <div class="x_content">
-                    <br />
-                  <form id="editmodal" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>hotel/Pemesanan/Fasilitas/ubah_fasilitas">
-                  <input type="hidden" name="id_fas" value="<?php echo $value['id_fas'];?>" class="form-control">
+            <br />
+          <form id="editmodal" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>hotel/Pemesanan/Fasilitas/ubah_fasilitas">
+          <input type="hidden" name="id_fas" value="<?php echo $value['id_fas'];?>" class="form-control">
 
-                   <!--  <div class="form-group">
-                        <label for="id_fas" class="control-label col-md-3 col-sm-3 col-xs-12">ID</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                           <input type="text"  name="id_fas" value="<?php echo $value['id_fas'];?>" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div> -->
-
-                      <div class="form-group">
-                        <label for="nama_fas" class="control-label col-md-3 col-sm-3 col-xs-12" >Nama Fasilitas
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" name="nama_fas" value="<?php echo $value['nama_fas'];?>" class="form-control col-md-7 col-xs-12 " >
-                        </div>
-                      </div> 
-                      
-                      <!-- <div class="form-group">
-                        <label for="jml" class="control-label col-md-3 col-sm-3 col-xs-12" >Jumlah
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text"  name="jml" value="<?php echo $value['jml'];?>" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <label for="harga" class="control-label col-md-3 col-sm-3 col-xs-12">Harga</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text"  name="harga" value="<?php echo $value['harga'];?>" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div> -->                                              
-                        
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button data-dismiss="modal" class="btn btn-primary btn-md">Batal</button>
-                          <button class="btn btn-success">Simpan</button>
-                        </div>
-                      </div>
-                    </form>
-                   
-                  </div>
+              <div class="form-group">
+                <label for="nama_fas" class="control-label col-md-3 col-sm-3 col-xs-12" >Nama Fasilitas
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                <input type="text" name="nama_fas" value="<?php echo $value['nama_fas'];?>" class="form-control col-md-7 col-xs-12 " >
+                </div>
+              </div> 
+                                                     
+              <div class="ln_solid"></div>
+              <div class="form-group">
+                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                  <button data-dismiss="modal" class="btn btn-primary btn-md">Batal</button>
+                  <button class="btn btn-success">Simpan</button>
+                </div>
+              </div>
+              
+            </form>
+          </div>
         </div>
         <div class="modal-footer">
         </div>

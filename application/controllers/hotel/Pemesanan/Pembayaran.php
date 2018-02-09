@@ -23,6 +23,7 @@ class Pembayaran extends CI_Controller {
 	function tambah_bayar(){
 		$data = array (
 			'id_pembayaran' => $this->input->post('id_pembayaran'),
+			'nama_pendaftar' => $this->input->post('nama_pendaftar'),
 			'tgl_transaksi' => $this->input->post('tgl_transaksi'),
 			'Total' => $this->input->post('Total')
 			);
@@ -33,6 +34,17 @@ class Pembayaran extends CI_Controller {
 		redirect('hotel/Pemesanan/Pembayaran/','refresh');
 	}
 
+	function hapus_bayar($id){
+		$where = array('id_pembayaran' => $id);
+		$this->M_Pembayaran->delete($where);
+		$this->session->set_flashdata('hapusdata', "Data berhasil dihapus");
+		redirect('hotel/Pemesanan/Pembayaran/','refresh');
+	}
 	
+	function cetak($where)
+	{
+		$data['pembayaran'] = $this->M_Pembayaran->pembayaran($where);
+		$this->load->view('hotel/pendaftaran/cetak',$data);
+	}
 
 }
