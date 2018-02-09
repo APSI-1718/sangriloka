@@ -24,7 +24,7 @@
         <?php
               $berhasil = $this->session->flashdata('tambahdata');
               if ((isset($berhasil)) && (!empty($berhasil))) {?>
-              <div class="alert alert-success">
+              <div class="alert alert-success alertservice">
               <a href="#" class="close" data-dismiss="alert">&times;</a>
         <?php print_r($berhasil);?>
           </div>
@@ -33,7 +33,7 @@
         <?php
               $berhasil = $this->session->flashdata('editdata');
               if ((isset($berhasil)) && (!empty($berhasil))) {?>
-              <div class="alert alert-success">
+              <div class="alert alert-success alertservice">
               <a href="#" class="close" data-dismiss="alert">&times;</a>
         <?php print_r($berhasil);?>
           </div>
@@ -42,7 +42,7 @@
         <?php
               $berhasil = $this->session->flashdata('deletedata');
               if ((isset($berhasil)) && (!empty($berhasil))) {?>
-              <div class="alert alert-success">
+              <div class="alert alert-success alertservice">
               <a href="#" class="close" data-dismiss="alert">&times;</a>
         <?php print_r($berhasil);?>
           </div>
