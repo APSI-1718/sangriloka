@@ -22,9 +22,6 @@ class M_Pendaftaran extends CI_Model{
 		$this->db->insert($this->table, $data);
 	}
 
-	// function edit_data($where){
-	// 	return $this->db->get_where($this->table,$where);
-	// }
 
 	function update($data, $where){
 		$this->db->where($where);

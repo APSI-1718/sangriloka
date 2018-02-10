@@ -8,13 +8,15 @@ class Pendaftaran extends CI_Controller {
 		parent::__construct();
 		$this->load->model('hotel/Pemesanan_model/M_Pendaftaran');
 		$this->load->model('hotel/Pemesanan_model/M_Jenis');
+		$this->load->model('hotel/Pemesanan_model/M_Kamar');
 	}
 
 	public function index()
 	{
 		$data['kode'] = $this->M_Pendaftaran->buat_kode();
 		$data['pendaftaran'] = $this->M_Pendaftaran->select();	
-		$data['jenis_kamar'] = $this->M_Jenis->select();	
+		$data['jenis_kamar'] = $this->M_Jenis->select();
+		$data['kamar'] = $this->M_Kamar->select();	
 
 		$this->load->view('hotel/pendaftaran/template/header');
 		$this->load->view('hotel/pendaftaran/template/menu');
@@ -32,7 +34,7 @@ class Pendaftaran extends CI_Controller {
 			'notlp' => $this->input->post('notlp'),
 			'email' => $this->input->post('email'),
 			'jenis' => $this->input->post('jenis'),
-			// 'harga'=> $this->input->post('harga'),
+			'no_kmr'=> $this->input->post('no_kmr'),
 			'tgl_checkin' => $this->input->post('tgl_checkin'),
 			'tgl_checkout' => $this->input->post('tgl_checkout')
 			);
@@ -42,24 +44,6 @@ class Pendaftaran extends CI_Controller {
 		redirect('hotel/Pemesanan/pendaftaran','refresh');
 	}
 
-	// function lamainap()
- //    {
- //        $data['tgl_checkout']=(int)$this->input->post('tgl_checkout',true);
- //        $data['tgl_checkin']=(int)$this->input->post('tgl_checkin',true);
- //        $data['hasil']=$data['tgl_checkout']-$data['tgl_checkin'];;
- //        $this->load->view('lamainap',$data);
- //    }
-
-	// function tampil_edit($id)
-	// 	{
-	// 			$where = array('id_pendaftar' => $id);
-	// 			$data['pendaftaran'] = $this->M_Pendaftaran->edit_data($where)->result();
-	// 			$this->load->view('hotel/pendaftaran/template/header');
-	// 			$this->load->view('hotel/pendaftaran/template/menu');
-	// 			$this->load->view('hotel/pendaftaran/ubah_pendaftaran', $data);
-	// 			$this->load->view('template/footer');
-	// 	}
-	
 	function ubah_pendaftar(){
 		$tgl_pendaftaran = $this->input->post('tgl_pendaftaran');
 		$id = $this->input->post('id_pendaftar');
@@ -70,7 +54,7 @@ class Pendaftaran extends CI_Controller {
 		$notlp =  $this->input->post('notlp');
 		$email =  $this->input->post('email');
 		$jenis = $this->input->post('jenis');
-		// $harga = $this->input->post('harga');
+		$no_kmr = $this->input->post('no_kmr');
 		$tgl_checkin =  $this->input->post('tgl_checkin');
 		$tgl_checkout =  $this->input->post('tgl_checkout');
 		$data = array (
@@ -83,7 +67,7 @@ class Pendaftaran extends CI_Controller {
 			'notlp' => $notlp,
 			'email' => $email,
 			'jenis'=> $jenis,
-			// 'harga' => $harga,
+			'no_kmr' => $no_kmr,
 			'tgl_checkin' => $tgl_checkin,
 			'tgl_checkout' => $tgl_checkout
 			);

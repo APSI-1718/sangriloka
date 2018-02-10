@@ -57,7 +57,7 @@
                           <th>Tgl Checkin</th>
                           <th>Tgl Checkout</th>
                           <th>Kamar</th> 
-                         <!--  <th>Harga</th> -->
+                          <th>No Kamar</th>
                           <th>Rincian</th>
                           <th>Aksi</th>
                         </tr>
@@ -75,6 +75,7 @@
                           <td><?php echo $value['tgl_checkin'] ?></td>
                           <td><?php echo $value['tgl_checkout'] ?></td>
                           <td><?php echo $value['jenis']; ?></td> 
+                          <td><?php echo $value['no_kmr']; ?></td>
                           <td>            
                           <button class="btn btn-success" data-toggle='modal' data-target="#rincian<?php echo $value['id_pendaftar'];?>"><i style="color: white" aria-hidden="true">Rincian</i></button></td>
 
@@ -195,6 +196,22 @@
                       </div>
 
                       <div class="form-group">
+                        <label for="id" class="control-label col-md-3 col-sm-3 col-xs-12" >No Kamar
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <select name="no_kmr" class="form-control col-md-7 col-xs-12">
+                          <?php 
+                          foreach ($kamar as $key => $value) {
+                            ?>
+                            <option value="<?php echo $value['no_kmr'];?>"><?php echo $value['no_kmr'];?></option>
+                            <?php 
+                            }
+                            ?>
+                        </select>
+                      </div>
+                      </div>
+
+                      <div class="form-group">
                         <label for="tgl_checkin" class="control-label col-md-3 col-sm-3 col-xs-12">Tgl Checkin</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                            <input type="date"  name="tgl_checkin" required="required" class="form-control col-md-7 col-xs-12">
@@ -284,6 +301,9 @@ $i = 1;
                               <tr>
                              <td>Kamar</td>
                                <td>: <?php echo $value['jenis'];?></td>
+                             </tr>
+                             <td>No Kamar</td>
+                               <td>: <?php echo $value['no_kmr'];?></td>
                              </tr>
                              <tr>
                              <td>Tgl Checkin</td>
@@ -396,6 +416,13 @@ $i++;
                           <input type="text"  name="jenis" class="form-control col-md-7 col-xs-12 jenis" value="<?php echo $value['jenis'];?>">
                         </div>
                       </div>      
+
+                      <div class="form-group">
+                        <label for="no_kmr" class="control-label col-md-3 col-sm-3 col-xs-12">No Kamar</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text"  name="no_kmr" class="form-control col-md-7 col-xs-12 no_kmr" value="<?php echo $value['no_kmr'];?>">
+                        </div>
+                      </div>
 
                       <div class="form-group">
                         <label for="tgl_checkin" class="control-label col-md-3 col-sm-3 col-xs-12">Tgl Checkin</label>
