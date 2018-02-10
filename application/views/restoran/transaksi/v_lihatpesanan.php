@@ -1,8 +1,3 @@
-<script type="text/javascript">
-   setTimeout(function(){
-       location.reload();
-   },5000);
-</script>
 
                   <div class="x_panel">
                     <div class="jumbotron" style="background-color: #C7CAC9">
@@ -40,7 +35,7 @@
                           <th>No. Meja</th>
                           <th>Qty</th>
                           <th>Status</th>
-                          <th>Aksi</th>    
+                          <!-- <th>Aksi</th>  -->   
                         </tr>
                       </thead>
 
@@ -62,11 +57,19 @@
                                     echo "<button class='btn btn-info btn-sm'>Sedang Dimasak</button>";
                                   } else if ($value['status'] == 3) {
                                     echo "<button class='btn btn-success btn-sm'>Selesai Dimasak</button>";
+                                  } else if ($value['status'] == 4) {
+                                    echo "<button class='btn btn-danger btn-sm'>Pesanan Habis</button>";
                                   }
                                    
                                 ?>
                                 </td>
-                                <td><button class="btn btn-danger btn-sm"><i class="fa fa-close"></i> Batalkan Pesanan</button></td>
+                               <!--  <td>
+                                  <button class="btn btn-info btn-sm Tomboleditpesanan" data-toggle="modal" data-target="#editpemesananModal" 
+                                  data-id_pemesanan="<?php echo $value['id_pemesanan']?>"
+                                  data-nama_menu="<?php echo $value['nama_menu']?>"
+                                  data-total_harga="<?php echo $value['total']?>"
+                                  data-Qty="<?php echo $value['Qty']?>"><i class="fa fa-edit"></i> Edit</button>
+                                  <button class="btn btn-danger btn-sm"><i class="fa fa-close"></i> Batalkan Pesanan</button></td> -->
                                 </tr>
 
 
@@ -80,3 +83,69 @@
               </div>
                   </div>
                 </div>
+
+<!-- Modal preview pemesanan -->
+
+<div class="modal fade" id="editpemesananModal" tabindex="-1" role="dialog" aria-labelledby="pemesananModalLabel" >
+    <div class="modal-dialog" role="document" >
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title pemesanan" id="pemesananModalLabel">Form Edit Pesanan</h4>
+        </div>
+        <div class="modal-body">
+          <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url() ?>Restoran/kitchen/kelola_order/order_makanan">
+
+                <input type="hidden" name="statusBayar" class="form-control col-md-7 col-xs-12 statusBayar" value="Belum Dibayar">
+                <input type="hidden" name="status" class="form-control col-md-7 col-xs-12 status" value="1">
+                <input type="hidden" name="tgl_pemesanan" required="required" class="form-control col-md-7 col-xs-12 tgl_pemesanan" value="<?php echo date('Y-m-d')?>">
+                <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nama_menu">ID Pemesanan <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="id_pemesanan" name="id_pemesanan" required="required" class="form-control col-md-7 col-xs-12 id_pemesanan" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #152865">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="nama_menu">Nama Menu <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="nama_menu" name="nama_menu" required="required" class="form-control col-md-7 col-xs-12 nama_menu" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #152865">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="qty">Qty <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="number" id="qty" name="Qty" required="required" class="form-control col-md-7 col-xs-12 Qty" min="1">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="harga_menu">Harga Menu <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="harga_menu" name="harga_menu" required="required" class="form-control col-md-7 col-xs-12 harga_menu" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #2D7207">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="harga_menu">Total Harga <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="total" name="total_harga" required="required" class="form-control col-md-7 col-xs-12 total_harga" readonly="true" style="background-color: white; font-size: 18px; font-weight: bold; color: #2D7207">
+                        </div>
+                      </div>
+            
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-btn-default" data-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary">Simpan</button>
+        </div>
+        </form>
+      </div>
+    </div>
+</div>

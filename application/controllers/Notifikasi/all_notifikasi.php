@@ -12,10 +12,10 @@ class all_notifikasi extends CI_Controller {
 		$data2['notifikasi']=$this->notifikasi_db->select();
 
 
-		$this->load->view('template/header');
+		$this->load->view('notifikasi/template/header');
 		$this->load->view('notifikasi/home', $data2);
 		$this->load->view('notifikasi/all_notifikasi');
-		$this->load->view('template/footer');
+		$this->load->view('notifikasi/template/footer');
 
 	}
 

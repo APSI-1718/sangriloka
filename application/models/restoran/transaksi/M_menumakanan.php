@@ -108,7 +108,7 @@ class M_menumakanan extends CI_Model {
 		function pesanan($where)
 		{
 			$this->db->where('id_pemesanan',$where);
-			$hasil = $this->db->get('menu_makanan,pemesanan');
+			$hasil = $this->db->get('pemesanan');
 			return $hasil->result_array();
 		}
 

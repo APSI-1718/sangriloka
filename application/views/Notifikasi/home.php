@@ -7,21 +7,26 @@
             </div>
 
             <div class="clearfix"></div>
-
-            <!-- menu profile quick info -->
-        
-            <!-- /menu profile quick info -->
-
-            <br />
+             <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="<?php echo base_url() ?>images/admin.png" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Selamat Datang,</span>
+                <h2>Admin</h2>
+              </div>
+            </div>
+          
 
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
              <div class="menu_section">
     
                 <ul class="nav side-menu">
-                  <li><a href="../notifikasi/utama"><i class="fa fa-newspaper-o"></i>Kelola Konten</a></li>
-                  <li><a href="../notifikasi/agenda"><i class="fa fa-calendar"></i>Kelola Agenda</a></li>
-                  <li><a href="../notifikasi/promosi"><i class="fa fa-bullhorn"></i> Promosi </a> </li>
+                  <li><a href="<?php echo base_url() ?>notifikasi/beranda"><i class="fa fa-home"></i>Halaman Utama</a></li>
+                  <li><a href="<?php echo base_url() ?>notifikasi/utama"><i class="fa fa-newspaper-o"></i>Kelola Konten</a></li>
+                  <li><a href="<?php echo base_url() ?>notifikasi/agenda"><i class="fa fa-calendar"></i>Kelola Agenda</a></li>
+                  <li><a href="<?php echo base_url() ?>notifikasi/promosi"><i class="fa fa-bullhorn"></i> Promosi </a> </li>
                 </ul>
               </div>
           

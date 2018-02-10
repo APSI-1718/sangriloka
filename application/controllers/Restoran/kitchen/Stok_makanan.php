@@ -41,26 +41,64 @@ class Stok_makanan extends CI_Controller {
 
 			 $this->M_stokmakanan->insert($data);
 
-			 $this->session->set_flashdata('tambahdata', "Data berhasil ditambahkan");
+			 $this->session->set_flashdata('tambahdatamkn', "Data berhasil ditambahkan");
 			 redirect('restoran/kitchen/Stok_makanan', 'refresh');
 
 			}
 
-	function terima_stok() {
+			function edit_form() {
+				$id = $this->input->get('kode_mkn');
+				$where = array ('kode_mkn' => $id);
+				$data['kitchen'] = $this->M_stokmakanan->select($where);
+				$this->load->view('edit-form', $data);
+			}
+
+	function edit_data() {
+				$id = $this->input->post('kode_mkn');
+
+				 $data = array (
+				 	'nama_mkn' => $this->input->post('nama_mkn'),
+				 	'jenis_mkn' => $this->input->post('jenis_mkn')	 	
+
+				 	);
+
+
+			$where = array ('kode_mkn' => $id);
+
+			$this->session->set_flashdata('editdatamkn', "Data berhasil diubah");
+
+			$this->M_stokmakanan->update($data, $where);
+
+			redirect('restoran/kitchen/Stok_makanan', 'refresh');
+		}
+
+	function delete_data() {
+		$id = $this->input->post('kode_mkn');
+		$where = array ('kode_mkn' => $id); $this->M_stokmakanan->delete($where);
+
+		$this->session->set_flashdata('deletedatamkn', "Data berhasil dihapus");
+
+		redirect('restoran/kitchen/Stok_makanan', 'refresh');
+		}
+
+
+			function hapus_stok($where) {
+
+			$id = $where;
 
 			$data = array (
-			'id_penerimaan' => $this->input->post('id_penerimaan'),
-			'kode_mkn' 	=> $this->input->post('kode_mkn'),
-			'nama_mkn' 	=> $this->input->post('nama_mkn'),
-			'tanggal_masuk' => $this->input->post('tanggal_masuk'),
-			'tanggal_expired' => $this->input->post('tanggal_expired'),
-			'jumlah' 	=> $this->input->post('jumlah_masuk')
+			'stok_mkn' => 0,
+			'tanggal_masuk' => null,
+			'tanggal_expired' => null
 
 			);
 
-			 $this->M_stokmakanan->tambah_stok($data);
+			 $this->M_stokmakanan->update($data, array('kode_mkn' => $id));
+			 $this->session->set_flashdata('hapusstok', "Stok berhasil dihapus");
 			 redirect('restoran/kitchen/Stok_makanan', 'refresh');
 
 			}
+
+
 
 }

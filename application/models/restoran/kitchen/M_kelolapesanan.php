@@ -1,10 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script allowed');
 
-/**
-*
-*/
-class M_kelolaorder extends CI_Model
+
+class M_kelolapesanan extends CI_Model
 {
 	function __construct(){
 		parent::__construct();

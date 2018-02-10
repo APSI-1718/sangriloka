@@ -41,10 +41,10 @@
                                 <td><?php echo date('d/m/Y', strtotime($value['tanggal_masuk']));?></td>
                                 <td><?php echo $value['kode_mkn']; ?></td>
                                 <td><?php echo $value['nama_mkn']; ?></td>
-                                <td><?php echo $value['jumlah']; ?></td>
+                                <td><?php echo $value['jumlah_masuk']; ?></td>
                                 <td><?php echo date('d/m/Y', strtotime($value['tanggal_expired']));?></td>
 
-                                <td><button class="btn btn-success tombolterima">Delete Stok</button></td>
+                                <td><button class="btn btn-danger tombolterima"><i class="fa fa-trash"></i> Hapus Stok</button></td>
                                 
                                 </tr>
 

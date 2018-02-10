@@ -14,9 +14,9 @@ class promosi extends CI_Controller {
 		$data['promosi']=$this->promosi_db->select();
 		$data2['notifikasi']=$this->notifikasi_db->select();
 
-		$this->load->view('template/header');
+		$this->load->view('notifikasi/template/header');
 		$this->load->view('notifikasi/home', $data2);
 		$this->load->view('notifikasi/promosi', $data);
-		$this->load->view('template/footer');
+		$this->load->view('notifikasi/template/footer');
 	}
 }

@@ -13,11 +13,12 @@ class utama extends CI_Controller {
 	{
 		$data['event']=$this->konten_db->select();
 		$data2['notifikasi']=$this->notifikasi_db->select();
+		$data2['detail'] = $this->konten_db->detail();
 
-		$this->load->view('template/header');
+		$this->load->view('notifikasi/template/header');
 		$this->load->view('notifikasi/home', $data2);
 		$this->load->view('notifikasi/konten', $data);
-		$this->load->view('template/footer');
+		$this->load->view('notifikasi/template/footer');
 	}
 
 

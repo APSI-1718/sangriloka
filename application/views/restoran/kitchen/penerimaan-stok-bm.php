@@ -3,19 +3,36 @@
 
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_title">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Pilih Penerimaan
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="<?php echo base_url() ?>Restoran/kitchen/Penerimaan_stok_BM"><h5>Bahan Makanan</h5></a></li>
+                          <li><a href="<?php echo base_url() ?>Restoran/kitchen/Penerimaan_stok_AM"><h5>Peralatan Makan</h5></a></li>
+                        </ul>
+                      </div> 
+                  
+                    <div class="clearfix"></div>
+                  </div>
                 <div class="x_panel">
+            
                   <div class="x_title">
-                    <h2>Penerimaan Stok <small>Users</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-              
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
+                    <h2>Penerimaan Stok &nbsp;<b>Bahan Makanan</b></h2>
+                  
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
+
+                              <?php
+              $berhasil = $this->session->flashdata('penerimaan');
+              if ((isset($berhasil)) && (!empty($berhasil))) {?>
+              <div class="alert alert-success alertpenerimaan">
+              <a href="#" class="close" data-dismiss="alert">&times;</a>
+              <?php print_r($berhasil);?>
+              </div>
+              <?php } ?>
+
                     <table id="datatable" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -43,7 +60,7 @@
                                 <td><?php echo $value['kode_mkn']; ?></td>
                                 <td><?php echo $value['nama_mkn']; ?></td>
                                 <td><?php echo $value['jumlah_masuk']; ?></td>
-                                <td><button class="btn btn-success tombolterima" data-toggle="modal" 
+                                <td><button class="btn btn-success btn-sm tombolterima" data-toggle="modal" 
                                   data-target="#terimaModal"
                                               data-id_penerimaan="<?php echo $value['id_penerimaan']?>"
                                               data-tanggal_masuk="<?php echo $value['tanggal_penerimaan']?>"
@@ -77,7 +94,7 @@
         </div>
         <div class="modal-body">
          
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url()?>Restoran/kitchen/stok_makanan/terima_stok">
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post" action="<?php echo base_url()?>Restoran/kitchen/Penerimaan_stok_BM/terima_stok">
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="id_penerimaan">ID Penerimaan <span class="required">*</span>
                         </label>
@@ -128,7 +145,7 @@
 
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-success">Simpan</button>
+          <button type="submit" class="btn btn-success">Terima</button>
         </div>
       </div>
     </form>

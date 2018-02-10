@@ -34,4 +34,11 @@ class konten_db extends CI_Model {
 		$this->db->where($where);
 		$this->db->delete($this->table);
 	}
+
+	function detail()
+	{
+		$detail = $this->input->GET('detail', TRUE);
+		$data = $this->db->query("SELECT * from konten_event where id_konten = '%$detail%' ");
+		return $data->result();
+	}
 }
